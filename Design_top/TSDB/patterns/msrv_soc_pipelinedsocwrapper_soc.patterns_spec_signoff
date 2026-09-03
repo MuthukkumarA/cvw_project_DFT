@@ -1,0 +1,13 @@
+//-------------------------------------------------
+//  File created by: Tessent Shell
+//          Version: 2026.1
+//       Created on: Fri Aug 28 13:53:36 IST 2026
+//-------------------------------------------------
+
+
+PatternsSpecification(msrv_soc_pipelinedsocwrapper,soc,signoff) {
+  Patterns(ICLNetwork) {
+    ICLNetworkVerify(msrv_soc_pipelinedsocwrapper) {
+    }
+  }
+}

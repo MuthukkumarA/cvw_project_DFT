@@ -1,0 +1,157 @@
+//
+// Verilog format test patterns produced by Tessent Shell 2026.1
+// Filename       : ./TSDB/patterns/msrv_soc_pipelinedsocwrapper_soc.patterns_signoff/ICLNetwork.sv.0.vec
+// Idstamp        : 2026.1:ec94:508e:0:0000
+// Date           : Fri Aug 28 13:53:35 2026
+//
+// Format of broadside vector:
+//   PI_bits PO_bits MASK_bits Increment_bit Timeplate_bits(1) PatType_bits(3)
+//   VecType_bits(4)
+//   Increment_bit  - indicates when to increment pattern count
+//   Timeplate_bits - encodes timeplate number to use
+//   PatType_bits   - encodes pattern type
+//   VecType_bits   - encodes vector type
+
+// Scan test block
+
+// Pattern 0 Cycle 0 Timestamp 0 ns 
+000000000000000000000000000001000110000
+ // Start Pattern (0) MSG
+// Pattern_set msrv_soc_pipelinedsocwrapper 
+000000000000000000000000000101000110000
+// + System reset 
+// Simulation Cycle 0  Timestamp 0 ns
+1000000X0Z10101011
+1100000X0Z10101011
+//  Activate selection for scan mux msrv_soc_pipelinedsocwrapper_soc_tessent_sib_sri_inst.scan_in_mux, selection 0: sib = 1'b0 -> scan_in_mux = ijtag_si 
+000000000000000000000000000101010110000
+// + Scan path activation 
+//  
+// + Write integrity pattern to scan registers 
+// + scan vector ijtag_si..ijtag_so ( 
+//        W 0:0    R 0:0   msrv_soc_pipelinedsocwrapper_soc_tessent_sib_sri_inst.sib 
+// ) 
+// +  Loading: 1 
+// Unloading: X 
+// + Associated TAP transition: IDLE -> DRSELECT 
+1100010X0Z10101011
+//  Scan in verification pattern to the following scan register: 
+000000000000000000000000000101100110000
+//   msrv_soc_pipelinedsocwrapper_soc_tessent_sib_sri_inst.sib, load value = 1 
+000000000000000000000000000101110110000
+// + Associated TAP transition: DRSELECT -> DRCAPTURE 
+1110010X0Z10101011
+// + Associated TAP transition: DRCAPTURE -> DRSHIFT 
+1101010X0Z10101011
+// + Shift Cycle 
+// + Associated TAP transition: DRSHIFT -> DREXIT1 
+1100011X0Z10101011
+// + Associated TAP transition: DREXIT1 -> DRPAUSE 
+1100010X0Z10101011
+//  Scan out verification pattern from the following scan register: 
+000000000000000000000000000110000110000
+//   msrv_soc_pipelinedsocwrapper_soc_tessent_sib_sri_inst.sib, expected value = 1 
+000000000000000000000000000110010110000
+// + Read integrity pattern from scan registers 
+// + scan vector ijtag_si..ijtag_so ( 
+//        W 0:0    R 0:0   msrv_soc_pipelinedsocwrapper_soc_tessent_sib_sri_inst.sib 
+// ) 
+// +  Loading: 1 
+// Unloading: 1 
+// + Associated TAP transition: DRPAUSE -> DREXIT2 
+1100010X0Z10101011
+// + Associated TAP transition: DREXIT2 -> DRSHIFT 
+1101010X0Z10101011
+// + Shift Cycle 
+// + Associated TAP transition: DRSHIFT -> DREXIT1 
+110001111Z10101011
+000000000000000000000000000110100110000
+// + Associated TAP transition: DREXIT1 -> DRUPDATE 
+// Simulation Cycle 10  Timestamp 1000 ns
+1100110X0Z10101011
+//  Activate selection of the following scan muxes: 
+000000000000000000000000000110110110000
+//   msrv_soc_pipelinedsocwrapper_soc_tessent_sib_sri_inst.scan_in_mux, selection 1: sib = 1'b1 -> scan_in_mux = ijtag_from_so 
+000000000000000000000000000111000110000
+//   msrv_soc_pipelinedsocwrapper_soc_tessent_sib_pb1_inst.scan_in_mux, selection 0: sib = 1'b0 -> scan_in_mux = ijtag_si 
+000000000000000000000000000111010110000
+//   msrv_soc_pipelinedsocwrapper_soc_tessent_sib_pb2_inst.scan_in_mux, selection 0: sib = 1'b0 -> scan_in_mux = ijtag_si 
+000000000000000000000000000111100110000
+//   msrv_soc_pipelinedsocwrapper_soc_tessent_sib_pb3_inst.scan_in_mux, selection 0: sib = 1'b0 -> scan_in_mux = ijtag_si 
+000000000000000000000000000111110110000
+// + Scan path activation 
+//  
+// + Write integrity pattern to scan registers 
+// + scan vector ijtag_si..ijtag_so ( 
+//        W 3:3    R 3:3   msrv_soc_pipelinedsocwrapper_soc_tessent_sib_pb3_inst.sib 
+//        W 2:2    R 2:2   msrv_soc_pipelinedsocwrapper_soc_tessent_sib_pb2_inst.sib 
+//        W 1:1    R 1:1   msrv_soc_pipelinedsocwrapper_soc_tessent_sib_pb1_inst.sib 
+//        W 0:0    R 0:0   msrv_soc_pipelinedsocwrapper_soc_tessent_sib_sri_inst.sib 
+// ) 
+// +  Loading: 1_1_0_1 
+// Unloading: X_X_X_X 
+// + Associated TAP transition: DRUPDATE -> DRSELECT 
+1100010X0Z10101011
+//  Scan in verification pattern to the following scan registers: 
+000000000000000000000000001000000110000
+//   msrv_soc_pipelinedsocwrapper_soc_tessent_sib_pb3_inst.sib, load value = 1 
+000000000000000000000000001000010110000
+//   msrv_soc_pipelinedsocwrapper_soc_tessent_sib_pb2_inst.sib, load value = 1 
+000000000000000000000000001000100110000
+//   msrv_soc_pipelinedsocwrapper_soc_tessent_sib_pb1_inst.sib, load value = 0 
+000000000000000000000000001000110110000
+//   msrv_soc_pipelinedsocwrapper_soc_tessent_sib_sri_inst.sib, load value = 1 
+000000000000000000000000000101110110000
+// + Associated TAP transition: DRSELECT -> DRCAPTURE 
+1110010X0Z10101011
+// + Associated TAP transition: DRCAPTURE -> DRSHIFT 
+1101010X0Z10101011
+// + Shift Cycles 
+1101011X0Z10101011
+1101010X0Z10101011
+1101011X0Z10101011
+// + Associated TAP transition: DRSHIFT -> DREXIT1 
+1100011X0Z10101011
+// + Associated TAP transition: DREXIT1 -> DRPAUSE 
+1100010X0Z10101011
+//  Scan out verification pattern from the following scan registers: 
+000000000000000000000000001001000110000
+//   msrv_soc_pipelinedsocwrapper_soc_tessent_sib_pb3_inst.sib, expected value = 1 
+000000000000000000000000001001010110000
+//   msrv_soc_pipelinedsocwrapper_soc_tessent_sib_pb2_inst.sib, expected value = 1 
+000000000000000000000000001001100110000
+//   msrv_soc_pipelinedsocwrapper_soc_tessent_sib_pb1_inst.sib, expected value = 0 
+000000000000000000000000001001110110000
+//   msrv_soc_pipelinedsocwrapper_soc_tessent_sib_sri_inst.sib, expected value = 1 
+000000000000000000000000000110010110000
+// + Read integrity pattern from scan registers 
+// + scan vector ijtag_si..ijtag_so ( 
+//        W 3:3    R 3:3   msrv_soc_pipelinedsocwrapper_soc_tessent_sib_pb3_inst.sib 
+//        W 2:2    R 2:2   msrv_soc_pipelinedsocwrapper_soc_tessent_sib_pb2_inst.sib 
+//        W 1:1    R 1:1   msrv_soc_pipelinedsocwrapper_soc_tessent_sib_pb1_inst.sib 
+//        W 0:0    R 0:0   msrv_soc_pipelinedsocwrapper_soc_tessent_sib_sri_inst.sib 
+// ) 
+// +  Loading: 0_0_0_0 
+// Unloading: 1_1_0_1 
+// + Associated TAP transition: DRPAUSE -> DREXIT2 
+1100010X0Z10101011
+// + Associated TAP transition: DREXIT2 -> DRSHIFT 
+// Simulation Cycle 20  Timestamp 2000 ns
+1101010X0Z10101011
+// + Shift Cycles 
+110101011Z10101011
+000000000000000000000000000110100110000
+110101001Z10101011
+000000000000000000000000001010000110000
+110101011Z10101011
+000000000000000000000000001010010110000
+// + Associated TAP transition: DRSHIFT -> DREXIT1 
+110001011Z10101011
+000000000000000000000000001010100110000
+// + Associated TAP transition: DREXIT1 -> DRUPDATE 
+1100110X0Z10101011
+// + Associated TAP transition: DRUPDATE -> IDLE 
+1100010X0Z10101011
+// Total count SimulationCycles:27 Timestamp:2700 ns
+// end of Vec file MSG
+000000000000000000000000000000110110000

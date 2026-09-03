@@ -1,0 +1,1667 @@
+set simulation_dict {
+  version 4
+  top_design_logical_library "work"
+  patterns {
+    ICLNetwork {
+      testbench_module_name      TB
+      current_design_view        ijtag_graybox
+      top_design_instance_name   DUT_inst
+      top_module_name_list {}
+      extra_simulation_file_list {}
+      sim_instance_name_macro SIM_INSTANCE_NAME=DUT_inst
+      simulation_macro_list {
+      }
+      lower_instances {
+        dut/core_dft {
+          module_name msrv_soc_pipelinedcorewrapper
+          view interface
+          logical_library work
+        }
+        dut/sys_ctrl {
+          module_name msrv_soc_system_controllerwrapper
+          view interface
+          logical_library work
+        }
+        dut/uncore_dft {
+          module_name msrv_soc_uncorewrapper
+          view interface
+          logical_library work
+        }
+      }
+      file_list {
+         "ICLNetwork.pdl"
+         "ICLNetwork.sv"
+         "ICLNetwork.sv.0.vec"
+         "ICLNetwork.sv.cfg"
+         "ICLNetwork.sv.po.name"
+      }
+      icl_time "Fri Aug 28 13:52:58 IST 2026"
+      sim_data_files ok
+    }
+  }
+
+  design_source_dictionary {
+    read1 {
+      format       "verilog_sv2012"
+      work_library "work"
+
+      files {
+        "../../../../../rtl/cvw.sv"
+      }
+      libraries {
+        { directory "../../../../../rtl" }
+      }
+      extensions {
+        ".vh" ".vh.gz"
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+        "-vcs_compatibility"
+      }
+      needed_before_reading_interface_view on
+      modules_dict {
+        msrv_soc_uncorewrapper {needed_in_views {full interface ijtag_graybox}}
+        msrv_soc_system_controllerwrapper {needed_in_views {full interface ijtag_graybox}}
+        msrv_soc_pipelinedcorewrapper {needed_in_views {full interface ijtag_graybox}}
+      }
+    }
+
+    read2 {
+      format       "verilog_sv2012"
+      work_library "work"
+
+      files {
+        "../../../../../rtl/msrv_soc_uncore/msrv_soc_ahb_slave.sv"
+        "../../../../../rtl/msrv_soc_uncore/msrv_soc_ahb_to_apb_bridge.sv"
+        "../../../../../rtl/msrv_soc_uncore/msrv_soc_apb_master.sv"
+        "../../../../../rtl/msrv_soc_uncore/msrv_soc_apb_slave_interface.sv"
+        "../../../../../rtl/msrv_soc_uncore/msrv_soc_aux_interface.sv"
+        "../../../../../rtl/msrv_soc_uncore/msrv_soc_clint_apb.sv"
+        "../../../../../rtl/msrv_soc_uncore/msrv_soc_gpio_apb.sv"
+        "../../../../../rtl/msrv_soc_uncore/msrv_soc_gpio_register.sv"
+        "../../../../../rtl/msrv_soc_uncore/msrv_soc_plic_apb.sv"
+        "../../../../../rtl/msrv_soc_uncore/msrv_soc_ram_ahb.sv"
+        "../../../../../rtl/msrv_soc_uncore/msrv_soc_rom_ahb.sv"
+        "../../../../../rtl/msrv_soc_uncore/msrv_soc_spi_apb.sv"
+        "../../../../../rtl/msrv_soc_uncore/msrv_soc_spi_controller.sv"
+        "../../../../../rtl/msrv_soc_uncore/msrv_soc_spi_fifo.sv"
+        "../../../../../rtl/msrv_soc_uncore/msrv_soc_synchronizer.sv"
+        "../../../../../rtl/msrv_soc_uncore/msrv_soc_uartPC16550D.sv"
+        "../../../../../rtl/msrv_soc_uncore/msrv_soc_uart_apb.sv"
+        "../../../../../rtl/msrv_soc_uncore/msrv_soc_uncore.sv"
+      }
+      libraries {
+        { directory "../../../../../rtl" }
+      }
+      extensions {
+        ".vh" ".vh.gz"
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+      }
+      modules_dict {
+        msrv_soc_uncorewrapper {needed_in_views full}
+      }
+    }
+
+    read3 {
+      format       "verilog_sv2012"
+      work_library "work"
+
+      files {
+        "../../../../../rtl/msrv_soc_mmu/msrv_soc_adrdec.sv"
+      }
+      libraries {
+        { directory "../../../../../rtl" }
+      }
+      extensions {
+        ".vh" ".vh.gz"
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+      }
+      modules_dict {
+        msrv_soc_uncorewrapper {needed_in_views full}
+      }
+    }
+
+    read4 {
+      format       "verilog_sv2012"
+      work_library "work"
+
+      files {
+        "../../../../../rtl/msrv_soc_mmu/msrv_soc_adrdecs.sv"
+      }
+      libraries {
+        { directory "../../../../../rtl" }
+      }
+      extensions {
+        ".vh" ".vh.gz"
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+      }
+      modules_dict {
+        msrv_soc_uncorewrapper {needed_in_views full}
+      }
+    }
+
+    read5 {
+      format       "verilog_sv2012"
+      work_library "work"
+
+      files {
+        "../../../../../rtl/msrv_soc_generic/msrv_soc_adder.sv"
+        "../../../../../rtl/msrv_soc_generic/msrv_soc_aplusbeq0.sv"
+        "../../../../../rtl/msrv_soc_generic/msrv_soc_arrs.sv"
+        "../../../../../rtl/msrv_soc_generic/msrv_soc_binencoder.sv"
+        "../../../../../rtl/msrv_soc_generic/msrv_soc_counter.sv"
+        "../../../../../rtl/msrv_soc_generic/msrv_soc_csa.sv"
+        "../../../../../rtl/msrv_soc_generic/msrv_soc_decoder.sv"
+        "../../../../../rtl/msrv_soc_generic/msrv_soc_lzc.sv"
+        "../../../../../rtl/msrv_soc_generic/msrv_soc_mux.sv"
+        "../../../../../rtl/msrv_soc_generic/msrv_soc_neg.sv"
+        "../../../../../rtl/msrv_soc_generic/msrv_soc_onehotdecoder.sv"
+        "../../../../../rtl/msrv_soc_generic/msrv_soc_or_rows.sv"
+        "../../../../../rtl/msrv_soc_generic/msrv_soc_priorityonehot.sv"
+        "../../../../../rtl/msrv_soc_generic/msrv_soc_prioritythermometer.sv"
+      }
+      libraries {
+        { directory "../../../../../rtl" }
+      }
+      extensions {
+        ".vh" ".vh.gz"
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+      }
+      modules_dict {
+        msrv_soc_uncorewrapper {needed_in_views full}
+        msrv_soc_system_controllerwrapper {needed_in_views full}
+        msrv_soc_pipelinedcorewrapper {needed_in_views full}
+      }
+    }
+
+    read6 {
+      format       "verilog_sv2012"
+      work_library "work"
+
+      files {
+        "../../../../../rtl/msrv_soc_generic/msrv_soc_flop/msrv_soc_flop.sv"
+        "../../../../../rtl/msrv_soc_generic/msrv_soc_flop/msrv_soc_flopen.sv"
+        "../../../../../rtl/msrv_soc_generic/msrv_soc_flop/msrv_soc_flopenl.sv"
+        "../../../../../rtl/msrv_soc_generic/msrv_soc_flop/msrv_soc_flopenr.sv"
+        "../../../../../rtl/msrv_soc_generic/msrv_soc_flop/msrv_soc_flopenrc.sv"
+        "../../../../../rtl/msrv_soc_generic/msrv_soc_flop/msrv_soc_flopr.sv"
+        "../../../../../rtl/msrv_soc_generic/msrv_soc_flop/msrv_soc_reset_synchronizer.sv"
+      }
+      libraries {
+        { directory "../../../../../rtl" }
+      }
+      extensions {
+        ".vh" ".vh.gz"
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+      }
+      modules_dict {
+        msrv_soc_uncorewrapper {needed_in_views full}
+        msrv_soc_system_controllerwrapper {needed_in_views full}
+        msrv_soc_pipelinedcorewrapper {needed_in_views full}
+      }
+    }
+
+    read7 {
+      format       "verilog_sv2012"
+      work_library "work"
+
+      files {
+        "../../../uncore/TSDB/dft_inserted_designs/msrv_soc_uncorewrapper_pass2_rtl.dft_inserted_design/modified_rtl_files/wrapper/msrv_soc_uncorewrapper.sv"
+      }
+      libraries {
+        { directory "../../../../../rtl" }
+      }
+      extensions {
+        ".vh" ".vh.gz"
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+      }
+      modules_dict {
+        msrv_soc_uncorewrapper {needed_in_views full}
+      }
+    }
+
+    read8 {
+      format       "verilog_2001"
+      work_library "work"
+
+      files {
+        "../../../uncore/TSDB/instruments/msrv_soc_uncorewrapper_pass2_rtl_cells.instrument/msrv_soc_uncorewrapper_pass2_rtl_tessent_posedge_synchronizer_reset.v"
+      }
+      libraries {
+        { directory "../../../../../rtl" }
+      }
+      extensions {
+        ".vh" ".vh.gz"
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+        "-no_overwrite"
+      }
+      modules_dict {
+        msrv_soc_uncorewrapper {needed_in_views {full ijtag_graybox}}
+      }
+    }
+
+    read9 {
+      format       "verilog_2001"
+      work_library "work"
+
+      files {
+        "../../../uncore/TSDB/instruments/msrv_soc_uncorewrapper_pass2_rtl_cells.instrument/msrv_soc_uncorewrapper_pass2_rtl_tessent_clk_inv.v"
+      }
+      libraries {
+        { directory "../../../../../rtl" }
+      }
+      extensions {
+        ".vh" ".vh.gz"
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+        "-no_overwrite"
+      }
+      modules_dict {
+        msrv_soc_uncorewrapper {needed_in_views {full ijtag_graybox}}
+      }
+    }
+
+    read10 {
+      format       "verilog_2001"
+      work_library "work"
+
+      files {
+        "../../../uncore/TSDB/instruments/msrv_soc_uncorewrapper_pass2_rtl_ijtag.instrument/msrv_soc_uncorewrapper_pass2_rtl_tessent_sib_1.v"
+        "../../../uncore/TSDB/instruments/msrv_soc_uncorewrapper_pass2_rtl_ijtag.instrument/msrv_soc_uncorewrapper_pass2_rtl_tessent_sib_2.v"
+        "../../../uncore/TSDB/instruments/msrv_soc_uncorewrapper_pass2_rtl_ijtag.instrument/msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl.v"
+      }
+      libraries {
+        { directory "../../../../../rtl" }
+      }
+      extensions {
+        ".vh" ".vh.gz"
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+        "-no_overwrite"
+      }
+      modules_dict {
+        msrv_soc_uncorewrapper {needed_in_views {full ijtag_graybox}}
+      }
+    }
+
+    read11 {
+      format       "verilog_2001"
+      work_library "work"
+
+      files {
+        "../../../uncore/TSDB/instruments/msrv_soc_uncorewrapper_pass2_rtl_occ.instrument/msrv_soc_uncorewrapper_pass2_rtl_tessent_occ.v"
+      }
+      libraries {
+        { directory "../../../../../rtl" }
+      }
+      extensions {
+        ".vh" ".vh.gz"
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+        "-no_overwrite"
+      }
+      modules_dict {
+        msrv_soc_uncorewrapper {needed_in_views {full ijtag_graybox}}
+      }
+    }
+
+    read12 {
+      format       "verilog_2001"
+      work_library "work"
+
+      files {
+        "../../../uncore/TSDB/instruments/msrv_soc_uncorewrapper_pass2_rtl_edt_lbist.instrument/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1.v"
+        "../../../uncore/TSDB/instruments/msrv_soc_uncorewrapper_pass2_rtl_edt_lbist.instrument/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_tdr.v"
+      }
+      libraries {
+        { directory "../../../../../rtl" }
+      }
+      extensions {
+        ".vh" ".vh.gz"
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+        "-no_overwrite"
+      }
+      modules_dict {
+        msrv_soc_uncorewrapper {needed_in_views {full ijtag_graybox}}
+      }
+    }
+
+    read13 {
+      format       "verilog_2001"
+      work_library "work"
+
+      files {
+        "../../../uncore/TSDB/instruments/msrv_soc_uncorewrapper_pass2_rtl_lbist.instrument/msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist.v"
+        "../../../uncore/TSDB/instruments/msrv_soc_uncorewrapper_pass2_rtl_lbist.instrument/msrv_soc_uncorewrapper_pass2_rtl_tessent_single_chain_mode_logic.v"
+      }
+      libraries {
+        { directory "../../../../../rtl" }
+      }
+      extensions {
+        ".vh" ".vh.gz"
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+        "-no_overwrite"
+      }
+      modules_dict {
+        msrv_soc_uncorewrapper {needed_in_views {full ijtag_graybox}}
+      }
+    }
+
+    read14 {
+      format       "verilog_2001"
+      work_library "tsdb_interface"
+
+      files {
+        "../../../uncore/TSDB/dft_inserted_designs/msrv_soc_uncorewrapper_pass2_rtl.dft_inserted_design/msrv_soc_uncorewrapper.v_interface"
+      }
+      libraries {
+      }
+      extensions {
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+      }
+      modules_dict {
+        msrv_soc_uncorewrapper {needed_in_views interface}
+      }
+    }
+
+    read15 {
+      format       "verilog_2001"
+      work_library "work"
+
+      files {
+        "../../../uncore/TSDB/dft_inserted_designs/msrv_soc_uncorewrapper_pass2_rtl.dft_inserted_design/ijtag_graybox/msrv_soc_uncorewrapper.v_ijtag_graybox"
+      }
+      libraries {
+      }
+      extensions {
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+        "-mfcu" "-pragma_list" ""
+      }
+      is_graybox_view 1
+      modules_dict {
+        msrv_soc_uncorewrapper {needed_in_views ijtag_graybox}
+      }
+    }
+
+    read16 {
+      format       "verilog_sv2012"
+      work_library "work"
+
+      files {
+        "../../../../../rtl/msrv_soc_mmu/msrv_soc_adrdec.sv"
+        "../../../../../rtl/msrv_soc_mmu/msrv_soc_adrdecs.sv"
+        "../../../../../rtl/msrv_soc_mmu/msrv_soc_hptw.sv"
+        "../../../../../rtl/msrv_soc_mmu/msrv_soc_mmu.sv"
+        "../../../../../rtl/msrv_soc_mmu/msrv_soc_pmachecker.sv"
+        "../../../../../rtl/msrv_soc_mmu/msrv_soc_pmpadrdec.sv"
+        "../../../../../rtl/msrv_soc_mmu/msrv_soc_pmpchecker.sv"
+      }
+      libraries {
+        { directory "../../../../../rtl" }
+      }
+      extensions {
+        ".vh" ".vh.gz"
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+      }
+      modules_dict {
+        msrv_soc_system_controllerwrapper {needed_in_views full}
+        msrv_soc_pipelinedcorewrapper {needed_in_views full}
+      }
+    }
+
+    read17 {
+      format       "verilog_sv2012"
+      work_library "work"
+
+      files {
+        "../../../../../rtl/msrv_soc_top/msrv_soc_clk_generator.sv"
+        "../../../../../rtl/msrv_soc_top/msrv_soc_design_top.sv"
+        "../../../../../rtl/msrv_soc_top/msrv_soc_glitch_free_ckt.sv"
+        "../../../../../rtl/msrv_soc_top/msrv_soc_io_interface.sv"
+        "../../../../../rtl/msrv_soc_top/msrv_soc_pipelinedcore.sv"
+        "../../../../../rtl/msrv_soc_top/msrv_soc_pipelinedsoc.sv"
+        "../../../../../rtl/msrv_soc_top/msrv_soc_pmu.sv"
+        "../../../../../rtl/msrv_soc_top/msrv_soc_register_bank.sv"
+        "../../../sys_ctr/TSDB/dft_inserted_designs/msrv_soc_system_controllerwrapper_sys_controller.dft_inserted_design/modified_rtl_files/msrv_soc_top/msrv_soc_system_controller.sv"
+        "../../../../../rtl/msrv_soc_top/soc_topwrapper.sv"
+      }
+      libraries {
+        { directory "../../../../../rtl" }
+      }
+      extensions {
+        ".vh" ".vh.gz"
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+      }
+      modules_dict {
+        msrv_soc_system_controllerwrapper {needed_in_views full}
+      }
+    }
+
+    read18 {
+      format       "verilog_sv2012"
+      work_library "work"
+
+      files {
+        "../../../sys_ctr/TSDB/dft_inserted_designs/msrv_soc_system_controllerwrapper_sys_controller.dft_inserted_design/modified_rtl_files/wrapper/msrv_soc_system_controllerwrapper.sv"
+      }
+      libraries {
+        { directory "../../../../../rtl" }
+      }
+      extensions {
+        ".vh" ".vh.gz"
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+      }
+      modules_dict {
+        msrv_soc_system_controllerwrapper {needed_in_views full}
+      }
+    }
+
+    read19 {
+      format       "verilog_2001"
+      work_library "work"
+
+      files {
+        "../../../sys_ctr/TSDB/instruments/msrv_soc_system_controllerwrapper_sys_controller_cells.instrument/msrv_soc_system_controllerwrapper_sys_controller_tessent_posedge_synchronizer_reset.v"
+      }
+      libraries {
+        { directory "../../../../../rtl" }
+      }
+      extensions {
+        ".vh" ".vh.gz"
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+        "-no_overwrite"
+      }
+      modules_dict {
+        msrv_soc_system_controllerwrapper {needed_in_views {full ijtag_graybox}}
+      }
+    }
+
+    read20 {
+      format       "verilog_2001"
+      work_library "work"
+
+      files {
+        "../../../sys_ctr/TSDB/instruments/msrv_soc_system_controllerwrapper_sys_controller_cells.instrument/msrv_soc_system_controllerwrapper_sys_controller_tessent_clk_inv.v"
+      }
+      libraries {
+        { directory "../../../../../rtl" }
+      }
+      extensions {
+        ".vh" ".vh.gz"
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+        "-no_overwrite"
+      }
+      modules_dict {
+        msrv_soc_system_controllerwrapper {needed_in_views {full ijtag_graybox}}
+      }
+    }
+
+    read21 {
+      format       "verilog_2001"
+      work_library "work"
+
+      files {
+        "../../../sys_ctr/TSDB/instruments/msrv_soc_system_controllerwrapper_sys_controller_ijtag.instrument/msrv_soc_system_controllerwrapper_sys_controller_tessent_sib_1.v"
+        "../../../sys_ctr/TSDB/instruments/msrv_soc_system_controllerwrapper_sys_controller_ijtag.instrument/msrv_soc_system_controllerwrapper_sys_controller_tessent_sib_2.v"
+        "../../../sys_ctr/TSDB/instruments/msrv_soc_system_controllerwrapper_sys_controller_ijtag.instrument/msrv_soc_system_controllerwrapper_sys_controller_tessent_tdr_sri_ctrl.v"
+      }
+      libraries {
+        { directory "../../../../../rtl" }
+      }
+      extensions {
+        ".vh" ".vh.gz"
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+        "-no_overwrite"
+      }
+      modules_dict {
+        msrv_soc_system_controllerwrapper {needed_in_views {full ijtag_graybox}}
+      }
+    }
+
+    read22 {
+      format       "verilog_2001"
+      work_library "work"
+
+      files {
+        "../../../sys_ctr/TSDB/instruments/msrv_soc_system_controllerwrapper_sys_controller_occ.instrument/msrv_soc_system_controllerwrapper_sys_controller_tessent_occ.v"
+      }
+      libraries {
+        { directory "../../../../../rtl" }
+      }
+      extensions {
+        ".vh" ".vh.gz"
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+        "-no_overwrite"
+      }
+      modules_dict {
+        msrv_soc_system_controllerwrapper {needed_in_views {full ijtag_graybox}}
+      }
+    }
+
+    read23 {
+      format       "verilog_2001"
+      work_library "work"
+
+      files {
+        "../../../sys_ctr/TSDB/instruments/msrv_soc_system_controllerwrapper_sys_controller_edt_lbist.instrument/msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_lbist_c1.v"
+        "../../../sys_ctr/TSDB/instruments/msrv_soc_system_controllerwrapper_sys_controller_edt_lbist.instrument/msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_lbist_c1_tdr.v"
+      }
+      libraries {
+        { directory "../../../../../rtl" }
+      }
+      extensions {
+        ".vh" ".vh.gz"
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+        "-no_overwrite"
+      }
+      modules_dict {
+        msrv_soc_system_controllerwrapper {needed_in_views {full ijtag_graybox}}
+      }
+    }
+
+    read24 {
+      format       "verilog_2001"
+      work_library "work"
+
+      files {
+        "../../../sys_ctr/TSDB/instruments/msrv_soc_system_controllerwrapper_sys_controller_lbist.instrument/msrv_soc_system_controllerwrapper_sys_controller_tessent_lbist.v"
+        "../../../sys_ctr/TSDB/instruments/msrv_soc_system_controllerwrapper_sys_controller_lbist.instrument/msrv_soc_system_controllerwrapper_sys_controller_tessent_single_chain_mode_logic.v"
+      }
+      libraries {
+        { directory "../../../../../rtl" }
+      }
+      extensions {
+        ".vh" ".vh.gz"
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+        "-no_overwrite"
+      }
+      modules_dict {
+        msrv_soc_system_controllerwrapper {needed_in_views {full ijtag_graybox}}
+      }
+    }
+
+    read25 {
+      format       "verilog_2001"
+      work_library "tsdb_interface"
+
+      files {
+        "../../../sys_ctr/TSDB/dft_inserted_designs/msrv_soc_system_controllerwrapper_sys_controller.dft_inserted_design/msrv_soc_system_controllerwrapper.v_interface"
+      }
+      libraries {
+      }
+      extensions {
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+      }
+      modules_dict {
+        msrv_soc_system_controllerwrapper {needed_in_views interface}
+      }
+    }
+
+    read26 {
+      format       "verilog_2001"
+      work_library "work"
+
+      files {
+        "../../../sys_ctr/TSDB/dft_inserted_designs/msrv_soc_system_controllerwrapper_sys_controller.dft_inserted_design/ijtag_graybox/msrv_soc_system_controllerwrapper.v_ijtag_graybox"
+      }
+      libraries {
+      }
+      extensions {
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+        "-mfcu" "-pragma_list" ""
+      }
+      is_graybox_view 1
+      modules_dict {
+        msrv_soc_system_controllerwrapper {needed_in_views ijtag_graybox}
+      }
+    }
+
+    read27 {
+      format       "verilog_sv2012"
+      work_library "work"
+
+      files {
+        "../../../../../rtl/msrv_soc_fpu/msrv_soc_fclassify.sv"
+        "../../../../../rtl/msrv_soc_fpu/msrv_soc_fcmp.sv"
+        "../../../../../rtl/msrv_soc_fpu/msrv_soc_fctrl.sv"
+        "../../../../../rtl/msrv_soc_fpu/msrv_soc_fcvt.sv"
+        "../../../../../rtl/msrv_soc_fpu/msrv_soc_fhazard.sv"
+        "../../../../../rtl/msrv_soc_fpu/msrv_soc_fli.sv"
+        "../../../../../rtl/msrv_soc_fpu/msrv_soc_fmtparams.sv"
+        "../../../../../rtl/msrv_soc_fpu/msrv_soc_fpu.sv"
+        "../../../../../rtl/msrv_soc_fpu/msrv_soc_fregfile.sv"
+        "../../../../../rtl/msrv_soc_fpu/msrv_soc_fround.sv"
+        "../../../../../rtl/msrv_soc_fpu/msrv_soc_fsgninj.sv"
+        "../../../../../rtl/msrv_soc_fpu/msrv_soc_packoutput.sv"
+        "../../../../../rtl/msrv_soc_fpu/msrv_soc_unpack.sv"
+        "../../../../../rtl/msrv_soc_fpu/msrv_soc_unpackinput.sv"
+      }
+      libraries {
+        { directory "../../../../../rtl" }
+      }
+      extensions {
+        ".vh" ".vh.gz"
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+      }
+      modules_dict {
+        msrv_soc_pipelinedcorewrapper {needed_in_views full}
+      }
+    }
+
+    read28 {
+      format       "verilog_sv2012"
+      work_library "work"
+
+      files {
+        "../../../../../rtl/msrv_soc_fpu/msrv_soc_fdivsqrt/msrv_soc_fdivsqrt.sv"
+        "../../../../../rtl/msrv_soc_fpu/msrv_soc_fdivsqrt/msrv_soc_fdivsqrtcycles.sv"
+        "../../../../../rtl/msrv_soc_fpu/msrv_soc_fdivsqrt/msrv_soc_fdivsqrtexpcalc.sv"
+        "../../../../../rtl/msrv_soc_fpu/msrv_soc_fdivsqrt/msrv_soc_fdivsqrtfgen2.sv"
+        "../../../../../rtl/msrv_soc_fpu/msrv_soc_fdivsqrt/msrv_soc_fdivsqrtfgen4.sv"
+        "../../../../../rtl/msrv_soc_fpu/msrv_soc_fdivsqrt/msrv_soc_fdivsqrtfsm.sv"
+        "../../../../../rtl/msrv_soc_fpu/msrv_soc_fdivsqrt/msrv_soc_fdivsqrtiter.sv"
+        "../../../../../rtl/msrv_soc_fpu/msrv_soc_fdivsqrt/msrv_soc_fdivsqrtpostproc.sv"
+        "../../../../../rtl/msrv_soc_fpu/msrv_soc_fdivsqrt/msrv_soc_fdivsqrtpreproc.sv"
+        "../../../../../rtl/msrv_soc_fpu/msrv_soc_fdivsqrt/msrv_soc_fdivsqrtstage2.sv"
+        "../../../../../rtl/msrv_soc_fpu/msrv_soc_fdivsqrt/msrv_soc_fdivsqrtstage4.sv"
+        "../../../../../rtl/msrv_soc_fpu/msrv_soc_fdivsqrt/msrv_soc_fdivsqrtuotfc2.sv"
+        "../../../../../rtl/msrv_soc_fpu/msrv_soc_fdivsqrt/msrv_soc_fdivsqrtuotfc4.sv"
+        "../../../../../rtl/msrv_soc_fpu/msrv_soc_fdivsqrt/msrv_soc_fdivsqrtuslc2.sv"
+        "../../../../../rtl/msrv_soc_fpu/msrv_soc_fdivsqrt/msrv_soc_fdivsqrtuslc4.sv"
+        "../../../../../rtl/msrv_soc_fpu/msrv_soc_fdivsqrt/msrv_soc_fdivsqrtuslc4cmp.sv"
+      }
+      libraries {
+        { directory "../../../../../rtl" }
+      }
+      extensions {
+        ".vh" ".vh.gz"
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+      }
+      modules_dict {
+        msrv_soc_pipelinedcorewrapper {needed_in_views full}
+      }
+    }
+
+    read29 {
+      format       "verilog_sv2012"
+      work_library "work"
+
+      files {
+        "../../../../../rtl/msrv_soc_fpu/msrv_soc_fma/msrv_soc_fma.sv"
+        "../../../../../rtl/msrv_soc_fpu/msrv_soc_fma/msrv_soc_fmaadd.sv"
+        "../../../../../rtl/msrv_soc_fpu/msrv_soc_fma/msrv_soc_fmaalign.sv"
+        "../../../../../rtl/msrv_soc_fpu/msrv_soc_fma/msrv_soc_fmaexpadd.sv"
+        "../../../../../rtl/msrv_soc_fpu/msrv_soc_fma/msrv_soc_fmalza.sv"
+        "../../../../../rtl/msrv_soc_fpu/msrv_soc_fma/msrv_soc_fmamult.sv"
+        "../../../../../rtl/msrv_soc_fpu/msrv_soc_fma/msrv_soc_fmasign.sv"
+      }
+      libraries {
+        { directory "../../../../../rtl" }
+      }
+      extensions {
+        ".vh" ".vh.gz"
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+      }
+      modules_dict {
+        msrv_soc_pipelinedcorewrapper {needed_in_views full}
+      }
+    }
+
+    read30 {
+      format       "verilog_sv2012"
+      work_library "work"
+
+      files {
+        "../../../../../rtl/msrv_soc_fpu/msrv_soc_postproc/msrv_soc_cvtshiftcalc.sv"
+        "../../../../../rtl/msrv_soc_fpu/msrv_soc_postproc/msrv_soc_divshiftcalc.sv"
+        "../../../../../rtl/msrv_soc_fpu/msrv_soc_postproc/msrv_soc_flags.sv"
+        "../../../../../rtl/msrv_soc_fpu/msrv_soc_postproc/msrv_soc_fmashiftcalc.sv"
+        "../../../../../rtl/msrv_soc_fpu/msrv_soc_postproc/msrv_soc_negateintres.sv"
+        "../../../../../rtl/msrv_soc_fpu/msrv_soc_postproc/msrv_soc_normshift.sv"
+        "../../../../../rtl/msrv_soc_fpu/msrv_soc_postproc/msrv_soc_postprocess.sv"
+        "../../../../../rtl/msrv_soc_fpu/msrv_soc_postproc/msrv_soc_resultsign.sv"
+        "../../../../../rtl/msrv_soc_fpu/msrv_soc_postproc/msrv_soc_round.sv"
+        "../../../../../rtl/msrv_soc_fpu/msrv_soc_postproc/msrv_soc_roundsign.sv"
+        "../../../../../rtl/msrv_soc_fpu/msrv_soc_postproc/msrv_soc_shiftcorrection.sv"
+        "../../../../../rtl/msrv_soc_fpu/msrv_soc_postproc/msrv_soc_specialcase.sv"
+      }
+      libraries {
+        { directory "../../../../../rtl" }
+      }
+      extensions {
+        ".vh" ".vh.gz"
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+      }
+      modules_dict {
+        msrv_soc_pipelinedcorewrapper {needed_in_views full}
+      }
+    }
+
+    read31 {
+      format       "verilog_sv2012"
+      work_library "work"
+
+      files {
+        "../../../../../rtl/msrv_soc_ifu/msrv_soc_decompress.sv"
+        "../../../../../rtl/msrv_soc_ifu/msrv_soc_ifu.sv"
+        "../../../../../rtl/msrv_soc_ifu/msrv_soc_irom.sv"
+        "../../../../../rtl/msrv_soc_ifu/msrv_soc_spill.sv"
+      }
+      libraries {
+        { directory "../../../../../rtl" }
+      }
+      extensions {
+        ".vh" ".vh.gz"
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+      }
+      modules_dict {
+        msrv_soc_pipelinedcorewrapper {needed_in_views full}
+      }
+    }
+
+    read32 {
+      format       "verilog_sv2012"
+      work_library "work"
+
+      files {
+        "../../../../../rtl/msrv_soc_ifu/msrv_soc_bpred/msrv_soc_RASPredictor.sv"
+        "../../../../../rtl/msrv_soc_ifu/msrv_soc_bpred/msrv_soc_bpred.sv"
+        "../../../../../rtl/msrv_soc_ifu/msrv_soc_bpred/msrv_soc_btb.sv"
+        "../../../../../rtl/msrv_soc_ifu/msrv_soc_bpred/msrv_soc_gshare.sv"
+        "../../../../../rtl/msrv_soc_ifu/msrv_soc_bpred/msrv_soc_gsharebasic.sv"
+        "../../../../../rtl/msrv_soc_ifu/msrv_soc_bpred/msrv_soc_icpred.sv"
+        "../../../../../rtl/msrv_soc_ifu/msrv_soc_bpred/msrv_soc_localaheadbp.sv"
+        "../../../../../rtl/msrv_soc_ifu/msrv_soc_bpred/msrv_soc_localbpbasic.sv"
+        "../../../../../rtl/msrv_soc_ifu/msrv_soc_bpred/msrv_soc_localrepairbp.sv"
+        "../../../../../rtl/msrv_soc_ifu/msrv_soc_bpred/msrv_soc_satCounter2.sv"
+        "../../../../../rtl/msrv_soc_ifu/msrv_soc_bpred/msrv_soc_twoBitPredictor.sv"
+      }
+      libraries {
+        { directory "../../../../../rtl" }
+      }
+      extensions {
+        ".vh" ".vh.gz"
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+      }
+      modules_dict {
+        msrv_soc_pipelinedcorewrapper {needed_in_views full}
+      }
+    }
+
+    read33 {
+      format       "verilog_sv2012"
+      work_library "work"
+
+      files {
+        "../../../../../rtl/msrv_soc_ieu/msrv_soc_alu.sv"
+        "../../../../../rtl/msrv_soc_ieu/msrv_soc_comparator.sv"
+        "../../../../../rtl/msrv_soc_ieu/msrv_soc_controller.sv"
+        "../../../../../rtl/msrv_soc_ieu/msrv_soc_datapath.sv"
+        "../../../../../rtl/msrv_soc_ieu/msrv_soc_extend.sv"
+        "../../../../../rtl/msrv_soc_ieu/msrv_soc_ieu.sv"
+        "../../../../../rtl/msrv_soc_ieu/msrv_soc_regfile.sv"
+        "../../../../../rtl/msrv_soc_ieu/msrv_soc_shifter.sv"
+      }
+      libraries {
+        { directory "../../../../../rtl" }
+      }
+      extensions {
+        ".vh" ".vh.gz"
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+      }
+      modules_dict {
+        msrv_soc_pipelinedcorewrapper {needed_in_views full}
+      }
+    }
+
+    read34 {
+      format       "verilog_sv2012"
+      work_library "work"
+
+      files {
+        "../../../../../rtl/msrv_soc_ieu/msrv_soc_bmu/msrv_soc_bitmanipalu.sv"
+        "../../../../../rtl/msrv_soc_ieu/msrv_soc_bmu/msrv_soc_bitreverse.sv"
+        "../../../../../rtl/msrv_soc_ieu/msrv_soc_bmu/msrv_soc_bmuctrl.sv"
+        "../../../../../rtl/msrv_soc_ieu/msrv_soc_bmu/msrv_soc_byteop.sv"
+        "../../../../../rtl/msrv_soc_ieu/msrv_soc_bmu/msrv_soc_clmul.sv"
+        "../../../../../rtl/msrv_soc_ieu/msrv_soc_bmu/msrv_soc_cnt.sv"
+        "../../../../../rtl/msrv_soc_ieu/msrv_soc_bmu/msrv_soc_ext.sv"
+        "../../../../../rtl/msrv_soc_ieu/msrv_soc_bmu/msrv_soc_popcnt.sv"
+        "../../../../../rtl/msrv_soc_ieu/msrv_soc_bmu/msrv_soc_zbb.sv"
+        "../../../../../rtl/msrv_soc_ieu/msrv_soc_bmu/msrv_soc_zbc.sv"
+      }
+      libraries {
+        { directory "../../../../../rtl" }
+      }
+      extensions {
+        ".vh" ".vh.gz"
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+      }
+      modules_dict {
+        msrv_soc_pipelinedcorewrapper {needed_in_views full}
+      }
+    }
+
+    read35 {
+      format       "verilog_sv2012"
+      work_library "work"
+
+      files {
+        "../../../../../rtl/msrv_soc_ieu/msrv_soc_aes/msrv_soc_aes32d.sv"
+        "../../../../../rtl/msrv_soc_ieu/msrv_soc_aes/msrv_soc_aes32e.sv"
+        "../../../../../rtl/msrv_soc_ieu/msrv_soc_aes/msrv_soc_aes64d.sv"
+        "../../../../../rtl/msrv_soc_ieu/msrv_soc_aes/msrv_soc_aes64e.sv"
+        "../../../../../rtl/msrv_soc_ieu/msrv_soc_aes/msrv_soc_aes64ks1i.sv"
+        "../../../../../rtl/msrv_soc_ieu/msrv_soc_aes/msrv_soc_aes64ks2.sv"
+        "../../../../../rtl/msrv_soc_ieu/msrv_soc_aes/msrv_soc_aesinvmixcolumns32.sv"
+        "../../../../../rtl/msrv_soc_ieu/msrv_soc_aes/msrv_soc_aesinvmixcolumns8.sv"
+        "../../../../../rtl/msrv_soc_ieu/msrv_soc_aes/msrv_soc_aesinvsbox64.sv"
+        "../../../../../rtl/msrv_soc_ieu/msrv_soc_aes/msrv_soc_aesinvsbox8.sv"
+        "../../../../../rtl/msrv_soc_ieu/msrv_soc_aes/msrv_soc_aesinvshiftrows64.sv"
+        "../../../../../rtl/msrv_soc_ieu/msrv_soc_aes/msrv_soc_aesmixcolumns32.sv"
+        "../../../../../rtl/msrv_soc_ieu/msrv_soc_aes/msrv_soc_aesmixcolumns8.sv"
+        "../../../../../rtl/msrv_soc_ieu/msrv_soc_aes/msrv_soc_aessbox32.sv"
+        "../../../../../rtl/msrv_soc_ieu/msrv_soc_aes/msrv_soc_aessbox8.sv"
+        "../../../../../rtl/msrv_soc_ieu/msrv_soc_aes/msrv_soc_aesshiftrows64.sv"
+        "../../../../../rtl/msrv_soc_ieu/msrv_soc_aes/msrv_soc_galoismultforward8.sv"
+        "../../../../../rtl/msrv_soc_ieu/msrv_soc_aes/msrv_soc_galoismultinverse8.sv"
+        "../../../../../rtl/msrv_soc_ieu/msrv_soc_aes/msrv_soc_rconlut32.sv"
+        "../../../../../rtl/msrv_soc_ieu/msrv_soc_aes/msrv_soc_rotate.sv"
+      }
+      libraries {
+        { directory "../../../../../rtl" }
+      }
+      extensions {
+        ".vh" ".vh.gz"
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+      }
+      modules_dict {
+        msrv_soc_pipelinedcorewrapper {needed_in_views full}
+      }
+    }
+
+    read36 {
+      format       "verilog_sv2012"
+      work_library "work"
+
+      files {
+        "../../../../../rtl/msrv_soc_ieu/msrv_soc_kmu/msrv_soc_packer.sv"
+        "../../../../../rtl/msrv_soc_ieu/msrv_soc_kmu/msrv_soc_zbkb.sv"
+        "../../../../../rtl/msrv_soc_ieu/msrv_soc_kmu/msrv_soc_zbkx.sv"
+        "../../../../../rtl/msrv_soc_ieu/msrv_soc_kmu/msrv_soc_zipper.sv"
+        "../../../../../rtl/msrv_soc_ieu/msrv_soc_kmu/msrv_soc_zknde32.sv"
+        "../../../../../rtl/msrv_soc_ieu/msrv_soc_kmu/msrv_soc_zknde64.sv"
+        "../../../../../rtl/msrv_soc_ieu/msrv_soc_kmu/msrv_soc_zknh32.sv"
+        "../../../../../rtl/msrv_soc_ieu/msrv_soc_kmu/msrv_soc_zknh64.sv"
+      }
+      libraries {
+        { directory "../../../../../rtl" }
+      }
+      extensions {
+        ".vh" ".vh.gz"
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+      }
+      modules_dict {
+        msrv_soc_pipelinedcorewrapper {needed_in_views full}
+      }
+    }
+
+    read37 {
+      format       "verilog_sv2012"
+      work_library "work"
+
+      files {
+        "../../../../../rtl/msrv_soc_ieu/msrv_soc_sha/msrv_soc_sha256.sv"
+        "../../../../../rtl/msrv_soc_ieu/msrv_soc_sha/msrv_soc_sha512_32.sv"
+        "../../../../../rtl/msrv_soc_ieu/msrv_soc_sha/msrv_soc_sha512_64.sv"
+      }
+      libraries {
+        { directory "../../../../../rtl" }
+      }
+      extensions {
+        ".vh" ".vh.gz"
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+      }
+      modules_dict {
+        msrv_soc_pipelinedcorewrapper {needed_in_views full}
+      }
+    }
+
+    read38 {
+      format       "verilog_sv2012"
+      work_library "work"
+
+      files {
+        "../../../../../rtl/msrv_soc_lsu/msrv_soc_align.sv"
+        "../../../../../rtl/msrv_soc_lsu/msrv_soc_amoalu.sv"
+        "../../../../../rtl/msrv_soc_lsu/msrv_soc_atomic.sv"
+        "../../../../../rtl/msrv_soc_lsu/msrv_soc_dtim.sv"
+        "../../../../../rtl/msrv_soc_lsu/msrv_soc_endianswap.sv"
+        "../../../../../rtl/msrv_soc_lsu/msrv_soc_lrsc.sv"
+        "../../../../../rtl/msrv_soc_lsu/msrv_soc_lsu.sv"
+        "../../../../../rtl/msrv_soc_lsu/msrv_soc_subwordread.sv"
+        "../../../../../rtl/msrv_soc_lsu/msrv_soc_subwordwrite.sv"
+        "../../../../../rtl/msrv_soc_lsu/msrv_soc_swbytemask.sv"
+      }
+      libraries {
+        { directory "../../../../../rtl" }
+      }
+      extensions {
+        ".vh" ".vh.gz"
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+      }
+      modules_dict {
+        msrv_soc_pipelinedcorewrapper {needed_in_views full}
+      }
+    }
+
+    read39 {
+      format       "verilog_sv2012"
+      work_library "work"
+
+      files {
+        "../../../../../rtl/msrv_soc_ebu/msrv_soc_ahbcacheinterface.sv"
+        "../../../../../rtl/msrv_soc_ebu/msrv_soc_ahbinterface.sv"
+        "../../../../../rtl/msrv_soc_ebu/msrv_soc_buscachefsm.sv"
+        "../../../../../rtl/msrv_soc_ebu/msrv_soc_busfsm.sv"
+        "../../../../../rtl/msrv_soc_ebu/msrv_soc_controllerinput.sv"
+        "../../../../../rtl/msrv_soc_ebu/msrv_soc_ebu.sv"
+        "../../../../../rtl/msrv_soc_ebu/msrv_soc_ebufsmarb.sv"
+      }
+      libraries {
+        { directory "../../../../../rtl" }
+      }
+      extensions {
+        ".vh" ".vh.gz"
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+      }
+      modules_dict {
+        msrv_soc_pipelinedcorewrapper {needed_in_views full}
+      }
+    }
+
+    read40 {
+      format       "verilog_sv2012"
+      work_library "work"
+
+      files {
+        "../../../../../rtl/msrv_soc_hazard/msrv_soc_hazard.sv"
+      }
+      libraries {
+        { directory "../../../../../rtl" }
+      }
+      extensions {
+        ".vh" ".vh.gz"
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+      }
+      modules_dict {
+        msrv_soc_pipelinedcorewrapper {needed_in_views full}
+      }
+    }
+
+    read41 {
+      format       "verilog_sv2012"
+      work_library "work"
+
+      files {
+        "../../../../../rtl/msrv_soc_privileged/msrv_soc_csr.sv"
+        "../../../../../rtl/msrv_soc_privileged/msrv_soc_csrc.sv"
+        "../../../../../rtl/msrv_soc_privileged/msrv_soc_csri.sv"
+        "../../../../../rtl/msrv_soc_privileged/msrv_soc_csrm.sv"
+        "../../../../../rtl/msrv_soc_privileged/msrv_soc_csrs.sv"
+        "../../../../../rtl/msrv_soc_privileged/msrv_soc_csrsr.sv"
+        "../../../../../rtl/msrv_soc_privileged/msrv_soc_csru.sv"
+        "../../../../../rtl/msrv_soc_privileged/msrv_soc_privdec.sv"
+        "../../../../../rtl/msrv_soc_privileged/msrv_soc_privileged.sv"
+        "../../../../../rtl/msrv_soc_privileged/msrv_soc_privmode.sv"
+        "../../../../../rtl/msrv_soc_privileged/msrv_soc_privpiperegs.sv"
+        "../../../../../rtl/msrv_soc_privileged/msrv_soc_trap.sv"
+      }
+      libraries {
+        { directory "../../../../../rtl" }
+      }
+      extensions {
+        ".vh" ".vh.gz"
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+      }
+      modules_dict {
+        msrv_soc_pipelinedcorewrapper {needed_in_views full}
+      }
+    }
+
+    read42 {
+      format       "verilog_sv2012"
+      work_library "work"
+
+      files {
+        "../../../../../rtl/msrv_soc_mdu/msrv_soc_div.sv"
+        "../../../../../rtl/msrv_soc_mdu/msrv_soc_divstep.sv"
+        "../../../../../rtl/msrv_soc_mdu/msrv_soc_mdu.sv"
+        "../../../../../rtl/msrv_soc_mdu/msrv_soc_mul.sv"
+      }
+      libraries {
+        { directory "../../../../../rtl" }
+      }
+      extensions {
+        ".vh" ".vh.gz"
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+      }
+      modules_dict {
+        msrv_soc_pipelinedcorewrapper {needed_in_views full}
+      }
+    }
+
+    read43 {
+      format       "verilog_sv2012"
+      work_library "work"
+
+      files {
+        "../../../../../rtl/msrv_soc_mmu/msrv_soc_tlb/msrv_soc_tlb.sv"
+        "../../../../../rtl/msrv_soc_mmu/msrv_soc_tlb/msrv_soc_tlbcam.sv"
+        "../../../../../rtl/msrv_soc_mmu/msrv_soc_tlb/msrv_soc_tlbcamline.sv"
+        "../../../../../rtl/msrv_soc_mmu/msrv_soc_tlb/msrv_soc_tlbcontrol.sv"
+        "../../../../../rtl/msrv_soc_mmu/msrv_soc_tlb/msrv_soc_tlblru.sv"
+        "../../../../../rtl/msrv_soc_mmu/msrv_soc_tlb/msrv_soc_tlbmixer.sv"
+        "../../../../../rtl/msrv_soc_mmu/msrv_soc_tlb/msrv_soc_tlbram.sv"
+        "../../../../../rtl/msrv_soc_mmu/msrv_soc_tlb/msrv_soc_tlbramline.sv"
+        "../../../../../rtl/msrv_soc_mmu/msrv_soc_tlb/msrv_soc_vm64check.sv"
+      }
+      libraries {
+        { directory "../../../../../rtl" }
+      }
+      extensions {
+        ".vh" ".vh.gz"
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+      }
+      modules_dict {
+        msrv_soc_pipelinedcorewrapper {needed_in_views full}
+      }
+    }
+
+    read44 {
+      format       "verilog_sv2012"
+      work_library "work"
+
+      files {
+        "../../../../../rtl/msrv_soc_top/msrv_soc_clk_generator.sv"
+        "../../../../../rtl/msrv_soc_top/msrv_soc_design_top.sv"
+        "../../../../../rtl/msrv_soc_top/msrv_soc_glitch_free_ckt.sv"
+        "../../../../../rtl/msrv_soc_top/msrv_soc_io_interface.sv"
+        "../../../../../rtl/msrv_soc_top/msrv_soc_pipelinedcore.sv"
+        "../../../../../rtl/msrv_soc_top/msrv_soc_pipelinedsoc.sv"
+        "../../../../../rtl/msrv_soc_top/msrv_soc_pmu.sv"
+        "../../../../../rtl/msrv_soc_top/msrv_soc_register_bank.sv"
+        "../../../../../rtl/msrv_soc_top/msrv_soc_system_controller.sv"
+        "../../../../../rtl/msrv_soc_top/soc_topwrapper.sv"
+      }
+      libraries {
+        { directory "../../../../../rtl" }
+      }
+      extensions {
+        ".vh" ".vh.gz"
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+      }
+      modules_dict {
+        msrv_soc_pipelinedcorewrapper {needed_in_views full}
+      }
+    }
+
+    read45 {
+      format       "verilog_sv2012"
+      work_library "work"
+
+      files {
+        "../../../core/TSDB/dft_inserted_designs/msrv_soc_pipelinedcorewrapper_pass1_rtl.dft_inserted_design/modified_rtl_files/wrapper/msrv_soc_pipelinedcorewrapper.sv"
+      }
+      libraries {
+        { directory "../../../../../rtl" }
+      }
+      extensions {
+        ".vh" ".vh.gz"
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+      }
+      modules_dict {
+        msrv_soc_pipelinedcorewrapper {needed_in_views full}
+      }
+    }
+
+    read46 {
+      format       "verilog_2001"
+      work_library "work"
+
+      files {
+        "../../../core/TSDB/instruments/msrv_soc_pipelinedcorewrapper_pass1_rtl_cells.instrument/msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_posedge_synchronizer_reset.v"
+      }
+      libraries {
+        { directory "../../../../../rtl" }
+      }
+      extensions {
+        ".vh" ".vh.gz"
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+        "-no_overwrite"
+      }
+      modules_dict {
+        msrv_soc_pipelinedcorewrapper {needed_in_views {full ijtag_graybox}}
+      }
+    }
+
+    read47 {
+      format       "verilog_2001"
+      work_library "work"
+
+      files {
+        "../../../core/TSDB/instruments/msrv_soc_pipelinedcorewrapper_pass1_rtl_cells.instrument/msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_clk_inv.v"
+      }
+      libraries {
+        { directory "../../../../../rtl" }
+      }
+      extensions {
+        ".vh" ".vh.gz"
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+        "-no_overwrite"
+      }
+      modules_dict {
+        msrv_soc_pipelinedcorewrapper {needed_in_views {full ijtag_graybox}}
+      }
+    }
+
+    read48 {
+      format       "verilog_2001"
+      work_library "work"
+
+      files {
+        "../../../core/TSDB/instruments/msrv_soc_pipelinedcorewrapper_pass1_rtl_ijtag.instrument/msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_sib_1.v"
+        "../../../core/TSDB/instruments/msrv_soc_pipelinedcorewrapper_pass1_rtl_ijtag.instrument/msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_sib_2.v"
+        "../../../core/TSDB/instruments/msrv_soc_pipelinedcorewrapper_pass1_rtl_ijtag.instrument/msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_tdr_sri_ctrl.v"
+      }
+      libraries {
+        { directory "../../../../../rtl" }
+      }
+      extensions {
+        ".vh" ".vh.gz"
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+        "-no_overwrite"
+      }
+      modules_dict {
+        msrv_soc_pipelinedcorewrapper {needed_in_views {full ijtag_graybox}}
+      }
+    }
+
+    read49 {
+      format       "verilog_2001"
+      work_library "work"
+
+      files {
+        "../../../core/TSDB/instruments/msrv_soc_pipelinedcorewrapper_pass1_rtl_occ.instrument/msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_occ.v"
+      }
+      libraries {
+        { directory "../../../../../rtl" }
+      }
+      extensions {
+        ".vh" ".vh.gz"
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+        "-no_overwrite"
+      }
+      modules_dict {
+        msrv_soc_pipelinedcorewrapper {needed_in_views {full ijtag_graybox}}
+      }
+    }
+
+    read50 {
+      format       "verilog_2001"
+      work_library "work"
+
+      files {
+        "../../../core/TSDB/instruments/msrv_soc_pipelinedcorewrapper_pass1_rtl_edt_lbist.instrument/msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_edt_lbist_c1.v"
+        "../../../core/TSDB/instruments/msrv_soc_pipelinedcorewrapper_pass1_rtl_edt_lbist.instrument/msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_edt_lbist_c1_tdr.v"
+      }
+      libraries {
+        { directory "../../../../../rtl" }
+      }
+      extensions {
+        ".vh" ".vh.gz"
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+        "-no_overwrite"
+      }
+      modules_dict {
+        msrv_soc_pipelinedcorewrapper {needed_in_views {full ijtag_graybox}}
+      }
+    }
+
+    read51 {
+      format       "verilog_2001"
+      work_library "work"
+
+      files {
+        "../../../core/TSDB/instruments/msrv_soc_pipelinedcorewrapper_pass1_rtl_lbist.instrument/msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_lbist.v"
+        "../../../core/TSDB/instruments/msrv_soc_pipelinedcorewrapper_pass1_rtl_lbist.instrument/msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_single_chain_mode_logic.v"
+      }
+      libraries {
+        { directory "../../../../../rtl" }
+      }
+      extensions {
+        ".vh" ".vh.gz"
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+        "-no_overwrite"
+      }
+      modules_dict {
+        msrv_soc_pipelinedcorewrapper {needed_in_views {full ijtag_graybox}}
+      }
+    }
+
+    read52 {
+      format       "verilog_2001"
+      work_library "tsdb_interface"
+
+      files {
+        "../../../core/TSDB/dft_inserted_designs/msrv_soc_pipelinedcorewrapper_pass1_rtl.dft_inserted_design/msrv_soc_pipelinedcorewrapper.v_interface"
+      }
+      libraries {
+      }
+      extensions {
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+      }
+      modules_dict {
+        msrv_soc_pipelinedcorewrapper {needed_in_views interface}
+      }
+    }
+
+    read53 {
+      format       "verilog_2001"
+      work_library "work"
+
+      files {
+        "../../../core/TSDB/dft_inserted_designs/msrv_soc_pipelinedcorewrapper_pass1_rtl.dft_inserted_design/ijtag_graybox/msrv_soc_pipelinedcorewrapper.v_ijtag_graybox"
+      }
+      libraries {
+      }
+      extensions {
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+        "-mfcu" "-pragma_list" ""
+      }
+      is_graybox_view 1
+      modules_dict {
+        msrv_soc_pipelinedcorewrapper {needed_in_views ijtag_graybox}
+      }
+    }
+
+    read54 {
+      format       "verilog_sv2012"
+      work_library "work"
+
+      files {
+        "../../../../../rtl/cvw.sv"
+      }
+      libraries {
+      }
+      extensions {
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+        "-vcs_compatibility"
+      }
+      needed_before_reading_interface_view on
+      modules_dict {
+        msrv_soc_pipelinedsocwrapper {needed_in_views {full interface ijtag_graybox}}
+      }
+    }
+
+    read55 {
+      format       "verilog_sv2012"
+      work_library "work"
+
+      files {
+        "../../dft_inserted_designs/msrv_soc_pipelinedsocwrapper_soc.dft_inserted_design/modified_rtl_files/rtl/msrv_soc_top/msrv_soc_pipelinedsoc.sv"
+      }
+      libraries {
+      }
+      extensions {
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+      }
+      modules_dict {
+        msrv_soc_pipelinedsocwrapper {needed_in_views full}
+      }
+    }
+
+    read56 {
+      format       "verilog_sv2012"
+      work_library "work"
+
+      files {
+        "../../dft_inserted_designs/msrv_soc_pipelinedsocwrapper_soc.dft_inserted_design/modified_rtl_files/rtl/wrapper/msrv_soc_pipelinedsocwrapper.sv"
+      }
+      libraries {
+      }
+      extensions {
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+      }
+      is_current_design 1
+      modules_dict {
+        msrv_soc_pipelinedsocwrapper {needed_in_views full}
+      }
+    }
+
+    read57 {
+      format       "verilog_2001"
+      work_library "work"
+
+      files {
+        "../../instruments/msrv_soc_pipelinedsocwrapper_soc_ijtag.instrument/msrv_soc_pipelinedsocwrapper_soc_tessent_sib_1.v"
+        "../../instruments/msrv_soc_pipelinedsocwrapper_soc_ijtag.instrument/msrv_soc_pipelinedsocwrapper_soc_tessent_sib_2.v"
+      }
+      libraries {
+      }
+      extensions {
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+        "-no_overwrite"
+      }
+      modules_dict {
+        msrv_soc_pipelinedsocwrapper {needed_in_views {full ijtag_graybox}}
+      }
+    }
+
+    read58 {
+      format       "verilog_2001"
+      work_library "work"
+
+      files {
+        "../../dft_inserted_designs/msrv_soc_pipelinedsocwrapper_soc.dft_inserted_design/ijtag_graybox/msrv_soc_pipelinedsocwrapper.v_ijtag_graybox"
+      }
+      libraries {
+      }
+      extensions {
+      }
+      defines {
+      }
+      incdirs {
+      }
+      options {
+        "-mfcu" "-pragma_list" ""
+      }
+      is_current_design 1
+      is_graybox_view 1
+      modules_dict {
+        msrv_soc_pipelinedsocwrapper {needed_in_views ijtag_graybox}
+      }
+    }
+    logical_design_library_list { work }
+  }
+}

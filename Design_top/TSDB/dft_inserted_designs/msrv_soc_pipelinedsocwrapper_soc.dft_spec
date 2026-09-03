@@ -1,0 +1,33 @@
+//-------------------------------------------------
+//  File created by: Tessent Shell
+//          Version: 2026.1
+//       Created on: Fri Aug 28 13:51:54 IST 2026
+//-------------------------------------------------
+
+
+DftSpecification(msrv_soc_pipelinedsocwrapper,soc) {
+  IjtagNetwork {
+    HostScanInterface(ijtag) {
+      Sib(sri) {
+        Attributes {
+          tessent_dft_function : scan_resource_instrument_host;
+        }
+        Sib(pb1) {
+          DesignInstance(dut/core_dft) {
+            scan_interface : ijtag;
+          }
+        }
+        Sib(pb2) {
+          DesignInstance(dut/sys_ctrl) {
+            scan_interface : ijtag;
+          }
+        }
+        Sib(pb3) {
+          DesignInstance(dut/uncore_dft) {
+            scan_interface : ijtag;
+          }
+        }
+      }
+    }
+  }
+}

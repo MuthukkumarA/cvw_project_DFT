@@ -1,0 +1,20 @@
+#-------------------------------------------------
+#  File created by: Tessent Shell
+#          Version: 2026.1
+#       Created on: Fri Aug 28 13:52:59 IST 2026
+#-------------------------------------------------
+
+ 
+set tessent_dft_info_dict {
+  version 1
+  dft_signals {}
+  modules_with_chains {}
+  modules_with_chains_not_active_by_default {}
+  non_scannable_instance_list {
+    msrv_soc_pipelinedsocwrapper_soc_tessent_sib_pb1_inst
+    msrv_soc_pipelinedsocwrapper_soc_tessent_sib_pb2_inst
+    msrv_soc_pipelinedsocwrapper_soc_tessent_sib_pb3_inst
+    msrv_soc_pipelinedsocwrapper_soc_tessent_sib_sri_inst
+  }
+  edt_instances {}
+}

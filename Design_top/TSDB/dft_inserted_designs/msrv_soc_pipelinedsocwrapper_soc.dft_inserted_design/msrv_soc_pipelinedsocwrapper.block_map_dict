@@ -1,0 +1,33 @@
+set block_map_dict {
+  original_top_block_module {msrv_soc_pipelinedsocwrapper}
+  original_top_block_id {}
+  top_block_module {msrv_soc_pipelinedsocwrapper}
+  top_block_id {soc}
+  top_block_type {physical_block}
+  child_block_modules {
+    msrv_soc_pipelinedcorewrapper {
+      block_type {physical_block}
+      block_id {pass1_rtl}
+      original_block_module {msrv_soc_pipelinedcorewrapper}
+      original_block_id {pass1_rtl}
+      block_instances dut/core_dft
+      original_block_instances dut/core_dft
+    }
+    msrv_soc_system_controllerwrapper {
+      block_type {physical_block}
+      block_id {sys_controller}
+      original_block_module {msrv_soc_system_controllerwrapper}
+      original_block_id {sys_controller}
+      block_instances dut/sys_ctrl
+      original_block_instances dut/sys_ctrl
+    }
+    msrv_soc_uncorewrapper {
+      block_type {physical_block}
+      block_id {pass2_rtl}
+      original_block_module {msrv_soc_uncorewrapper}
+      original_block_id {pass2_rtl}
+      block_instances dut/uncore_dft
+      original_block_instances dut/uncore_dft
+    }
+  }
+}

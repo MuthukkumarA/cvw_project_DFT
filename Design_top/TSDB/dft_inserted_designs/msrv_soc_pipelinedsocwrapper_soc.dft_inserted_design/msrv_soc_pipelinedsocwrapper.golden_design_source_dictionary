@@ -1,0 +1,78 @@
+#-------------------------------------------------
+#  File created by: Tessent Shell
+#          Version: 2026.1
+#       Created on: Fri Aug 28 13:52:32 IST 2026
+#-------------------------------------------------
+
+set design_source_dictionary \
+{
+  read1 {
+    format {
+      "verilog_sv2012"
+    }
+    work_library {
+      "work"
+    }
+    files {
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//cvw.sv"
+    }
+    libraries {
+    }
+    extensions {
+    }
+    defines {
+    }
+    incdirs {
+    }
+    options {
+      "-vcs_compatibility"
+    }
+    needed_before_reading_interface_view on
+  }
+  read2 {
+    format {
+      "verilog_sv2012"
+    }
+    work_library {
+      "work"
+    }
+    files {
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_top/msrv_soc_pipelinedsoc.sv"
+    }
+    libraries {
+    }
+    extensions {
+    }
+    defines {
+    }
+    incdirs {
+    }
+    options {
+    }
+  }
+  read3 {
+    format {
+      "verilog_sv2012"
+    }
+    work_library {
+      "work"
+    }
+    files {
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper/msrv_soc_pipelinedsocwrapper.sv"
+    }
+    libraries {
+    }
+    extensions {
+    }
+    defines {
+    }
+    incdirs {
+    }
+    options {
+    }
+    is_current_design on
+  }
+  logical_design_library_list {work}
+  default_logical_design_library {work}
+}
+ 

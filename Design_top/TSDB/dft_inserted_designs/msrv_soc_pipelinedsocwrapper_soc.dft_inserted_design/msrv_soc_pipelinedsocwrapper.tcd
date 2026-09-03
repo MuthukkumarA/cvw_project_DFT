@@ -1,0 +1,26 @@
+//-------------------------------------------------
+//  File created by: Tessent Shell
+//          Version: 2026.1
+//       Created on: Fri Aug 28 13:52:32 IST 2026
+//-------------------------------------------------
+
+
+Core(msrv_soc_pipelinedsocwrapper) {
+  DesignInfo {
+    design_id : soc;
+    design_level : physical_block;
+    ChildBlockModules {
+      msrv_soc_pipelinedcorewrapper : pass1_rtl;
+      msrv_soc_system_controllerwrapper : sys_controller;
+      msrv_soc_uncorewrapper : pass2_rtl;
+    }
+    Clocks {
+      Clock(clk) {
+        domain_label : clk;
+        type : async_source;
+        base_period : 10.00ns;
+        period : 10.0;
+      }
+    }
+  }
+}
