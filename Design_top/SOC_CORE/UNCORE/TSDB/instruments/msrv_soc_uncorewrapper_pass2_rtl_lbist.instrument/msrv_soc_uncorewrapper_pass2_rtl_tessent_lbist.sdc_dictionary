@@ -1,0 +1,52 @@
+#-------------------------------------------------
+#  File created by: Tessent Shell
+#          Version: 2026.1
+#       Created on: Tue Aug 18 14:51:26 IST 2026
+#-------------------------------------------------
+
+set sdc_dictionary(msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist) {
+  insertion_done 1
+  3rd_party_occ_lbist_clock 0
+  edt_clock_created_from_test_clock 1
+  shift_capture_clock_created_from_test_clock 1
+  bist_clock_gater msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_fsm_i/tessent_persistent_cell_bist_clock_gater_i/GCK
+  shift_capture_clock_gater tessent_persistent_cell_shift_capture_clock_gater_i/GCK
+  lbist_test_clock_out_gater tessent_persistent_cell_lbist_test_clock_out_gater_i/GCK
+  lbist_en tessent_persistent_cell_lbist_en_buf/Z
+  shift_clock_select1 tessent_persistent_cell_shift_clock_select_1_buf/Z
+  shift_clock_select0 tessent_persistent_cell_shift_clock_select_0_buf/Z
+  shift_clock_select_mux_ijtag_tck msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_fsm_i/tessent_persistent_cell_edt_clock_tck_mux/A
+  shift_clock_select_mux_edt_clock msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_fsm_i/tessent_persistent_cell_edt_clock_tck_mux/B
+  scan_en_mux_lbist_in tessent_persistent_cell_scan_en_out_*mux/B
+  scan_en_mux_lbist_sel tessent_persistent_cell_scan_en_out_*mux/S
+  shift_en_mux_lbist_sel tessent_persistent_cell_shift_en_out_*mux/S
+  shift_clock_select_mux_sel msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_fsm_i/tessent_persistent_cell_*_mux/S
+  shift_clock_select_mux msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_fsm_i/tessent_persistent_cell_*_mux
+  prpg_en_reg msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_fsm_i/prpg_en_reg
+  misr_en_reg msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_fsm_i/misr_en_reg
+  hwdefault_reset_reg msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_fsm_i/lbist_reset_reg
+  tdr_sync_reset_reg msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_ctrl_signals_i/lbist_sync_reset_reg
+  prpg_en_persistent_buf tessent_persistent_cell_prpg_en/Z
+  misr_en_persistent_buf tessent_persistent_cell_misr_en/Z
+  capture_en_reg msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_fsm_i/capture_en_reg
+  mcp_per_pattern_en {
+    setup 8
+    hold 7
+  }
+  mcp_sync_reset {
+    setup 3
+    hold 2
+  }
+  tdr_single_bypass_persistent_pins tessent_persistent_cell_tdr_single_bypass*_buf/Z
+  single_chain_tdr_reg tdr_single_bypass_reg*
+  single_chain_sib_reg *_sib_i/*reg
+  single_chain_tdr_sib_so_retime_reg tdr_sib_i/so_retime_reg
+  ccm_en tessent_persistent_cell_ccm_en_buf/Z
+  ccm_clock tck
+  ccm_scan_in control_chain_scan_in
+  ccm_scan_out control_chain_scan_out
+  lbist_en_reg msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_ctrl_signals_i/lbist_en_reg
+  lbist_setup_reg msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_ctrl_signals_i/lbist_setup_reg*
+  lbist_run_mode_reg msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_fsm_i/lbist_run_mode_reg
+  lbist_low_power_shift_en_reg msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_ctrl_signals_i/lbist_low_power_shift_en_reg
+}

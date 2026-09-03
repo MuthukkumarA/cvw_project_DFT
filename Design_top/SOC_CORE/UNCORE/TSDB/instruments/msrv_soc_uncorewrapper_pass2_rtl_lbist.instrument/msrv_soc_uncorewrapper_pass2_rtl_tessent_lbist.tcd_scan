@@ -1,0 +1,36 @@
+//-------------------------------------------------
+//  File created by: Tessent Shell
+//          Version: 2026.1
+//       Created on: Tue Aug 18 14:51:24 IST 2026
+//-------------------------------------------------
+
+
+Core(msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist) {
+  tessent_tool_version : 2026.1;
+  tessent_meta_version : 10;
+  Scan {
+    module_type : logic_bist;
+    allow_scan_out_retiming : 1;
+    is_hard_module : 1;
+    Mode(controller_chain_mode) {
+      traceable : 0;
+      make_active_automatically : 0;
+      ModeEn(ccm_en) {
+        active_polarity : 1'b1;
+      }
+      Clock(ijtag_tck) {
+        off_state : 1'b0;
+      }
+      ScanEn(scan_en_in) {
+        active_polarity : 1'b1;
+      }
+      ScanChain {
+        length : 107;
+        scan_in_port : ccm_scan_in;
+        scan_out_port : ccm_scan_out;
+        scan_in_clock : ijtag_tck;
+        scan_out_clock : ~ijtag_tck;
+      }
+    }
+  }
+}

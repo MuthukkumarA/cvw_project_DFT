@@ -1,0 +1,1637 @@
+//-------------------------------------------------
+//  File created by: Tessent Shell
+//          Version: 2026.1
+//       Created on: Tue Aug 18 14:51:24 IST 2026
+//-------------------------------------------------
+
+
+Core(msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1) {
+  Edt {
+    version : 4;
+    ijtag_scan_interface : on;
+    Instances {
+      edt_decompressor : msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_decompressor_i;
+      edt_compactor : msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_compactor_i;
+    }
+    Interface {
+      MasterClock(edt_clock) {
+        persistent_pin : tessent_persistent_cell_edt_clock_buf/Z;
+      }
+      Update(edt_update) {
+        persistent_pin : tessent_persistent_cell_edt_update_buf/Z;
+      }
+      Bypass(edt_bypass) {
+        persistent_pin : tessent_persistent_cell_edt_bypass_buf/Z;
+      }
+      SingleBypassChain(edt_single_bypass_chain) {
+        persistent_pin : tessent_persistent_cell_edt_single_bypass_chain_buf/Z;
+      }
+      ChannelIn(edt_channels_in[0]) {
+        persistent_pin : tessent_persistent_cell_edt_channels_in_0_buf/Z;
+      }
+      ChannelIn(edt_channels_in[1]) {
+        persistent_pin : tessent_persistent_cell_edt_channels_in_1_buf/Z;
+      }
+      ChannelOut(edt_channels_out[0]) {
+        persistent_pin : tessent_persistent_cell_edt_channels_out_0_buf/Z;
+      }
+      ChannelOut(edt_channels_out[1]) {
+        persistent_pin : tessent_persistent_cell_edt_channels_out_1_buf/Z;
+      }
+      ScanInput(edt_scan_in[0]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_0_buf/Z;
+      }
+      ScanOutput(edt_scan_out[0]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_0_buf/Z;
+      }
+      ScanInput(edt_scan_in[1]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_1_buf/Z;
+      }
+      ScanOutput(edt_scan_out[1]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_1_buf/Z;
+      }
+      ScanInput(edt_scan_in[2]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_2_buf/Z;
+      }
+      ScanOutput(edt_scan_out[2]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_2_buf/Z;
+      }
+      ScanInput(edt_scan_in[3]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_3_buf/Z;
+      }
+      ScanOutput(edt_scan_out[3]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_3_buf/Z;
+      }
+      ScanInput(edt_scan_in[4]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_4_buf/Z;
+      }
+      ScanOutput(edt_scan_out[4]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_4_buf/Z;
+      }
+      ScanInput(edt_scan_in[5]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_5_buf/Z;
+      }
+      ScanOutput(edt_scan_out[5]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_5_buf/Z;
+      }
+      ScanInput(edt_scan_in[6]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_6_buf/Z;
+      }
+      ScanOutput(edt_scan_out[6]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_6_buf/Z;
+      }
+      ScanInput(edt_scan_in[7]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_7_buf/Z;
+      }
+      ScanOutput(edt_scan_out[7]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_7_buf/Z;
+      }
+      ScanInput(edt_scan_in[8]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_8_buf/Z;
+      }
+      ScanOutput(edt_scan_out[8]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_8_buf/Z;
+      }
+      ScanInput(edt_scan_in[9]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_9_buf/Z;
+      }
+      ScanOutput(edt_scan_out[9]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_9_buf/Z;
+      }
+      ScanInput(edt_scan_in[10]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_10_buf/Z;
+      }
+      ScanOutput(edt_scan_out[10]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_10_buf/Z;
+      }
+      ScanInput(edt_scan_in[11]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_11_buf/Z;
+      }
+      ScanOutput(edt_scan_out[11]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_11_buf/Z;
+      }
+      ScanInput(edt_scan_in[12]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_12_buf/Z;
+      }
+      ScanOutput(edt_scan_out[12]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_12_buf/Z;
+      }
+      ScanInput(edt_scan_in[13]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_13_buf/Z;
+      }
+      ScanOutput(edt_scan_out[13]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_13_buf/Z;
+      }
+      ScanInput(edt_scan_in[14]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_14_buf/Z;
+      }
+      ScanOutput(edt_scan_out[14]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_14_buf/Z;
+      }
+      ScanInput(edt_scan_in[15]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_15_buf/Z;
+      }
+      ScanOutput(edt_scan_out[15]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_15_buf/Z;
+      }
+      ScanInput(edt_scan_in[16]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_16_buf/Z;
+      }
+      ScanOutput(edt_scan_out[16]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_16_buf/Z;
+      }
+      ScanInput(edt_scan_in[17]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_17_buf/Z;
+      }
+      ScanOutput(edt_scan_out[17]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_17_buf/Z;
+      }
+      ScanInput(edt_scan_in[18]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_18_buf/Z;
+      }
+      ScanOutput(edt_scan_out[18]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_18_buf/Z;
+      }
+      ScanInput(edt_scan_in[19]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_19_buf/Z;
+      }
+      ScanOutput(edt_scan_out[19]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_19_buf/Z;
+      }
+      ScanInput(edt_scan_in[20]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_20_buf/Z;
+      }
+      ScanOutput(edt_scan_out[20]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_20_buf/Z;
+      }
+      ScanInput(edt_scan_in[21]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_21_buf/Z;
+      }
+      ScanOutput(edt_scan_out[21]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_21_buf/Z;
+      }
+      ScanInput(edt_scan_in[22]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_22_buf/Z;
+      }
+      ScanOutput(edt_scan_out[22]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_22_buf/Z;
+      }
+      ScanInput(edt_scan_in[23]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_23_buf/Z;
+      }
+      ScanOutput(edt_scan_out[23]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_23_buf/Z;
+      }
+      ScanInput(edt_scan_in[24]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_24_buf/Z;
+      }
+      ScanOutput(edt_scan_out[24]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_24_buf/Z;
+      }
+      ScanInput(edt_scan_in[25]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_25_buf/Z;
+      }
+      ScanOutput(edt_scan_out[25]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_25_buf/Z;
+      }
+      ScanInput(edt_scan_in[26]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_26_buf/Z;
+      }
+      ScanOutput(edt_scan_out[26]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_26_buf/Z;
+      }
+      ScanInput(edt_scan_in[27]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_27_buf/Z;
+      }
+      ScanOutput(edt_scan_out[27]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_27_buf/Z;
+      }
+      ScanInput(edt_scan_in[28]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_28_buf/Z;
+      }
+      ScanOutput(edt_scan_out[28]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_28_buf/Z;
+      }
+      ScanInput(edt_scan_in[29]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_29_buf/Z;
+      }
+      ScanOutput(edt_scan_out[29]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_29_buf/Z;
+      }
+      ScanInput(edt_scan_in[30]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_30_buf/Z;
+      }
+      ScanOutput(edt_scan_out[30]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_30_buf/Z;
+      }
+      ScanInput(edt_scan_in[31]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_31_buf/Z;
+      }
+      ScanOutput(edt_scan_out[31]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_31_buf/Z;
+      }
+      ScanInput(edt_scan_in[32]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_32_buf/Z;
+      }
+      ScanOutput(edt_scan_out[32]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_32_buf/Z;
+      }
+      ScanInput(edt_scan_in[33]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_33_buf/Z;
+      }
+      ScanOutput(edt_scan_out[33]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_33_buf/Z;
+      }
+      ScanInput(edt_scan_in[34]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_34_buf/Z;
+      }
+      ScanOutput(edt_scan_out[34]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_34_buf/Z;
+      }
+      ScanInput(edt_scan_in[35]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_35_buf/Z;
+      }
+      ScanOutput(edt_scan_out[35]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_35_buf/Z;
+      }
+      ScanInput(edt_scan_in[36]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_36_buf/Z;
+      }
+      ScanOutput(edt_scan_out[36]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_36_buf/Z;
+      }
+      ScanInput(edt_scan_in[37]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_37_buf/Z;
+      }
+      ScanOutput(edt_scan_out[37]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_37_buf/Z;
+      }
+      ScanInput(edt_scan_in[38]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_38_buf/Z;
+      }
+      ScanOutput(edt_scan_out[38]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_38_buf/Z;
+      }
+      ScanInput(edt_scan_in[39]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_39_buf/Z;
+      }
+      ScanOutput(edt_scan_out[39]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_39_buf/Z;
+      }
+      ScanInput(edt_scan_in[40]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_40_buf/Z;
+      }
+      ScanOutput(edt_scan_out[40]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_40_buf/Z;
+      }
+      ScanInput(edt_scan_in[41]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_41_buf/Z;
+      }
+      ScanOutput(edt_scan_out[41]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_41_buf/Z;
+      }
+      ScanInput(edt_scan_in[42]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_42_buf/Z;
+      }
+      ScanOutput(edt_scan_out[42]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_42_buf/Z;
+      }
+      ScanInput(edt_scan_in[43]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_43_buf/Z;
+      }
+      ScanOutput(edt_scan_out[43]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_43_buf/Z;
+      }
+      ScanInput(edt_scan_in[44]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_44_buf/Z;
+      }
+      ScanOutput(edt_scan_out[44]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_44_buf/Z;
+      }
+      ScanInput(edt_scan_in[45]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_45_buf/Z;
+      }
+      ScanOutput(edt_scan_out[45]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_45_buf/Z;
+      }
+      ScanInput(edt_scan_in[46]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_46_buf/Z;
+      }
+      ScanOutput(edt_scan_out[46]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_46_buf/Z;
+      }
+      ScanInput(edt_scan_in[47]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_47_buf/Z;
+      }
+      ScanOutput(edt_scan_out[47]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_47_buf/Z;
+      }
+      ScanInput(edt_scan_in[48]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_48_buf/Z;
+      }
+      ScanOutput(edt_scan_out[48]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_48_buf/Z;
+      }
+      ScanInput(edt_scan_in[49]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_49_buf/Z;
+      }
+      ScanOutput(edt_scan_out[49]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_49_buf/Z;
+      }
+      ScanInput(edt_scan_in[50]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_50_buf/Z;
+      }
+      ScanOutput(edt_scan_out[50]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_50_buf/Z;
+      }
+      ScanInput(edt_scan_in[51]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_51_buf/Z;
+      }
+      ScanOutput(edt_scan_out[51]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_51_buf/Z;
+      }
+      ScanInput(edt_scan_in[52]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_52_buf/Z;
+      }
+      ScanOutput(edt_scan_out[52]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_52_buf/Z;
+      }
+      ScanInput(edt_scan_in[53]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_53_buf/Z;
+      }
+      ScanOutput(edt_scan_out[53]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_53_buf/Z;
+      }
+      ScanInput(edt_scan_in[54]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_54_buf/Z;
+      }
+      ScanOutput(edt_scan_out[54]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_54_buf/Z;
+      }
+      ScanInput(edt_scan_in[55]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_55_buf/Z;
+      }
+      ScanOutput(edt_scan_out[55]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_55_buf/Z;
+      }
+      ScanInput(edt_scan_in[56]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_56_buf/Z;
+      }
+      ScanOutput(edt_scan_out[56]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_56_buf/Z;
+      }
+      ScanInput(edt_scan_in[57]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_57_buf/Z;
+      }
+      ScanOutput(edt_scan_out[57]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_57_buf/Z;
+      }
+      ScanInput(edt_scan_in[58]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_58_buf/Z;
+      }
+      ScanOutput(edt_scan_out[58]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_58_buf/Z;
+      }
+      ScanInput(edt_scan_in[59]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_in_59_buf/Z;
+      }
+      ScanOutput(edt_scan_out[59]) {
+        persistent_pin : tessent_persistent_cell_edt_scan_out_59_buf/Z;
+      }
+    }
+    Parameters {
+      iproc : setup;
+      Bypass {
+        parameter : edt_bypass;
+        type : boolean;
+        default_value : off;
+      }
+      SingleBypassChain {
+        parameter : edt_single_bypass_chain;
+        type : boolean;
+        default_value : off;
+        read_only : true;
+        hidden : true;
+      }
+      LbistLowPowerShiftEnable {
+        parameter : lbist_low_power_shift_en;
+        type : boolean;
+        default_value : off;
+        ijtag_controllable : false;
+      }
+      TessentChainMasking {
+        parameter : tessent_chain_masking;
+        type : boolean;
+        legal_string : auto;
+        default_value : auto;
+        ijtag_controllable : false;
+      }
+      InternallyMaskedChains {
+        parameter : internally_masked_chains;
+        type : string;
+      }
+    }
+    SignalNames {
+      PrpgRegister() {
+        registers : msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_decompressor_i/lfsm_vec[30:0];
+      }
+      LowPowerShiftRegister() {
+        registers : msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_decompressor_i/lbist_lp_mask_shift_reg[30:0];
+      }
+      MisrRegister(0) {
+        registers : msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_misr_i/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_misr_reg_i/misr_0[31:0];
+      }
+      MisrRegister(1) {
+        registers : msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_misr_i/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_misr_reg_i/misr_1[31:0];
+      }
+    }
+    Misrs {
+      Misr(0) {
+        size : 32;
+        seed : 00000000;
+        taps : 5 6 32;
+        Tap(1) {
+          chains : 1;
+        }
+        Tap(2) {
+          chains : 2;
+        }
+        Tap(3) {
+          chains : 3;
+        }
+        Tap(4) {
+          chains : 4;
+        }
+        Tap(5) {
+          chains : 5;
+        }
+        Tap(6) {
+          chains : 6;
+        }
+        Tap(7) {
+          chains : 7;
+        }
+        Tap(8) {
+          chains : 8;
+        }
+        Tap(9) {
+          chains : 9;
+        }
+        Tap(10) {
+          chains : 10;
+        }
+        Tap(11) {
+          chains : 11;
+        }
+        Tap(12) {
+          chains : 12;
+        }
+        Tap(13) {
+          chains : 13;
+        }
+        Tap(14) {
+          chains : 14;
+        }
+        Tap(15) {
+          chains : 15;
+        }
+        Tap(16) {
+          chains : 16;
+        }
+        Tap(17) {
+          chains : 17;
+        }
+        Tap(18) {
+          chains : 18;
+        }
+        Tap(19) {
+          chains : 19;
+        }
+        Tap(20) {
+          chains : 20;
+        }
+        Tap(21) {
+          chains : 21;
+        }
+        Tap(22) {
+          chains : 22;
+        }
+        Tap(23) {
+          chains : 23;
+        }
+        Tap(24) {
+          chains : 24;
+        }
+        Tap(25) {
+          chains : 25;
+        }
+        Tap(26) {
+          chains : 26;
+        }
+        Tap(27) {
+          chains : 27;
+        }
+        Tap(28) {
+          chains : 28;
+        }
+        Tap(29) {
+          chains : 29;
+        }
+        Tap(30) {
+          chains : 30;
+        }
+        Tap(31) {
+          chains : 31;
+        }
+        Tap(32) {
+          chains : 32;
+        }
+      }
+      Misr(1) {
+        size : 32;
+        seed : 00000000;
+        taps : 5 6 32;
+        Tap(1) {
+          chains : 33;
+        }
+        Tap(2) {
+          chains : 34;
+        }
+        Tap(3) {
+          chains : 35;
+        }
+        Tap(4) {
+          chains : 36;
+        }
+        Tap(5) {
+          chains : 37;
+        }
+        Tap(6) {
+          chains : 38;
+        }
+        Tap(7) {
+          chains : 39;
+        }
+        Tap(8) {
+          chains : 40;
+        }
+        Tap(9) {
+          chains : 41;
+        }
+        Tap(10) {
+          chains : 42;
+        }
+        Tap(11) {
+          chains : 43;
+        }
+        Tap(12) {
+          chains : 44;
+        }
+        Tap(13) {
+          chains : 45;
+        }
+        Tap(14) {
+          chains : 46;
+        }
+        Tap(15) {
+          chains : 47;
+        }
+        Tap(16) {
+          chains : 48;
+        }
+        Tap(17) {
+          chains : 49;
+        }
+        Tap(18) {
+          chains : 50;
+        }
+        Tap(19) {
+          chains : 51;
+        }
+        Tap(20) {
+          chains : 52;
+        }
+        Tap(21) {
+          chains : 53;
+        }
+        Tap(22) {
+          chains : 54;
+        }
+        Tap(23) {
+          chains : 55;
+        }
+        Tap(24) {
+          chains : 56;
+        }
+        Tap(25) {
+          chains : 57;
+        }
+        Tap(26) {
+          chains : 58;
+        }
+        Tap(27) {
+          chains : 59;
+        }
+        Tap(28) {
+          chains : 60;
+        }
+      }
+    }
+    EdtConfigurationCommon {
+      ip_version : 8;
+      scan_chains : 60;
+      compactor_type : xpress;
+      decompressor_type : edt;
+      decompressor_size : 31;
+      initialization_cycles : 26;
+      xor_taps_per_chain : 3;
+      longest_chain_range_min : 50;
+      longest_chain_range_max : 65;
+      multiple_fanouts_from_scan_chains : off;
+      clock_edt_before_shift : off;
+      clocking : edge;
+      reset : off;
+      lockup_cells : include_bypass_lockup_in_edt_chains;
+      retime_chain_boundaries : on;
+      chain_endpoints : le_te;
+      chain_mask : on;
+      chain_mask_load_value : 0;
+      internal_static_control_tdr : off;
+      bypass_chain_change_edge : on;
+      change_edge_at_compactor_output_global : trailing;
+      BypassChains {
+        BypassChain(1) {
+          concatenated_chains : 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30;
+        }
+        BypassChain(2) {
+          concatenated_chains : 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60;
+        }
+      }
+      ScanChainClocking {
+        Chain(1) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(2) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(3) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(4) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(5) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(6) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(7) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(8) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(9) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(10) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(11) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(12) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(13) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(14) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(15) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(16) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(17) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(18) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(19) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(20) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(21) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(22) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(23) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(24) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(25) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(26) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(27) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(28) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(29) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(30) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(31) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(32) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(33) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(34) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(35) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(36) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(37) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(38) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(39) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(40) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(41) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(42) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(43) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(44) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(45) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(46) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(47) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(48) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(49) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(50) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(51) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(52) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(53) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(54) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(55) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(56) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(57) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(58) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(59) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+        Chain(60) {
+          scan_in_clock_id : 0;
+          scan_out_clock_id : 0;
+          scan_in_clock_edge : LE;
+          scan_out_clock_edge : TE;
+        }
+      }
+    }
+    LbistConfigurationCommon {
+      lbist_controller : msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist;
+      lbist_misr_compactor_pipeline_stages : 0;
+      decompressor_seed : 00000001;
+      LowPowerConfiguration {
+        min_switching_threshold_percentage : 25;
+        tabular_method : off;
+        Encoder(hold_encoder) {
+          size : 4;
+          code(0) : c0;
+          code(1) : 1;
+          code(2) : 4, 7;
+          code(3) : 1, OR, 4, 7;
+          code(4) : 10, 13, 16;
+          code(5) : 1, OR, 10, 13, 16;
+          code(6) : 4, 7, OR, 10, 13, 16;
+          code(7) : 1, OR, 4, 7, OR, 10, 13, 16;
+          code(8) : 19, 22, 25, 28;
+          code(9) : 1, OR, 19, 22, 25, 28;
+          code(10) : 4, 7, OR, 19, 22, 25, 28;
+          code(11) : 1, OR, 4, 7, OR, 19, 22, 25, 28;
+          code(12) : 10, 13, 16, OR, 19, 22, 25, 28;
+          code(13) : 1, OR, 10, 13, 16, OR, 19, 22, 25, 28;
+          code(14) : 4, 7, OR, 10, 13, 16, OR, 19, 22, 25, 28;
+          code(15) : 1, OR, 4, 7, OR, 10, 13, 16, OR, 19, 22, 25, 28;
+        }
+        Encoder(toggle_encoder) {
+          size : 4;
+          code(0) : c0;
+          code(1) : 1;
+          code(2) : 4, 7;
+          code(3) : 1, OR, 4, 7;
+          code(4) : 10, 13, 16;
+          code(5) : 1, OR, 10, 13, 16;
+          code(6) : 4, 7, OR, 10, 13, 16;
+          code(7) : 1, OR, 4, 7, OR, 10, 13, 16;
+          code(8) : 19, 22, 25, 28;
+          code(9) : 1, OR, 19, 22, 25, 28;
+          code(10) : 4, 7, OR, 19, 22, 25, 28;
+          code(11) : 1, OR, 4, 7, OR, 19, 22, 25, 28;
+          code(12) : 10, 13, 16, OR, 19, 22, 25, 28;
+          code(13) : 1, OR, 10, 13, 16, OR, 19, 22, 25, 28;
+          code(14) : 4, 7, OR, 10, 13, 16, OR, 19, 22, 25, 28;
+          code(15) : 1, OR, 4, 7, OR, 10, 13, 16, OR, 19, 22, 25, 28;
+        }
+        Encoder(switching_reg) {
+          size : 4;
+          code(0) : c0;
+          code(1) : 2;
+          code(2) : 5, 8;
+          code(3) : 2, OR, 5, 8;
+          code(4) : 11, 14, 17;
+          code(5) : 2, OR, 11, 14, 17;
+          code(6) : 5, 8, OR, 11, 14, 17;
+          code(7) : 2, OR, 5, 8, OR, 11, 14, 17;
+          code(8) : 20, 23, 26, 29;
+          code(9) : 2, OR, 20, 23, 26, 29;
+          code(10) : 5, 8, OR, 20, 23, 26, 29;
+          code(11) : 2, OR, 5, 8, OR, 20, 23, 26, 29;
+          code(12) : 11, 14, 17, OR, 20, 23, 26, 29;
+          code(13) : 2, OR, 11, 14, 17, OR, 20, 23, 26, 29;
+          code(14) : 5, 8, OR, 11, 14, 17, OR, 20, 23, 26, 29;
+          code(15) : 2, OR, 5, 8, OR, 11, 14, 17, OR, 20, 23, 26, 29;
+        }
+      }
+      HardwareDefaultValues {
+        prpg_register : 2205b3c3;
+        low_power_hold_register : 1111;
+        low_power_toggle_register : 0011;
+        low_power_switching_register : 0011;
+        low_power_mask_shift_register : 533c7da8;
+      }
+    }
+    EdtConfiguration() {
+      input_channels : 2;
+      output_channels : 2;
+      separate_control_data_channels : off;
+      compactor_pipeline_stages : 1;
+      bypass_logic : on;
+      bypass_single_chain_config : off;
+      bypass_chains : 2;
+      DecompressorConnections {
+        ChainTaps {
+          chain(1) : 13, 16, 18;
+          chain(2) : 14, 15, 27;
+          chain(3) : 2, 3, 31;
+          chain(4) : 8, 10, 30;
+          chain(5) : 4, 6, 24;
+          chain(6) : 7, 11, 26;
+          chain(7) : 1, 20, 29;
+          chain(8) : 12, 23, 25;
+          chain(9) : 9, 19, 21;
+          chain(10) : 5, 17, 22;
+          chain(11) : 3, 25, 27;
+          chain(12) : 8, 26, 31;
+          chain(13) : 5, 18, 28;
+          chain(14) : 10, 23, 24;
+          chain(15) : 21, 28, 30;
+          chain(16) : 4, 12, 16;
+          chain(17) : 11, 13, 20;
+          chain(18) : 2, 7, 14;
+          chain(19) : 1, 6, 19;
+          chain(20) : 9, 15, 17;
+          chain(21) : 2, 16, 31;
+          chain(22) : 10, 19, 26;
+          chain(23) : 5, 25, 27;
+          chain(24) : 4, 8, 20;
+          chain(25) : 6, 13, 29;
+          chain(26) : 7, 14, 24;
+          chain(27) : 3, 12, 30;
+          chain(28) : 11, 15, 17;
+          chain(29) : 1, 22, 29;
+          chain(30) : 9, 22, 28;
+          chain(31) : 11, 15, 22;
+          chain(32) : 6, 19, 28;
+          chain(33) : 24, 25, 26;
+          chain(34) : 2, 9, 14;
+          chain(35) : 5, 18, 29;
+          chain(36) : 10, 27, 31;
+          chain(37) : 1, 21, 23;
+          chain(38) : 16, 18, 20;
+          chain(39) : 7, 12, 30;
+          chain(40) : 8, 13, 23;
+          chain(41) : 3, 17, 21;
+          chain(42) : 1, 11, 17;
+          chain(43) : 5, 12, 21;
+          chain(44) : 15, 27, 30;
+          chain(45) : 4, 19, 25;
+          chain(46) : 6, 8, 24;
+          chain(47) : 9, 10, 20;
+          chain(48) : 7, 13, 26;
+          chain(49) : 3, 4, 14;
+          chain(50) : 28, 29, 31;
+          chain(51) : 2, 18, 22;
+          chain(52) : 9, 21, 27;
+          chain(53) : 14, 15, 28;
+          chain(54) : 11, 20, 26;
+          chain(55) : 1, 8, 19;
+          chain(56) : 13, 16, 17;
+          chain(57) : 2, 4, 31;
+          chain(58) : 3, 7, 18;
+          chain(59) : 5, 6, 25;
+          chain(60) : 16, 22, 29;
+        }
+        ChannelTaps {
+          channel(1) : 1, 3, 6, 30, 28, 25, 23;
+          channel(2) : 8, 10, 12, 21, 19, 17, 14;
+        }
+      }
+      CompactorConnections {
+        channel(1) : 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30;
+        channel(2) : 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60;
+      }
+      MaskRegisterBitsPerChannel {
+        channel(1) : 10;
+        channel(2) : 9;
+      }
+      MaskDecoderConnections {
+        ModeBit {
+          Coordinate {
+            channel(1) : 10;
+          }
+        }
+        OneHotDecoder(1) {
+          Coordinate {
+            channel(1) : 9;
+            channel(1) : 8;
+            channel(1) : 7;
+            channel(1) : 6;
+            channel(1) : 5;
+          }
+        }
+        OneHotDecoder(2) {
+          Coordinate {
+            channel(2) : 9;
+            channel(2) : 8;
+            channel(2) : 7;
+            channel(2) : 6;
+            channel(2) : 5;
+          }
+        }
+        xorDecoderConnection(1) {
+          Coordinate {
+            channel(1) : 9;
+            channel(1) : 8;
+            channel(1) : 7;
+          }
+        }
+        xorDecoderConnection(2) {
+          Coordinate {
+            channel(1) : 9;
+            channel(1) : 8;
+            channel(1) : 6;
+          }
+        }
+        xorDecoderConnection(3) {
+          Coordinate {
+            channel(1) : 9;
+            channel(1) : 8;
+            channel(1) : 5;
+          }
+        }
+        xorDecoderConnection(4) {
+          Coordinate {
+            channel(1) : 9;
+            channel(1) : 8;
+            channel(1) : 4;
+          }
+        }
+        xorDecoderConnection(5) {
+          Coordinate {
+            channel(1) : 9;
+            channel(1) : 8;
+            channel(1) : 3;
+          }
+        }
+        xorDecoderConnection(6) {
+          Coordinate {
+            channel(1) : 9;
+            channel(1) : 8;
+            channel(1) : 2;
+          }
+        }
+        xorDecoderConnection(7) {
+          Coordinate {
+            channel(1) : 9;
+            channel(1) : 8;
+            channel(1) : 1;
+          }
+        }
+        xorDecoderConnection(8) {
+          Coordinate {
+            channel(1) : 9;
+            channel(1) : 7;
+            channel(1) : 6;
+          }
+        }
+        xorDecoderConnection(9) {
+          Coordinate {
+            channel(1) : 8;
+            channel(1) : 7;
+            channel(1) : 6;
+          }
+        }
+        xorDecoderConnection(10) {
+          Coordinate {
+            channel(1) : 6;
+            channel(1) : 5;
+            channel(1) : 2;
+          }
+        }
+        xorDecoderConnection(11) {
+          Coordinate {
+            channel(1) : 8;
+            channel(1) : 3;
+            channel(1) : 1;
+          }
+        }
+        xorDecoderConnection(12) {
+          Coordinate {
+            channel(1) : 7;
+            channel(1) : 5;
+            channel(1) : 4;
+          }
+        }
+        xorDecoderConnection(13) {
+          Coordinate {
+            channel(1) : 4;
+            channel(1) : 3;
+            channel(1) : 2;
+          }
+        }
+        xorDecoderConnection(14) {
+          Coordinate {
+            channel(1) : 9;
+            channel(1) : 5;
+            channel(1) : 1;
+          }
+        }
+        xorDecoderConnection(15) {
+          Coordinate {
+            channel(1) : 9;
+            channel(1) : 4;
+            channel(1) : 3;
+          }
+        }
+        xorDecoderConnection(16) {
+          Coordinate {
+            channel(1) : 3;
+            channel(1) : 2;
+            channel(1) : 1;
+          }
+        }
+        xorDecoderConnection(17) {
+          Coordinate {
+            channel(1) : 7;
+            channel(1) : 4;
+            channel(1) : 2;
+          }
+        }
+        xorDecoderConnection(18) {
+          Coordinate {
+            channel(1) : 6;
+            channel(1) : 3;
+            channel(1) : 1;
+          }
+        }
+        xorDecoderConnection(19) {
+          Coordinate {
+            channel(1) : 8;
+            channel(1) : 5;
+            channel(1) : 1;
+          }
+        }
+        xorDecoderConnection(20) {
+          Coordinate {
+            channel(1) : 6;
+            channel(1) : 5;
+            channel(1) : 4;
+          }
+        }
+        xorDecoderConnection(21) {
+          Coordinate {
+            channel(1) : 7;
+            channel(1) : 3;
+            channel(1) : 2;
+          }
+        }
+        xorDecoderConnection(22) {
+          Coordinate {
+            channel(1) : 9;
+            channel(1) : 7;
+            channel(1) : 3;
+          }
+        }
+        xorDecoderConnection(23) {
+          Coordinate {
+            channel(1) : 4;
+            channel(1) : 2;
+            channel(1) : 1;
+          }
+        }
+        xorDecoderConnection(24) {
+          Coordinate {
+            channel(1) : 8;
+            channel(1) : 6;
+            channel(1) : 5;
+          }
+        }
+        xorDecoderConnection(25) {
+          Coordinate {
+            channel(1) : 7;
+            channel(1) : 6;
+            channel(1) : 2;
+          }
+        }
+        xorDecoderConnection(26) {
+          Coordinate {
+            channel(1) : 5;
+            channel(1) : 3;
+            channel(1) : 1;
+          }
+        }
+        xorDecoderConnection(27) {
+          Coordinate {
+            channel(1) : 7;
+            channel(1) : 4;
+            channel(1) : 3;
+          }
+        }
+        xorDecoderConnection(28) {
+          Coordinate {
+            channel(1) : 9;
+            channel(1) : 7;
+            channel(1) : 5;
+          }
+        }
+        xorDecoderConnection(29) {
+          Coordinate {
+            channel(1) : 9;
+            channel(1) : 4;
+            channel(1) : 2;
+          }
+        }
+        xorDecoderConnection(30) {
+          Coordinate {
+            channel(1) : 6;
+            channel(1) : 4;
+            channel(1) : 1;
+          }
+        }
+        xorDecoderConnection(31) {
+          Coordinate {
+            channel(2) : 9;
+            channel(2) : 8;
+            channel(2) : 7;
+          }
+        }
+        xorDecoderConnection(32) {
+          Coordinate {
+            channel(2) : 9;
+            channel(2) : 8;
+            channel(2) : 6;
+          }
+        }
+        xorDecoderConnection(33) {
+          Coordinate {
+            channel(2) : 9;
+            channel(2) : 8;
+            channel(2) : 5;
+          }
+        }
+        xorDecoderConnection(34) {
+          Coordinate {
+            channel(2) : 9;
+            channel(2) : 8;
+            channel(2) : 4;
+          }
+        }
+        xorDecoderConnection(35) {
+          Coordinate {
+            channel(2) : 9;
+            channel(2) : 8;
+            channel(2) : 3;
+          }
+        }
+        xorDecoderConnection(36) {
+          Coordinate {
+            channel(2) : 9;
+            channel(2) : 8;
+            channel(2) : 2;
+          }
+        }
+        xorDecoderConnection(37) {
+          Coordinate {
+            channel(2) : 9;
+            channel(2) : 8;
+            channel(2) : 1;
+          }
+        }
+        xorDecoderConnection(38) {
+          Coordinate {
+            channel(2) : 9;
+            channel(2) : 7;
+            channel(2) : 6;
+          }
+        }
+        xorDecoderConnection(39) {
+          Coordinate {
+            channel(2) : 8;
+            channel(2) : 7;
+            channel(2) : 6;
+          }
+        }
+        xorDecoderConnection(40) {
+          Coordinate {
+            channel(2) : 6;
+            channel(2) : 5;
+            channel(2) : 2;
+          }
+        }
+        xorDecoderConnection(41) {
+          Coordinate {
+            channel(2) : 8;
+            channel(2) : 3;
+            channel(2) : 1;
+          }
+        }
+        xorDecoderConnection(42) {
+          Coordinate {
+            channel(2) : 7;
+            channel(2) : 5;
+            channel(2) : 4;
+          }
+        }
+        xorDecoderConnection(43) {
+          Coordinate {
+            channel(2) : 4;
+            channel(2) : 3;
+            channel(2) : 2;
+          }
+        }
+        xorDecoderConnection(44) {
+          Coordinate {
+            channel(2) : 9;
+            channel(2) : 5;
+            channel(2) : 1;
+          }
+        }
+        xorDecoderConnection(45) {
+          Coordinate {
+            channel(2) : 9;
+            channel(2) : 4;
+            channel(2) : 3;
+          }
+        }
+        xorDecoderConnection(46) {
+          Coordinate {
+            channel(2) : 3;
+            channel(2) : 2;
+            channel(2) : 1;
+          }
+        }
+        xorDecoderConnection(47) {
+          Coordinate {
+            channel(2) : 7;
+            channel(2) : 4;
+            channel(2) : 2;
+          }
+        }
+        xorDecoderConnection(48) {
+          Coordinate {
+            channel(2) : 6;
+            channel(2) : 3;
+            channel(2) : 1;
+          }
+        }
+        xorDecoderConnection(49) {
+          Coordinate {
+            channel(2) : 8;
+            channel(2) : 5;
+            channel(2) : 1;
+          }
+        }
+        xorDecoderConnection(50) {
+          Coordinate {
+            channel(2) : 6;
+            channel(2) : 5;
+            channel(2) : 4;
+          }
+        }
+        xorDecoderConnection(51) {
+          Coordinate {
+            channel(2) : 7;
+            channel(2) : 3;
+            channel(2) : 2;
+          }
+        }
+        xorDecoderConnection(52) {
+          Coordinate {
+            channel(2) : 9;
+            channel(2) : 7;
+            channel(2) : 3;
+          }
+        }
+        xorDecoderConnection(53) {
+          Coordinate {
+            channel(2) : 4;
+            channel(2) : 2;
+            channel(2) : 1;
+          }
+        }
+        xorDecoderConnection(54) {
+          Coordinate {
+            channel(2) : 8;
+            channel(2) : 6;
+            channel(2) : 5;
+          }
+        }
+        xorDecoderConnection(55) {
+          Coordinate {
+            channel(2) : 7;
+            channel(2) : 6;
+            channel(2) : 2;
+          }
+        }
+        xorDecoderConnection(56) {
+          Coordinate {
+            channel(2) : 5;
+            channel(2) : 3;
+            channel(2) : 1;
+          }
+        }
+        xorDecoderConnection(57) {
+          Coordinate {
+            channel(2) : 7;
+            channel(2) : 4;
+            channel(2) : 3;
+          }
+        }
+        xorDecoderConnection(58) {
+          Coordinate {
+            channel(2) : 9;
+            channel(2) : 7;
+            channel(2) : 5;
+          }
+        }
+        xorDecoderConnection(59) {
+          Coordinate {
+            channel(2) : 9;
+            channel(2) : 4;
+            channel(2) : 2;
+          }
+        }
+        xorDecoderConnection(60) {
+          Coordinate {
+            channel(2) : 6;
+            channel(2) : 4;
+            channel(2) : 1;
+          }
+        }
+      }
+    }
+  }
+}

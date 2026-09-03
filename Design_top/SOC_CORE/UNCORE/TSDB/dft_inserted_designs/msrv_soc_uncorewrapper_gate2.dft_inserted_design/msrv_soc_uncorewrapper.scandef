@@ -1,0 +1,3194 @@
+#
+#    DESC: ScanDEF written by Tessent Shell on Tue Aug 18 14:52:40 IST 2026
+#
+
+VERSION 5.7 ;
+DIVIDERCHAR "/" ;
+BUSBITCHARS "[]" ;
+DESIGN msrv_soc_uncorewrapper ;
+UNITS DISTANCE MICRONS 1000 ;
+
+SCANCHAINS 76 ;
+
+- scan_segment_0
+  + START tessent_persistent_cell_0_buf_extsi3404_i Z
+  + ORDERED 
+      msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_HCLK_inst/tessent_persistent_cell_scan_in_buf ( IN A ) ( OUT Z ) ( BITS 0 )
+      msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_HCLK_inst/occ_control/ShiftReg/rtlc1_3 ( IN A ) ( OUT Z ) ( BITS 0 )
+      msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_HCLK_inst/occ_control/ShiftReg/rtlc_49 ( IN A ) ( OUT Z ) ( BITS 0 )
+      msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_HCLK_inst/occ_control/ShiftReg/rtlc_46/muxinst ( IN A ) ( OUT Z ) ( BITS 0 )
+      msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_HCLK_inst/occ_control/ShiftReg/rtlcreg_FF_2 ( IN D ) ( OUT Q )
+      msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_HCLK_inst/occ_control/ShiftReg/rtlc_41/mux4inst0 ( IN D2 ) ( OUT Z ) ( BITS 0 )
+      msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_HCLK_inst/occ_control/ShiftReg/rtlc_45/muxinst ( IN A ) ( OUT Z ) ( BITS 0 )
+      msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_HCLK_inst/occ_control/ShiftReg/rtlcreg_FF_1 ( IN D ) ( OUT Q )
+      msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_HCLK_inst/occ_control/ShiftReg/rtlc_42/muxinst ( IN A ) ( OUT Z ) ( BITS 0 )
+      msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_HCLK_inst/occ_control/ShiftReg/rtlc_44/muxinst ( IN A ) ( OUT Z ) ( BITS 0 )
+      msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_HCLK_inst/occ_control/ShiftReg/rtlcreg_FF_0 ( IN D ) ( OUT Q )
+      msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_HCLK_inst/occ_control/ShiftReg/rtlc1_2 ( IN A ) ( OUT Z ) ( BITS 0 )
+      msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_HCLK_inst/occ_control/rtlc0_20/muxinst ( IN A ) ( OUT Z ) ( BITS 0 )
+      msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_HCLK_inst/occ_control/rtlc4_0 ( IN A ) ( OUT Z ) ( BITS 0 )
+      msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_HCLK_inst/occ_control/rtlcreg_scan_out ( IN D ) ( OUT Q ) ( BITS 0 )
+      msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_HCLK_inst/tessent_persistent_cell_scan_out_buf ( IN A ) ( OUT Z ) ( BITS 0 )
+  + ORDERED 
+      msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_PCLK_inst/tessent_persistent_cell_scan_in_buf ( IN A ) ( OUT Z ) ( BITS 0 )
+      msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_PCLK_inst/occ_control/ShiftReg/rtlc1_3 ( IN A ) ( OUT Z ) ( BITS 0 )
+      msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_PCLK_inst/occ_control/ShiftReg/rtlc_49 ( IN A ) ( OUT Z ) ( BITS 0 )
+      msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_PCLK_inst/occ_control/ShiftReg/rtlc_46/muxinst ( IN A ) ( OUT Z ) ( BITS 0 )
+      msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_PCLK_inst/occ_control/ShiftReg/rtlcreg_FF_2 ( IN D ) ( OUT Q )
+      msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_PCLK_inst/occ_control/ShiftReg/rtlc_41/mux4inst0 ( IN D2 ) ( OUT Z ) ( BITS 0 )
+      msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_PCLK_inst/occ_control/ShiftReg/rtlc_45/muxinst ( IN A ) ( OUT Z ) ( BITS 0 )
+      msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_PCLK_inst/occ_control/ShiftReg/rtlcreg_FF_1 ( IN D ) ( OUT Q )
+      msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_PCLK_inst/occ_control/ShiftReg/rtlc_42/muxinst ( IN A ) ( OUT Z ) ( BITS 0 )
+      msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_PCLK_inst/occ_control/ShiftReg/rtlc_44/muxinst ( IN A ) ( OUT Z ) ( BITS 0 )
+      msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_PCLK_inst/occ_control/ShiftReg/rtlcreg_FF_0 ( IN D ) ( OUT Q )
+      msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_PCLK_inst/occ_control/ShiftReg/rtlc1_2 ( IN A ) ( OUT Z ) ( BITS 0 )
+      msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_PCLK_inst/occ_control/rtlc0_20/muxinst ( IN A ) ( OUT Z ) ( BITS 0 )
+      msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_PCLK_inst/occ_control/rtlc4_0 ( IN A ) ( OUT Z ) ( BITS 0 )
+      msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_PCLK_inst/occ_control/rtlcreg_scan_out ( IN D ) ( OUT Q ) ( BITS 0 )
+      msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_PCLK_inst/tessent_persistent_cell_scan_out_buf ( IN A ) ( OUT Z ) ( BITS 0 )
+  + STOP dut/\gpio.gpio /GPIO_REGISTER/tessent_persistent_cell_0_mux_stm1s3_fsffp_clkc79_lo0l19_extsi3465_sea0__intno3_i B
+  # Partition constraints - clock domain: msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_inst/shift_capture_clock_out_pport(+%)_msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_inst/shift_capture_clock_out_pport(-%); chain type: core; scan mode(s): int_mode
+  + PARTITION partition_1  MAXBITS 6 ;
+
+
+- scan_segment_1
+  + START dut/\gpio.gpio /GPIO_REGISTER/tessent_persistent_cell_0_mux_stm1s3_fsffp_clkc79_lo0l19_extsi3465_sea0__intno3_i Z
+  + FLOATING 
+      ts_0_dihw_3285smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so915__si915_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_ints_17 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so916__si916_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_ints_16 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so917__si917_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_ints_15 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so918__si918_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_ints_14 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so919__si919_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_ints_13 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so920__si920_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_ints_12 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so921__si921_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_ints_11 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so922__si922_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_ints_10 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so923__si923_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_ints_9 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so924__si924_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_ints_8 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so925__si925_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_ints_7 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so926__si926_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_ints_6 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so927__si927_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_ints_5 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so928__si928_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_ints_4 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so929__si929_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_ints_3 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so930__si930_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_ints_2 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so931__si931_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_ints_1 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so932__si932_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_ints_0 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\uartgen.uart /uartPC/ts_0_sihw_mux_sea0_not_so942__si942_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\uartgen.uart /uartPC/rtlcreg_SINd ( IN SI ) ( OUT Q )
+  + STOP tessent_persistent_cell_0_buf_extso3286_i A
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: input_wrapper; scan mode(s): int_mode ext_mode
+  + PARTITION partition_2  MAXBITS 20 ;
+
+
+- scan_segment_2
+  + START ts_0_lockup_latchn_clkc4_intno3286_i Q
+  + FLOATING 
+      dut/\spi.spi /controller/rtlcreg_EndOfFrame ( IN SI ) ( OUT Q )
+      dut/\spi.spi /controller/rtlcreg_SampleEdge ( IN SI ) ( OUT Q )
+      dut/\spi.spi /controller/rtlcreg_ShiftEdge ( IN SI ) ( OUT Q )
+  + STOP dut/\spi.spi /controller/tessent_persistent_cell_0_buf_extso1584_i A
+  # Partition constraints - clock domain: inferred_occ_clock0(-); chain type: core; scan mode(s): int_mode
+  + PARTITION partition_3  MAXBITS 3 ;
+
+
+- scan_segment_3
+  + START dut/\clint.clint /tessent_persistent_cell_0_buf_extsi3405_i Z
+  + FLOATING 
+      dut/\clint.clint /rtlcreg_PRDATA_63 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_62 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_61 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_60 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_59 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_58 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_57 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_56 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_55 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_54 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_53 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_52 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_51 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_50 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_49 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_48 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_47 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_46 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_45 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_44 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_43 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_42 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_41 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_40 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_39 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_38 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_37 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_36 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_35 ( IN SI ) ( OUT Q )
+  + STOP dut/\clint.clint /ts_0_lockup_latchn_clkc7_intno446_i D
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: core; scan mode(s): int_mode
+  + PARTITION partition_4  MAXBITS 29 ;
+
+
+- scan_segment_4
+  + START dut/\clint.clint /tessent_persistent_cell_0_buf_extsi3406_i Z
+  + FLOATING 
+      dut/\clint.clint /rtlcreg_PRDATA_34 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_33 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_32 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_31 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_30 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_29 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_28 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_27 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_26 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_25 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_24 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_23 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_22 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_21 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_20 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_19 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_18 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_17 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_16 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_15 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_14 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_13 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_12 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_11 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_10 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_9 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_8 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_7 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_6 ( IN SI ) ( OUT Q )
+  + STOP dut/\clint.clint /ts_0_lockup_latchn_clkc8_intno475_i D
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: core; scan mode(s): int_mode
+  + PARTITION partition_4  MAXBITS 29 ;
+
+
+- scan_segment_5
+  + START dut/\clint.clint /tessent_persistent_cell_0_buf_extsi3407_i Z
+  + FLOATING 
+      dut/\clint.clint /rtlcreg_PRDATA_5 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_4 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_3 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_2 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_1 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_PRDATA_0 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_63 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_62 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_61 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_60 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_59 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_58 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_57 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_56 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_55 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_54 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_53 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_52 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_51 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_50 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_49 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_48 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_47 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_46 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_45 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_44 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_43 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_42 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_41 ( IN SI ) ( OUT Q )
+  + STOP dut/\clint.clint /ts_0_lockup_latchn_clkc9_intno504_i D
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: core; scan mode(s): int_mode
+  + PARTITION partition_4  MAXBITS 29 ;
+
+
+- scan_segment_6
+  + START dut/\clint.clint /tessent_persistent_cell_0_buf_extsi3408_i Z
+  + FLOATING 
+      dut/\clint.clint /rtlcreg_MTIMECMP_40 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_39 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_38 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_37 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_36 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_35 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_34 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_33 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_32 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_31 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_30 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_29 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_28 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_27 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_26 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_25 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_24 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_23 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_22 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_21 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_20 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_19 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_18 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_17 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_16 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_15 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_14 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_13 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_12 ( IN SI ) ( OUT Q )
+  + STOP dut/\clint.clint /ts_0_lockup_latchn_clkc10_intno533_i D
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: core; scan mode(s): int_mode
+  + PARTITION partition_4  MAXBITS 29 ;
+
+
+- scan_segment_7
+  + START dut/\clint.clint /tessent_persistent_cell_0_buf_extsi3409_i Z
+  + FLOATING 
+      dut/\clint.clint /rtlcreg_MTIMECMP_11 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_10 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_9 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_8 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_7 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_6 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_5 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_4 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_3 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_2 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_1 ( IN SI ) ( OUT Q )
+      dut/\clint.clint /rtlcreg_MTIMECMP_0 ( IN SI ) ( OUT Q )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_ctrl_1 ( IN SI ) ( OUT Q )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_gpio_dat_o_31 ( IN SI ) ( OUT Q )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_gpio_dat_o_30 ( IN SI ) ( OUT Q )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_gpio_dat_o_29 ( IN SI ) ( OUT Q )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_gpio_dat_o_28 ( IN SI ) ( OUT Q )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_gpio_dat_o_27 ( IN SI ) ( OUT Q )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_gpio_dat_o_26 ( IN SI ) ( OUT Q )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_gpio_dat_o_25 ( IN SI ) ( OUT Q )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_gpio_dat_o_24 ( IN SI ) ( OUT Q )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_gpio_dat_o_23 ( IN SI ) ( OUT Q )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_gpio_dat_o_22 ( IN SI ) ( OUT Q )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_gpio_dat_o_21 ( IN SI ) ( OUT Q )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_gpio_dat_o_20 ( IN SI ) ( OUT Q )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_gpio_dat_o_19 ( IN SI ) ( OUT Q )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_gpio_dat_o_18 ( IN SI ) ( OUT Q )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_gpio_dat_o_17 ( IN SI ) ( OUT Q )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_gpio_dat_o_16 ( IN SI ) ( OUT Q )
+  + STOP dut/\gpio.gpio /GPIO_REGISTER/ts_0_lockup_latchn_clkc11_intno884_i D
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: core; scan mode(s): int_mode
+  + PARTITION partition_4  MAXBITS 29 ;
+
+
+- scan_segment_8
+  + START dut/\gpio.gpio /GPIO_REGISTER/tessent_persistent_cell_0_buf_extsi3410_i Z
+  + FLOATING 
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_gpio_dat_o_15 ( IN SI ) ( OUT Q )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_gpio_dat_o_14 ( IN SI ) ( OUT Q )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_gpio_dat_o_13 ( IN SI ) ( OUT Q )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_gpio_dat_o_12 ( IN SI ) ( OUT Q )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_gpio_dat_o_11 ( IN SI ) ( OUT Q )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_gpio_dat_o_10 ( IN SI ) ( OUT Q )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_gpio_dat_o_9 ( IN SI ) ( OUT Q )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_gpio_dat_o_8 ( IN SI ) ( OUT Q )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_gpio_dat_o_7 ( IN SI ) ( OUT Q )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_gpio_dat_o_6 ( IN SI ) ( OUT Q )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_gpio_dat_o_5 ( IN SI ) ( OUT Q )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_gpio_dat_o_4 ( IN SI ) ( OUT Q )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_gpio_dat_o_3 ( IN SI ) ( OUT Q )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_gpio_dat_o_2 ( IN SI ) ( OUT Q )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_gpio_dat_o_1 ( IN SI ) ( OUT Q )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_gpio_dat_o_0 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_Dout_31 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_Dout_30 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_Dout_29 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_Dout_28 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_Dout_27 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_Dout_26 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_Dout_25 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_Dout_24 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_Dout_23 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_Dout_22 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_Dout_21 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_Dout_20 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_Dout_19 ( IN SI ) ( OUT Q )
+  + STOP dut/\plic.plic /ts_0_lockup_latchn_clkc12_intno623_i D
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: core; scan mode(s): int_mode
+  + PARTITION partition_4  MAXBITS 29 ;
+
+
+- scan_segment_9
+  + START dut/\plic.plic /tessent_persistent_cell_0_buf_extsi3411_i Z
+  + FLOATING 
+      dut/\plic.plic /rtlcreg_Dout_18 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_Dout_17 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_Dout_16 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_Dout_15 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_Dout_14 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_Dout_13 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_Dout_12 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_Dout_11 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_Dout_10 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_Dout_9 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_Dout_8 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_Dout_7 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_Dout_6 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_Dout_5 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_Dout_4 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_Dout_3 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_Dout_2 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_Dout_1 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_Dout_0 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intInProgress_10 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intInProgress_9 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intInProgress_8 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intInProgress_7 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intInProgress_6 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intInProgress_5 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intInProgress_4 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intInProgress_3 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intInProgress_2 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intInProgress_1 ( IN SI ) ( OUT Q )
+  + STOP dut/\plic.plic /ts_0_lockup_latchn_clkc13_intno652_i D
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: core; scan mode(s): int_mode
+  + PARTITION partition_4  MAXBITS 29 ;
+
+
+- scan_segment_10
+  + START dut/\plic.plic /tessent_persistent_cell_0_buf_extsi3412_i Z
+  + FLOATING 
+      dut/\plic.plic /rtlcreg_intThreshold_5 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intThreshold_4 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intThreshold_3 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intThreshold_2 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intThreshold_1 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intThreshold_0 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intEn_19 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intEn_18 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intEn_17 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intEn_16 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intEn_15 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intEn_14 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intEn_13 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intEn_12 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intEn_11 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intEn_10 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intEn_9 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intEn_8 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intEn_7 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intEn_6 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intEn_5 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intEn_4 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intEn_3 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intEn_2 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intEn_1 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intEn_0 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intPriority_29 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intPriority_28 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intPriority_27 ( IN SI ) ( OUT Q )
+  + STOP dut/\plic.plic /ts_0_lockup_latchn_clkc14_intno681_i D
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: core; scan mode(s): int_mode
+  + PARTITION partition_4  MAXBITS 29 ;
+
+
+- scan_segment_11
+  + START dut/\plic.plic /tessent_persistent_cell_0_buf_extsi3413_i Z
+  + FLOATING 
+      dut/\plic.plic /rtlcreg_intPriority_26 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intPriority_25 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intPriority_24 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intPriority_23 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intPriority_22 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intPriority_21 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intPriority_20 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intPriority_19 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intPriority_18 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intPriority_17 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intPriority_16 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intPriority_15 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intPriority_14 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intPriority_13 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intPriority_12 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intPriority_11 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intPriority_10 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intPriority_9 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intPriority_8 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intPriority_7 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intPriority_6 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intPriority_5 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intPriority_4 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intPriority_3 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intPriority_2 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intPriority_1 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /rtlcreg_intPriority_0 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /intPendingFlop/rtlcreg_q_9 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /intPendingFlop/rtlcreg_q_8 ( IN SI ) ( OUT Q )
+  + STOP dut/\plic.plic /intPendingFlop/ts_0_lockup_latchn_clkc15_intno710_i D
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: core; scan mode(s): int_mode
+  + PARTITION partition_4  MAXBITS 29 ;
+
+
+- scan_segment_12
+  + START dut/\plic.plic /intPendingFlop/tessent_persistent_cell_0_buf_extsi3414_i Z
+  + FLOATING 
+      dut/\plic.plic /intPendingFlop/rtlcreg_q_7 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /intPendingFlop/rtlcreg_q_6 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /intPendingFlop/rtlcreg_q_5 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /intPendingFlop/rtlcreg_q_4 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /intPendingFlop/rtlcreg_q_3 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /intPendingFlop/rtlcreg_q_2 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /intPendingFlop/rtlcreg_q_1 ( IN SI ) ( OUT Q )
+      dut/\plic.plic /intPendingFlop/rtlcreg_q_0 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Dout_31 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Dout_30 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Dout_29 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Dout_28 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Dout_27 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Dout_26 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Dout_25 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Dout_24 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Dout_23 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Dout_22 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Dout_21 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Dout_20 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Dout_19 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Dout_18 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Dout_17 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Dout_16 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Dout_15 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Dout_14 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Dout_13 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Dout_12 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Dout_11 ( IN SI ) ( OUT Q )
+  + STOP dut/\spi.spi /ts_0_lockup_latchn_clkc16_intno1446_i D
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: core; scan mode(s): int_mode
+  + PARTITION partition_4  MAXBITS 29 ;
+
+
+- scan_segment_13
+  + START dut/\spi.spi /tessent_persistent_cell_0_buf_extsi3415_i Z
+  + FLOATING 
+      dut/\spi.spi /rtlcreg_Dout_10 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Dout_9 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Dout_8 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Dout_7 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Dout_6 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Dout_5 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Dout_4 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Dout_3 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Dout_2 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Dout_1 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Dout_0 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_InterruptPending_1 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_InterruptPending_0 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_InterruptEnable_1 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_InterruptEnable_0 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_ReceiveWatermark_2 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_ReceiveWatermark_1 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_ReceiveWatermark_0 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_TransmitWatermark_2 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_TransmitWatermark_1 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_TransmitWatermark_0 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_TransmitData_8 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_TransmitData_7 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_TransmitData_6 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_TransmitData_5 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_TransmitData_4 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_TransmitData_3 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_TransmitData_2 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_TransmitData_1 ( IN SI ) ( OUT Q )
+  + STOP dut/\spi.spi /ts_0_lockup_latchn_clkc17_intno1475_i D
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: core; scan mode(s): int_mode
+  + PARTITION partition_4  MAXBITS 29 ;
+
+
+- scan_segment_14
+  + START dut/\spi.spi /tessent_persistent_cell_0_buf_extsi3416_i Z
+  + FLOATING 
+      dut/\spi.spi /rtlcreg_TransmitData_0 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Format_4 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Format_3 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Format_2 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Format_1 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Format_0 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Delay1_15 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Delay1_14 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Delay1_13 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Delay1_12 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Delay1_11 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Delay1_10 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Delay1_9 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Delay1_8 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Delay1_7 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Delay1_6 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Delay1_5 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Delay1_4 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Delay1_3 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Delay1_2 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Delay1_1 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Delay1_0 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Delay0_15 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Delay0_14 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Delay0_13 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Delay0_12 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Delay0_11 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Delay0_10 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Delay0_9 ( IN SI ) ( OUT Q )
+  + STOP dut/\spi.spi /ts_0_lockup_latchn_clkc18_intno1504_i D
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: core; scan mode(s): int_mode
+  + PARTITION partition_4  MAXBITS 29 ;
+
+
+- scan_segment_15
+  + START dut/\spi.spi /tessent_persistent_cell_0_buf_extsi3417_i Z
+  + FLOATING 
+      dut/\spi.spi /rtlcreg_Delay0_8 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Delay0_7 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Delay0_6 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Delay0_5 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Delay0_4 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Delay0_3 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Delay0_2 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Delay0_1 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_Delay0_0 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_ChipSelectMode_1 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_ChipSelectMode_0 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_ChipSelectDef_3 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_ChipSelectDef_2 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_ChipSelectDef_1 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_ChipSelectDef_0 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_ChipSelectID_1 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_ChipSelectID_0 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_SckMode_1 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_SckMode_0 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_SckDiv_11 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_SckDiv_10 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_SckDiv_9 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_SckDiv_8 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_SckDiv_7 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_SckDiv_6 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_SckDiv_5 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_SckDiv_4 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_SckDiv_3 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_SckDiv_2 ( IN SI ) ( OUT Q )
+  + STOP dut/\spi.spi /ts_0_lockup_latchn_clkc19_intno1533_i D
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: core; scan mode(s): int_mode
+  + PARTITION partition_4  MAXBITS 29 ;
+
+
+- scan_segment_16
+  + START dut/\spi.spi /tessent_persistent_cell_0_buf_extsi3418_i Z
+  + FLOATING 
+      dut/\spi.spi /rtlcreg_SckDiv_1 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_SckDiv_0 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_TransmitRegLoaded ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_CurrState_1 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_CurrState_0 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_TransmitStartD ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_TransmitReg_7 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_TransmitReg_6 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_TransmitReg_5 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_TransmitReg_4 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_TransmitReg_3 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_TransmitReg_2 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_TransmitReg_1 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_TransmitReg_0 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_ReceiveShiftReg_7 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_ReceiveShiftReg_6 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_ReceiveShiftReg_5 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_ReceiveShiftReg_4 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_ReceiveShiftReg_3 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_ReceiveShiftReg_2 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_ReceiveShiftReg_1 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rtlcreg_ReceiveShiftReg_0 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /controller/rtlcreg_DelayCounter_7 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /controller/rtlcreg_DelayCounter_6 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /controller/rtlcreg_DelayCounter_5 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /controller/rtlcreg_DelayCounter_4 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /controller/rtlcreg_DelayCounter_3 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /controller/rtlcreg_DelayCounter_2 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /controller/rtlcreg_DelayCounter_1 ( IN SI ) ( OUT Q )
+  + STOP dut/\spi.spi /controller/ts_0_lockup_latchn_clkc20_intno1562_i D
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: core; scan mode(s): int_mode
+  + PARTITION partition_4  MAXBITS 29 ;
+
+
+- scan_segment_17
+  + START dut/\spi.spi /controller/tessent_persistent_cell_0_buf_extsi3419_i Z
+  + FLOATING 
+      dut/\spi.spi /controller/rtlcreg_DelayCounter_0 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /controller/rtlcreg_BitNum_3 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /controller/rtlcreg_BitNum_2 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /controller/rtlcreg_BitNum_1 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /controller/rtlcreg_BitNum_0 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /controller/rtlcreg_SCK ( IN SI ) ( OUT Q )
+      dut/\spi.spi /controller/rtlcreg_SPICLK ( IN SI ) ( OUT Q )
+      dut/\spi.spi /controller/rtlcreg_DivCounter_11 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /controller/rtlcreg_DivCounter_10 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /controller/rtlcreg_DivCounter_9 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /controller/rtlcreg_DivCounter_8 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /controller/rtlcreg_DivCounter_7 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /controller/rtlcreg_DivCounter_6 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /controller/rtlcreg_DivCounter_5 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /controller/rtlcreg_DivCounter_4 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /controller/rtlcreg_DivCounter_3 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /controller/rtlcreg_DivCounter_2 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /controller/rtlcreg_DivCounter_1 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /controller/rtlcreg_DivCounter_0 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /controller/rtlcreg_CurrState_2 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /controller/rtlcreg_CurrState_1 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /controller/rtlcreg_CurrState_0 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_rempty ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_wfull ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_wptr_3 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_wptr_2 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_wptr_1 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_wptr_0 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_rptr_3 ( IN SI ) ( OUT Q )
+  + STOP dut/\spi.spi /rxFIFO/ts_0_lockup_latchn_clkc21_intno1672_i D
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: core; scan mode(s): int_mode
+  + PARTITION partition_4  MAXBITS 29 ;
+
+
+- scan_segment_18
+  + START dut/\spi.spi /rxFIFO/tessent_persistent_cell_0_buf_extsi3420_i Z
+  + FLOATING 
+      dut/\spi.spi /rxFIFO/rtlcreg_rptr_2 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_rptr_1 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_rptr_0 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_63 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_62 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_61 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_60 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_59 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_58 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_57 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_56 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_55 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_54 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_53 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_52 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_51 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_50 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_49 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_48 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_47 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_46 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_45 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_44 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_43 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_42 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_41 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_40 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_39 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_38 ( IN SI ) ( OUT Q )
+  + STOP dut/\spi.spi /rxFIFO/ts_0_lockup_latchn_clkc22_intno1701_i D
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: core; scan mode(s): int_mode
+  + PARTITION partition_4  MAXBITS 29 ;
+
+
+- scan_segment_19
+  + START dut/\spi.spi /rxFIFO/tessent_persistent_cell_0_buf_extsi3421_i Z
+  + FLOATING 
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_37 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_36 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_35 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_34 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_33 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_32 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_31 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_30 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_29 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_28 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_27 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_26 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_25 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_24 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_23 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_22 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_21 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_20 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_19 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_18 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_17 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_16 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_15 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_14 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_13 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_12 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_11 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_10 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_9 ( IN SI ) ( OUT Q )
+  + STOP dut/\spi.spi /rxFIFO/ts_0_lockup_latchn_clkc23_intno1730_i D
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: core; scan mode(s): int_mode
+  + PARTITION partition_4  MAXBITS 29 ;
+
+
+- scan_segment_20
+  + START dut/\spi.spi /rxFIFO/tessent_persistent_cell_0_buf_extsi3422_i Z
+  + FLOATING 
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_8 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_7 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_6 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_5 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_4 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_3 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_2 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_1 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxFIFO/rtlcreg_mem_0 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxfiforincreg/rtlcreg_q_0 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /rxfifowincreg/rtlcreg_q_0 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_rempty ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_wfull ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_wptr_3 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_wptr_2 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_wptr_1 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_wptr_0 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_rptr_3 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_rptr_2 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_rptr_1 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_rptr_0 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_63 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_62 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_61 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_60 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_59 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_58 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_57 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_56 ( IN SI ) ( OUT Q )
+  + STOP dut/\spi.spi /txFIFO/ts_0_lockup_latchn_clkc24_intno1607_i D
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: core; scan mode(s): int_mode
+  + PARTITION partition_4  MAXBITS 29 ;
+
+
+- scan_segment_21
+  + START dut/\spi.spi /txFIFO/tessent_persistent_cell_0_buf_extsi3423_i Z
+  + FLOATING 
+      dut/\spi.spi /txFIFO/rtlcreg_mem_55 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_54 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_53 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_52 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_51 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_50 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_49 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_48 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_47 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_46 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_45 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_44 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_43 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_42 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_41 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_40 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_39 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_38 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_37 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_36 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_35 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_34 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_33 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_32 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_31 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_30 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_29 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_28 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_27 ( IN SI ) ( OUT Q )
+  + STOP dut/\spi.spi /txFIFO/ts_0_lockup_latchn_clkc25_intno1636_i D
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: core; scan mode(s): int_mode
+  + PARTITION partition_4  MAXBITS 29 ;
+
+
+- scan_segment_22
+  + START dut/\spi.spi /txFIFO/tessent_persistent_cell_0_buf_extsi3424_i Z
+  + FLOATING 
+      dut/\spi.spi /txFIFO/rtlcreg_mem_26 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_25 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_24 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_23 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_22 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_21 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_20 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_19 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_18 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_17 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_16 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_15 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_14 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_13 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_12 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_11 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_10 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_9 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_8 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_7 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_6 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_5 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_4 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_3 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_2 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_1 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txFIFO/rtlcreg_mem_0 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txrincreg/rtlcreg_q_0 ( IN SI ) ( OUT Q )
+      dut/\spi.spi /txwincreg/rtlcreg_q_0 ( IN SI ) ( OUT Q )
+  + STOP dut/\spi.spi /txwincreg/ts_0_lockup_latchn_clkc26_intno1588_i D
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: core; scan mode(s): int_mode
+  + PARTITION partition_4  MAXBITS 29 ;
+
+
+- scan_segment_23
+  + START dut/\uartgen.uart /uartPC/tessent_persistent_cell_0_buf_extsi3425_i Z
+  + FLOATING 
+      dut/\uartgen.uart /uartPC/rtlcreg_SINsync ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_DSRbd ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_DCDbd ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_CTSbd ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_RIbd ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_SCR_7 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_SCR_6 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_SCR_5 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_SCR_4 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_SCR_3 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_SCR_2 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_SCR_1 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_SCR_0 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_DLM_7 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_DLM_6 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_DLM_5 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_DLM_4 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_DLM_3 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_DLM_2 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_DLM_1 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_DLM_0 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_DLL_7 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_DLL_6 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_DLL_5 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_DLL_4 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_DLL_3 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_DLL_2 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_DLL_1 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_DLL_0 ( IN SI ) ( OUT Q )
+  + STOP dut/\uartgen.uart /uartPC/ts_0_lockup_latchn_clkc27_intno970_i D
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: core; scan mode(s): int_mode
+  + PARTITION partition_4  MAXBITS 29 ;
+
+
+- scan_segment_24
+  + START dut/\uartgen.uart /uartPC/tessent_persistent_cell_0_buf_extsi3426_i Z
+  + FLOATING 
+      dut/\uartgen.uart /uartPC/rtlcreg_MSR_3 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_MSR_2 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_MSR_1 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_MSR_0 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_LSR_7 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_LSR_6 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_LSR_5 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_LSR_4 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_LSR_3 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_LSR_2 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_LSR_1 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_LSR_0 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_MCR_4 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_MCR_3 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_MCR_2 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_MCR_1 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_MCR_0 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_LCR_7 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_LCR_6 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_LCR_5 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_LCR_4 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_LCR_3 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_LCR_2 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_LCR_1 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_LCR_0 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_FCR_7 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_FCR_6 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_FCR_5 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_FCR_4 ( IN SI ) ( OUT Q )
+  + STOP dut/\uartgen.uart /uartPC/ts_0_lockup_latchn_clkc28_intno999_i D
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: core; scan mode(s): int_mode
+  + PARTITION partition_4  MAXBITS 29 ;
+
+
+- scan_segment_25
+  + START dut/\uartgen.uart /uartPC/tessent_persistent_cell_0_buf_extsi3427_i Z
+  + FLOATING 
+      dut/\uartgen.uart /uartPC/rtlcreg_FCR_3 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_FCR_2 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_FCR_1 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_FCR_0 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_IER_3 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_IER_2 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_IER_1 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_IER_0 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_baudpulse ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_baudcount_16 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_baudcount_15 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_baudcount_14 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_baudcount_13 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_baudcount_12 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_baudcount_11 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_baudcount_10 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_baudcount_9 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_baudcount_8 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_baudcount_7 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_baudcount_6 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_baudcount_5 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_baudcount_4 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_baudcount_3 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_baudcount_2 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_baudcount_1 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_baudcount_0 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxtimeoutcnt_9 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxtimeoutcnt_8 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxtimeoutcnt_7 ( IN SI ) ( OUT Q )
+  + STOP dut/\uartgen.uart /uartPC/ts_0_lockup_latchn_clkc29_intno1028_i D
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: core; scan mode(s): int_mode
+  + PARTITION partition_4  MAXBITS 29 ;
+
+
+- scan_segment_26
+  + START dut/\uartgen.uart /uartPC/tessent_persistent_cell_0_buf_extsi3428_i Z
+  + FLOATING 
+      dut/\uartgen.uart /uartPC/rtlcreg_rxtimeoutcnt_6 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxtimeoutcnt_5 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxtimeoutcnt_4 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxtimeoutcnt_3 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxtimeoutcnt_2 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxtimeoutcnt_1 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxtimeoutcnt_0 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxbitsreceived_3 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxbitsreceived_2 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxbitsreceived_1 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxbitsreceived_0 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxstate_1 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxstate_0 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxoversampledcnt_3 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxoversampledcnt_2 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxoversampledcnt_1 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxoversampledcnt_0 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxshiftreg_9 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxshiftreg_8 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxshiftreg_7 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxshiftreg_6 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxshiftreg_5 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxshiftreg_4 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxshiftreg_3 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxshiftreg_2 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxshiftreg_1 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxshiftreg_0 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_RXBR_10 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_RXBR_9 ( IN SI ) ( OUT Q )
+  + STOP dut/\uartgen.uart /uartPC/ts_0_lockup_latchn_clkc30_intno1057_i D
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: core; scan mode(s): int_mode
+  + PARTITION partition_4  MAXBITS 29 ;
+
+
+- scan_segment_27
+  + START dut/\uartgen.uart /uartPC/tessent_persistent_cell_0_buf_extsi3429_i Z
+  + FLOATING 
+      dut/\uartgen.uart /uartPC/rtlcreg_RXBR_8 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_RXBR_7 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_RXBR_6 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_RXBR_5 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_RXBR_4 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_RXBR_3 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_RXBR_2 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_RXBR_1 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_RXBR_0 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxdataready ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifotail_3 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifotail_2 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifotail_1 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifotail_0 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifohead_3 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifohead_2 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifohead_1 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifohead_0 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifodmaready ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txbitssent_3 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txbitssent_2 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txbitssent_1 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txbitssent_0 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txstate_1 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txstate_0 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txoversampledcnt_3 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txoversampledcnt_2 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txoversampledcnt_1 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txoversampledcnt_0 ( IN SI ) ( OUT Q )
+  + STOP dut/\uartgen.uart /uartPC/ts_0_lockup_latchn_clkc31_intno1086_i D
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: core; scan mode(s): int_mode
+  + PARTITION partition_4  MAXBITS 29 ;
+
+
+- scan_segment_28
+  + START dut/\uartgen.uart /uartPC/tessent_persistent_cell_0_buf_extsi3430_i Z
+  + FLOATING 
+      dut/\uartgen.uart /uartPC/rtlcreg_txsr_11 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txsr_10 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txsr_9 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txsr_8 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txsr_7 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txsr_6 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txsr_5 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txsr_4 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txsr_3 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txsr_2 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txsr_1 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txsr_0 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_TXHR_7 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_TXHR_6 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_TXHR_5 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_TXHR_4 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_TXHR_3 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_TXHR_2 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_TXHR_1 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_TXHR_0 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txsrfull ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txhrfull ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifotail_3 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifotail_2 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifotail_1 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifotail_0 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifohead_3 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifohead_2 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifohead_1 ( IN SI ) ( OUT Q )
+  + STOP dut/\uartgen.uart /uartPC/ts_0_lockup_latchn_clkc32_intno1115_i D
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: core; scan mode(s): int_mode
+  + PARTITION partition_4  MAXBITS 29 ;
+
+
+- scan_segment_29
+  + START dut/\uartgen.uart /uartPC/tessent_persistent_cell_0_buf_extsi3431_i Z
+  + FLOATING 
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifohead_0 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_HeadPointerLastMove ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifodmaready ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_INTR ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_175 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_174 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_173 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_172 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_171 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_170 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_169 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_168 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_167 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_166 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_165 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_164 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_163 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_162 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_161 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_160 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_159 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_158 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_157 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_156 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_155 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_154 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_153 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_152 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_151 ( IN SI ) ( OUT Q )
+  + STOP dut/\uartgen.uart /uartPC/ts_0_lockup_latchn_clkc33_intno1144_i D
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: core; scan mode(s): int_mode
+  + PARTITION partition_4  MAXBITS 29 ;
+
+
+- scan_segment_30
+  + START dut/\uartgen.uart /uartPC/tessent_persistent_cell_0_buf_extsi3432_i Z
+  + FLOATING 
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_150 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_149 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_148 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_147 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_146 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_145 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_144 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_143 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_142 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_141 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_140 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_139 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_138 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_137 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_136 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_135 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_134 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_133 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_132 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_131 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_130 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_129 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_128 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_127 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_126 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_125 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_124 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_123 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_122 ( IN SI ) ( OUT Q )
+  + STOP dut/\uartgen.uart /uartPC/ts_0_lockup_latchn_clkc34_intno1173_i D
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: core; scan mode(s): int_mode
+  + PARTITION partition_4  MAXBITS 29 ;
+
+
+- scan_segment_31
+  + START dut/\uartgen.uart /uartPC/tessent_persistent_cell_0_buf_extsi3433_i Z
+  + FLOATING 
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_121 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_120 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_119 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_118 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_117 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_116 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_115 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_114 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_113 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_112 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_111 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_110 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_109 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_108 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_107 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_106 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_105 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_104 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_103 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_102 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_101 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_100 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_99 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_98 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_97 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_96 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_95 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_94 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_93 ( IN SI ) ( OUT Q )
+  + STOP dut/\uartgen.uart /uartPC/ts_0_lockup_latchn_clkc35_intno1202_i D
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: core; scan mode(s): int_mode
+  + PARTITION partition_4  MAXBITS 29 ;
+
+
+- scan_segment_32
+  + START dut/\uartgen.uart /uartPC/tessent_persistent_cell_0_buf_extsi3434_i Z
+  + FLOATING 
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_92 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_91 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_90 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_89 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_88 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_87 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_86 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_85 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_84 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_83 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_82 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_81 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_80 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_79 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_78 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_77 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_76 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_75 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_74 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_73 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_72 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_71 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_70 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_69 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_68 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_67 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_66 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_65 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_64 ( IN SI ) ( OUT Q )
+  + STOP dut/\uartgen.uart /uartPC/ts_0_lockup_latchn_clkc36_intno1231_i D
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: core; scan mode(s): int_mode
+  + PARTITION partition_4  MAXBITS 29 ;
+
+
+- scan_segment_33
+  + START dut/\uartgen.uart /uartPC/tessent_persistent_cell_0_buf_extsi3435_i Z
+  + FLOATING 
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_63 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_62 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_61 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_60 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_59 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_58 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_57 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_56 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_55 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_54 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_53 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_52 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_51 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_50 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_49 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_48 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_47 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_46 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_45 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_44 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_43 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_42 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_41 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_40 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_39 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_38 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_37 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_36 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_35 ( IN SI ) ( OUT Q )
+  + STOP dut/\uartgen.uart /uartPC/ts_0_lockup_latchn_clkc37_intno1260_i D
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: core; scan mode(s): int_mode
+  + PARTITION partition_4  MAXBITS 29 ;
+
+
+- scan_segment_34
+  + START dut/\uartgen.uart /uartPC/tessent_persistent_cell_0_buf_extsi3436_i Z
+  + FLOATING 
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_34 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_33 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_32 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_31 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_30 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_29 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_28 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_27 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_26 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_25 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_24 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_23 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_22 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_21 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_20 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_19 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_18 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_17 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_16 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_15 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_14 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_13 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_12 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_11 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_10 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_9 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_8 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_7 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_6 ( IN SI ) ( OUT Q )
+  + STOP dut/\uartgen.uart /uartPC/ts_0_lockup_latchn_clkc38_intno1289_i D
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: core; scan mode(s): int_mode
+  + PARTITION partition_4  MAXBITS 29 ;
+
+
+- scan_segment_35
+  + START dut/\uartgen.uart /uartPC/tessent_persistent_cell_0_buf_extsi3437_i Z
+  + FLOATING 
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_5 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_4 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_3 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_2 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_1 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_rxfifo_0 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_127 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_126 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_125 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_124 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_123 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_122 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_121 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_120 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_119 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_118 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_117 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_116 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_115 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_114 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_113 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_112 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_111 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_110 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_109 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_108 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_107 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_106 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_105 ( IN SI ) ( OUT Q )
+  + STOP dut/\uartgen.uart /uartPC/ts_0_lockup_latchn_clkc39_intno1318_i D
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: core; scan mode(s): int_mode
+  + PARTITION partition_4  MAXBITS 29 ;
+
+
+- scan_segment_36
+  + START dut/\uartgen.uart /uartPC/tessent_persistent_cell_0_buf_extsi3438_i Z
+  + FLOATING 
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_104 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_103 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_102 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_101 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_100 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_99 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_98 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_97 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_96 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_95 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_94 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_93 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_92 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_91 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_90 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_89 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_88 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_87 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_86 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_85 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_84 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_83 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_82 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_81 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_80 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_79 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_78 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_77 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_76 ( IN SI ) ( OUT Q )
+  + STOP dut/\uartgen.uart /uartPC/ts_0_lockup_latchn_clkc40_intno1347_i D
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: core; scan mode(s): int_mode
+  + PARTITION partition_4  MAXBITS 29 ;
+
+
+- scan_segment_37
+  + START dut/\uartgen.uart /uartPC/tessent_persistent_cell_0_buf_extsi3439_i Z
+  + FLOATING 
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_75 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_74 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_73 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_72 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_71 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_70 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_69 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_68 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_67 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_66 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_65 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_64 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_63 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_62 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_61 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_60 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_59 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_58 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_57 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_56 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_55 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_54 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_53 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_52 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_51 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_50 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_49 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_48 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_47 ( IN SI ) ( OUT Q )
+  + STOP dut/\uartgen.uart /uartPC/ts_0_lockup_latchn_clkc41_intno1376_i D
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: core; scan mode(s): int_mode
+  + PARTITION partition_4  MAXBITS 29 ;
+
+
+- scan_segment_38
+  + START dut/\uartgen.uart /uartPC/tessent_persistent_cell_0_buf_extsi3440_i Z
+  + FLOATING 
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_46 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_45 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_44 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_43 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_42 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_41 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_40 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_39 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_38 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_37 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_36 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_35 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_34 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_33 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_32 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_31 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_30 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_29 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_28 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_27 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_26 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_25 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_24 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_23 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_22 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_21 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_20 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_19 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_18 ( IN SI ) ( OUT Q )
+  + STOP dut/\uartgen.uart /uartPC/ts_0_lockup_latchn_clkc42_intno1405_i D
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: core; scan mode(s): int_mode
+  + PARTITION partition_4  MAXBITS 29 ;
+
+
+- scan_segment_39
+  + START dut/\uartgen.uart /uartPC/tessent_persistent_cell_0_buf_extsi3441_i Z
+  + FLOATING 
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_17 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_16 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_15 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_14 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_13 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_12 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_11 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_10 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_9 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_8 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_7 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_6 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_5 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_4 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_3 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_2 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_1 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_txfifo_0 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/squashRXerrIPreg/rtlcreg_q_0 ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/squashTHRE_IPreg/rtlcreg_q_0 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_trans_valid_reg ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\uartgen.uart /uartPC/rtlcreg_CTSbsync ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_CTSb2 ( IN D ) ( OUT Q )
+  + ORDERED 
+      dut/\uartgen.uart /uartPC/rtlcreg_DCDbsync ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_DCDb2 ( IN D ) ( OUT Q )
+  + ORDERED 
+      dut/\uartgen.uart /uartPC/rtlcreg_DSRbsync ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_DSRb2 ( IN D ) ( OUT Q )
+  + ORDERED 
+      dut/\uartgen.uart /uartPC/rtlcreg_RIbsync ( IN SI ) ( OUT Q )
+      dut/\uartgen.uart /uartPC/rtlcreg_RIb2 ( IN D ) ( OUT Q )
+  + STOP dut/ahbapbbridge/APB_MASTER/ts_0_lockup_latchn_clkc43_intno277_i D
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: core; scan mode(s): int_mode
+  + PARTITION partition_4  MAXBITS 29 ;
+
+
+- scan_segment_40
+  + START dut/ahbapbbridge/APB_MASTER/tessent_persistent_cell_0_buf_extsi3442_i Z
+  + FLOATING 
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_curr_state_1 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_63 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_62 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_61 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_60 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_59 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_58 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_57 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_56 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_55 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_54 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_53 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_52 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_51 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_50 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_49 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_48 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_47 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_46 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_45 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_44 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_43 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_42 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_41 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_40 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_39 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_38 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_37 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_36 ( IN SI ) ( OUT Q )
+  + STOP dut/ahbapbbridge/APB_MASTER/ts_0_lockup_latchn_clkc44_intno307_i D
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: core; scan mode(s): int_mode
+  + PARTITION partition_4  MAXBITS 29 ;
+
+
+- scan_segment_41
+  + START dut/ahbapbbridge/APB_MASTER/tessent_persistent_cell_0_buf_extsi3443_i Z
+  + FLOATING 
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_35 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_34 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_33 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_32 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_31 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_30 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_29 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_28 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_27 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_26 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_25 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_24 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_23 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_22 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_21 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_20 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_19 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_18 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_17 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_16 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_15 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_14 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_13 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_12 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_11 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_10 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_9 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_8 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_7 ( IN SI ) ( OUT Q )
+  + STOP dut/ahbapbbridge/APB_MASTER/ts_0_lockup_latchn_clkc45_intno336_i D
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: core; scan mode(s): int_mode
+  + PARTITION partition_4  MAXBITS 29 ;
+
+
+- scan_segment_42
+  + START dut/ahbapbbridge/APB_MASTER/tessent_persistent_cell_0_buf_extsi3444_i Z
+  + FLOATING 
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_6 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_5 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_4 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_3 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_2 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_1 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_rdata_0 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_reg_s_ack_p ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/SYNCHRONIZER1/rtlcreg_sync_reg_1 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/SYNCHRONIZER1/rtlcreg_sync_reg_2 ( IN D ) ( OUT Q )
+      dut/ahbapbbridge/SYNCHRONIZER1/rtlc3_0 ( IN A ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_last_s_req_p ( IN D ) ( OUT Q )
+  + STOP dut/\gpio.gpio /GPIO_REGISTER/tessent_persistent_cell_0_mux_stm1s3_intno3286_intno2322_i B
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: core; scan mode(s): int_mode
+  + PARTITION partition_4  MAXBITS 11 ;
+
+
+- scan_segment_43
+  + START dut/\gpio.gpio /GPIO_REGISTER/tessent_persistent_cell_0_mux_stm1s3_intno3286_intno2322_i Z
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so837__si837_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_in_31 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so838__si838_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_in_30 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so839__si839_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_in_29 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so840__si840_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_in_28 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so841__si841_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_in_27 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so842__si842_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_in_26 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so843__si843_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_in_25 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so844__si844_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_in_24 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so845__si845_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_in_23 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so846__si846_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_in_22 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so847__si847_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_in_21 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so848__si848_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_in_20 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so849__si849_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_in_19 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so850__si850_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_in_18 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so851__si851_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_in_17 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so852__si852_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_in_16 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so853__si853_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_in_15 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so854__si854_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_in_14 ( IN SI ) ( OUT Q )
+  + STOP dut/\gpio.gpio /GPIO_REGISTER/tessent_persistent_cell_0_buf_extso854_i A
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: input_wrapper; scan mode(s): int_mode ext_mode
+  + PARTITION partition_2  MAXBITS 18 ;
+
+
+- scan_segment_44
+  + START dut/\clint.clint /tessent_persistent_cell_0_mux_stm1s3_fsffp_clkc47_lo1l8_extsi3466_sea0__fsffp_clkc47_lo0l8_extsi3445_sea0__i Z
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so546__si546_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MSIP ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so547__si547_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_63 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so548__si548_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_62 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so549__si549_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_61 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so550__si550_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_60 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so551__si551_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_59 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so552__si552_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_58 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so553__si553_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_57 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so554__si554_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_56 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so555__si555_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_55 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so556__si556_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_54 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so557__si557_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_53 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so558__si558_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_52 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so559__si559_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_51 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so560__si560_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_50 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so561__si561_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_49 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so562__si562_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_48 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so563__si563_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_47 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so564__si564_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_46 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so565__si565_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_45 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so566__si566_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_44 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so567__si567_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_43 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so568__si568_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_42 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so569__si569_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_41 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so570__si570_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_40 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so571__si571_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_39 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so572__si572_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_38 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so573__si573_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_37 ( IN SI ) ( OUT Q )
+  + STOP dut/\clint.clint /tessent_persistent_cell_0_buf_extso573_i A
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: output_wrapper; scan mode(s): int_mode ext_mode
+  + PARTITION partition_5  MAXBITS 28 ;
+
+
+- scan_segment_45
+  + START dut/\clint.clint /tessent_persistent_cell_0_mux_stm1s3_intno573_fsffp_clkc49_lo0l9_extsi3446_sea0__i Z
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so574__si574_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_36 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so575__si575_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_35 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so576__si576_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_34 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so577__si577_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_33 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so578__si578_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_32 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so579__si579_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_31 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so580__si580_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_30 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so581__si581_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_29 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so582__si582_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_28 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so583__si583_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_27 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so584__si584_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_26 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so585__si585_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_25 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so586__si586_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_24 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so587__si587_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_23 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so588__si588_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_22 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so589__si589_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_21 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so590__si590_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_20 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so591__si591_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_19 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so592__si592_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_18 ( IN SI ) ( OUT Q )
+  + STOP dut/\clint.clint /tessent_persistent_cell_0_buf_extso592_i A
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: output_wrapper; scan mode(s): int_mode ext_mode
+  + PARTITION partition_5  MAXBITS 19 ;
+
+
+- scan_segment_46
+  + START dut/\clint.clint /tessent_persistent_cell_0_mux_stm1s3_fsffp_clkc82_lo0l10_extsi3467_sea0__intno592_i Z
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so593__si593_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_17 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so594__si594_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_16 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so595__si595_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_15 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so596__si596_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_14 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so597__si597_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_13 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so598__si598_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_12 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so599__si599_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_11 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so600__si600_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_10 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so601__si601_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_9 ( IN SI ) ( OUT Q )
+  + STOP dut/\clint.clint /tessent_persistent_cell_0_buf_extso601_i A
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: output_wrapper; scan mode(s): int_mode ext_mode
+  + PARTITION partition_5  MAXBITS 9 ;
+
+
+- scan_segment_47
+  + START dut/\clint.clint /tessent_persistent_cell_0_mux_stm1s3_intno601_fsffp_clkc51_lo0l11_extsi3447_sea0__i Z
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so602__si602_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_8 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so603__si603_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_7 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so604__si604_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_6 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so605__si605_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_5 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so606__si606_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_4 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so607__si607_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_3 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so608__si608_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_2 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so609__si609_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_1 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\clint.clint /ts_0_sohw_mux_sea0_not_so610__si610_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\clint.clint /rtlcreg_MTIME_0 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /APB_INTERFACE/ts_0_sohw_mux_sea0_not_so719__si719_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /APB_INTERFACE/rtlcreg_STATE_1 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /APB_INTERFACE/ts_0_sohw_mux_sea0_not_so720__si720_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /APB_INTERFACE/rtlcreg_STATE_0 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /AUX_INTERFACE/ts_0_sohw_mux_sea0_not_so721__si721_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /AUX_INTERFACE/rtlcreg_aux_i_8 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /AUX_INTERFACE/ts_0_sohw_mux_sea0_not_so722__si722_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /AUX_INTERFACE/rtlcreg_aux_i_7 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /AUX_INTERFACE/ts_0_sohw_mux_sea0_not_so723__si723_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /AUX_INTERFACE/rtlcreg_aux_i_6 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /AUX_INTERFACE/ts_0_sohw_mux_sea0_not_so724__si724_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /AUX_INTERFACE/rtlcreg_aux_i_5 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /AUX_INTERFACE/ts_0_sohw_mux_sea0_not_so725__si725_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /AUX_INTERFACE/rtlcreg_aux_i_4 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /AUX_INTERFACE/ts_0_sohw_mux_sea0_not_so726__si726_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /AUX_INTERFACE/rtlcreg_aux_i_3 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /AUX_INTERFACE/ts_0_sohw_mux_sea0_not_so727__si727_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /AUX_INTERFACE/rtlcreg_aux_i_2 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /AUX_INTERFACE/ts_0_sohw_mux_sea0_not_so728__si728_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /AUX_INTERFACE/rtlcreg_aux_i_1 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /AUX_INTERFACE/ts_0_sohw_mux_sea0_not_so729__si729_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /AUX_INTERFACE/rtlcreg_aux_i_0 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so731__si731_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_ctrl_0 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so732__si732_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_out_31 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so733__si733_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_out_30 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so734__si734_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_out_29 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so735__si735_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_out_28 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so736__si736_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_out_27 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so737__si737_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_out_26 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so738__si738_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_out_25 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so739__si739_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_out_24 ( IN SI ) ( OUT Q )
+  + STOP dut/\gpio.gpio /GPIO_REGISTER/tessent_persistent_cell_0_buf_extso739_i A
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: output_wrapper; scan mode(s): int_mode ext_mode
+  + PARTITION partition_5  MAXBITS 29 ;
+
+
+- scan_segment_48
+  + START dut/\gpio.gpio /GPIO_REGISTER/tessent_persistent_cell_0_mux_stm1s3_intno739_fsffp_clkc53_lo0l12_extsi3448_sea0__i Z
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so740__si740_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_out_23 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so741__si741_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_out_22 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so742__si742_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_out_21 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so743__si743_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_out_20 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so744__si744_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_out_19 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so745__si745_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_out_18 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so746__si746_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_out_17 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so747__si747_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_out_16 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so748__si748_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_out_15 ( IN SI ) ( OUT Q )
+  + STOP dut/\gpio.gpio /GPIO_REGISTER/tessent_persistent_cell_0_buf_extso748_i A
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: output_wrapper; scan mode(s): int_mode ext_mode
+  + PARTITION partition_5  MAXBITS 9 ;
+
+
+- scan_segment_49
+  + START dut/\gpio.gpio /GPIO_REGISTER/tessent_persistent_cell_0_mux_stm1s3_fsffp_clkc84_lo0l13_extsi3468_sea0__intno748_i Z
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so749__si749_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_out_14 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so750__si750_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_out_13 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so751__si751_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_out_12 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so752__si752_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_out_11 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so753__si753_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_out_10 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so754__si754_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_out_9 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so755__si755_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_out_8 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so756__si756_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_out_7 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so757__si757_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_out_6 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so758__si758_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_out_5 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so759__si759_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_out_4 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so760__si760_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_out_3 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so761__si761_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_out_2 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so762__si762_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_out_1 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so763__si763_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_out_0 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so764__si764_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_oe_31 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so765__si765_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_oe_30 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so766__si766_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_oe_29 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so767__si767_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_oe_28 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so768__si768_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_oe_27 ( IN SI ) ( OUT Q )
+  + STOP dut/\gpio.gpio /GPIO_REGISTER/tessent_persistent_cell_0_buf_extso768_i A
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: output_wrapper; scan mode(s): int_mode ext_mode
+  + PARTITION partition_5  MAXBITS 20 ;
+
+
+- scan_segment_50
+  + START dut/\gpio.gpio /GPIO_REGISTER/tessent_persistent_cell_0_mux_stm1s3_intno768_fsffp_clkc55_lo0l14_extsi3449_sea0__i Z
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so769__si769_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_oe_26 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so770__si770_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_oe_25 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so771__si771_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_oe_24 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so772__si772_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_oe_23 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so773__si773_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_oe_22 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so774__si774_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_oe_21 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so775__si775_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_oe_20 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so776__si776_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_oe_19 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so777__si777_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_oe_18 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so778__si778_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_oe_17 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so779__si779_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_oe_16 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so780__si780_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_oe_15 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so781__si781_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_oe_14 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so782__si782_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_oe_13 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so783__si783_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_oe_12 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so784__si784_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_oe_11 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so785__si785_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_oe_10 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so786__si786_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_oe_9 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so787__si787_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_oe_8 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so788__si788_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_oe_7 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so789__si789_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_oe_6 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so790__si790_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_oe_5 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so791__si791_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_oe_4 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so792__si792_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_oe_3 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so793__si793_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_oe_2 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so794__si794_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_oe_1 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so795__si795_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_oe_0 ( IN SI ) ( OUT Q )
+  + STOP dut/\gpio.gpio /GPIO_REGISTER/tessent_persistent_cell_0_buf_extso795_i A
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: output_wrapper; scan mode(s): int_mode ext_mode
+  + PARTITION partition_5  MAXBITS 27 ;
+
+
+- scan_segment_51
+  + START dut/\gpio.gpio /GPIO_REGISTER/tessent_persistent_cell_0_mux_stm1s3_fsffp_clkc86_lo0l15_extsi3469_sea0__intno795_i Z
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so796__si796_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_inte_31 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so797__si797_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_inte_30 ( IN SI ) ( OUT Q )
+  + STOP dut/\gpio.gpio /GPIO_REGISTER/tessent_persistent_cell_0_buf_extso797_i A
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: output_wrapper; scan mode(s): int_mode ext_mode
+  + PARTITION partition_5  MAXBITS 2 ;
+
+
+- scan_segment_52
+  + START dut/\gpio.gpio /GPIO_REGISTER/tessent_persistent_cell_0_mux_stm1s3_intno797_fsffp_clkc57_lo0l16_extsi3450_sea0__i Z
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so798__si798_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_inte_29 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so799__si799_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_inte_28 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so800__si800_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_inte_27 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so801__si801_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_inte_26 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so802__si802_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_inte_25 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so803__si803_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_inte_24 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so804__si804_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_inte_23 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so805__si805_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_inte_22 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so806__si806_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_inte_21 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so807__si807_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_inte_20 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so808__si808_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_inte_19 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so809__si809_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_inte_18 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so810__si810_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_inte_17 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so811__si811_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_inte_16 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so812__si812_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_inte_15 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so813__si813_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_inte_14 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so814__si814_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_inte_13 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so815__si815_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_inte_12 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so816__si816_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_inte_11 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so817__si817_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_inte_10 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so818__si818_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_inte_9 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so819__si819_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_inte_8 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so820__si820_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_inte_7 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so821__si821_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_inte_6 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so822__si822_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_inte_5 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so823__si823_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_inte_4 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so824__si824_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_inte_3 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so825__si825_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_inte_2 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so826__si826_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_inte_1 ( IN SI ) ( OUT Q )
+  + STOP dut/\gpio.gpio /GPIO_REGISTER/tessent_persistent_cell_0_buf_extso826_i A
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: output_wrapper; scan mode(s): int_mode ext_mode
+  + PARTITION partition_5  MAXBITS 29 ;
+
+
+- scan_segment_53
+  + START dut/\gpio.gpio /GPIO_REGISTER/tessent_persistent_cell_0_mux_stm1s3_intno826_fsffp_clkc59_lo0l17_extsi3451_sea0__i Z
+  + FLOATING 
+      ts_0_dohw_3279smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dohw_3281smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dohw_3283smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so827__si827_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_inte_0 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so828__si828_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_aux_8 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so829__si829_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_aux_7 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so830__si830_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_aux_6 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so831__si831_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_aux_5 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so832__si832_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_aux_4 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so833__si833_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_aux_3 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so834__si834_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_aux_2 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so835__si835_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_aux_1 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sohw_mux_sea0_not_so836__si836_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_aux_0 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/APB_MASTER/ts_0_sohw_mux_sea0_not_so279__si279_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_curr_state_0 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/APB_MASTER/ts_0_sohw_mux_sea0_not_so345__si345_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/APB_MASTER/rtlcreg_s_write_reg ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so855__si855_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_in_13 ( IN SI ) ( OUT Q )
+  + STOP dut/\gpio.gpio /GPIO_REGISTER/tessent_persistent_cell_0_buf_extso855_i A
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: input_wrapper output_wrapper; scan mode(s): int_mode ext_mode
+  + PARTITION partition_6  MAXBITS 16 ;
+
+
+- scan_segment_54
+  + START dut/\gpio.gpio /GPIO_REGISTER/tessent_persistent_cell_0_mux_stm1s3_intno854_intno855_i Z
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so856__si856_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_in_12 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so857__si857_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_in_11 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so858__si858_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_in_10 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so859__si859_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_in_9 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so860__si860_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_in_8 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so861__si861_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_in_7 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so862__si862_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_in_6 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so863__si863_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_in_5 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so864__si864_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_in_4 ( IN SI ) ( OUT Q )
+  + STOP dut/\gpio.gpio /GPIO_REGISTER/tessent_persistent_cell_0_buf_extso864_i A
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: input_wrapper; scan mode(s): int_mode ext_mode
+  + PARTITION partition_2  MAXBITS 9 ;
+
+
+- scan_segment_55
+  + START dut/\gpio.gpio /GPIO_REGISTER/tessent_persistent_cell_0_mux_stm1s3_fsffp_clkc88_lo0l18_extsi3470_sea0__intno864_i Z
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so865__si865_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_in_3 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so866__si866_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_in_2 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so867__si867_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_in_1 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so868__si868_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_in_0 ( IN SI ) ( OUT Q )
+  + STOP dut/\gpio.gpio /GPIO_REGISTER/tessent_persistent_cell_0_buf_extso868_i A
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: input_wrapper; scan mode(s): int_mode ext_mode
+  + PARTITION partition_2  MAXBITS 4 ;
+
+
+- scan_segment_56
+  + START dut/\bootrom.bootrom /haddrreg/tessent_persistent_cell_0_mux_stm1s3_fsffp_clkc61_lo1l7_extsi3471_sea0__fsffp_clkc61_lo0l7_extsi3452_sea0__i Z
+  + ORDERED 
+      dut/\bootrom.bootrom /haddrreg/ts_0_sihw_mux_sea0_not_so414__si414_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_2 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\bootrom.bootrom /haddrreg/ts_0_sihw_mux_sea0_not_so415__si415_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_1 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\bootrom.bootrom /haddrreg/ts_0_sihw_mux_sea0_not_so416__si416_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_0 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\bootrom.bootrom /memwritereg/ts_0_sihw_mux_sea0_not_so360__si360_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\bootrom.bootrom /memwritereg/rtlcreg_q_0 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\bootrom.bootrom /readyreg/ts_0_sihw_mux_sea0_not_so417__si417_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\bootrom.bootrom /readyreg/rtlcreg_q_0 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so58__si58_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_2 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so59__si59_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_1 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so60__si60_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_0 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so66__si66_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_write ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so67__si67_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_pstrb_reg_7 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so68__si68_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_pstrb_reg_6 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so69__si69_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_pstrb_reg_5 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so70__si70_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_pstrb_reg_4 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so71__si71_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_pstrb_reg_3 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so72__si72_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_pstrb_reg_2 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so73__si73_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_pstrb_reg_1 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so74__si74_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_pstrb_reg_0 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so76__si76_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_63 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so77__si77_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_62 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so78__si78_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_61 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so79__si79_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_60 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so80__si80_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_59 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so81__si81_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_58 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so82__si82_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_57 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so83__si83_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_56 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so84__si84_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_55 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so85__si85_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_54 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so86__si86_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_53 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so87__si87_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_52 ( IN SI ) ( OUT Q )
+  + STOP dut/ahbapbbridge/AHB_SLAVE/tessent_persistent_cell_0_buf_extso87_i A
+  # Partition constraints - clock domain: inferred_occ_clock1(+); chain type: input_wrapper; scan mode(s): int_mode ext_mode
+  + PARTITION partition_7  MAXBITS 29 ;
+
+
+- scan_segment_57
+  + START dut/ahbapbbridge/AHB_SLAVE/tessent_persistent_cell_0_mux_stm1s3_intno87_fsffp_clkc63_lo0l2_extsi3453_sea0__i Z
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so88__si88_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_51 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so89__si89_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_50 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so90__si90_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_49 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so91__si91_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_48 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so92__si92_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_47 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so93__si93_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_46 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so94__si94_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_45 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so95__si95_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_44 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so96__si96_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_43 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so97__si97_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_42 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so98__si98_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_41 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so99__si99_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_40 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so100__si100_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_39 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so101__si101_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_38 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so102__si102_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_37 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so103__si103_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_36 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so104__si104_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_35 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so105__si105_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_34 ( IN SI ) ( OUT Q )
+  + STOP dut/ahbapbbridge/AHB_SLAVE/tessent_persistent_cell_0_buf_extso105_i A
+  # Partition constraints - clock domain: inferred_occ_clock1(+); chain type: input_wrapper; scan mode(s): int_mode ext_mode
+  + PARTITION partition_7  MAXBITS 18 ;
+
+
+- scan_segment_58
+  + START dut/ahbapbbridge/AHB_SLAVE/tessent_persistent_cell_0_mux_stm1s3_fsffp_clkc90_lo0l3_extsi3472_sea0__intno105_i Z
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so106__si106_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_33 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so107__si107_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_32 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so108__si108_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_31 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so109__si109_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_30 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so110__si110_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_29 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so111__si111_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_28 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so112__si112_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_27 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so113__si113_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_26 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so114__si114_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_25 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so115__si115_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_24 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so116__si116_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_23 ( IN SI ) ( OUT Q )
+  + STOP dut/ahbapbbridge/AHB_SLAVE/tessent_persistent_cell_0_buf_extso116_i A
+  # Partition constraints - clock domain: inferred_occ_clock1(+); chain type: input_wrapper; scan mode(s): int_mode ext_mode
+  + PARTITION partition_7  MAXBITS 11 ;
+
+
+- scan_segment_59
+  + START dut/ahbapbbridge/AHB_SLAVE/tessent_persistent_cell_0_mux_stm1s3_intno116_fsffp_clkc65_lo0l4_extsi3454_sea0__i Z
+  + FLOATING 
+      ts_0_dihw_3287smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dihw_3289smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dihw_3291smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dihw_3293smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so117__si117_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_22 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so118__si118_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_21 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so119__si119_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_20 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so120__si120_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_19 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so121__si121_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_18 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so122__si122_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_17 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so123__si123_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_16 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so124__si124_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_15 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so125__si125_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_14 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so126__si126_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_13 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so127__si127_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_12 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so128__si128_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_11 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so129__si129_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_10 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so130__si130_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_9 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so131__si131_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_8 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so132__si132_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_7 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so133__si133_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_6 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so134__si134_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_5 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so135__si135_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_4 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so136__si136_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_3 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so137__si137_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_2 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so138__si138_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_1 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so139__si139_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_wdata_0 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so141__si141_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_curr_state_0 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sihw_mux_sea0_not_so142__si142_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_reg_s_req_h ( IN SI ) ( OUT Q )
+  + STOP tessent_persistent_cell_0_buf_extso3294_i A
+  # Partition constraints - clock domain: inferred_occ_clock1(+); chain type: input_wrapper; scan mode(s): int_mode ext_mode
+  + PARTITION partition_7  MAXBITS 29 ;
+
+
+- scan_segment_60
+  + START tessent_persistent_cell_0_mux_stm1s3_intno3294_fsffp_clkc5_lo0l20_extsi3455_sea0__i Z
+  + FLOATING 
+      ts_0_dihw_3295smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dihw_3297smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dihw_3299smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dihw_3301smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dihw_3303smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dihw_3305smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dihw_3307smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+  + STOP tessent_persistent_cell_0_buf_extso3308_i A
+  # Partition constraints - clock domain: inferred_occ_clock1(+); chain type: input_wrapper; scan mode(s): int_mode ext_mode
+  + PARTITION partition_7  MAXBITS 7 ;
+
+
+- scan_segment_61
+  + START tessent_persistent_cell_0_mux_stm1s3_fsffp_clkc5_lo0l21_extsi3473_sea0__intno3308_i Z
+  + FLOATING 
+      ts_0_dihw_3309smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dihw_3311smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dihw_3313smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dihw_3315smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dihw_3317smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dihw_3319smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dihw_3321smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dihw_3323smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dihw_3325smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dihw_3327smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dihw_3329smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dihw_3331smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dihw_3333smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dihw_3335smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dihw_3337smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dihw_3339smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dihw_3341smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dihw_3343smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dihw_3345smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dihw_3347smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dihw_3349smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dihw_3351smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+  + STOP tessent_persistent_cell_0_buf_extso3352_i A
+  # Partition constraints - clock domain: inferred_occ_clock1(+); chain type: input_wrapper; scan mode(s): int_mode ext_mode
+  + PARTITION partition_7  MAXBITS 22 ;
+
+
+- scan_segment_62
+  + START tessent_persistent_cell_0_mux_stm1s3_intno3352_fsffp_clkc5_lo0l22_extsi3456_sea0__i Z
+  + FLOATING 
+      ts_0_dihw_3353smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dihw_3355smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dihw_3357smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dihw_3359smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dihw_3361smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dihw_3363smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dihw_3365smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dihw_3367smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dihw_3369smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dihw_3371smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dihw_3373smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dihw_3375smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dihw_3377smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dihw_3379smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dihw_3381smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dihw_3383smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dihw_3385smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dihw_3387smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dihw_3389smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dihw_3391smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dihw_3393smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dihw_3395smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dihw_3397smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dihw_3399smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+      ts_0_dihw_3401smodp1_i/ts_0_default_logic_4000fsffp1_i ( IN SI ) ( OUT Q )
+  + STOP ts_0_lockup_latchn_clkc5_intno3402_i D
+  # Partition constraints - clock domain: inferred_occ_clock1(+); chain type: input_wrapper; scan mode(s): int_mode ext_mode
+  + PARTITION partition_7  MAXBITS 25 ;
+
+
+- scan_segment_63
+  + START ts_0_lockup_latchn_clkc5_intno3402_i Q
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so901__si901_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_ints_31 ( IN SI ) ( OUT Q )
+  + STOP dut/\gpio.gpio /GPIO_REGISTER/tessent_persistent_cell_0_buf_extso901_i A
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: input_wrapper; scan mode(s): int_mode ext_mode
+  + PARTITION partition_2  MAXBITS 1 ;
+
+
+- scan_segment_64
+  + START dut/\gpio.gpio /GPIO_REGISTER/tessent_persistent_cell_0_mux_stm1s3_intno868_intno901_i Z
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so902__si902_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_ints_30 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so903__si903_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_ints_29 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so904__si904_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_ints_28 ( IN SI ) ( OUT Q )
+  + STOP dut/\gpio.gpio /GPIO_REGISTER/tessent_persistent_cell_0_buf_extso904_i A
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: input_wrapper; scan mode(s): int_mode ext_mode
+  + PARTITION partition_2  MAXBITS 3 ;
+
+
+- scan_segment_65
+  + START dut/\bootrom.bootrom /haddrreg/tessent_persistent_cell_0_buf_extsi3457_i Z
+  + FLOATING 
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_55 ( IN SI ) ( OUT Q )
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_54 ( IN SI ) ( OUT Q )
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_53 ( IN SI ) ( OUT Q )
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_52 ( IN SI ) ( OUT Q )
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_51 ( IN SI ) ( OUT Q )
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_50 ( IN SI ) ( OUT Q )
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_49 ( IN SI ) ( OUT Q )
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_48 ( IN SI ) ( OUT Q )
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_47 ( IN SI ) ( OUT Q )
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_46 ( IN SI ) ( OUT Q )
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_45 ( IN SI ) ( OUT Q )
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_44 ( IN SI ) ( OUT Q )
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_43 ( IN SI ) ( OUT Q )
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_42 ( IN SI ) ( OUT Q )
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_41 ( IN SI ) ( OUT Q )
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_40 ( IN SI ) ( OUT Q )
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_39 ( IN SI ) ( OUT Q )
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_38 ( IN SI ) ( OUT Q )
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_37 ( IN SI ) ( OUT Q )
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_36 ( IN SI ) ( OUT Q )
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_35 ( IN SI ) ( OUT Q )
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_34 ( IN SI ) ( OUT Q )
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_33 ( IN SI ) ( OUT Q )
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_32 ( IN SI ) ( OUT Q )
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_31 ( IN SI ) ( OUT Q )
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_30 ( IN SI ) ( OUT Q )
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_29 ( IN SI ) ( OUT Q )
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_28 ( IN SI ) ( OUT Q )
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_27 ( IN SI ) ( OUT Q )
+  + STOP dut/\bootrom.bootrom /haddrreg/ts_0_lockup_latchn_clkc67_intno389_i D
+  # Partition constraints - clock domain: inferred_occ_clock1(+); chain type: core; scan mode(s): int_mode
+  + PARTITION partition_8  MAXBITS 29 ;
+
+
+- scan_segment_66
+  + START dut/\bootrom.bootrom /haddrreg/tessent_persistent_cell_0_buf_extsi3458_i Z
+  + FLOATING 
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_26 ( IN SI ) ( OUT Q )
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_25 ( IN SI ) ( OUT Q )
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_24 ( IN SI ) ( OUT Q )
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_23 ( IN SI ) ( OUT Q )
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_22 ( IN SI ) ( OUT Q )
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_21 ( IN SI ) ( OUT Q )
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_20 ( IN SI ) ( OUT Q )
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_19 ( IN SI ) ( OUT Q )
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_18 ( IN SI ) ( OUT Q )
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_17 ( IN SI ) ( OUT Q )
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_16 ( IN SI ) ( OUT Q )
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_15 ( IN SI ) ( OUT Q )
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_14 ( IN SI ) ( OUT Q )
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_13 ( IN SI ) ( OUT Q )
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_12 ( IN SI ) ( OUT Q )
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_11 ( IN SI ) ( OUT Q )
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_10 ( IN SI ) ( OUT Q )
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_9 ( IN SI ) ( OUT Q )
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_8 ( IN SI ) ( OUT Q )
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_7 ( IN SI ) ( OUT Q )
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_6 ( IN SI ) ( OUT Q )
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_5 ( IN SI ) ( OUT Q )
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_4 ( IN SI ) ( OUT Q )
+      dut/\bootrom.bootrom /haddrreg/rtlcreg_q_3 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_55 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_54 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_53 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_52 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_51 ( IN SI ) ( OUT Q )
+  + STOP dut/ahbapbbridge/AHB_SLAVE/ts_0_lockup_latchn_clkc68_intno9_i D
+  # Partition constraints - clock domain: inferred_occ_clock1(+); chain type: core; scan mode(s): int_mode
+  + PARTITION partition_8  MAXBITS 29 ;
+
+
+- scan_segment_67
+  + START dut/ahbapbbridge/AHB_SLAVE/tessent_persistent_cell_0_buf_extsi3459_i Z
+  + FLOATING 
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_50 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_49 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_48 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_47 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_46 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_45 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_44 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_43 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_42 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_41 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_40 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_39 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_38 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_37 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_36 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_35 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_34 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_33 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_32 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_31 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_30 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_29 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_28 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_27 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_26 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_25 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_24 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_23 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_22 ( IN SI ) ( OUT Q )
+  + STOP dut/ahbapbbridge/AHB_SLAVE/ts_0_lockup_latchn_clkc69_intno38_i D
+  # Partition constraints - clock domain: inferred_occ_clock1(+); chain type: core; scan mode(s): int_mode
+  + PARTITION partition_8  MAXBITS 29 ;
+
+
+- scan_segment_68
+  + START dut/ahbapbbridge/AHB_SLAVE/tessent_persistent_cell_0_buf_extsi3460_i Z
+  + FLOATING 
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_21 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_20 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_19 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_18 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_17 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_16 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_15 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_14 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_13 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_12 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_11 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_10 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_9 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_8 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_sel_4 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_sel_3 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_sel_2 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_sel_1 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_sel_0 ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_trans_valid ( IN SI ) ( OUT Q )
+      dut/ahbapbbridge/SYNCHRONIZER2/rtlcreg_sync_reg_1 ( IN SI ) ( OUT Q )
+      dut/hseldelayreg/rtlcreg_q_11 ( IN SI ) ( OUT Q )
+      dut/hseldelayreg/rtlcreg_q_9 ( IN SI ) ( OUT Q )
+      dut/hseldelayreg/rtlcreg_q_8 ( IN SI ) ( OUT Q )
+      dut/hseldelayreg/rtlcreg_q_7 ( IN SI ) ( OUT Q )
+      dut/hseldelayreg/rtlcreg_q_6 ( IN SI ) ( OUT Q )
+      dut/hseldelayreg/rtlcreg_q_2 ( IN SI ) ( OUT Q )
+      dut/hseldelayreg/rtlcreg_q_1 ( IN SI ) ( OUT Q )
+  + STOP dut/hseldelayreg/ts_0_lockup_latchn_clkc70_intno357_i D
+  # Partition constraints - clock domain: inferred_occ_clock1(+); chain type: core; scan mode(s): int_mode
+  + PARTITION partition_8  MAXBITS 28 ;
+
+
+- scan_segment_69
+  + START dut/\gpio.gpio /GPIO_REGISTER/tessent_persistent_cell_0_mux_stm1s3_intno904_no357_i Z
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so905__si905_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_ints_27 ( IN SI ) ( OUT Q )
+  + STOP dut/\gpio.gpio /GPIO_REGISTER/ts_0_lockup_latchn_clkc71_intno905_i D
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: input_wrapper; scan mode(s): int_mode ext_mode
+  + PARTITION partition_2  MAXBITS 1 ;
+
+
+- scan_segment_70
+  + START dut/ahbapbbridge/AHB_SLAVE/tessent_persistent_cell_0_mux_stm1s3_fsffp_clkc72_lo1l1_extsi3474_sea0__fsffp_clkc72_lo0l1_extsi3461_sea0__i Z
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so53__si53_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_7 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so54__si54_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_6 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so55__si55_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_5 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so56__si56_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_4 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so57__si57_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_s_addr_3 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so140__si140_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_curr_state_1 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so143__si143_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_63 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so144__si144_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_62 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so145__si145_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_61 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so146__si146_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_60 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so147__si147_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_59 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so148__si148_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_58 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so149__si149_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_57 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so150__si150_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_56 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so151__si151_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_55 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so152__si152_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_54 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so153__si153_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_53 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so154__si154_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_52 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so155__si155_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_51 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so156__si156_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_50 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so157__si157_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_49 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so158__si158_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_48 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so159__si159_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_47 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so160__si160_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_46 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so161__si161_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_45 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so162__si162_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_44 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so163__si163_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_43 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so164__si164_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_42 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so165__si165_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_41 ( IN SI ) ( OUT Q )
+  + STOP dut/ahbapbbridge/AHB_SLAVE/tessent_persistent_cell_0_buf_extso165_i A
+  # Partition constraints - clock domain: inferred_occ_clock1(+); chain type: output_wrapper; scan mode(s): int_mode ext_mode
+  + PARTITION partition_9  MAXBITS 29 ;
+
+
+- scan_segment_71
+  + START dut/ahbapbbridge/AHB_SLAVE/tessent_persistent_cell_0_mux_stm1s3_intno165_fsffp_clkc74_lo0l5_extsi3462_sea0__i Z
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so166__si166_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_40 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so167__si167_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_39 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so168__si168_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_38 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so169__si169_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_37 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so170__si170_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_36 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so171__si171_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_35 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so172__si172_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_34 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so173__si173_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_33 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so174__si174_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_32 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so175__si175_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_31 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so176__si176_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_30 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so177__si177_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_29 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so178__si178_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_28 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so179__si179_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_27 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so180__si180_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_26 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so181__si181_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_25 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so182__si182_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_24 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so183__si183_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_23 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so184__si184_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_22 ( IN SI ) ( OUT Q )
+  + STOP dut/ahbapbbridge/AHB_SLAVE/tessent_persistent_cell_0_buf_extso184_i A
+  # Partition constraints - clock domain: inferred_occ_clock1(+); chain type: output_wrapper; scan mode(s): int_mode ext_mode
+  + PARTITION partition_9  MAXBITS 19 ;
+
+
+- scan_segment_72
+  + START dut/ahbapbbridge/AHB_SLAVE/tessent_persistent_cell_0_mux_stm1s3_no905_intno184_i Z
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so185__si185_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_21 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so186__si186_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_20 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so187__si187_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_19 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so188__si188_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_18 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so189__si189_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_17 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so190__si190_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_16 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so191__si191_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_15 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so192__si192_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_14 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so193__si193_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_13 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so194__si194_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_12 ( IN SI ) ( OUT Q )
+  + STOP dut/ahbapbbridge/AHB_SLAVE/tessent_persistent_cell_0_buf_extso194_i A
+  # Partition constraints - clock domain: inferred_occ_clock1(+); chain type: output_wrapper; scan mode(s): int_mode ext_mode
+  + PARTITION partition_9  MAXBITS 10 ;
+
+
+- scan_segment_73
+  + START dut/ahbapbbridge/AHB_SLAVE/tessent_persistent_cell_0_mux_stm1s3_intno194_fsffp_clkc76_lo0l6_extsi3463_sea0__i Z
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so195__si195_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_11 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so196__si196_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_10 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so197__si197_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_9 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so198__si198_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_8 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so199__si199_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_7 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so200__si200_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_6 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so201__si201_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_5 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so202__si202_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_4 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so203__si203_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_3 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so204__si204_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_2 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so205__si205_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_1 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/AHB_SLAVE/ts_0_sohw_mux_sea0_not_so206__si206_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/AHB_SLAVE/rtlcreg_HRDATA_0 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/ahbapbbridge/SYNCHRONIZER2/ts_0_sohw_mux_sea0_not_so3403__si3403_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/ahbapbbridge/SYNCHRONIZER2/rtlcreg_sync_reg_2 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/hselbridgedelayreg/ts_0_sohw_mux_sea0_not_so359__si359_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/hselbridgedelayreg/rtlcreg_q_0 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/hseldelayreg/ts_0_sohw_mux_sea0_not_so346__si346_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/hseldelayreg/rtlcreg_q_12 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/hseldelayreg/ts_0_sohw_mux_sea0_not_so348__si348_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/hseldelayreg/rtlcreg_q_10 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/hseldelayreg/ts_0_sohw_mux_sea0_not_so353__si353_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/hseldelayreg/rtlcreg_q_5 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/hseldelayreg/ts_0_sohw_mux_sea0_not_so354__si354_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/hseldelayreg/rtlcreg_q_4 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/hseldelayreg/ts_0_sohw_mux_sea0_not_so355__si355_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/hseldelayreg/rtlcreg_q_3 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/hseldelayreg/ts_0_sohw_mux_sea0_not_so358__si358_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/hseldelayreg/rtlcreg_q_0 ( IN SI ) ( OUT Q )
+  + STOP dut/hseldelayreg/ts_0_lockup_latchn_clkc77_intno358_i D
+  # Partition constraints - clock domain: inferred_occ_clock1(+); chain type: output_wrapper; scan mode(s): int_mode ext_mode
+  + PARTITION partition_9  MAXBITS 20 ;
+
+
+- scan_segment_74
+  + START dut/hseldelayreg/ts_0_lockup_latchn_clkc77_intno358_i Q
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so906__si906_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_ints_26 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so907__si907_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_ints_25 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so908__si908_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_ints_24 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so909__si909_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_ints_23 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so910__si910_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_ints_22 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so911__si911_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_ints_21 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so912__si912_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_ints_20 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so913__si913_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_ints_19 ( IN SI ) ( OUT Q )
+  + ORDERED 
+      dut/\gpio.gpio /GPIO_REGISTER/ts_0_sihw_mux_sea0_not_so914__si914_i ( IN B ) ( OUT Z ) ( BITS 0 )
+      dut/\gpio.gpio /GPIO_REGISTER/rtlcreg_rgpio_ints_18 ( IN SI ) ( OUT Q )
+  + STOP dut/\gpio.gpio /GPIO_REGISTER/ts_0_lockup_latchn_clkc78_intno914_i D
+  # Partition constraints - clock domain: inferred_occ_clock0(+); chain type: input_wrapper; scan mode(s): int_mode ext_mode
+  + PARTITION partition_2  MAXBITS 9 ;
+
+
+- scan_segment_75
+  + START tessent_persistent_cell_0_buf_extsi3464_i Z
+  + FLOATING 
+      msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst ( IN ccm_scan_in ) ( OUT ccm_scan_out ) ( BITS 332 )
+      msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_inst ( IN ccm_scan_in ) ( OUT ccm_scan_out ) ( BITS 107 )
+      msrv_soc_uncorewrapper_pass2_rtl_tessent_single_chain_mode_logic_inst ( IN ccm_scan_in ) ( OUT ccm_scan_out ) ( BITS 16 )
+  + STOP tessent_persistent_cell_0_buf_extso4_i A
+  # Partition constraints - clock domain: ijtag_tck(+)_ijtag_tck(-); chain type: core; scan mode(s): controller_chain_mode
+  + PARTITION partition_10  MAXBITS 455 ;
+
+
+END SCANCHAINS 
+
+END DESIGN

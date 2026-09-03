@@ -1,0 +1,296 @@
+//-------------------------------------------------
+//  File created by: Tessent Shell
+//          Version: 2026.1
+//       Created on: Tue Aug 18 14:52:40 IST 2026
+//-------------------------------------------------
+
+
+Core(msrv_soc_uncorewrapper) {
+  DesignInfo {
+    design_id : gate2;
+    design_level : physical_block;
+    ChildBlockModules {
+    }
+    Clocks {
+      Clock(HCLK) {
+        domain_label : HCLK;
+        type : async_source;
+        base_period : 2.00ns;
+        period : 2.0;
+        posedge_scannable_flop_count : 276;
+        negedge_scannable_flop_count : 0;
+        posedge_non_scannable_flop_count : 0;
+        negedge_non_scannable_flop_count : 0;
+        active_high_latch_count : 0;
+        active_low_latch_count : 0;
+        posedge_memory_clock_input_count : 0;
+        negedge_memory_clock_input_count : 0;
+      }
+      Clock(PCLK) {
+        domain_label : PCLK;
+        type : async_source;
+        base_period : 2.00ns;
+        period : 2.0;
+        posedge_scannable_flop_count : 1391;
+        negedge_scannable_flop_count : 3;
+        posedge_non_scannable_flop_count : 0;
+        negedge_non_scannable_flop_count : 0;
+        active_high_latch_count : 0;
+        active_low_latch_count : 0;
+        posedge_memory_clock_input_count : 0;
+        negedge_memory_clock_input_count : 0;
+      }
+    }
+    DynamicDftSignals {
+      DynamicDftSignal(async_set_reset_dynamic_disable) {
+        Instance {
+          type : pin;
+          created_from_other_signals : on;
+          add_hold_scan_cell : off;
+          node_name : tessent_persistent_cell_async_set_reset_dynamic_disable/ZN;
+        }
+      }
+      DynamicDftSignal(edt_clock) {
+        Instance {
+          type : pin;
+          created_from_other_signals : on;
+          node_name : msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_inst/edt_lbist_clock;
+          At {
+            lbist_dft_driver_node_name : msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_inst/edt_lbist_clock;
+          }
+        }
+      }
+      DynamicDftSignal(edt_update) {
+        Instance {
+          type : port;
+          add_hold_scan_cell : off;
+          node_name : edt_update;
+          At {
+            lbist_dft_driver_node_name : msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_inst/edt_update_out;
+          }
+        }
+      }
+      DynamicDftSignal(scan_en) {
+        Instance {
+          type : pin;
+          add_hold_scan_cell : off;
+          node_name : msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_inst/scan_en_out;
+          unmapped_node_name : scan_en_w;
+          unmapped_type : port;
+          At {
+            lbist_dft_driver_node_name : msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_inst/scan_en_out;
+          }
+        }
+      }
+      DynamicDftSignal(shift_capture_clock) {
+        Instance {
+          type : pin;
+          created_from_other_signals : on;
+          node_name : msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_inst/shift_capture_clock_out;
+          At {
+            lbist_dft_driver_node_name : msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_inst/shift_capture_clock_out;
+          }
+        }
+      }
+      DynamicDftSignal(test_clock) {
+        Instance {
+          type : port;
+          add_hold_scan_cell : off;
+          node_name : test_clock_w;
+          At {
+            lbist_dft_driver_node_name : msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_inst/lbist_test_clock_out;
+          }
+        }
+      }
+    }
+  }
+  Scan {
+    allow_internal_pins : 1;
+    is_hard_module : 1;
+    exclude_from_concatenated_netlist : 1;
+    internal_scan_only : 1;
+    Mode(int_mode) {
+      type : internal;
+      enable_dft_signal : int_mode;
+      traceable : 1;
+      make_active_automatically : 1;
+      EdtInstances {
+        msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst : msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1;
+      }
+      OccInstances {
+        msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_PCLK_inst : msrv_soc_uncorewrapper_pass2_rtl_tessent_occ;
+        msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_HCLK_inst : msrv_soc_uncorewrapper_pass2_rtl_tessent_occ;
+      }
+      ScanEn(scan_en_w) {
+        pipeline_count : 0;
+        active_polarity : all_ones;
+      }
+      Clock(test_clock_w) {
+        off_state : 1'b0;
+      }
+      ChildBlockInstance(msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_HCLK_inst) {
+        child_mode_name : "";
+        enable_dft_signal : "";
+      }
+      ChildBlockInstance(msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_PCLK_inst) {
+        child_mode_name : "";
+        enable_dft_signal : "";
+      }
+    }
+    Mode(controller_chain_mode) {
+      type : unwrapped;
+      enable_dft_signal : controller_chain_mode;
+      traceable : 1;
+      make_active_automatically : 0;
+      ScanChain {
+        length : 455;
+        scan_in_clock : ijtag_tck;
+        scan_out_clock : ~ijtag_tck;
+        scan_in_port : ccm_scan_in0;
+        scan_out_port : ccm_scan_out0;
+      }
+      ScanEn(scan_en_w) {
+        pipeline_count : 0;
+        active_polarity : all_ones;
+      }
+      Clock(ijtag_tck) {
+        off_state : 1'b0;
+      }
+      ChildBlockInstance(msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst) {
+        child_mode_name : controller_chain_mode;
+        enable_dft_signal : "";
+      }
+      ChildBlockInstance(msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_inst) {
+        child_mode_name : controller_chain_mode;
+        enable_dft_signal : "";
+      }
+      ChildBlockInstance(msrv_soc_uncorewrapper_pass2_rtl_tessent_single_chain_mode_logic_inst) {
+        child_mode_name : controller_chain_mode;
+        enable_dft_signal : "";
+      }
+    }
+    Mode(ext_mode) {
+      type : external;
+      enable_dft_signal : ext_mode;
+      traceable : 1;
+      make_active_automatically : 1;
+      ScanChain {
+        length : 48;
+        no_si_pipelining : 1;
+        scan_in_clock : %test_clock_w;
+        scan_out_clock : ~%test_clock_w;
+        scan_in_port : ts_ext_mode_si[0];
+        scan_out_port : ts_ext_mode_so[0];
+      }
+      ScanChain {
+        length : 48;
+        no_si_pipelining : 1;
+        scan_in_clock : %test_clock_w;
+        scan_out_clock : ~%test_clock_w;
+        scan_in_port : ts_ext_mode_si[1];
+        scan_out_port : ts_ext_mode_so[1];
+      }
+      ScanChain {
+        length : 48;
+        no_si_pipelining : 1;
+        scan_in_clock : %test_clock_w;
+        scan_out_clock : ~%test_clock_w;
+        scan_in_port : ts_ext_mode_si[2];
+        scan_out_port : ts_ext_mode_so[2];
+      }
+      ScanChain {
+        length : 48;
+        no_si_pipelining : 1;
+        scan_in_clock : %test_clock_w;
+        scan_out_clock : ~%test_clock_w;
+        scan_in_port : ts_ext_mode_si[3];
+        scan_out_port : ts_ext_mode_so[3];
+      }
+      ScanChain {
+        length : 48;
+        no_si_pipelining : 1;
+        scan_in_clock : %test_clock_w;
+        scan_out_clock : ~%test_clock_w;
+        scan_in_port : ts_ext_mode_si[4];
+        scan_out_port : ts_ext_mode_so[4];
+      }
+      ScanChain {
+        length : 48;
+        no_si_pipelining : 1;
+        scan_in_clock : %test_clock_w;
+        scan_out_clock : ~%test_clock_w;
+        scan_in_port : ts_ext_mode_si[5];
+        scan_out_port : ts_ext_mode_so[5];
+      }
+      ScanChain {
+        length : 48;
+        no_si_pipelining : 1;
+        scan_in_clock : %test_clock_w;
+        scan_out_clock : ~%test_clock_w;
+        scan_in_port : ts_ext_mode_si[6];
+        scan_out_port : ts_ext_mode_so[6];
+      }
+      ScanChain {
+        length : 48;
+        no_si_pipelining : 1;
+        scan_in_clock : %test_clock_w;
+        scan_out_clock : ~%test_clock_w;
+        scan_in_port : ts_ext_mode_si[7];
+        scan_out_port : ts_ext_mode_so[7];
+      }
+      ScanChain {
+        length : 49;
+        no_si_pipelining : 1;
+        scan_in_clock : %test_clock_w;
+        scan_out_clock : ~%test_clock_w;
+        scan_in_port : ts_ext_mode_si[8];
+        scan_out_port : ts_ext_mode_so[8];
+      }
+      ScanChain {
+        length : 49;
+        no_si_pipelining : 1;
+        scan_in_clock : %test_clock_w;
+        scan_out_clock : ~%test_clock_w;
+        scan_in_port : ts_ext_mode_si[9];
+        scan_out_port : ts_ext_mode_so[9];
+      }
+      ScanEn(scan_en_w) {
+        pipeline_count : 0;
+        active_polarity : all_ones;
+      }
+      Clock(HCLK) {
+        off_state : 1'b0;
+        is_capture_clock : true;
+      }
+      Clock(PCLK) {
+        off_state : 1'b0;
+        is_capture_clock : true;
+      }
+      Clock(test_clock_w) {
+        off_state : 1'b0;
+      }
+    }
+    OccModule(msrv_soc_uncorewrapper_pass2_rtl_tessent_occ) {
+      supports_add_core_instances : 1;
+      Iproc(setup) {
+        parameter_value_list : fast_capture_mode, 1;
+      }
+      OccShiftOnlyEn(shift_only_mode) {
+        active_polarity : 1'b1;
+      }
+      Clock(slow_clock) {
+        off_state : 1'b0;
+      }
+      ClockOut(tessent_persistent_cell_clock_out_mux/Z) {
+        slow_clock_input : slow_clock;
+        fast_clock_input : fast_clock;
+      }
+      FastCaptureClockEn(tessent_persistent_cell_cgc_fast_clock/E) {
+        clock_input : fast_clock;
+      }
+      ShiftRegisterClockEn(occ_control/tessent_persistent_cell_cgc_SHIFT_REG_CLK/E) {
+        clock_input : slow_clock;
+      }
+    }
+  }
+}

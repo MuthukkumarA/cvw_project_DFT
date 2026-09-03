@@ -1,0 +1,59 @@
+#--------------------------------------------------------------------------
+#
+#  Unpublished work. Copyright 2026 Siemens
+#
+#  This material contains trade secrets or otherwise confidential 
+#  information owned by Siemens Industry Software Inc. or its affiliates 
+#  (collectively, SISW), or its licensors. Access to and use of this 
+#  information is strictly limited as set forth in the Customer's 
+#  applicable agreements with SISW.
+#
+#--------------------------------------------------------------------------
+#  File created by: Tessent Shell
+#          Version: 2026.1
+#       Created on: Tue Aug 18 14:51:19 IST 2026
+#--------------------------------------------------------------------------
+
+set msrv_soc_uncorewrapper_pass2_rtl_tessent_occ {
+  msrv_soc_uncorewrapper_pass2_rtl_tessent_occ {
+    custom0 {
+      comment {Stop tck propagation on functional path.}
+      code {set_disable_timing [tessent_get_pins {$tessent_occ_controller_instance/tessent_persistent_cell_inject_tck_mux/B}]}
+    }
+    custom1 {
+      comment {inject tck mux select pin is static during test}
+      code {set_disable_timing [tessent_get_pins {$tessent_occ_controller_instance/tessent_persistent_cell_inject_tck_mux/S}]}
+    }
+    custom2 {
+      comment {Stop timing check of the select of the clock_out clock mux.}
+      code {set_disable_timing [tessent_get_pins {$tessent_occ_controller_instance/tessent_persistent_cell_clock_out*_mux/S}]}
+    }
+    custom3 {
+      comment {Clocks are gated when switching this clock mux.}
+      code {set_disable_clock_gating_check [tessent_get_cells {$tessent_occ_controller_instance/occ_control/tessent_persistent_cell_SHIFT_REG_CLK*_mux}]}
+    }
+    type standard
+    clock_cell_prefix tessent_persistent_cell_
+    fast_clock_buffer tessent_persistent_cell_fast_clock_buf
+    slow_clock_buffer tessent_persistent_cell_slow_clock_buf
+    clock_buffer_pins {
+      A Z
+    }
+    clock_mux_pins {
+      A B
+      S Z
+    }
+    cts_exclude_pins {occ_control/tessent_persistent_cell_ltest_ntc_sync_cell/clk occ_control/tessent_persistent_cell_cgc_SHIFT_REG_CLK/CK occ_control/tessent_persistent_cell_SHIFT_REG_CLK_mux/B}
+    scan_in_buffer tessent_persistent_cell_scan_in_buf
+    buffer_pins {
+      A Z
+    }
+    port_connections {
+      fast_clock HCLK
+      slow_clock OptionalDftSignal(shift_capture_clock)
+      scan_en OptionalDftSignal(scan_en)
+      capture_en 0
+      static_clock_control_mode 0
+    }
+  }
+}

@@ -1,0 +1,24 @@
+//-------------------------------------------------
+//  File created by: Tessent Shell
+//          Version: 2026.1
+//       Created on: Tue Aug 18 14:52:40 IST 2026
+//-------------------------------------------------
+
+
+TsdbInfo(msrv_soc_uncorewrapper,gate2) {
+  tessent_tool_version : 2026.1;
+  tessent_meta_version : 11;
+  version : 3;
+  creation_date : Tue Aug 18 09:22:40 GMT 2026;
+  creation_user : AMuthuKKumar;
+  creation_step : insert_test_logic;
+  level : physical_block;
+  icl_extraction_needed : On;
+  library_name : work;
+  instrument_module_name_prefix : msrv_soc_uncorewrapper;
+  gate_extension : vg;
+  interface_has_external_dependencies : 0;
+  OpenedTsdbDirectories {
+    /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/Core_v_wally/SOC/uncore/TSDB;
+  }
+}

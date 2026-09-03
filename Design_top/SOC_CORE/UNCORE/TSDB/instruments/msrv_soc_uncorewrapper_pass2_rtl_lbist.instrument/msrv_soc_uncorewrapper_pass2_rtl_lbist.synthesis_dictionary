@@ -1,0 +1,52 @@
+#--------------------------------------------------------------------------
+#
+#  Unpublished work. Copyright 2026 Siemens
+#
+#  This material contains trade secrets or otherwise confidential 
+#  information owned by Siemens Industry Software Inc. or its affiliates 
+#  (collectively, SISW), or its licensors. Access to and use of this 
+#  information is strictly limited as set forth in the Customer's 
+#  applicable agreements with SISW.
+#
+#--------------------------------------------------------------------------
+#  File created by: Tessent Shell
+#          Version: 2026.1
+#       Created on: Tue Aug 18 14:51:24 IST 2026
+#--------------------------------------------------------------------------
+
+set synthesis_dictionary {
+  design_source_dictionary {
+    read1 {
+      format verilog_2001
+      work_library work
+      files {
+        ./msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist.v
+        ./msrv_soc_uncorewrapper_pass2_rtl_tessent_single_chain_mode_logic.v
+      }
+    }
+  }
+  designs_dictionary {
+    msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist {
+      boundary_optimization off
+      size_only_prefix_list tessent_persistent_cell_
+      output_files {
+        msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist.vg {
+          module_name_list msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist*
+        }
+      }
+      sdc {
+        file_name msrv_soc_uncorewrapper_pass2_rtl_lbist.sdc
+        proc_list msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist
+      }
+    }
+    msrv_soc_uncorewrapper_pass2_rtl_tessent_single_chain_mode_logic {
+      boundary_optimization off
+      size_only_prefix_list tessent_persistent_cell_
+      output_files {
+        msrv_soc_uncorewrapper_pass2_rtl_tessent_single_chain_mode_logic.vg {
+          module_name_list msrv_soc_uncorewrapper_pass2_rtl_tessent_single_chain_mode_logic*
+        }
+      }
+    }
+  }
+}

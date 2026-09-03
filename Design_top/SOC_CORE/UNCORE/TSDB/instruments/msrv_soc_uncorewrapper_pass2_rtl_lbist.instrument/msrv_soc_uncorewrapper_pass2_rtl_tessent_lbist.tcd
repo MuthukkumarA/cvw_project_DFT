@@ -1,0 +1,148 @@
+//-------------------------------------------------
+//  File created by: Tessent Shell
+//          Version: 2026.1
+//       Created on: Tue Aug 18 14:51:24 IST 2026
+//-------------------------------------------------
+
+
+Core(msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist) {
+  tessent_tool_version : 2026.1;
+  tessent_meta_version : 10;
+  Lbist {
+    version : 9;
+    creation_date : Tue Aug 18 14:51:24 IST 2026;
+    ijtag_scan_interface : on;
+    Interface {
+      Tck(ijtag_tck) {
+      }
+      TestClock(test_clock) {
+        persistent_pin : tessent_persistent_cell_test_clock_buf/Z;
+      }
+      Clock(shift_clock_src) {
+        persistent_pin : msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_fsm_i/tessent_persistent_cell_shift_clock_int_mux/A;
+      }
+      TestLogicEnable(ijtag_sel) {
+      }
+      TestLogicReset(ijtag_reset) {
+      }
+      CaptureDr(ijtag_ce) {
+      }
+      ShiftDr(ijtag_se) {
+      }
+      UpdateDr(ijtag_ue) {
+      }
+      PrpgEn(lbist_prpg_en) {
+        persistent_pin : tessent_persistent_cell_prpg_en/Z;
+      }
+      MisrEn(misr_accumulate_en) {
+        persistent_pin : tessent_persistent_cell_misr_en/Z;
+      }
+      ScanEn(scan_en_in) {
+        persistent_pin : tessent_persistent_cell_scan_en_in_buf/Z;
+      }
+      LbistEn(lbist_en) {
+      }
+      CaptureEn(capture_en_out) {
+      }
+      InternalLbistEn(tessent_persistent_cell_lbist_en_buf/Z) {
+      }
+      InternalShiftPhase(tessent_persistent_cell_scan_en_out_mux/Z) {
+      }
+      InternalCaptureEn(tessent_persistent_cell_capture_en_buf/Z) {
+      }
+      InternalShiftClockEn(tessent_persistent_cell_shift_clock_en_buf/Z) {
+      }
+      InternalCaptureClockEn(tessent_persistent_cell_capture_clock_en_buf/Z) {
+      }
+      InternalShiftClockEn(tessent_persistent_cell_shift_en_out_mux/Z) {
+      }
+      LbistClock(edt_lbist_clock) {
+      }
+      InternalLbistClock(msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_fsm_i/tessent_persistent_cell_bist_clock_gater_i/GCK) {
+      }
+      CcmEn(ccm_en) {
+        persistent_pin : tessent_persistent_cell_ccm_en_buf/Z;
+      }
+      CcmScanIn(ccm_scan_in) {
+      }
+      CcmScanOut(ccm_scan_out) {
+      }
+    }
+    Parameters {
+      InternalCaptureEn {
+        parameter : pattern_set;
+        type : string;
+        default_value : scan;
+        ref_enum : pattern_set_type;
+        ijtag_controllable : false;
+      }
+      CaptureProcedureTimeplate {
+        parameter : named_capture_procedure_timeplate;
+        type : string;
+        default_value : "";
+        ijtag_controllable : false;
+      }
+      TestLogicReset {
+        parameter : active_low_reset;
+        type : boolean;
+        default_value : on;
+        ijtag_controllable : false;
+      }
+      Enum(pattern_set_type) {
+        chain : 0;
+        scan : 1;
+      }
+    }
+    SignalNames {
+      LbistEn() {
+        registers : msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_ctrl_signals_i/lbist_en;
+      }
+      LbistSetup() {
+        registers : msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_ctrl_signals_i/lbist_setup[2:0];
+      }
+      ShiftBitCounter() {
+        registers : msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_ctrl_i/msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_counter_i/bit_cnt_max[9:0];
+      }
+      LbistState() {
+        registers : msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_fsm_i/state[2:0];
+      }
+      CaptureEn() {
+        registers : msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_fsm_i/capture_en;
+      }
+      CaptureWidthCounter() {
+        registers : msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_ctrl_i/msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_capture_phase_size_reg_i/capture_phase_size[2:0];
+      }
+      MisrEn() {
+        registers : msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_fsm_i/misr_en;
+      }
+    }
+    LbistInternalInstances {
+      lbist_controller : msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_ctrl_signals_i;
+      shift_controller : msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_fsm_i;
+    }
+    LbistConfiguration {
+      ip_version : 2;
+      burn_in : on;
+      shift_cycles_reg_width : 10;
+      ncapture_cycles_reg_width : 3;
+      pattern_count_reg_width : 11;
+      warmup_pattern_count_reg_width : 8;
+      ncp_index_reg_width : 0;
+      programmable_capture_procedures : on;
+      programmable_ncp_count : 1;
+      pre_post_shift_dead_cycles : 8;
+      shift_counter_resolution : bit;
+      single_chain_mode_skip_edt_blocks : on;
+      diagnosis_single_chain_mode : on;
+      ijtag_sub_network : on;
+      HardwareDefaultValues {
+        shift_length_counter : 800;
+        capture_width_counter : 7;
+        pattern_counter : 1024;
+        warmup_pattern_counter : 0;
+        ncp_limit_counts : 256;
+        ncp_limit_percentages : -1;
+      }
+    }
+  }
+}
