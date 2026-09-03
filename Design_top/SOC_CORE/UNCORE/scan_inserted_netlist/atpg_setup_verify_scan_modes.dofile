@@ -1,0 +1,28 @@
+set dofileName ./scan_inserted_netlist/atpg_setup.dofile
+set designFile /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/Core_v_wally/SOC/uncore/scan_inserted_netlist/scan_inserted_netlist.v
+set topName {msrv_soc_uncorewrapper}
+set libName "../../../libs/NangateOpenCellLibrary.tcelllib ../../../libs/dft_sim.tcelllib"
+
+
+proc verify_all_scan_modes {} {
+   set modeList [list int_mode controller_chain_mode ext_mode]
+   foreach mode $modeList {
+      set_system_mode setup
+      reset_design
+      tessent_scan_setup $mode
+      set_edt_options off
+      add_black_box -auto
+      set_system_mode analysis
+      report_scan_cells
+   }
+}
+
+
+set_context patterns -scan
+delete_design
+read_cell_library $libName
+read_verilog $designFile
+set_current_design $topName
+dofile $dofileName
+
+verify_all_scan_modes

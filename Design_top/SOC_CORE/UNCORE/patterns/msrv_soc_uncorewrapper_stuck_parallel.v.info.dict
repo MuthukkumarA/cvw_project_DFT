@@ -1,0 +1,22 @@
+#
+# Information Dictionary File produced by Tessent Shell 2026.1
+# Date           : Tue Aug 18 14:54:23 2026
+#
+# <view> : (interface) | scan_graybox | full | ijtag_graybox
+# <language_version> : (verilog_2001) | verilog_sv31a
+
+set pattern_info_dict {
+  version 1
+  pattern_type scan
+  ssn off
+  current_mode edt_int_stuck
+  simulation_design_view {
+    testbench_language verilog_2001
+    testbench_name msrv_soc_uncorewrapper_msrv_soc_uncorewrapper_stuck_parallel_v_ctl
+    dut_inst msrv_soc_uncorewrapper_inst
+    current_design_block {
+      module_name msrv_soc_uncorewrapper
+      view full
+    }
+  }
+}

@@ -1,0 +1,145 @@
+#
+#  Written by Tessent Shell 2026.1 on Tue Aug 18 14:52:39 IST 2026
+#
+# The generated dofile contains references to internal pins
+# The file may require editing to make it function properly.
+proc tessent_scan_common {} {
+   # internal input pin
+   add_primary_inputs -internal msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl_inst/ltest_en
+   add_clocks 0 test_clock_w
+   add_clocks 0 ijtag_tck
+   add_clocks 0 msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_PCLK_inst/tessent_persistent_cell_clock_out_mux/Z  -internal -pin_name inferred_occ_clock0
+   add_clocks 0 msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_HCLK_inst/tessent_persistent_cell_clock_out_mux/Z  -internal -pin_name inferred_occ_clock1
+   add_clocks 0 PCLK
+   add_clocks 0 HCLK
+   add_pin_constraints edt_update C0
+   add_pin_constraints ijtag_sel C0
+   add_pin_constraints ijtag_reset C1
+   add_pin_constraints msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl_inst/ltest_en C1
+add_black_boxes -auto
+   // internal scan mode enables must be controllable
+   add_primary_input -internal msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl_inst/int_mode
+   add_primary_input -internal msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl_inst/controller_chain_mode
+   add_primary_input -internal msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl_inst/ext_mode
+}
+
+
+proc tessent_scan_int_mode_mode {} {
+   add_scan_groups grp1 ./scan_inserted_netlist/atpg_setup.testproc
+
+   add_scan_chains -internal int_mode_chain0 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[0]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[0]}
+   add_scan_chains -internal int_mode_chain1 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[1]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[1]}
+   add_scan_chains -internal int_mode_chain2 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[2]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[2]}
+   add_scan_chains -internal int_mode_chain3 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[3]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[3]}
+   add_scan_chains -internal int_mode_chain4 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[4]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[4]}
+   add_scan_chains -internal int_mode_chain5 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[5]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[5]}
+   add_scan_chains -internal int_mode_chain6 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[6]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[6]}
+   add_scan_chains -internal int_mode_chain7 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[7]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[7]}
+   add_scan_chains -internal int_mode_chain8 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[8]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[8]}
+   add_scan_chains -internal int_mode_chain9 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[9]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[9]}
+   add_scan_chains -internal int_mode_chain10 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[10]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[10]}
+   add_scan_chains -internal int_mode_chain11 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[11]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[11]}
+   add_scan_chains -internal int_mode_chain12 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[12]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[12]}
+   add_scan_chains -internal int_mode_chain13 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[13]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[13]}
+   add_scan_chains -internal int_mode_chain14 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[14]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[14]}
+   add_scan_chains -internal int_mode_chain15 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[15]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[15]}
+   add_scan_chains -internal int_mode_chain16 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[16]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[16]}
+   add_scan_chains -internal int_mode_chain17 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[17]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[17]}
+   add_scan_chains -internal int_mode_chain18 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[18]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[18]}
+   add_scan_chains -internal int_mode_chain19 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[19]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[19]}
+   add_scan_chains -internal int_mode_chain20 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[20]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[20]}
+   add_scan_chains -internal int_mode_chain21 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[21]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[21]}
+   add_scan_chains -internal int_mode_chain22 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[22]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[22]}
+   add_scan_chains -internal int_mode_chain23 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[23]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[23]}
+   add_scan_chains -internal int_mode_chain24 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[24]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[24]}
+   add_scan_chains -internal int_mode_chain25 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[25]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[25]}
+   add_scan_chains -internal int_mode_chain26 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[26]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[26]}
+   add_scan_chains -internal int_mode_chain27 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[27]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[27]}
+   add_scan_chains -internal int_mode_chain28 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[28]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[28]}
+   add_scan_chains -internal int_mode_chain29 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[29]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[29]}
+   add_scan_chains -internal int_mode_chain30 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[30]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[30]}
+   add_scan_chains -internal int_mode_chain31 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[31]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[31]}
+   add_scan_chains -internal int_mode_chain32 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[32]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[32]}
+   add_scan_chains -internal int_mode_chain33 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[33]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[33]}
+   add_scan_chains -internal int_mode_chain34 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[34]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[34]}
+   add_scan_chains -internal int_mode_chain35 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[35]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[35]}
+   add_scan_chains -internal int_mode_chain36 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[36]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[36]}
+   add_scan_chains -internal int_mode_chain37 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[37]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[37]}
+   add_scan_chains -internal int_mode_chain38 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[38]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[38]}
+   add_scan_chains -internal int_mode_chain39 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[39]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[39]}
+   add_scan_chains -internal int_mode_chain40 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[40]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[40]}
+   add_scan_chains -internal int_mode_chain41 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[41]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[41]}
+   add_scan_chains -internal int_mode_chain42 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[42]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[42]}
+   add_scan_chains -internal int_mode_chain43 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[43]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[43]}
+   add_scan_chains -internal int_mode_chain44 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[44]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[44]}
+   add_scan_chains -internal int_mode_chain45 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[45]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[45]}
+   add_scan_chains -internal int_mode_chain46 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[46]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[46]}
+   add_scan_chains -internal int_mode_chain47 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[47]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[47]}
+   add_scan_chains -internal int_mode_chain48 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[48]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[48]}
+   add_scan_chains -internal int_mode_chain49 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[49]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[49]}
+   add_scan_chains -internal int_mode_chain50 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[50]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[50]}
+   add_scan_chains -internal int_mode_chain51 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[51]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[51]}
+   add_scan_chains -internal int_mode_chain52 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[52]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[52]}
+   add_scan_chains -internal int_mode_chain53 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[53]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[53]}
+   add_scan_chains -internal int_mode_chain54 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[54]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[54]}
+   add_scan_chains -internal int_mode_chain55 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[55]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[55]}
+   add_scan_chains -internal int_mode_chain56 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[56]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[56]}
+   add_scan_chains -internal int_mode_chain57 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[57]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[57]}
+   add_scan_chains -internal int_mode_chain58 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[58]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[58]}
+   add_scan_chains -internal int_mode_chain59 grp1 {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_in[59]} {/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst/edt_scan_out[59]}
+
+   tessent_scan_common
+
+   add_pin_constraints msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl_inst/int_mode C1
+   add_pin_constraints msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl_inst/controller_chain_mode C0
+   add_pin_constraints msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl_inst/ext_mode C0
+}
+
+
+proc tessent_scan_controller_chain_mode_mode {} {
+   add_scan_groups grp1 ./scan_inserted_netlist/atpg_setup.testproc
+
+   add_scan_chains controller_chain_mode_chain grp1 /ccm_scan_in0 /ccm_scan_out0
+
+   tessent_scan_common
+
+   add_pin_constraints msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl_inst/int_mode C0
+   add_pin_constraints msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl_inst/controller_chain_mode C1
+   add_pin_constraints msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl_inst/ext_mode C0
+}
+
+
+proc tessent_scan_ext_mode_mode {} {
+   add_scan_groups grp1 ./scan_inserted_netlist/atpg_setup.testproc
+
+   add_scan_chains ext_mode_chain0 grp1 {/ts_ext_mode_si[0]} {/ts_ext_mode_so[0]}
+   add_scan_chains ext_mode_chain1 grp1 {/ts_ext_mode_si[1]} {/ts_ext_mode_so[1]}
+   add_scan_chains ext_mode_chain2 grp1 {/ts_ext_mode_si[2]} {/ts_ext_mode_so[2]}
+   add_scan_chains ext_mode_chain3 grp1 {/ts_ext_mode_si[3]} {/ts_ext_mode_so[3]}
+   add_scan_chains ext_mode_chain4 grp1 {/ts_ext_mode_si[4]} {/ts_ext_mode_so[4]}
+   add_scan_chains ext_mode_chain5 grp1 {/ts_ext_mode_si[5]} {/ts_ext_mode_so[5]}
+   add_scan_chains ext_mode_chain6 grp1 {/ts_ext_mode_si[6]} {/ts_ext_mode_so[6]}
+   add_scan_chains ext_mode_chain7 grp1 {/ts_ext_mode_si[7]} {/ts_ext_mode_so[7]}
+   add_scan_chains ext_mode_chain8 grp1 {/ts_ext_mode_si[8]} {/ts_ext_mode_so[8]}
+   add_scan_chains ext_mode_chain9 grp1 {/ts_ext_mode_si[9]} {/ts_ext_mode_so[9]}
+
+   tessent_scan_common
+
+   add_pin_constraints msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl_inst/int_mode C0
+   add_pin_constraints msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl_inst/controller_chain_mode C0
+   add_pin_constraints msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl_inst/ext_mode C1
+}
+
+
+proc tessent_scan_setup { {mode int_mode} } {
+   switch -exact -- $mode {
+      int_mode { tessent_scan_int_mode_mode }
+      controller_chain_mode { tessent_scan_controller_chain_mode_mode }
+      ext_mode { tessent_scan_ext_mode_mode }
+      default {
+         display_message -error "invalid scan mode: $mode"
+      }
+   }
+}
+
+
