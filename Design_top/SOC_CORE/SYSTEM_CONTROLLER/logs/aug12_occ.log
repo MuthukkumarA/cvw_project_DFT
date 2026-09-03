@@ -1,0 +1,726 @@
+/home/cad/eda/Mentor_Graphics/Tessent_2026/tessent_2026.1/bin/tessent -shell -logfile ./logs/aug12_occ.log -replace
+//  Tessent Shell  2026.1    Thu Feb 26 18:38:00 GMT 2026
+//                Unpublished work. Copyright 2026 Siemens
+//
+//      This material contains trade secrets or otherwise confidential 
+//  information owned by Siemens Industry Software Inc. or its affiliates 
+//   (collectively, "SISW"), or its licensors. Access to and use of this 
+//     information is strictly limited as set forth in the Customer's 
+//                   applicable agreements with SISW. 
+//
+//  Siemens software executing under x86-64 Linux on Wed Aug 12 11:48:49 IST 2026.
+//  64 bit version
+//  Host: mavenserver-RH3 (255072 MB RAM, 122071 MB Swap)
+//
+//  command: set_context dft -rtl -design_identifier sys_controller
+//  command: 
+//  command: set_tsdb_output_directory TSDB
+TSDB
+//  command: 
+//  command: read_cell_library ../../../libs/NangateOpenCellLibrary.tcelllib 
+//  Reading DFT Library file ../../../libs/NangateOpenCellLibrary.tcelllib
+//  Finished reading file ../../../libs/NangateOpenCellLibrary.tcelllib
+//  command: 
+//  command: set msrv_soc "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl/"
+/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl/
+//  command: 
+//  command: set_design_sources -Y $msrv_soc/ -extension vh
+//  command: 
+//  command: read_verilog $msrv_soc/cvw.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/msrv_soc_top/*.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/wrapper/msrv_soc_system_controllerwrapper.sv -format sv2012 -vcs_compatibility
+//  command: set_current_design msrv_soc_pipelinedcorewrapper
+//  Error: Specified module 'msrv_soc_pipelinedcorewrapper' is not defined.
+//  command: set_current_design msrv_soc_system_controllerwrapper
+//  Note: Changing pin 'CK' function from 'active_low_clock' to 'clock_in'
+//        Model 'CLKGATE_X1' line 1266 file '../../../libs/NangateOpenCellLibrary.tcelllib'
+//  Note: Changing pin 'CK' function from 'active_low_clock' to 'clock_in'
+//        Model 'CLKGATE_X2' line 1282 file '../../../libs/NangateOpenCellLibrary.tcelllib'
+//  Note: Changing pin 'CK' function from 'active_low_clock' to 'clock_in'
+//        Model 'CLKGATE_X4' line 1298 file '../../../libs/NangateOpenCellLibrary.tcelllib'
+//  Note: Changing pin 'CK' function from 'active_low_clock' to 'clock_in'
+//        Model 'CLKGATE_X8' line 1314 file '../../../libs/NangateOpenCellLibrary.tcelllib'
+//  Warning: Undefined modules were found.
+//           Before using "set_system_mode" or "create_flat_model", you must either define
+//           the missing modules using "read_verilog" and/or "read_cell_library", or use the
+//           following command to treat them as black boxes:
+             add_black_boxes -modules { \
+                    msrv_soc_adrdecs \
+                    msrv_soc_flopenr \
+                    msrv_soc_flopr \
+                    msrv_soc_mux2 \
+                    msrv_soc_reset_synchronizer \
+             }
+//           You can also use "add_black_boxes -auto" to black box all undefined modules but
+//           it is recommended that you do not add this command to your dofile. Doing so may
+//           unintentionally black-box new undefined modules in future runs.
+//  command: read_verilog $msrv_soc/msrv_soc_mmu/*.sv -format sv2012 -vcs_compatibility
+//  Note: The elaborated design is no longer available.
+//        Use the 'set_current_design' command to re-elaborate the design.
+//  command: set_current_design msrv_soc_system_controllerwrapper
+//  Warning: Undefined modules were found.
+//           Before using "set_system_mode" or "create_flat_model", you must either define
+//           the missing modules using "read_verilog" and/or "read_cell_library", or use the
+//           following command to treat them as black boxes:
+             add_black_boxes -modules { \
+                    msrv_soc_flopenr \
+                    msrv_soc_flopr \
+                    msrv_soc_mux2 \
+                    msrv_soc_reset_synchronizer \
+             }
+//           You can also use "add_black_boxes -auto" to black box all undefined modules but
+//           it is recommended that you do not add this command to your dofile. Doing so may
+//           unintentionally black-box new undefined modules in future runs.
+//  command: read_verilog $msrv_soc/msrv_soc_generic/*.sv -format sv2012 -vcs_compatibility
+//  Note: The elaborated design is no longer available.
+//        Use the 'set_current_design' command to re-elaborate the design.
+//  command: read_verilog $msrv_soc/msrv_soc_generic/msrv_soc_flop/*.sv -format sv2012 -vcs_compatibility
+//  command: set_current_design msrv_soc_system_controllerwrapper
+//  command: set_design_level physical_block
+//  command: 
+//  command: report_dft_signal_names 
+
+// Registered static DFT signal names
+// ==================================
+// ------------------------------  -----------------------  -----------  --------------------------  ---------------------  -------------------
+// Name                            Usage                    Reset value  Default value in all tests  Value in pre-scan DRC  Registration source
+// ------------------------------  -----------------------  -----------  --------------------------  ---------------------  -------------------
+// all_test                        Global DFT control            0                   1                         1            Built-in
+// bscan_clamp_enable              Global DFT control            0                   0                         X            Built-in
+// dft_signal_disable              Global DFT control            1                   0                         0            Built-in
+// istc_hsio_select                Global DFT control            0                   0                         X            Built-in
+// memory_write_disable            Global DFT control            0                   0                         0            Built-in
+// occ_kill_clock_en               Global DFT control            0                   0                         0            Built-in
+// output_pad_disable              Global DFT control            0                   0                         X            Built-in
+// ssn_en                          Global DFT control            0                   0                         X            Built-in
+// ssn_lfsr_en                     Global DFT control            0                   0                         X            Built-in
+// tck_occ_en                      Global DFT control            0                   0                         0            Built-in
+// tck_select                      Global DFT control            0                   0                         0            Built-in
+// tristate_enable_nc_test         Global DFT control            0                   0                         0            Built-in
+// tristate_enable_nc_test_type    Global DFT control            0                   0                         0            Built-in
+// async_set_reset_static_disable  Logic test control            0                   0                         0            Built-in
+// bscan_input_isolation_enable    Logic test control            0                   0                         X            Built-in
+// capture_per_cycle_static_en     Logic test control            0                   0                         X            Built-in
+// control_test_point_en           Logic test control            0                   0                         X            Built-in
+// ext_lbist_en                    Logic test control            0                   0                         X            Built-in
+// ext_ltest_en                    Logic test control            0                   0                         X            Built-in
+// fp_bounding_en                  Logic test control            0                   0                         X            Built-in
+// input_control_value_en          Logic test control            0                   0                         X            Built-in
+// int_ltest_en                    Logic test control            0                   0                         X            Built-in
+// ist_ltest_en                    Logic test control            0                   0                         1            Built-in
+// lbist_en                        Logic test control            0                   0                         0            Built-in
+// lbist_low_power_shift_en        Logic test control            0                   0                         0            Built-in
+// lbist_self_test_en              Logic test control            0                   0                         0            Built-in
+// ltest_en                        Logic test control            0                   0                         1            Built-in
+// mcp_bounding_en                 Logic test control            0                   0                         X            Built-in
+// memory_bypass_en                Logic test control            0                   0                         1            Built-in
+// observe_test_point_en           Logic test control            0                   0                         X            Built-in
+// output_safe_value_en            Logic test control            0                   0                         X            Built-in
+// se_pipeline_en                  Logic test control            0                   0                         0            Built-in
+// wrapper_toggle_en               Logic test control            0                   0                         X            Built-in
+// x_bounding_en                   Logic test control            0                   0                         X            Built-in
+// controller_chain_mode           Scan mode (unwrapped)         0                   0                         X            Built-in
+// edt_mode                        Scan mode (unwrapped)         0                   0                         X            Built-in
+// multi_mode                      Scan mode (unwrapped)         0                   0                         X            Built-in
+// promoted_cells_mode             Scan mode (unwrapped)         0                   0                         X            Built-in
+// single_mode                     Scan mode (unwrapped)         0                   0                         X            Built-in
+// int_edt_mode                    Scan mode (internal)          0                   0                         X            Built-in
+// int_mode                        Scan mode (internal)          0                   0                         X            Built-in
+// int_multi_mode                  Scan mode (internal)          0                   0                         X            Built-in
+// int_single_mode                 Scan mode (internal)          0                   0                         X            Built-in
+// ext_edt_mode                    Scan mode (external)          0                   0                         X            Built-in
+// ext_mode                        Scan mode (external)          0                   0                         X            Built-in
+// ext_multi_mode                  Scan mode (external)          0                   0                         X            Built-in
+// ext_single_mode                 Scan mode (external)          0                   0                         X            Built-in
+// retargeting1_mode               Scan mode (retargeting)       0                   0                         X            Built-in
+// retargeting2_mode               Scan mode (retargeting)       0                   0                         X            Built-in
+// retargeting3_mode               Scan mode (retargeting)       0                   0                         X            Built-in
+// retargeting4_mode               Scan mode (retargeting)       0                   0                         X            Built-in
+// retargeting5_mode               Scan mode (retargeting)       0                   0                         X            Built-in
+// retargeting6_mode               Scan mode (retargeting)       0                   0                         X            Built-in
+// retargeting7_mode               Scan mode (retargeting)       0                   0                         X            Built-in
+// retargeting8_mode               Scan mode (retargeting)       0                   0                         X            Built-in
+//
+
+// Registered dynamic DFT signal names
+// ===================================
+// ------------------------------------  ---------------------------------
+// Name                                  Can be created from other signals
+// ------------------------------------  ---------------------------------
+// async_set_reset_dynamic_disable                      Yes
+// capture_clock                                        Yes
+// edt_clock                                            Yes
+// edt_update                                           No
+// input_wrapper_scan_en                                Yes
+// lbist_async_set_reset_dynamic_enable                 No
+// lbist_misr_accumulate_en                             No
+// lbist_prpg_en                                        No
+// lbist_reset                                          No
+// occ_capture_en                                       No
+// occ_shift_clock_en                                   No
+// output_wrapper_scan_en                               Yes
+// scan_en                                              No
+// shift_capture_clock                                  Yes
+// shift_clock                                          Yes
+// test_clock                                           No
+//
+//  command: add_dft_signals ltest_en 
+//  command: 
+//  command: add_dft_signals scan_en edt_update test_clock -source_node {scan_en_w edt_update test_clock_w}
+//  command: 
+//  command: add_dft_signals shift_capture_clock edt_clock -create_from_other_signals
+//  command: 
+//  command: add_dft_signals controller_chain_mode
+//  command: 
+//  command: add_dft_signals int_ltest_en ext_ltest_en int_mode ext_mode
+//  command: 
+//  command: add_dft_signals {x_bounding_en observe_test_point_en control_test_point_en mcp_bounding_en}
+//  command: 
+//  command: report_dft_signals 
+
+// Existing and to be created DFT signals
+// ======================================
+// ---------------------  -------------  ----------  --------------  -------------------------------------------------
+// Name                   Status         Origin      Type            Location
+// ---------------------  -------------  ----------  --------------  -------------------------------------------------
+// control_test_point_en  To be created  User added  IJTAG register
+// controller_chain_mode  To be created  User added  IJTAG register
+// edt_clock              To be created  User added  ClockGateAnd    <persistent_clock_cell_prefix>edt_clock
+// edt_update             To be created  User added  Port            edt_update
+// ext_ltest_en           To be created  User added  IJTAG register
+// ext_mode               To be created  User added  IJTAG register
+// int_ltest_en           To be created  User added  IJTAG register
+// int_mode               To be created  User added  IJTAG register
+// ltest_en               To be created  User added  IJTAG register
+// mcp_bounding_en        To be created  User added  IJTAG register
+// observe_test_point_en  To be created  User added  IJTAG register
+// scan_en                To be created  User added  Port            scan_en_w
+// shift_capture_clock    To be created  User added  ClockGateAnd    <persistent_clock_cell_prefix>shift_capture_clock
+// test_clock             To be created  User added  Port            test_clock_w
+// x_bounding_en          To be created  User added  IJTAG register
+//
+//  command: 
+//  command: set_dft_specification_requirements -logic_test on
+//  command: check_design_rules 
+//  ---------------------------------------------------------------------------
+//  Begin RTL synthesis.
+//  --------------------
+//  Synthesized modules=13, Time=1.00 sec.
+//  ---------------------------------------------------------------------------
+//  Flattening process completed, cell instances=2800, gates=5063, PIs=137, POs=5, CPU time=0.02 sec.
+//  ---------------------------------------------------------------------------
+//  Begin circuit learning analyses.
+//  --------------------------------
+//  Learning completed, CPU time=0.00 sec.
+//  Error: The pin 'dut/reg_bank/haddrreg/rtlcreg_q_21/CP' (4924.3) is sourced by port 'clk' (136.0)
+//         but the port was not defined as clock using the 'add_clocks -period' command. (DFT_C6-1)
+//  Error: The pin 'dut/clk_gen/GLITCH_FREE_CKT1/rtlcreg_q3/CP' (4885.3) source tracing stopped at pin 'dut/clk_gen/rtlcreg_counter_1/Q' (4886.0).
+//         Correct the blocking conditions or use the 'add_clocks -period' if this is an embedded oscillator
+//         or 'add_clocks -reference' if this is an active PLL or clock divider. (DFT_C6-2)
+//  Error: The pin 'dut/clk_gen/GLITCH_FREE_CKT0/rtlcreg_q2/CP' (4880.3) source tracing stopped at pin 'dut/clk_gen/rtlcreg_counter_0/Q' (4887.0).
+//         Correct the blocking conditions or use the 'add_clocks -period' if this is an embedded oscillator
+//         or 'add_clocks -reference' if this is an active PLL or clock divider. (DFT_C6-3)
+//  Note: Adding DFT signal 'async_set_reset_static_disable' with the -create_with_tdr option.
+//  Note: Adding DFT signal 'async_set_reset_dynamic_disable' with the -create_from_other_signals option.
+//  Note: There was 1 'add_dft_control_points -type async_set_reset' command inferred from DRC. Use report_dft_control_points to see it.
+//  Error: There were 3 DFT_C6 violations (Clock of scannable flip-flops not properly sourced by a declared clock).
+//  Error: Rules checking unsuccessful, cannot exit SETUP mode.
+//  command: add_clocks [get_ports clk] -period 2ns
+//  command: check_design_rules 
+//  Error: The pin 'dut/clk_gen/GLITCH_FREE_CKT1/rtlcreg_q3/CP' (4885.3) source tracing stopped at pin 'dut/clk_gen/rtlcreg_counter_1/Q' (4886.0).
+//         Correct the blocking conditions or use the 'add_clocks -period' if this is an embedded oscillator
+//         or 'add_clocks -reference' if this is an active PLL or clock divider. (DFT_C6-1)
+//  Error: The pin 'dut/clk_gen/GLITCH_FREE_CKT0/rtlcreg_q2/CP' (4880.3) source tracing stopped at pin 'dut/clk_gen/rtlcreg_counter_0/Q' (4887.0).
+//         Correct the blocking conditions or use the 'add_clocks -period' if this is an embedded oscillator
+//         or 'add_clocks -reference' if this is an active PLL or clock divider. (DFT_C6-2)
+//  Note: There was 1 'add_dft_control_points -type async_set_reset' command inferred from DRC. Use report_dft_control_points to see it.
+//  Error: There were 2 DFT_C6 violations (Clock of scannable flip-flops not properly sourced by a declared clock).
+//  Error: Rules checking unsuccessful, cannot exit SETUP mode.
+//  command: add_nonscan_instances -instances dut/clk_gen
+//  command: check_design_rules 
+//  Note: There was 1 'add_dft_control_points -type async_set_reset' command inferred from DRC. Use report_dft_control_points to see it.
+//  command: report_dft_control_points 
+
+// DFT control points
+// ==================
+// -----------------  ---------------  -------------------  -------------------------------
+// Node               Type             Control source name  Origin
+// -----------------  ---------------  -------------------  -------------------------------
+// 'dut/resetsync/q'  async_set_reset  scan_en              Inferred by DFT_C9, Active High
+//
+//  command: set spec [create_dft_specification -sri_sib_list {edt occ lbist}]
+//  sub-command: create_dft_specification -sri_sib_list "edt occ lbist" 
+//  
+//  Begin creation of DftSpecification(msrv_soc_system_controllerwrapper,sys_controller)
+//    Creation of RtlCells wrapper
+//    Creation of IjtagNetwork wrapper
+//  
+//  Done  creation of DftSpecification(msrv_soc_system_controllerwrapper,sys_controller)
+//  
+/DftSpecification(msrv_soc_system_controllerwrapper,sys_controller)
+//  command:    
+//  command: report_config_data $spec 
+
+DftSpecification(msrv_soc_system_controllerwrapper,sys_controller) {
+  IjtagNetwork {
+    HostScanInterface(ijtag) {
+      Sib(sri) {
+        Attributes {
+          tessent_dft_function : scan_resource_instrument_host;
+        }
+        Sib(sri_ctrl) {
+          Tdr(sri_ctrl) {
+            Attributes {
+              tessent_dft_function : scan_resource_instrument_dft_control;
+            }
+          }
+        }
+        Sib(edt) {
+        }
+        Sib(occ) {
+        }
+        Sib(lbist) {
+        }
+      }
+    }
+  }
+}
+//  command: 
+//  command: #OCC specification given by sir.
+//  command: 
+//  command: read_config_data -in $spec -from_string { OCC { ijtag_host_interface : Sib(occ); static_clock_control : both; capture_trigger : capture_en; }}
+//  command: 
+//  command: set id_clk_list [list clk clk]
+clk clk
+//  command: 
+//  command: foreach {id clk} $id_clk_list {
+//            set occ [add_config_element OCC/controller($id) -in $spec]
+//            set_config_value clock_intercept_node -in $occ $clk
+//           }
+//  sub-command: add_config_element OCC/controller(clk) -in /DftSpecification(msrv_soc_system_controllerwrapper,sys_controller) 
+//  sub-command: set_config_value clock_intercept_node -in {/DftSpecification(msrv_soc_system_controllerwrapper,sys_controller)/OCC/Controller(clk)} clk 
+//  command: read_config_data -in $spec -from_string {
+  EDT {
+    ijtag_host_interface : Sib(edt);
+    Controller (c1) {
+      longest_chain_range : 50, 65;
+      scan_chain_count : 60;
+      input_channel_count : 2;
+      output_channel_count : 2;
+        LogicBistOptions { 
+          misr_input_ratio : 1 ;
+          ShiftPowerOptions {
+            present : on ;
+            default_operation : disabled ;
+            SwitchingThresholdPercentage {
+              hardware_default : 25 ;
+           }
+         }
+       }
+    }
+  }
+}
+//  command: 
+//  command: report_config_data $spec
+
+DftSpecification(msrv_soc_system_controllerwrapper,sys_controller) {
+  IjtagNetwork {
+    HostScanInterface(ijtag) {
+      Sib(sri) {
+        Attributes {
+          tessent_dft_function : scan_resource_instrument_host;
+        }
+        Sib(sri_ctrl) {
+          Tdr(sri_ctrl) {
+            Attributes {
+              tessent_dft_function : scan_resource_instrument_dft_control;
+            }
+          }
+        }
+        Sib(edt) {
+        }
+        Sib(occ) {
+        }
+        Sib(lbist) {
+        }
+      }
+    }
+  }
+  OCC {
+    ijtag_host_interface : Sib(occ);
+    static_clock_control : both;
+    capture_trigger : capture_en;
+    Controller(clk) {
+      clock_intercept_nodes : clk;
+    }
+  }
+  EDT {
+    ijtag_host_interface : Sib(edt);
+    Controller(c1) {
+      longest_chain_range : 50, 65;
+      scan_chain_count : 60;
+      input_channel_count : 2;
+      output_channel_count : 2;
+      LogicBistOptions {
+        misr_input_ratio : 1;
+        ShiftPowerOptions {
+          present : on;
+          default_operation : disabled;
+          SwitchingThresholdPercentage {
+            hardware_default : 25;
+          }
+        }
+      }
+    }
+  }
+}
+//  command: read_config_data -in $spec -from_string {
+  LogicBist {
+    ijtag_host_interface : Sib(lbist);
+    Controller(1%ctrl_lbist) {
+      burn_in : on ;
+      pre_post_shift_dead_cycles : 8 ;
+      SingleChainForDiagnosis {
+        Present : on ;
+      }  
+      ControllerChain {
+         present : on; 
+         clock : tck;
+      }
+      Connections {
+        shift_clock_src:lbist_shift_clk;
+      }
+
+      NcpOptions {
+        count : 1;
+      }
+  
+      ShiftCycles { max :800 ; }   
+      CaptureCycles { max : 7; }   
+      PatternCount { max : 1024; }   
+      WarmupPatternCount { max : 128; }   
+    }
+  
+   }
+}
+//  command: 
+//  command: report_config_data $spec
+
+DftSpecification(msrv_soc_system_controllerwrapper,sys_controller) {
+  IjtagNetwork {
+    HostScanInterface(ijtag) {
+      Sib(sri) {
+        Attributes {
+          tessent_dft_function : scan_resource_instrument_host;
+        }
+        Sib(sri_ctrl) {
+          Tdr(sri_ctrl) {
+            Attributes {
+              tessent_dft_function : scan_resource_instrument_dft_control;
+            }
+          }
+        }
+        Sib(edt) {
+        }
+        Sib(occ) {
+        }
+        Sib(lbist) {
+        }
+      }
+    }
+  }
+  OCC {
+    ijtag_host_interface : Sib(occ);
+    static_clock_control : both;
+    capture_trigger : capture_en;
+    Controller(clk) {
+      clock_intercept_nodes : clk;
+    }
+  }
+  EDT {
+    ijtag_host_interface : Sib(edt);
+    Controller(c1) {
+      longest_chain_range : 50, 65;
+      scan_chain_count : 60;
+      input_channel_count : 2;
+      output_channel_count : 2;
+      LogicBistOptions {
+        misr_input_ratio : 1;
+        ShiftPowerOptions {
+          present : on;
+          default_operation : disabled;
+          SwitchingThresholdPercentage {
+            hardware_default : 25;
+          }
+        }
+      }
+    }
+  }
+  LogicBist {
+    ijtag_host_interface : Sib(lbist);
+    Controller(1%ctrl_lbist) {
+      burn_in : on;
+      pre_post_shift_dead_cycles : 8;
+      SingleChainForDiagnosis {
+        present : on;
+      }
+      ControllerChain {
+        present : on;
+        clock : tck;
+      }
+      Connections {
+        shift_clock_src : lbist_shift_clk;
+      }
+      NcpOptions {
+        count : 1;
+      }
+      ShiftCycles {
+        max : 800;
+      }
+      CaptureCycles {
+        max : 7;
+      }
+      PatternCount {
+        max : 1024;
+      }
+      WarmupPatternCount {
+        max : 128;
+      }
+    }
+  }
+}
+//  command: report_dft_signal_names 
+
+// Registered static DFT signal names
+// ==================================
+// ------------------------------  -----------------------  -----------  --------------------------  ---------------------  -------------------
+// Name                            Usage                    Reset value  Default value in all tests  Value in pre-scan DRC  Registration source
+// ------------------------------  -----------------------  -----------  --------------------------  ---------------------  -------------------
+// all_test                        Global DFT control            0                   1                         1            Built-in
+// bscan_clamp_enable              Global DFT control            0                   0                         X            Built-in
+// dft_signal_disable              Global DFT control            1                   0                         0            Built-in
+// istc_hsio_select                Global DFT control            0                   0                         X            Built-in
+// memory_write_disable            Global DFT control            0                   0                         0            Built-in
+// occ_kill_clock_en               Global DFT control            0                   0                         0            Built-in
+// output_pad_disable              Global DFT control            0                   0                         X            Built-in
+// ssn_en                          Global DFT control            0                   0                         X            Built-in
+// ssn_lfsr_en                     Global DFT control            0                   0                         X            Built-in
+// tck_occ_en                      Global DFT control            0                   0                         0            Built-in
+// tck_select                      Global DFT control            0                   0                         0            Built-in
+// tristate_enable_nc_test         Global DFT control            0                   0                         0            Built-in
+// tristate_enable_nc_test_type    Global DFT control            0                   0                         0            Built-in
+// async_set_reset_static_disable  Logic test control            0                   0                         0            Built-in
+// bscan_input_isolation_enable    Logic test control            0                   0                         X            Built-in
+// capture_per_cycle_static_en     Logic test control            0                   0                         X            Built-in
+// control_test_point_en           Logic test control            0                   0                         X            Built-in
+// ext_lbist_en                    Logic test control            0                   0                         X            Built-in
+// ext_ltest_en                    Logic test control            0                   0                         X            Built-in
+// fp_bounding_en                  Logic test control            0                   0                         X            Built-in
+// input_control_value_en          Logic test control            0                   0                         X            Built-in
+// int_ltest_en                    Logic test control            0                   0                         X            Built-in
+// ist_ltest_en                    Logic test control            0                   0                         1            Built-in
+// lbist_en                        Logic test control            0                   0                         0            Built-in
+// lbist_low_power_shift_en        Logic test control            0                   0                         0            Built-in
+// lbist_self_test_en              Logic test control            0                   0                         0            Built-in
+// ltest_en                        Logic test control            0                   0                         1            Built-in
+// mcp_bounding_en                 Logic test control            0                   0                         X            Built-in
+// memory_bypass_en                Logic test control            0                   0                         1            Built-in
+// observe_test_point_en           Logic test control            0                   0                         X            Built-in
+// output_safe_value_en            Logic test control            0                   0                         X            Built-in
+// se_pipeline_en                  Logic test control            0                   0                         0            Built-in
+// wrapper_toggle_en               Logic test control            0                   0                         X            Built-in
+// x_bounding_en                   Logic test control            0                   0                         X            Built-in
+// controller_chain_mode           Scan mode (unwrapped)         0                   0                         X            Built-in
+// edt_mode                        Scan mode (unwrapped)         0                   0                         X            Built-in
+// multi_mode                      Scan mode (unwrapped)         0                   0                         X            Built-in
+// promoted_cells_mode             Scan mode (unwrapped)         0                   0                         X            Built-in
+// single_mode                     Scan mode (unwrapped)         0                   0                         X            Built-in
+// int_edt_mode                    Scan mode (internal)          0                   0                         X            Built-in
+// int_mode                        Scan mode (internal)          0                   0                         X            Built-in
+// int_multi_mode                  Scan mode (internal)          0                   0                         X            Built-in
+// int_single_mode                 Scan mode (internal)          0                   0                         X            Built-in
+// ext_edt_mode                    Scan mode (external)          0                   0                         X            Built-in
+// ext_mode                        Scan mode (external)          0                   0                         X            Built-in
+// ext_multi_mode                  Scan mode (external)          0                   0                         X            Built-in
+// ext_single_mode                 Scan mode (external)          0                   0                         X            Built-in
+// retargeting1_mode               Scan mode (retargeting)       0                   0                         X            Built-in
+// retargeting2_mode               Scan mode (retargeting)       0                   0                         X            Built-in
+// retargeting3_mode               Scan mode (retargeting)       0                   0                         X            Built-in
+// retargeting4_mode               Scan mode (retargeting)       0                   0                         X            Built-in
+// retargeting5_mode               Scan mode (retargeting)       0                   0                         X            Built-in
+// retargeting6_mode               Scan mode (retargeting)       0                   0                         X            Built-in
+// retargeting7_mode               Scan mode (retargeting)       0                   0                         X            Built-in
+// retargeting8_mode               Scan mode (retargeting)       0                   0                         X            Built-in
+//
+
+// Registered dynamic DFT signal names
+// ===================================
+// ------------------------------------  ---------------------------------
+// Name                                  Can be created from other signals
+// ------------------------------------  ---------------------------------
+// async_set_reset_dynamic_disable                      Yes
+// capture_clock                                        Yes
+// edt_clock                                            Yes
+// edt_update                                           No
+// input_wrapper_scan_en                                Yes
+// lbist_async_set_reset_dynamic_enable                 No
+// lbist_misr_accumulate_en                             No
+// lbist_prpg_en                                        No
+// lbist_reset                                          No
+// occ_capture_en                                       No
+// occ_shift_clock_en                                   No
+// output_wrapper_scan_en                               Yes
+// scan_en                                              No
+// shift_capture_clock                                  Yes
+// shift_clock                                          Yes
+// test_clock                                           No
+//
+//  command: 
+//  command: process_dft_specification 
+//  
+//  Begin processing of /DftSpecification(msrv_soc_system_controllerwrapper,sys_controller)
+//    --- IP generation phase ---
+//    Validation of IjtagNetwork
+//    Validation of OCC
+//    Validation of EDT
+//    Validation of LogicBist
+//    Processing of RtlCells
+//      Generating Verilog RTL Cells
+//        Verilog RTL : ./TSDB/instruments/msrv_soc_system_controllerwrapper_sys_controller_cells.instrument/msrv_soc_system_controllerwrapper_sys_controller_tessent_clk_inv.v
+//        Verilog RTL : ./TSDB/instruments/msrv_soc_system_controllerwrapper_sys_controller_cells.instrument/msrv_soc_system_controllerwrapper_sys_controller_tessent_posedge_synchronizer_reset.v
+//
+//      Loading the generated RTL verilog files (1) to enable instantiating the contained modules
+//      into the design.
+//
+//      Loading the generated structural verilog files (1) to enable instantiating the contained modules
+//      into the design.
+//    Processing of IjtagNetwork
+//      Generating design files for IJTAG SIB module msrv_soc_system_controllerwrapper_sys_controller_tessent_sib_1
+//        Verilog RTL : ./TSDB/instruments/msrv_soc_system_controllerwrapper_sys_controller_ijtag.instrument/msrv_soc_system_controllerwrapper_sys_controller_tessent_sib_1.v
+//        IJTAG ICL   : ./TSDB/instruments/msrv_soc_system_controllerwrapper_sys_controller_ijtag.instrument/msrv_soc_system_controllerwrapper_sys_controller_tessent_sib_1.icl
+//      Generating design files for IJTAG SIB module msrv_soc_system_controllerwrapper_sys_controller_tessent_sib_2
+//        Verilog RTL : ./TSDB/instruments/msrv_soc_system_controllerwrapper_sys_controller_ijtag.instrument/msrv_soc_system_controllerwrapper_sys_controller_tessent_sib_2.v
+//        IJTAG ICL   : ./TSDB/instruments/msrv_soc_system_controllerwrapper_sys_controller_ijtag.instrument/msrv_soc_system_controllerwrapper_sys_controller_tessent_sib_2.icl
+//      Generating design files for IJTAG Tdr module msrv_soc_system_controllerwrapper_sys_controller_tessent_tdr_sri_ctrl
+//        Verilog RTL : ./TSDB/instruments/msrv_soc_system_controllerwrapper_sys_controller_ijtag.instrument/msrv_soc_system_controllerwrapper_sys_controller_tessent_tdr_sri_ctrl.v
+//        IJTAG ICL   : ./TSDB/instruments/msrv_soc_system_controllerwrapper_sys_controller_ijtag.instrument/msrv_soc_system_controllerwrapper_sys_controller_tessent_tdr_sri_ctrl.icl
+//
+//      Loading the generated RTL verilog files (3) to enable instantiating the contained modules
+//      into the design.
+//    Processing of OCC
+//      Generating design files for OCC module msrv_soc_system_controllerwrapper_sys_controller_tessent_occ
+//        Verilog RTL : ./TSDB/instruments/msrv_soc_system_controllerwrapper_sys_controller_occ.instrument/msrv_soc_system_controllerwrapper_sys_controller_tessent_occ.v
+//        IJTAG ICL   : ./TSDB/instruments/msrv_soc_system_controllerwrapper_sys_controller_occ.instrument/msrv_soc_system_controllerwrapper_sys_controller_tessent_occ.icl
+//        IJTAG PDL   : ./TSDB/instruments/msrv_soc_system_controllerwrapper_sys_controller_occ.instrument/msrv_soc_system_controllerwrapper_sys_controller_tessent_occ.pdl
+//        TCD         : ./TSDB/instruments/msrv_soc_system_controllerwrapper_sys_controller_occ.instrument/msrv_soc_system_controllerwrapper_sys_controller_tessent_occ.tcd
+//        TCD Scan    : ./TSDB/instruments/msrv_soc_system_controllerwrapper_sys_controller_occ.instrument/msrv_soc_system_controllerwrapper_sys_controller_tessent_occ.tcd_scan
+//        CTL         : ./TSDB/instruments/msrv_soc_system_controllerwrapper_sys_controller_occ.instrument/msrv_soc_system_controllerwrapper_sys_controller_tessent_occ.ctl
+//
+//      Loading the generated RTL verilog files (1) to enable instantiating the contained modules
+//      into the design.
+//    Processing of EDT
+//      Generating design files for EDT Tdr module msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_lbist_c1_tdr
+//        Verilog RTL : ./TSDB/instruments/msrv_soc_system_controllerwrapper_sys_controller_edt_lbist.instrument/msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_lbist_c1_tdr.v
+//        IJTAG ICL   : ./TSDB/instruments/msrv_soc_system_controllerwrapper_sys_controller_edt_lbist.instrument/msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_lbist_c1_tdr.icl
+//      Generating design files for EDT module msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_lbist_c1
+//        Verilog RTL : ./TSDB/instruments/msrv_soc_system_controllerwrapper_sys_controller_edt_lbist.instrument/msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_lbist_c1.v
+//        IJTAG ICL   : ./TSDB/instruments/msrv_soc_system_controllerwrapper_sys_controller_edt_lbist.instrument/msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_lbist_c1.icl
+//        IJTAG PDL   : ./TSDB/instruments/msrv_soc_system_controllerwrapper_sys_controller_edt_lbist.instrument/msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_lbist_c1.pdl
+//        TCD         : ./TSDB/instruments/msrv_soc_system_controllerwrapper_sys_controller_edt_lbist.instrument/msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_lbist_c1.tcd
+//        TCD Scan    : ./TSDB/instruments/msrv_soc_system_controllerwrapper_sys_controller_edt_lbist.instrument/msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_lbist_c1.tcd_scan
+//        CTL         : ./TSDB/instruments/msrv_soc_system_controllerwrapper_sys_controller_edt_lbist.instrument/msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_lbist_c1.ctl
+//
+//      Loading the generated RTL verilog files (2) to enable instantiating the contained modules
+//      into the design.
+//    Processing of LogicBist
+//      Generating design files for LBIST module msrv_soc_system_controllerwrapper_sys_controller_tessent_lbist
+//        Verilog RTL : ./TSDB/instruments/msrv_soc_system_controllerwrapper_sys_controller_lbist.instrument/msrv_soc_system_controllerwrapper_sys_controller_tessent_lbist.v
+//        IJTAG ICL   : ./TSDB/instruments/msrv_soc_system_controllerwrapper_sys_controller_lbist.instrument/msrv_soc_system_controllerwrapper_sys_controller_tessent_lbist.icl
+//        IJTAG PDL   : ./TSDB/instruments/msrv_soc_system_controllerwrapper_sys_controller_lbist.instrument/msrv_soc_system_controllerwrapper_sys_controller_tessent_lbist.pdl
+//        TCD         : ./TSDB/instruments/msrv_soc_system_controllerwrapper_sys_controller_lbist.instrument/msrv_soc_system_controllerwrapper_sys_controller_tessent_lbist.tcd
+//        TCD Scan    : ./TSDB/instruments/msrv_soc_system_controllerwrapper_sys_controller_lbist.instrument/msrv_soc_system_controllerwrapper_sys_controller_tessent_lbist.tcd_scan
+//        CTL         : ./TSDB/instruments/msrv_soc_system_controllerwrapper_sys_controller_lbist.instrument/msrv_soc_system_controllerwrapper_sys_controller_tessent_lbist.ctl
+//      Generating design files for LBIST module msrv_soc_system_controllerwrapper_sys_controller_tessent_single_chain_mode_logic
+//        Verilog RTL : ./TSDB/instruments/msrv_soc_system_controllerwrapper_sys_controller_lbist.instrument/msrv_soc_system_controllerwrapper_sys_controller_tessent_single_chain_mode_logic.v
+//        IJTAG ICL   : ./TSDB/instruments/msrv_soc_system_controllerwrapper_sys_controller_lbist.instrument/msrv_soc_system_controllerwrapper_sys_controller_tessent_single_chain_mode_logic.icl
+//        TCD Scan    : ./TSDB/instruments/msrv_soc_system_controllerwrapper_sys_controller_lbist.instrument/msrv_soc_system_controllerwrapper_sys_controller_tessent_single_chain_mode_logic.tcd_scan
+//        CTL         : ./TSDB/instruments/msrv_soc_system_controllerwrapper_sys_controller_lbist.instrument/msrv_soc_system_controllerwrapper_sys_controller_tessent_single_chain_mode_logic.ctl
+//
+//      Loading the generated RTL verilog files (2) to enable instantiating the contained modules
+//      into the design.
+//    --- Instrument insertion phase ---
+//   Inserting instruments of type 'ijtag'
+//   Inserting instruments of type 'occ'
+//   Inserting instruments of type 'edt'
+//   Inserting instruments of type 'logic_bist'
+//  
+//    Writing out modified source design in ./TSDB/dft_inserted_designs/msrv_soc_system_controllerwrapper_sys_controller.dft_inserted_design
+//    Writing out specification in ./TSDB/dft_inserted_designs/msrv_soc_system_controllerwrapper_sys_controller.dft_spec
+//  
+//  Done  processing of DftSpecification(msrv_soc_system_controllerwrapper,sys_controller)
+//  
+/DftSpecification(msrv_soc_system_controllerwrapper,sys_controller)
+//  command: extract_icl 
+//  Note: Updating the hierarchical data model to reflect RTL design changes.
+//  Writing design source dictionary : ./TSDB/dft_inserted_designs/msrv_soc_system_controllerwrapper_sys_controller.dft_inserted_design/msrv_soc_system_controllerwrapper.design_source_dictionary
+//  ---------------------------------------------------------------------------
+//  Begin RTL synthesis.
+//  --------------------
+//  Synthesized modules=1, Time=1.00 sec.
+//  Synthesized modules=2, Time=1.00 sec.
+//  Synthesized modules=1, Time=1.00 sec.
+//  Synthesized modules=1, Time=1.00 sec.
+//  Synthesized modules=1, Time=1.00 sec.
+//  Synthesized modules=1, Time=1.00 sec.
+//  Note: There were 7 modules selectively synthesized. There was also 1 sub-module created by synthesis.
+//        Use 'get_module -filter is_synthesized' to see them.
+//        You can also use 'set_quick_synthesis_options -verbose on' to have the synthesis step report the
+//        synthesized module names in the transcript as they are being synthesized.
+//  ---------------------------------------------------------------------------
+//  Warning: Rule FN1 violation occurs 1019 times
+//  Warning: Rule FN4 violation occurs 7 times
+//  Warning: Rule FP13 violation occurs 1379 times
+//  Flattening process completed, cell instances=1542, gates=2667, PIs=150+1(pseudo port), POs=8, CPU time=0.02 sec.
+//  ---------------------------------------------------------------------------
+//  Begin circuit learning analyses.
+//  --------------------------------
+//  Learning completed, CPU time=0.00 sec.
+//  ---------------------------------------------------------------------------
+//  Begin ICL extraction.
+//  ---------------------
+//  ICL extraction completed, ICL instances=11, CPU time=0.06 sec.
+//  ---------------------------------------------------------------------------
+//  ---------------------------------------------------------------------------
+//  Begin ICL elaboration and checking.
+//  -----------------------------------
+//  ICL elaboration completed, CPU time=0.03 sec.
+//  ---------------------------------------------------------------------------
+//  Writing ICL file : ./TSDB/dft_inserted_designs/msrv_soc_system_controllerwrapper_sys_controller.dft_inserted_design/msrv_soc_system_controllerwrapper.icl
+//  Writing consolidated PDL file: ./TSDB/dft_inserted_designs/msrv_soc_system_controllerwrapper_sys_controller.dft_inserted_design/msrv_soc_system_controllerwrapper.pdl
+//  Extracting SDC...
+//  Writing SDC file: ./TSDB/dft_inserted_designs/msrv_soc_system_controllerwrapper_sys_controller.dft_inserted_design/msrv_soc_system_controllerwrapper.sdc
+//  Writing DFT info dictionary: ./TSDB/dft_inserted_designs/msrv_soc_system_controllerwrapper_sys_controller.dft_inserted_design/msrv_soc_system_controllerwrapper.dft_info_dictionary
+//  Writing IJTAG graybox files in directory: ./TSDB/dft_inserted_designs/msrv_soc_system_controllerwrapper_sys_controller.dft_inserted_design/ijtag_graybox
+//  command: set_quick_synthesis_options -complete_synthesis on
+//  command: 
+//  command: set_system_mode analysis
+//  ---------------------------------------------------------------------------
+//  Begin RTL synthesis.
+//  --------------------
+//  Synthesized modules=46, Time=1.42 sec.
+//  ---------------------------------------------------------------------------
+//  Warning: Rule FN4 violation occurs 7 times
+//  Flattening process completed, cell instances=6717, gates=10927, PIs=150+1(pseudo port), POs=8, CPU time=0.05 sec.
+//  ---------------------------------------------------------------------------
+//  Begin circuit learning analyses.
+//  --------------------------------
+//  Learning completed, CPU time=0.01 sec.
+//  ---------------------------------------------------------------------------
+//  Begin transparent latch checking for 8 latches.
+//  ---------------------------------------------------------------------------
+//  Number transparent latches = 8.
+//  command: write_design -output_file synthesis_core.v -replace 
+//  command: 
+//  command: write_design -output_file synthesis_core.vg -replace 
+//  command: 
+//  command: exit 
