@@ -1,0 +1,1199 @@
+/home/cad/eda/Mentor_Graphics/Tessent_2026/tessent_2026.1/bin/tessent -shell -logfile ./logs/aug10_atpg.log -replace
+//  Tessent Shell  2026.1    Thu Feb 26 18:38:00 GMT 2026
+//                Unpublished work. Copyright 2026 Siemens
+//
+//      This material contains trade secrets or otherwise confidential 
+//  information owned by Siemens Industry Software Inc. or its affiliates 
+//   (collectively, "SISW"), or its licensors. Access to and use of this 
+//     information is strictly limited as set forth in the Customer's 
+//                   applicable agreements with SISW. 
+//
+//  Siemens software executing under x86-64 Linux on Mon Aug 10 16:06:44 IST 2026.
+//  64 bit version
+//  Host: mavenserver-RH3 (255072 MB RAM, 122071 MB Swap)
+//
+//  command: set_context patterns -scan
+//  command: 
+//  command: set_tsdb_output_directory ./TSDB
+./TSDB
+//  command: 
+//  command: read_cell_library ../../../libs/NangateOpenCellLibrary.tcelllib ../../../libs/dft_sim.tcelllib
+//  Reading DFT Library file ../../../libs/NangateOpenCellLibrary.tcelllib
+//  Finished reading file ../../../libs/NangateOpenCellLibrary.tcelllib
+//  Reading DFT Library file ../../../libs/dft_sim.tcelllib
+//  Finished reading file ../../../libs/dft_sim.tcelllib
+//  command: 
+//  command: read_design msrv_soc_uncorewrapper -design_identifier gate2 -verbose
+//  sub-command: set_tool_options -reapply_settings_after_reelaboration On
+//  sub-command: set_read_design_tag msrv_soc_uncorewrapper
+//  sub-command: read_verilog ./TSDB/dft_inserted_designs/msrv_soc_uncorewrapper_gate2.dft_inserted_design/msrv_soc_uncorewrapper.vg -no_duplicate_modules_warnings
+//  sub-command: set_read_design_tag ""
+//  sub-command: set_tool_options -reapply_settings_after_reelaboration Off
+//  sub-command: read_icl ./TSDB/dft_inserted_designs/msrv_soc_uncorewrapper_gate2.dft_inserted_design/msrv_soc_uncorewrapper.icl -skip_child_blocks -no_notes
+//  sub-command: source ./TSDB/dft_inserted_designs/msrv_soc_uncorewrapper_gate2.dft_inserted_design/msrv_soc_uncorewrapper.pdl
+//  sub-command: read_core_descriptions ./TSDB/dft_inserted_designs/msrv_soc_uncorewrapper_gate2.dft_inserted_design/msrv_soc_uncorewrapper.tcd
+//  command: 
+//  command: #read_verilog ./scan_inserted_netlist/scan_inserted_netlist.v 
+//  command: 
+//  command: set_current_design msrv_soc_uncorewrapper -show_elaboration_warnings
+//  Warning: Pin 'clk' of module 'msrv_soc_eeprom' is undefined, direction assumed to be input
+//  Warning: Pin 'rst_n' of module 'msrv_soc_eeprom' is undefined, direction assumed to be input
+//  Warning: Pin 'write_enable' of module 'msrv_soc_eeprom' is undefined, direction assumed to be input
+//  Note: Changing pin 'CK' function from 'active_low_clock' to 'clock_in'
+//        Model 'CLKGATE_X1' line 1266 file '../../../libs/NangateOpenCellLibrary.tcelllib'
+//  Note: Changing pin 'CK' function from 'active_low_clock' to 'clock_in'
+//        Model 'CLKGATE_X2' line 1282 file '../../../libs/NangateOpenCellLibrary.tcelllib'
+//  Note: Changing pin 'CK' function from 'active_low_clock' to 'clock_in'
+//        Model 'CLKGATE_X4' line 1298 file '../../../libs/NangateOpenCellLibrary.tcelllib'
+//  Note: Changing pin 'CK' function from 'active_low_clock' to 'clock_in'
+//        Model 'CLKGATE_X8' line 1314 file '../../../libs/NangateOpenCellLibrary.tcelllib'
+//  Warning: Undefined modules were found.
+//           Before using "set_system_mode" or "create_flat_model", you must either define
+//           the missing modules using "read_verilog" and/or "read_cell_library", or use the
+//           following command to treat them as black boxes:
+             add_black_boxes -modules { \
+                    msrv_soc_eeprom \
+             }
+//           You can also use "add_black_boxes -auto" to black box all undefined modules but
+//           it is recommended that you do not add this command to your dofile. Doing so may
+//           unintentionally black-box new undefined modules in future runs.
+//  Warning: Net 'edt_update_inv' in module 'msrv_soc_uncorewrapper' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper' has no pins
+//  Warning: Net 'HREADRam[63]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[62]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[61]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[60]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[59]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[58]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[57]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[56]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[55]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[54]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[53]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[52]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[51]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[50]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[49]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[48]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[47]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[46]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[45]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[44]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[43]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[42]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[41]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[40]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[39]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[38]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[37]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[36]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[35]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[34]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[33]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[32]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[31]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[30]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[29]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[28]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[27]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[26]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[25]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[24]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[23]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[22]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[21]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[20]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[19]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[18]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[17]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[16]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[15]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[14]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[13]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[12]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[11]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[10]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[9]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[8]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[7]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[6]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[5]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[4]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[3]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[2]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[1]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[0]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADSDC[63]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[62]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[61]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[60]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[59]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[58]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[57]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[56]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[55]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[54]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[53]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[52]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[51]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[50]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[49]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[48]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[47]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[46]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[45]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[44]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[43]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[42]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[41]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[40]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[39]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[38]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[37]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[36]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[35]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[34]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[33]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[32]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[31]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[30]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[29]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[28]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[27]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[26]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[25]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[24]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[23]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[22]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[21]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[20]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[19]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[18]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[17]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[16]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[15]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[14]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[13]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[12]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[11]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[10]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[9]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[8]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[7]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[6]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[5]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[4]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[3]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[2]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[1]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[0]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'aux_in[8]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'aux_in[6]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HSELSDCD' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HRESPRam' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HRESPSDC' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADYRam' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HRESPSDCD' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADYSDC' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'SDCIntM' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_adrdecs' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_adrdecs' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_adrdec' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_adrdec' has no pins
+//  Warning: Net 'rtlcN_out_mux0' in module 'M_RTLSIM_MUXN_DCZ_4_2' has no pins
+//  Warning: Net 's_wdata[15]' in module 'msrv_soc_ahbapbbridge' has no pins
+//  Warning: Net 's_resp' in module 'msrv_soc_ahbapbbridge' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_ahbapbbridge' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_ahbapbbridge' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_ahb_slave' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_ahb_slave' has no pins
+//  Warning: Net 'rtlcN_out_mux0' in module 'M_RTLSIM_MUXN_4_2' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_synchronizer_1' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_synchronizer_1' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_synchronizer' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_synchronizer' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_apb_master' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_apb_master' has no pins
+//  Warning: Net 'rtlc21n1' in module 'msrv_soc_apb_master' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_flopenl' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_flopenl' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_flopenr_1' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_flopenr_1' has no pins
+//  Warning: Net 'HADDRD[3]' in module 'msrv_soc_rom_ahb' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_rom_ahb' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_rom_ahb' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_flopenr_2' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_flopenr_2' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_flopenr_pv1' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_flopenr_pv1' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_flopr_1' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_flopr_1' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_mux2' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_mux2' has no pins
+//  Warning: Net 'MTIMECMP[0]' in module 'msrv_soc_clint_apb' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_clint_apb' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_clint_apb' has no pins
+//  Warning: Net 'rtlc4n167[31]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n167[30]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n167[29]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n167[28]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n167[27]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n167[26]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n167[25]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n167[24]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n167[23]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n167[22]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n167[21]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n167[20]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n167[19]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n167[18]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n167[17]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n167[16]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n167[15]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n167[14]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n167[13]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n167[12]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n167[11]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n167[10]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n167[9]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n167[8]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n167[7]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n167[6]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n297[31]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n297[30]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n297[29]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n297[28]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n297[27]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n297[26]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n297[25]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n297[24]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n297[23]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n297[22]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n297[21]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n297[20]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n297[19]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n297[18]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n297[17]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n297[16]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n297[15]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n297[14]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n297[13]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n297[12]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n297[11]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n297[10]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n297[9]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n297[8]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n297[7]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n297[6]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n321[31]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n321[30]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n321[29]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n321[28]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n321[27]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n321[26]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n321[25]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n321[24]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n321[23]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n321[22]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n321[21]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n321[20]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n321[19]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n321[18]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n321[17]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n321[16]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n321[15]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n321[14]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n321[13]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n321[12]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n321[11]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n321[10]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n321[9]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n321[8]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n321[7]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n321[6]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'intPending[1]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n49[0]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n1[2]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n1[1]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n1[0]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc1n1' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc1n2' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc1n4' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc1n5' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc1n6' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc1n7' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc1n8' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc3n1' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc3n2' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc3n4' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc3n5' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc3n6' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc3n7' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc3n8' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_flopr_pv1' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_flopr_pv1' has no pins
+//  Warning: Net 'gpio_dat_o[0]' in module 'msrv_soc_gpio_apb' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_gpio_apb' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_gpio_apb' has no pins
+//  Warning: Net 'STATE[0]' in module 'msrv_soc_apb_slave_interface' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_apb_slave_interface' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_apb_slave_interface' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_aux_interface' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_aux_interface' has no pins
+//  Warning: Net 'rgpio_ints[0]' in module 'msrv_soc_gpio_register' has no pins
+//  Warning: Net 'rgpio_aux[0]' in module 'msrv_soc_gpio_register' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_gpio_register' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_gpio_register' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uart_apb' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uart_apb' has no pins
+//  Warning: Net 'rtlc3n37[17]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc3n40[17]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc4n149[10]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc7n5[10]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc7n5[9]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc7n5[8]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc7n5[7]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc7n5[6]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc7n5[5]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc7n5[4]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc7n5[3]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc7n5[2]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc7n5[1]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc7n5[0]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc12n5[7]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc12n5[6]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc12n5[5]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc12n5[4]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc12n5[3]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc12n5[2]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc12n5[1]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc12n5[0]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc4n79[4]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc7n636[4]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc12n509[4]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n607[3]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n607[2]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n687[1]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n5' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n8' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n10' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n11' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n12' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n13' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n14' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n15' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n16' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n17' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n18' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n19' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n20' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n21' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n22' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n23' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n24' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n25' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n26' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n27' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n28' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n29' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n30' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n31' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n32' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n33' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n34' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n35' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n36' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n37' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n38' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n39' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_flopr_2' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_flopr_2' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_flopr_3' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_flopr_3' has no pins
+//  Warning: Net 'TransmitWriteWatermarkLevel[2]' in module 'msrv_soc_spi_apb' is not driven
+//  Warning: Net 'TransmitWriteWatermarkLevel[1]' in module 'msrv_soc_spi_apb' is not driven
+//  Warning: Net 'TransmitWriteWatermarkLevel[0]' in module 'msrv_soc_spi_apb' is not driven
+//  Warning: Net 'ReceiveReadWatermarkLevel[2]' in module 'msrv_soc_spi_apb' is not driven
+//  Warning: Net 'ReceiveReadWatermarkLevel[1]' in module 'msrv_soc_spi_apb' is not driven
+//  Warning: Net 'ReceiveReadWatermarkLevel[0]' in module 'msrv_soc_spi_apb' is not driven
+//  Warning: Net 'TrasmitFIFOEmpty' in module 'msrv_soc_spi_apb' is not driven
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_spi_apb' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_spi_apb' has no pins
+//  Warning: Net 'CurrState[0]' in module 'msrv_soc_spi_controller' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_spi_controller' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_spi_controller' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_flopr_4' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_flopr_4' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_flopenr_3' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_flopenr_3' has no pins
+//  Warning: Net 'mem[0]' in module 'msrv_soc_spi_fifo_1' has no pins
+//  Warning: Net 'rtlc0n3[7]' in module 'msrv_soc_spi_fifo_1' has no pins
+//  Warning: Net 'rtlc0n3[6]' in module 'msrv_soc_spi_fifo_1' has no pins
+//  Warning: Net 'rtlc0n3[5]' in module 'msrv_soc_spi_fifo_1' has no pins
+//  Warning: Net 'rtlc0n3[4]' in module 'msrv_soc_spi_fifo_1' has no pins
+//  Warning: Net 'rtlc0n3[3]' in module 'msrv_soc_spi_fifo_1' has no pins
+//  Warning: Net 'rtlc0n3[2]' in module 'msrv_soc_spi_fifo_1' has no pins
+//  Warning: Net 'rtlc0n3[1]' in module 'msrv_soc_spi_fifo_1' has no pins
+//  Warning: Net 'rtlc0n3[0]' in module 'msrv_soc_spi_fifo_1' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_spi_fifo_1' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_spi_fifo_1' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_flopr' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_flopr' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_flopenr' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_flopenr' has no pins
+//  Warning: Net 'mem[0]' in module 'msrv_soc_spi_fifo' has no pins
+//  Warning: Net 'rtlc0n3[7]' in module 'msrv_soc_spi_fifo' has no pins
+//  Warning: Net 'rtlc0n3[6]' in module 'msrv_soc_spi_fifo' has no pins
+//  Warning: Net 'rtlc0n3[5]' in module 'msrv_soc_spi_fifo' has no pins
+//  Warning: Net 'rtlc0n3[4]' in module 'msrv_soc_spi_fifo' has no pins
+//  Warning: Net 'rtlc0n3[3]' in module 'msrv_soc_spi_fifo' has no pins
+//  Warning: Net 'rtlc0n3[2]' in module 'msrv_soc_spi_fifo' has no pins
+//  Warning: Net 'rtlc0n3[1]' in module 'msrv_soc_spi_fifo' has no pins
+//  Warning: Net 'rtlc0n3[0]' in module 'msrv_soc_spi_fifo' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_spi_fifo' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_spi_fifo' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_sib_1' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_sib_1' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_sib_2' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_sib_2' has no pins
+//  Warning: Net 'async_set_reset_static_disable_to_buf' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl' has no pins
+//  Warning: Net 'mcp_bounding_en_to_buf' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl' has no pins
+//  Warning: Net 'control_test_point_en_to_buf' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl' has no pins
+//  Warning: Net 'observe_test_point_en_to_buf' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl' has no pins
+//  Warning: Net 'x_bounding_en_to_buf' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl' has no pins
+//  Warning: Net 'ext_mode_to_buf' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl' has no pins
+//  Warning: Net 'int_mode_to_buf' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl' has no pins
+//  Warning: Net 'ext_ltest_en_to_buf' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl' has no pins
+//  Warning: Net 'int_ltest_en_to_buf' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl' has no pins
+//  Warning: Net 'controller_chain_mode_to_buf' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl' has no pins
+//  Warning: Net 'ltest_en_to_buf' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_occ' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_occ' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_control' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_control' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_posedge_synchronizer_reset' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_posedge_synchronizer_reset' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_shift_reg' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_shift_reg' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_ijtag_control' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_ijtag_control' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_sib' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_sib' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_decompressor' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_decompressor' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_sib' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_sib' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_compactor' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_compactor' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_spatial_compactor_30_w_output_lockup' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_spatial_compactor_30_w_output_lockup' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_controller' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_controller' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_xor_decoder' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_xor_decoder' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_onehot_decoder_5_to_30' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_onehot_decoder_5_to_30' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_bypass_logic' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_bypass_logic' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_misr' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_misr' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_misr_reg' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_misr_reg' has no pins
+//  Warning: Net 'edt_bypass_to_buf' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_tdr' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_tdr' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_tdr' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_ctrl' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_ctrl' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_capture_phase_reg' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_capture_phase_reg' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_warmup_pattern_cnt_reg' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_warmup_pattern_cnt_reg' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_counter' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_counter' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_bit_cnt_reg' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_bit_cnt_reg' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_vector_cnt_reg' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_vector_cnt_reg' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_sib' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_sib' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_ctrl_signals' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_ctrl_signals' has no pins
+//  Warning: Net 'rtlc0n17' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_fsm' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_fsm' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_fsm' has no pins
+//  Warning: Net 'rtlc8n4' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_fsm' has no pins
+//  Warning: Net 'rtlc11n4' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_fsm' has no pins
+//  Warning: Net 'rtlc14n3' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_fsm' has no pins
+//  Warning: Net 'rtlc14n4' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_fsm' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_single_chain_mode_logic' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_single_chain_mode_logic' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_single_chain_mode_logic_sib' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_single_chain_mode_logic_sib' has no pins
+//  ---------------------------------------------------------------------------
+//  Begin ICL elaboration and checking.
+//  -----------------------------------
+//  ICL elaboration completed, CPU time=0.04 sec.
+//  ---------------------------------------------------------------------------
+//  command: 
+//  command: set_current_mode edt_int_stuck -type internal
+//  command: 
+//  command: report_dft_signals 
+
+// Existing and to be created DFT signals
+// ======================================
+// -------------------------------  --------  ------------------------  --------------  -----------------------------------------------------------------------------------------
+// Name                             Status    Origin                    Type            Location
+// -------------------------------  --------  ------------------------  --------------  -----------------------------------------------------------------------------------------
+// async_set_reset_dynamic_disable  Existing  Imported from DesignInfo  Pin             tessent_persistent_cell_async_set_reset_dynamic_disable/ZN
+// async_set_reset_static_disable   Existing  ICL attributes            IJTAG register  msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl_inst/async_set_reset_static_disable
+// control_test_point_en            Existing  ICL attributes            IJTAG register  msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl_inst/control_test_point_en
+// controller_chain_mode            Existing  ICL attributes            IJTAG register  msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl_inst/controller_chain_mode
+// edt_clock                        Existing  Imported from DesignInfo  Pin             msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_inst/edt_lbist_clock
+// edt_update                       Existing  Imported from DesignInfo  Port            edt_update
+// ext_ltest_en                     Existing  ICL attributes            IJTAG register  msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl_inst/ext_ltest_en
+// ext_mode                         Existing  ICL attributes            IJTAG register  msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl_inst/ext_mode
+// int_ltest_en                     Existing  ICL attributes            IJTAG register  msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl_inst/int_ltest_en
+// int_mode                         Existing  ICL attributes            IJTAG register  msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl_inst/int_mode
+// ltest_en                         Existing  ICL attributes            IJTAG register  msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl_inst/ltest_en
+// mcp_bounding_en                  Existing  ICL attributes            IJTAG register  msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl_inst/mcp_bounding_en
+// observe_test_point_en            Existing  ICL attributes            IJTAG register  msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl_inst/observe_test_point_en
+// scan_en                          Existing  Imported from DesignInfo  Port            scan_en_w -> msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_inst/scan_en_out
+// shift_capture_clock              Existing  Imported from DesignInfo  Pin             msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_inst/shift_capture_clock_out
+// test_clock                       Existing  Imported from DesignInfo  Port            test_clock_w
+// x_bounding_en                    Existing  ICL attributes            IJTAG register  msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl_inst/x_bounding_en
+//
+//  command: 
+//  command: import_scan_mode int_mode
+//  Resetting design.
+//  Reading core description file ./TSDB/instruments/msrv_soc_uncorewrapper_pass2_rtl_edt_lbist.instrument/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1.tcd
+//  Reading core description file ./TSDB/instruments/msrv_soc_uncorewrapper_pass2_rtl_occ.instrument/msrv_soc_uncorewrapper_pass2_rtl_tessent_occ.tcd
+//  command: 
+//  command: add_black_boxes -auto
+//  command: 
+//  command: #analyze_control_signals 
+//  command: 
+//  command: #dofile ./scan_inserted_netlist/atpg_setup.dofile 
+//  command: 
+//  command: #tessent_scan_setup
+//  command: set_system_mode analysis
+//  Warning: Rule FN1 violation occurs 488 times
+//  Warning: Rule FN4 violation occurs 166 times
+//  Flattening process completed, cell instances=17640, gates=36052, PIs=268+1(pseudo port), POs=213, CPU time=0.22 sec.
+//  ---------------------------------------------------------------------------
+//  Begin circuit learning analyses.
+//  --------------------------------
+//  Learning completed, CPU time=0.11 sec.
+//  ---------------------------------------------------------------------------
+//  Begin scan chain identification process, memory elements = 2442.
+//  ---------------------------------------------------------------------------
+//  Begin simulation of test_setup procedure with 220 cycles.
+//  Simulation of test_setup procedure completed, CPU time=0.0 sec.
+//  Begin simulation of load_unload procedure.
+//  Simulation of load_unload procedure completed, CPU time=0.2 sec.
+//  Error: Clock port 'PCLK' is not internal, pulse-always, pulse-in-capture, or constrained during retargetable pattern generation.
+//         This will allow ATPG to control it to any value (unless a named capture procedure enforces specific constraints),
+//         even though this value will not be mapped to the top level during pattern retargeting.
+//         If this clock will not pulse during capture when the core is embedded, then constrain it off.
+//         Otherwise, use 'set_attribute_value {{PCLK}} -name is_excluded_from_isolation_constraints' to prevent
+//         this clock from being X-constrained, but only if it will be explicitly controlled by an NCP
+//         which models control logic outside the core.
+//  Error: Rules checking unsuccessful, cannot exit SETUP mode.
+//  command: add_clocks -help
+Usage for Sync source clocks:
+   add_clocks [ off_state ] <ports> [ -PULSE_Always | -PULSE_In_capture ] [ -Label <label> ]
+                                    [ -dft_inject_node <name> ] [ -no_dft_connections ]
+   add_clocks [ off_state ] <pins>  [ -PULSE_Always | -PULSE_In_capture ] [ -Label <label> ]
+                                    [ -PSEudo_port_name <name> ] [ -CAPture_only ] [ -silent ]  
+                                    [ -dft_inject_node <name> ] [ -no_dft_connections ]
+   add_clocks [ off_state ] <ports> [ -FREQ_Multiplier <int> -PULSE_Always ] [ -Label <label> ]
+                                    [ -dft_inject_node <name> ] [ -no_dft_connections ]
+Usage for Async source clocks:
+   add_clocks <ports> { -PEriod <time> [ s | ms | us | ns | ps | fs ] } 
+                                       [ -FREQ_Multiplier <int> ] [ -Label <label> ]
+                                       [ -dft_inject_node <name> ] [ -no_dft_connections ]
+   add_clocks <pins>  { -PEriod <time> [ s | ms | us | ns | ps | fs ] }
+                      [ -PSEudo_port_name <name> ]  [ -FREQ_Multiplier <int> ] [ -Label <label> ] [ -silent ]
+                      [ -dft_inject_node <name> ] [ -no_dft_connections ]
+Usage for Generated clocks:
+   add_clocks <pin> -REFERENCE {<pin|port|pPort} [ -REFERENCE_Inv {<pin>|<port>|<pPort>} ] 
+                    [ -FREQ_Multiplier <int> ] [ -FREQ_Divider <int> ] [ -Label <label> ]
+                    [ -dft_inject_node <name> ] [ -no_dft_connections ]
+                    [ -PSEudo_port_name <name> ]  [ -silent ] 
+
+Usage for Branch clocks:
+   add_clocks <pins>  -Branch [ -Label <label> ]
+//  command: add_clocks 0 PCLK -pulse_in_capture
+//  Error: 'PCLK' is already in clock list.
+//  command: add_clocks 0 PCLK -pulse_always
+//  Error: 'PCLK' is already in clock list.
+//  command: add_clocks off_state PCLK -pulse_in_capture
+//  Error: 'off_state' is not a primary input.
+//  command: add_clocks [off_state] PCLK -pulse_in_capture
+//  Error: Command 'off_state' is unknown
+//  command: delete_clocks PCLK
+//  command: add_clocks PCLK -period 2 -pulse_in_capture
+//  Error: Cannot specify '-period' and '-pulse_in_capture' at the same time.
+//  command: add_clocks 0 PCLK -pulse_in_capture
+//  command: set_system_mode analysis
+//  ---------------------------------------------------------------------------
+//  Begin scan chain identification process, memory elements = 2442.
+//  ---------------------------------------------------------------------------
+//  Begin simulation of test_setup procedure with 220 cycles.
+//  Simulation of test_setup procedure completed, CPU time=0.0 sec.
+//  Begin simulation of load_unload procedure.
+//  Simulation of load_unload procedure completed, CPU time=0.2 sec.
+//  ---------------------------------------------------------------------------
+//  Begin EDT Finder analyses.
+//  ---------------------------------------------------------------------------
+//  Finding EDT logic.
+//  Finding internal scan chains.
+//  EDT Finder completed, EDT blocks=1, scan chains=60, CPU time=0.04 sec.
+//  ---------------------------------------------------------------------------
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_1 successfully traced with scan_cells = 29.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_2 successfully traced with scan_cells = 29.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_3 successfully traced with scan_cells = 29.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_4 successfully traced with scan_cells = 29.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_5 successfully traced with scan_cells = 29.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_6 successfully traced with scan_cells = 29.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_7 successfully traced with scan_cells = 29.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_8 successfully traced with scan_cells = 29.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_9 successfully traced with scan_cells = 29.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_10 successfully traced with scan_cells = 29.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_11 successfully traced with scan_cells = 29.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_12 successfully traced with scan_cells = 29.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_13 successfully traced with scan_cells = 29.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_14 successfully traced with scan_cells = 29.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_15 successfully traced with scan_cells = 29.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_16 successfully traced with scan_cells = 29.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_17 successfully traced with scan_cells = 29.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_18 successfully traced with scan_cells = 29.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_19 successfully traced with scan_cells = 29.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_20 successfully traced with scan_cells = 29.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_21 successfully traced with scan_cells = 29.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_22 successfully traced with scan_cells = 29.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_23 successfully traced with scan_cells = 29.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_24 successfully traced with scan_cells = 29.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_25 successfully traced with scan_cells = 29.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_26 successfully traced with scan_cells = 29.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_27 successfully traced with scan_cells = 29.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_28 successfully traced with scan_cells = 29.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_29 successfully traced with scan_cells = 29.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_30 successfully traced with scan_cells = 29.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_31 successfully traced with scan_cells = 29.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_32 successfully traced with scan_cells = 29.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_33 successfully traced with scan_cells = 29.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_34 successfully traced with scan_cells = 29.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_35 successfully traced with scan_cells = 29.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_36 successfully traced with scan_cells = 29.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_37 successfully traced with scan_cells = 29.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_38 successfully traced with scan_cells = 29.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_39 successfully traced with scan_cells = 29.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_40 successfully traced with scan_cells = 29.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_41 successfully traced with scan_cells = 29.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_42 successfully traced with scan_cells = 29.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_43 successfully traced with scan_cells = 29.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_44 successfully traced with scan_cells = 29.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_45 successfully traced with scan_cells = 29.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_46 successfully traced with scan_cells = 29.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_47 successfully traced with scan_cells = 30.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_48 successfully traced with scan_cells = 30.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_49 successfully traced with scan_cells = 30.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_50 successfully traced with scan_cells = 30.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_51 successfully traced with scan_cells = 30.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_52 successfully traced with scan_cells = 30.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_53 successfully traced with scan_cells = 30.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_54 successfully traced with scan_cells = 29.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_55 successfully traced with scan_cells = 29.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_56 successfully traced with scan_cells = 29.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_57 successfully traced with scan_cells = 29.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_58 successfully traced with scan_cells = 30.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_59 successfully traced with scan_cells = 30.
+//  Chain = msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_inst__chain_60 successfully traced with scan_cells = 30.
+//  1 external shadows that use shift clocking have been identified.
+//  1750 scan cells have been identified in 60 scan chains.
+//  Longest scan chain has 30 scan cells.
+//  4 edge-triggered clock ports set to stable high. (D7)
+//  ---------------------------------------------------------------------------
+//  Begin EDT setup and rules checking.
+//  ---------------------------------------------------------------------------
+//  Running EDT Pattern Generation Phase.
+//  EDT setup and rules checking completed, CPU time=0.09 sec.
+//  Warning: EDT initialization cycles increase each pattern size by 87%.
+//  ---------------------------------------------------------------------------
+//  Begin transparent latch checking for 140 latches.
+//  ---------------------------------------------------------------------------
+//  2 latches not transparent due to uncontrollable. (D6)
+//  Number transparent latches = 138.
+//  ---------------------------------------------------------------------------
+//  Begin scan clock rules checking.
+//  ---------------------------------------------------------------------------
+//  4 scan clock/set/reset lines have been identified.
+//  Note: 276 scan cells whose clock ports are not off when all clocks are off will be handled through additional ATPG effort.
+//        These scan cells have been excluded from default C1 violation list. Use "report_drc_rules C1 -excluded" to report such C1 violations.
+//  257 sequential cells passed clock stability checking.
+//  There were 3 clock rule C3 fails (clock may capture data affected by its captured data).
+//  Note: Trailing edge triggered device can capture data affected by leading edge.
+//  ---------------------------------------------------------------------------
+//  690 non-scan memory elements are identified.
+//  ---------------------------------------------------------------------------
+//  196 non-scan memory elements are identified as TIE-0.  (D5)
+//   95 non-scan memory elements are identified as TIE-1.  (D5)
+//    4 non-scan memory elements are identified as TIE-X.  (D5)
+//    1 non-scan memory element is   identified as INIT-0. (D5)
+//  256 non-scan memory elements are identified as INIT-X. (D5)
+//  138 non-scan memory elements are identified as TLA.    (D5)
+//  ---------------------------------------------------------------------------
+//  69 gates may have an observable X-state. (E5)
+//  Warning: There was 1 C22 violation (interacting clocks not in synchronous clock group but forced to pulse concurrently).
+//  2 cross domain false paths are added to prevent simulation mismatches due to C22 DRC violations.
+//  Use "set_drc_handling C22 -mask_interactions off" in SETUP mode to disable automatic addition of false paths.
+//  Warning: There were 65 C26 violations (sequential element with race on data and clock ports).
+//  command: report_clocks 
+User-defined Clocks (4):
+=========================
+
+  Sync and Async Source Clocks
+  ============================
+   ------------------------------------------------------------------------------------------------  ---------  ----------------  --------  ----------------  ------------------------------------------------------------------------------------------------
+   Name                                                                                              Off State     Constraints    Internal  Other Properties  Pin(s)                                                                                          
+   ------------------------------------------------------------------------------------------------  ---------  ----------------  --------  ----------------  ------------------------------------------------------------------------------------------------
+   'test_clock_w'                                                                                        0      Pulse in capture     No                                                                                                                       
+   'ijtag_tck'                                                                                           0                           No                                                                                                                       
+   'PCLK'                                                                                                0      Pulse in capture     No                                                                                                                       
+   'msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_PCLK_inst_tessent_persistent_cell_clock_out_mux_Z'      0                           Yes      Capture only    'msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_PCLK_inst/tessent_persistent_cell_clock_out_mux/Z'
+
+//  command: history 
+    1	set_context patterns -scan
+    2	set_tsdb_output_directory ./TSDB
+    3	read_cell_library ../../../libs/NangateOpenCellLibrary.tcelllib ../../../libs/dft_sim.tcelllib
+    4	read_design msrv_soc_uncorewrapper -design_identifier gate2 -verbose
+    5	#read_verilog ./scan_inserted_netlist/scan_inserted_netlist.v 
+    6	set_current_design msrv_soc_uncorewrapper -show_elaboration_warnings
+    7	set_current_mode edt_int_stuck -type internal
+    8	report_dft_signals
+    9	import_scan_mode int_mode
+   10	add_black_boxes -auto
+   11	#analyze_control_signals 
+   12	#dofile ./scan_inserted_netlist/atpg_setup.dofile 
+   13	#tessent_scan_setup
+   14	set_system_mode analysis
+   15	add_clocks -help
+   16	add_clock 0 PCLK -pulse_in_capture
+   17	add_clock 0 PCLK -pulse_always
+   18	add_clocks off_state PCLK -pulse_in_capture
+   19	add_clocks [off_state] PCLK -pulse_in_capture
+   20	delete_clocks PCLK
+   21	add_clocks PCLK -period 2 -pulse_in_capture
+   22	add_clocks 0 PCLK -pulse_in_capture
+   23	set_system_mode analysis
+   24	report_clocks
+   25	history 
+//  command: add_faults -all
+//  command: 
+//  command: report_statistics -detail
+                                                             Statistics Report                                                             
+                                                              Stuck-at Faults                                                              
+-------------------------------------------------------------------------------------------------------------------------------------------
+Fault Classes                                                                                                 #faults          #faults     
+                                                                                                              (total)      (total relevant)
+--------------------------------------------------------------------------------------------------------  --------------  ------------------
+  FU (full)                                                                                                   117860            96016      
+  ------------------------------------------------------------------------------------------------------  --------------  ------------------
+  UC (uncontrolled)                                                                                       61737 (52.38%)      same (64.30%)
+  DI (det_implication)                                                                                    16824 (14.27%)      same (17.52%)
+  UU (unused)                                                                                              1566 ( 1.33%)      same ( 1.63%)
+  TI (tied)                                                                                                4107 ( 3.48%)      same ( 4.28%)
+  BL (blocked)                                                                                             2825 ( 2.40%)      same ( 2.94%)
+  AU (atpg_untestable)                                                                                    30801 (26.13%)      8957 ( 9.33%)
+-------------------------------------------------------------------------------------------------------------------------------------------
+Fault Sub-classes                                                                                                                          
+  ------------------------------------------------------------------------------------------------------                                   
+  DI (det_implication)                                                                                                                     
+    SCAN  (scan_path)                                                                                     10783 ( 9.15%)      same (11.23%)
+    SEN   (scan_enable)                                                                                    2297 ( 1.95%)      same ( 2.39%)
+    CLK   (clock)                                                                                          3744 ( 3.18%)      same ( 3.90%)
+  AU (atpg_untestable)                                                                                                                     
+    UDN   (undriven)                                                                                        398 ( 0.34%)      same ( 0.41%)
+    BB    (black_boxes)                                                                                    1226 ( 1.04%)      same ( 1.28%)
+    EDT   (edt_blocks)                                                                                    14587 (12.38%)        deleted     
+    PC    (pin_constraints)                                                                                1354 ( 1.15%)      same ( 1.41%)
+      (Individual pin constraints below threshold)                                                         1330 ( 1.13%)                   
+      (Combined pin constraints)                                                                             24 ( 0.02%)                   
+    TC    (tied_cells)                                                                                     3548 ( 3.01%)      same ( 3.70%)
+      /msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl_inst/rtlcreg_ext_ltest_en_latch (35261) T0    1844 ( 1.56%)                   
+      /msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl_inst/rtlcreg_int_ltest_en_latch (35262) T1    1387 ( 1.18%)                   
+      /msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl_inst/rtlcreg_x_bounding_en_latch (35258) T0    207 ( 0.18%)                   
+      (Individual tied cells below threshold)                                                               110 ( 0.09%)                   
+    MPO   (mask_po)                                                                                        2431 ( 2.06%)      same ( 2.53%)
+    OCC   (on_chip_clock_control)                                                                           626 ( 0.53%)        deleted     
+    IJTAG (ijtag)                                                                                          6631 ( 5.63%)        deleted     
+-------------------------------------------------------------------------------------------------------------------------------------------
+Coverage                                                                                                                                   
+  ------------------------------------------------------------------------------------------------------                                   
+  test_coverage                                                                                                  15.38%             19.22% 
+  fault_coverage                                                                                                 14.27%             17.52% 
+  atpg_effectiveness                                                                                             47.62%             47.62% 
+-------------------------------------------------------------------------------------------------------------------------------------------
+#test_patterns                                                                                                                           0 
+#simulated_patterns                                                                                                                      0 
+CPU_time (secs)                                                                                                                     2495.8 
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+//  command: 
+//  command: create_patterns 
+//  Warning: Setup timing exceptions have been defined and will be applied, but a static fault type is set.
+//           If the clocks are sufficiently slow, only hold-time exceptions need to be considered,
+//           and setup timing exceptions would only need to be used when fault-simulating at-speed patterns.
+//           You can use 'set_timing_exceptions_handling -setup off' to disable the effect of setup timing exceptions.
+//  Analyzing false and multicycle paths ...
+//  False and multicycle path summary : 2 false paths, 0 multicycle paths
+// | ------------------------------------------------------------------------------------------------------------------ |
+// |                                             Analyzing the design                                                   |
+// |                                                                                                                    |
+// |      Current clock restriction setting:     Domain_clock (edge interaction)                                        |
+// |                                             (optimal)                                                              |
+// |                                                                                                                    |
+// |            Current abort limit setting:     30                                                                     |
+// |                                Calling:     set_abort_limit 300 100                                                |
+// | ------------------------------------------------------------------------------------------------------------------ |
+// |                                                                                                                    |
+// |               Current sequential depth:     0                                                                      |
+// |               Optimal sequential depth:     2                                                                      |
+// |                                Calling:     set_pattern_type -sequential 2                                         |
+// |                                                                                                                    |
+// | ------------------------------------------------------------------------------------------------------------------ |
+//  ------------------------------------------------------------------------
+//  Simulation performed for #gates = 36052  #faults = 61227
+//  system mode = analysis    pattern source = internal patterns
+//  ------------------------------------------------------------------------
+//  #patterns  test      #faults  #faults    # eff.    # test         process      RE/AU/AAB/EAB
+//  simulated  coverage  in list  detected   patterns  patterns       CPU time
+//   ---        ------      ---       ---      ---       ---          2.73 sec     1/31315/0/0
+//   64         49.71%    23822     37400       64        64          3.32 sec
+//   ---        ------      ---       ---      ---       ---          6.19 sec     50/31350/0/15
+//   128        55.13%    17798      5909       64       128          6.31 sec
+//   ---        ------      ---       ---      ---       ---          8.87 sec     67/31354/0/22
+//   192        57.07%    15658      2107       64       192          8.95 sec
+//   ---        ------      ---       ---      ---       ---         11.44 sec     107/31423/0/39
+//   256        58.58%    13912      1621       64       256         11.51 sec
+//   ---        ------      ---       ---      ---       ---         13.42 sec     126/31431/0/49
+//   320        59.61%    12756      1119       64       320         13.48 sec
+//   ---        ------      ---       ---      ---       ---         15.09 sec     152/31433/1/63
+//   384        60.31%    11957       753       64       384         15.15 sec
+//   ---        ------      ---       ---      ---       ---         16.91 sec     170/31442/1/70
+//   448        61.27%    10876      1036       64       448         16.98 sec
+//   ---        ------      ---       ---      ---       ---         20.30 sec     254/31463/1/83
+//   512        62.04%     9965       789       64       512         20.37 sec
+//   ---        ------      ---       ---      ---       ---         21.64 sec     452/31470/1/90
+//   576        62.70%     9153       594       63       575         21.70 sec
+//   ---        ------      ---       ---      ---       ---         22.31 sec     890/31500/1/88*
+//   640        64.99%     6450      2208       63       638         22.38 sec
+//   ---        ------      ---       ---      ---       ---         22.89 sec     1338/31521/2/100
+//   704        66.41%     4714      1251       64       702         22.93 sec
+//   ---        ------      ---       ---      ---       ---         23.75 sec     2160/31548/2/124
+//   768        67.44%     3285       558       64       766         23.80 sec
+//   ---        ------      ---       ---      ---       ---         24.68 sec     3208/31591/2/160
+//   832        68.52%     1717       438       63       829         24.72 sec
+//   ---        ------      ---       ---      ---       ---         25.07 sec     3509/31604/2/174
+//   870        68.99%     1104       292       38       867         25.09 sec
+//   ---        ------      ---       ---      ---       ---         25.28 sec     3509/31604/2/174
+//   934        69.44%      632       472       63       930         25.31 sec
+//   ---        ------      ---       ---      ---       ---         25.37 sec     3509/31604/2/174
+//   998        69.64%      416       216       62       992         25.41 sec
+//   ---        ------      ---       ---      ---       ---         25.41 sec     3509/31604/2/179
+//   1028       69.71%      337        79       30      1022         25.43 sec
+//  6875 faults were identified as detected by implication.
+//   ---        ------      ---       ---      ---       ---         25.61 sec     3509/24850/2/167
+//   1039       76.16%      329         8        5      1027         25.64 sec
+//   ---        ------      ---       ---      ---       ---         25.65 sec     3509/24850/2/167
+//   1040       76.17%      323         6        1      1028         25.65 sec
+//   ---        ------      ---       ---      ---       ---         25.66 sec     3509/24850/2/167
+//  EDT with 1-hot scan masking.
+//   ---        ------      ---       ---      ---       ---         25.66 sec     3509/24850/2/167
+//  Warning: Tests for 81 collapsed faults (167 uncollapsed) could not be compressed (0.12%).
+//           Reducing the number of scan chains may resolve this problem.
+//  5 faults were identified as detected by implication.
+//  -----------------------------------------------------------------------
+//  Performing redundant fault identification for 9611 faults
+//  -----------------------------------------------------------------------
+//  deterministic ATPG invoked with abort limit = 300
+//  # red.    # non-red.   # abort     # remn.   progress   test        process
+//  faults      faults      faults      faults              coverage    CPU time
+//      10        8869          2          730    92.40%    76.18%       0.23 sec
+//      40        9566          5            0   100.00%    76.20%       0.44 sec
+
+                          Statistics Report                         
+                           Stuck-at Faults                          
+--------------------------------------------------------------------
+Fault Classes                          #faults          #faults     
+                                       (total)      (total relevant)
+---------------------------------  --------------  ------------------
+  FU (full)                            117860            102332     
+  -------------------------------  --------------  ------------------
+  UO (unobserved)                    312 ( 0.26%)      same ( 0.30%)
+  DS (det_simulation)              56856 (48.24%)      same (55.56%)
+  DI (det_implication)             23704 (20.11%)      same (23.16%)
+  PU (posdet_untestable)             125 ( 0.11%)      same ( 0.12%)
+  PT (posdet_testable)                11 ( 0.01%)      same ( 0.01%)
+  UU (unused)                       1566 ( 1.33%)      same ( 1.53%)
+  TI (tied)                         4107 ( 3.48%)      same ( 4.01%)
+  BL (blocked)                      2825 ( 2.40%)      same ( 2.76%)
+  RE (redundant)                    3549 ( 3.01%)      same ( 3.47%)
+  AU (atpg_untestable)             24805 (21.05%)      9277 ( 9.07%)
+--------------------------------------------------------------------
+Fault Sub-classes                                                   
+  -------------------------------                                   
+  AU (atpg_untestable)                                              
+    UDN   (undriven)                 398 ( 0.34%)      same ( 0.39%)
+    BB    (black_boxes)             1226 ( 1.04%)      same ( 1.20%)
+    EDT   (edt_blocks)              8159 ( 6.92%)        deleted     
+    PC*   (pin_constraints)         1354 ( 1.15%)      same ( 1.32%)
+    TC*   (tied_cells)              3548 ( 3.01%)      same ( 3.47%)
+    MPO   (mask_po)                 2431 ( 2.06%)      same ( 2.38%)
+    SEQ   (sequential_depth)         105 ( 0.09%)      same ( 0.10%)
+    OCC   (on_chip_clock_control)    668 ( 0.57%)        deleted     
+    IJTAG (ijtag)                   6701 ( 5.69%)        deleted     
+    Unclassified                     215 ( 0.18%)      same ( 0.21%)
+  UC+UO                                                             
+    AAB   (atpg_abort)                 2 ( 0.00%)      same ( 0.00%)
+    UNS   (unsuccess)                143 ( 0.12%)      same ( 0.14%)
+    EAB   (edt_abort)                167 ( 0.14%)      same ( 0.16%)
+  *Use "report_statistics -detailed_analysis" for details.          
+--------------------------------------------------------------------
+Coverage                                                            
+  -------------------------------                                   
+  test_coverage                           76.20%             89.30% 
+  fault_coverage                          68.41%             78.79% 
+  atpg_effectiveness                      99.73%             99.73% 
+--------------------------------------------------------------------
+#test_patterns                                                 1028 
+  #basic_patterns                                              1018 
+  #clock_sequential_patterns                                     10 
+#simulated_patterns                                            1040 
+CPU_time (secs)                                              2522.1 
+--------------------------------------------------------------------
+
+//  command: report_statistics -detail
+                                                             Statistics Report                                                             
+                                                              Stuck-at Faults                                                              
+-------------------------------------------------------------------------------------------------------------------------------------------
+Fault Classes                                                                                                 #faults          #faults     
+                                                                                                              (total)      (total relevant)
+--------------------------------------------------------------------------------------------------------  --------------  ------------------
+  FU (full)                                                                                                   117860            102332     
+  ------------------------------------------------------------------------------------------------------  --------------  ------------------
+  UO (unobserved)                                                                                           312 ( 0.26%)      same ( 0.30%)
+  DS (det_simulation)                                                                                     56856 (48.24%)      same (55.56%)
+  DI (det_implication)                                                                                    23704 (20.11%)      same (23.16%)
+  PU (posdet_untestable)                                                                                    125 ( 0.11%)      same ( 0.12%)
+  PT (posdet_testable)                                                                                       11 ( 0.01%)      same ( 0.01%)
+  UU (unused)                                                                                              1566 ( 1.33%)      same ( 1.53%)
+  TI (tied)                                                                                                4107 ( 3.48%)      same ( 4.01%)
+  BL (blocked)                                                                                             2825 ( 2.40%)      same ( 2.76%)
+  RE (redundant)                                                                                           3549 ( 3.01%)      same ( 3.47%)
+  AU (atpg_untestable)                                                                                    24805 (21.05%)      9277 ( 9.07%)
+-------------------------------------------------------------------------------------------------------------------------------------------
+Fault Sub-classes                                                                                                                          
+  ------------------------------------------------------------------------------------------------------                                   
+  DI (det_implication)                                                                                                                     
+    EDT   (edt_logic)                                                                                      6746 ( 5.72%)      same ( 6.59%)
+    SCAN  (scan_path)                                                                                     10783 ( 9.15%)      same (10.54%)
+    SEN   (scan_enable)                                                                                    2354 ( 2.00%)      same ( 2.30%)
+    CLK   (clock)                                                                                          3817 ( 3.24%)      same ( 3.73%)
+    SR    (set_reset)                                                                                         4 ( 0.00%)      same ( 0.00%)
+  AU (atpg_untestable)                                                                                                                     
+    UDN   (undriven)                                                                                        398 ( 0.34%)      same ( 0.39%)
+    BB    (black_boxes)                                                                                    1226 ( 1.04%)      same ( 1.20%)
+    EDT   (edt_blocks)                                                                                     8159 ( 6.92%)        deleted     
+    PC    (pin_constraints)                                                                                1354 ( 1.15%)      same ( 1.32%)
+      (Individual pin constraints below threshold)                                                         1330 ( 1.13%)                   
+      (Combined pin constraints)                                                                             24 ( 0.02%)                   
+    TC    (tied_cells)                                                                                     3548 ( 3.01%)      same ( 3.47%)
+      /msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl_inst/rtlcreg_ext_ltest_en_latch (35261) T0    1844 ( 1.56%)                   
+      /msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl_inst/rtlcreg_int_ltest_en_latch (35262) T1    1387 ( 1.18%)                   
+      /msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl_inst/rtlcreg_x_bounding_en_latch (35258) T0    207 ( 0.18%)                   
+      (Individual tied cells below threshold)                                                               110 ( 0.09%)                   
+    MPO   (mask_po)                                                                                        2431 ( 2.06%)      same ( 2.38%)
+    SEQ   (sequential_depth)                                                                                105 ( 0.09%)      same ( 0.10%)
+    OCC   (on_chip_clock_control)                                                                           668 ( 0.57%)        deleted     
+    IJTAG (ijtag)                                                                                          6701 ( 5.69%)        deleted     
+    Unclassified                                                                                            215 ( 0.18%)      same ( 0.21%)
+  UC+UO                                                                                                                                    
+    AAB   (atpg_abort)                                                                                        2 ( 0.00%)      same ( 0.00%)
+    UNS   (unsuccess)                                                                                       143 ( 0.12%)      same ( 0.14%)
+    EAB   (edt_abort)                                                                                       167 ( 0.14%)      same ( 0.16%)
+-------------------------------------------------------------------------------------------------------------------------------------------
+Coverage                                                                                                                                   
+  ------------------------------------------------------------------------------------------------------                                   
+  test_coverage                                                                                                  76.20%             89.30% 
+  fault_coverage                                                                                                 68.41%             78.79% 
+  atpg_effectiveness                                                                                             99.73%             99.73% 
+-------------------------------------------------------------------------------------------------------------------------------------------
+#test_patterns                                                                                                                        1028 
+  #basic_patterns                                                                                                                     1018 
+  #clock_sequential_patterns                                                                                                            10 
+#simulated_patterns                                                                                                                   1040 
+CPU_time (secs)                                                                                                                     2563.5 
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+//  command: write_tsdb_data -replace
+//  Writing ./TSDB/logic_test_cores/msrv_soc_uncorewrapper_gate2.logic_test_core/msrv_soc_uncorewrapper.atpg_mode_edt_int_stuck/msrv_soc_uncorewrapper_edt_int_stuck.tcd.gz
+//  Writing ./TSDB/logic_test_cores/msrv_soc_uncorewrapper_gate2.logic_test_core/msrv_soc_uncorewrapper.atpg_mode_edt_int_stuck/msrv_soc_uncorewrapper_edt_int_stuck.flat.gz
+//  Writing ./TSDB/logic_test_cores/msrv_soc_uncorewrapper_gate2.logic_test_core/msrv_soc_uncorewrapper.atpg_mode_edt_int_stuck/msrv_soc_uncorewrapper_edt_int_stuck_stuck.patdb
+//  Note: Number of chain test patterns saved = 33.
+//  Writing ./TSDB/logic_test_cores/msrv_soc_uncorewrapper_gate2.logic_test_core/msrv_soc_uncorewrapper.atpg_mode_edt_int_stuck/msrv_soc_uncorewrapper_edt_int_stuck_stuck.faults.gz
+//  command: write_patterns patterns/msrv_soc_uncorewrapper_stuck_parallel.v -verilog -parallel -replace
+//  Warning: Scan chains contain shadow elements which can cause simulation
+//   mismatches in parallel load test benches.
+//   To correct for this, a second shift vector is being added when loading
+//   the scan chains, this is similar to using a post shift in the
+//   load_unload procedure.
+//  Error: File patterns/msrv_soc_uncorewrapper_stuck_parallel.v cannot be created
+//  command: write_patterns patterns/msrv_soc_uncorewrapper_stuck_parallel.v -verilog -parallel -replace
+//  Warning: Scan chains contain shadow elements which can cause simulation
+//   mismatches in parallel load test benches.
+//   To correct for this, a second shift vector is being added when loading
+//   the scan chains, this is similar to using a post shift in the
+//   load_unload procedure.
+//  Note: Number of chain test patterns saved = 33.
+//  command: set_pattern_filtering -sample_per_type 2
+//  Internal pattern filtering is on: 4 pattern type(s), 7 selected pattern(s), 1028 original pattern(s).
+//  command: write_patterns patterns/msrv_soc_uncorewrapper_stuck_serial.v -verilog -serial -replace
+//  Note: Number of chain test patterns saved = 33.
+//  Note: pattern filtering is on, #-saved-pattern(s) = 7, #-total-pattern(s) = 1028
+//  command: read_faults -mode ext_multi_stuck -fault_type stuck -merge
+//  Error: No fault files could be found in the opened TSDB for the current design with mode 'ext_multi_stuck' and with fault type 'stuck'
+//  command: open_tsdb ./TSDB/
+//  command: read_faults -mode ext_multi_stuck -fault_type stuck -merge
+//  Error: No fault files could be found in the opened TSDB for the current design with mode 'ext_multi_stuck' and with fault type 'stuck'
+//  command: report_statistics -detail
+                                                             Statistics Report                                                             
+                                                              Stuck-at Faults                                                              
+-------------------------------------------------------------------------------------------------------------------------------------------
+Fault Classes                                                                                                 #faults          #faults     
+                                                                                                              (total)      (total relevant)
+--------------------------------------------------------------------------------------------------------  --------------  ------------------
+  FU (full)                                                                                                   117860            102332     
+  ------------------------------------------------------------------------------------------------------  --------------  ------------------
+  UO (unobserved)                                                                                           312 ( 0.26%)      same ( 0.30%)
+  DS (det_simulation)                                                                                     56856 (48.24%)      same (55.56%)
+  DI (det_implication)                                                                                    23704 (20.11%)      same (23.16%)
+  PU (posdet_untestable)                                                                                    125 ( 0.11%)      same ( 0.12%)
+  PT (posdet_testable)                                                                                       11 ( 0.01%)      same ( 0.01%)
+  UU (unused)                                                                                              1566 ( 1.33%)      same ( 1.53%)
+  TI (tied)                                                                                                4107 ( 3.48%)      same ( 4.01%)
+  BL (blocked)                                                                                             2825 ( 2.40%)      same ( 2.76%)
+  RE (redundant)                                                                                           3549 ( 3.01%)      same ( 3.47%)
+  AU (atpg_untestable)                                                                                    24805 (21.05%)      9277 ( 9.07%)
+-------------------------------------------------------------------------------------------------------------------------------------------
+Fault Sub-classes                                                                                                                          
+  ------------------------------------------------------------------------------------------------------                                   
+  DI (det_implication)                                                                                                                     
+    EDT   (edt_logic)                                                                                      6746 ( 5.72%)      same ( 6.59%)
+    SCAN  (scan_path)                                                                                     10783 ( 9.15%)      same (10.54%)
+    SEN   (scan_enable)                                                                                    2354 ( 2.00%)      same ( 2.30%)
+    CLK   (clock)                                                                                          3817 ( 3.24%)      same ( 3.73%)
+    SR    (set_reset)                                                                                         4 ( 0.00%)      same ( 0.00%)
+  AU (atpg_untestable)                                                                                                                     
+    UDN   (undriven)                                                                                        398 ( 0.34%)      same ( 0.39%)
+    BB    (black_boxes)                                                                                    1226 ( 1.04%)      same ( 1.20%)
+    EDT   (edt_blocks)                                                                                     8159 ( 6.92%)        deleted     
+    PC    (pin_constraints)                                                                                1354 ( 1.15%)      same ( 1.32%)
+      (Individual pin constraints below threshold)                                                         1330 ( 1.13%)                   
+      (Combined pin constraints)                                                                             24 ( 0.02%)                   
+    TC    (tied_cells)                                                                                     3548 ( 3.01%)      same ( 3.47%)
+      /msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl_inst/rtlcreg_ext_ltest_en_latch (35261) T0    1844 ( 1.56%)                   
+      /msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl_inst/rtlcreg_int_ltest_en_latch (35262) T1    1387 ( 1.18%)                   
+      /msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl_inst/rtlcreg_x_bounding_en_latch (35258) T0    207 ( 0.18%)                   
+      (Individual tied cells below threshold)                                                               110 ( 0.09%)                   
+    MPO   (mask_po)                                                                                        2431 ( 2.06%)      same ( 2.38%)
+    SEQ   (sequential_depth)                                                                                105 ( 0.09%)      same ( 0.10%)
+    OCC   (on_chip_clock_control)                                                                           668 ( 0.57%)        deleted     
+    IJTAG (ijtag)                                                                                          6701 ( 5.69%)        deleted     
+    Unclassified                                                                                            215 ( 0.18%)      same ( 0.21%)
+  UC+UO                                                                                                                                    
+    AAB   (atpg_abort)                                                                                        2 ( 0.00%)      same ( 0.00%)
+    UNS   (unsuccess)                                                                                       143 ( 0.12%)      same ( 0.14%)
+    EAB   (edt_abort)                                                                                       167 ( 0.14%)      same ( 0.16%)
+-------------------------------------------------------------------------------------------------------------------------------------------
+Coverage                                                                                                                                   
+  ------------------------------------------------------------------------------------------------------                                   
+  test_coverage                                                                                                  76.20%             89.30% 
+  fault_coverage                                                                                                 68.41%             78.79% 
+  atpg_effectiveness                                                                                             99.73%             99.73% 
+-------------------------------------------------------------------------------------------------------------------------------------------
+#test_patterns                                                                                                                        1028 
+  #basic_patterns                                                                                                                     1018 
+  #clock_sequential_patterns                                                                                                            10 
+#simulated_patterns                                                                                                                   1040 
+CPU_time (secs)                                                                                                                     2960.7 
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+//  command: report_statistics 
+                          Statistics Report                         
+                           Stuck-at Faults                          
+--------------------------------------------------------------------
+Fault Classes                          #faults          #faults     
+                                       (total)      (total relevant)
+---------------------------------  --------------  ------------------
+  FU (full)                            117860            102332     
+  -------------------------------  --------------  ------------------
+  UO (unobserved)                    312 ( 0.26%)      same ( 0.30%)
+  DS (det_simulation)              56856 (48.24%)      same (55.56%)
+  DI (det_implication)             23704 (20.11%)      same (23.16%)
+  PU (posdet_untestable)             125 ( 0.11%)      same ( 0.12%)
+  PT (posdet_testable)                11 ( 0.01%)      same ( 0.01%)
+  UU (unused)                       1566 ( 1.33%)      same ( 1.53%)
+  TI (tied)                         4107 ( 3.48%)      same ( 4.01%)
+  BL (blocked)                      2825 ( 2.40%)      same ( 2.76%)
+  RE (redundant)                    3549 ( 3.01%)      same ( 3.47%)
+  AU (atpg_untestable)             24805 (21.05%)      9277 ( 9.07%)
+--------------------------------------------------------------------
+Fault Sub-classes                                                   
+  -------------------------------                                   
+  AU (atpg_untestable)                                              
+    UDN   (undriven)                 398 ( 0.34%)      same ( 0.39%)
+    BB    (black_boxes)             1226 ( 1.04%)      same ( 1.20%)
+    EDT   (edt_blocks)              8159 ( 6.92%)        deleted     
+    PC*   (pin_constraints)         1354 ( 1.15%)      same ( 1.32%)
+    TC*   (tied_cells)              3548 ( 3.01%)      same ( 3.47%)
+    MPO   (mask_po)                 2431 ( 2.06%)      same ( 2.38%)
+    SEQ   (sequential_depth)         105 ( 0.09%)      same ( 0.10%)
+    OCC   (on_chip_clock_control)    668 ( 0.57%)        deleted     
+    IJTAG (ijtag)                   6701 ( 5.69%)        deleted     
+    Unclassified                     215 ( 0.18%)      same ( 0.21%)
+  UC+UO                                                             
+    AAB   (atpg_abort)                 2 ( 0.00%)      same ( 0.00%)
+    UNS   (unsuccess)                143 ( 0.12%)      same ( 0.14%)
+    EAB   (edt_abort)                167 ( 0.14%)      same ( 0.16%)
+  *Use "report_statistics -detailed_analysis" for details.          
+--------------------------------------------------------------------
+Coverage                                                            
+  -------------------------------                                   
+  test_coverage                           76.20%             89.30% 
+  fault_coverage                          68.41%             78.79% 
+  atpg_effectiveness                      99.73%             99.73% 
+--------------------------------------------------------------------
+#test_patterns                                                 1028 
+  #basic_patterns                                              1018 
+  #clock_sequential_patterns                                     10 
+#simulated_patterns                                            1040 
+CPU_time (secs)                                              3023.0 
+--------------------------------------------------------------------
+
+//  command: read_faults -mode ext_multi_stuck -fault_type stuck -merge
+//  Error: No fault files could be found in the opened TSDB for the current design with mode 'ext_multi_stuck' and with fault type 'stuck'
+//  command: exit 

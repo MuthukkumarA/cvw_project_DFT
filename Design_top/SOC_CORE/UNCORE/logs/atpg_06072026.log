@@ -1,0 +1,254 @@
+/home/cad/eda/Mentor_Graphics/Tessent_2026/tessent_2026.1/bin/tessent -shell -logfile ./logs/atpg_06072026.log -replace
+//  Tessent Shell  2026.1    Thu Feb 26 18:38:00 GMT 2026
+//                Unpublished work. Copyright 2026 Siemens
+//
+//      This material contains trade secrets or otherwise confidential 
+//  information owned by Siemens Industry Software Inc. or its affiliates 
+//   (collectively, "SISW"), or its licensors. Access to and use of this 
+//     information is strictly limited as set forth in the Customer's 
+//                   applicable agreements with SISW. 
+//
+//  Siemens software executing under x86-64 Linux on Thu Aug 06 18:24:18 IST 2026.
+//  64 bit version
+//  Host: mavenserver-RH3 (255072 MB RAM, 122071 MB Swap)
+//
+//  command: set_context pattern -scan
+//  command: 
+//  command: read_cell_library ../../../libs/NangateOpenCellLibrary.tcelllib ../../../libs/dft_sim.tcelllib
+//  Reading DFT Library file ../../../libs/NangateOpenCellLibrary.tcelllib
+//  Finished reading file ../../../libs/NangateOpenCellLibrary.tcelllib
+//  Reading DFT Library file ../../../libs/dft_sim.tcelllib
+//  Finished reading file ../../../libs/dft_sim.tcelllib
+//  command: read_verilog scan_inserted_netlist/scan_inserted_netlist.v 
+//  command: set_current_design msrv_soc_uncorewrapper
+//  Note: Changing pin 'CK' function from 'active_low_clock' to 'clock_in'
+//        Model 'CLKGATE_X1' line 1266 file '../../../libs/NangateOpenCellLibrary.tcelllib'
+//  Note: Changing pin 'CK' function from 'active_low_clock' to 'clock_in'
+//        Model 'CLKGATE_X2' line 1282 file '../../../libs/NangateOpenCellLibrary.tcelllib'
+//  Note: Changing pin 'CK' function from 'active_low_clock' to 'clock_in'
+//        Model 'CLKGATE_X4' line 1298 file '../../../libs/NangateOpenCellLibrary.tcelllib'
+//  Note: Changing pin 'CK' function from 'active_low_clock' to 'clock_in'
+//        Model 'CLKGATE_X8' line 1314 file '../../../libs/NangateOpenCellLibrary.tcelllib'
+//  Warning: Undefined modules were found.
+//           Before using "set_system_mode" or "create_flat_model", you must either define
+//           the missing modules using "read_verilog" and/or "read_cell_library", or use the
+//           following command to treat them as black boxes:
+             add_black_boxes -modules { \
+                    msrv_soc_eeprom \
+             }
+//           You can also use "add_black_boxes -auto" to black box all undefined modules but
+//           it is recommended that you do not add this command to your dofile. Doing so may
+//           unintentionally black-box new undefined modules in future runs.
+//  Warning: 75 cases: Undriven net in netlist module
+//  Warning: 402 cases: Net in netlist not connected
+//  Warning: 3 cases: Undefined module pin assumed to be input
+//  Note: Issue set_current_design with the -show_elaboration_warnings option to see more details about previous warnings
+//  command: add_black_boxes -auto
+//  command: 
+//  command: analyze_control_signals -auto
+//  Warning: Rule FN1 violation occurs 480 times
+//  Warning: Rule FN4 violation occurs 166 times
+//  Flattening process completed, cell instances=17467, gates=35459, PIs=332, POs=272, CPU time=0.25 sec.
+//  ---------------------------------------------------------------------------
+//  Begin circuit learning analyses.
+//  --------------------------------
+//  Learning completed, CPU time=0.11 sec.
+//  ---------------------------------------------------------------------------
+//  Begin control signals identification analysis.
+//  ---------------------------------------------------------------------------
+//  Identified 3 clock control primary inputs.
+//     '/PCLK' (243) with off-state = 0.
+//     '/ijtag_tck' (245) with off-state = 1.
+//     '/HCLK' (1) with off-state = 0.
+//  Identified 1 set control primary inputs.
+//     '/ijtag_reset' (246) with off-state = 1.
+//  Identified 1 reset control primary inputs.
+//     '/ijtag_reset' (246) with off-state = 1.
+//  Identified 0 read control primary inputs.
+//  Identified 0 write control primary inputs.
+//  ---------------------------------------------------------------------------
+//  Total number of internal lines is 7290 (2430 clocks, 2430 sets , 2430 resets, 0 reads, 0 writes).
+//  Total number of potentially clockable internal lines is 1779 (1613 clocks, 18 sets , 148 resets, 0 reads, 0 writes).
+//  Total number of not clockable internal lines is 5511 (817 clocks, 2412 sets , 2282 resets, 0 reads, 0 writes).
+//  Total number of added primary input controls 4 (3 clocks, 0 sets , 1 resets, 0 reads, 0 writes).
+//  ---------------------------------------------------------------------------
+//  command: dofile ./scan_inserted_netlist/atpg_setup.dofile 
+//  command: #
+//  command: #  Written by Tessent Shell 2026.1 on Thu Aug 06 18:16:42 IST 2026
+//  command: #
+//  command: # The generated dofile contains references to internal pins
+//  command: # The file may require editing to make it function properly.
+//  command: proc tessent_scan_common {} {
+//              add_clocks 0 ijtag_tck
+//              add_clocks 0 msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_PCLK_inst/tessent_persistent_cell_clock_out_mux/Z  -internal -pin_name inferred_occ_clock0
+//              add_clocks 0 HCLK
+//              add_clocks 0 shift_capture_clock
+//              add_clocks 0 PCLK
+//              add_pin_constraints ijtag_sel C0
+//              add_pin_constraints ijtag_reset C1
+//           add_black_boxes -auto
+//           }
+//  command: proc tessent_scan_ext_mode_mode {} {
+//              add_scan_groups grp1 ./scan_inserted_netlist/atpg_setup.testproc
+//           
+//              add_scan_chains ext_mode_chain0 grp1 {/ts_ext_mode_si[0]} {/ts_ext_mode_so[0]}
+//              add_scan_chains ext_mode_chain1 grp1 {/ts_ext_mode_si[1]} {/ts_ext_mode_so[1]}
+//              add_scan_chains ext_mode_chain2 grp1 {/ts_ext_mode_si[2]} {/ts_ext_mode_so[2]}
+//              add_scan_chains ext_mode_chain3 grp1 {/ts_ext_mode_si[3]} {/ts_ext_mode_so[3]}
+//              add_scan_chains ext_mode_chain4 grp1 {/ts_ext_mode_si[4]} {/ts_ext_mode_so[4]}
+//              add_scan_chains ext_mode_chain5 grp1 {/ts_ext_mode_si[5]} {/ts_ext_mode_so[5]}
+//              add_scan_chains ext_mode_chain6 grp1 {/ts_ext_mode_si[6]} {/ts_ext_mode_so[6]}
+//              add_scan_chains ext_mode_chain7 grp1 {/ts_ext_mode_si[7]} {/ts_ext_mode_so[7]}
+//              add_scan_chains ext_mode_chain8 grp1 {/ts_ext_mode_si[8]} {/ts_ext_mode_so[8]}
+//              add_scan_chains ext_mode_chain9 grp1 {/ts_ext_mode_si[9]} {/ts_ext_mode_so[9]}
+//           
+//              tessent_scan_common
+//           
+//              add_pin_constraints ts_0_stm0s0 C1
+//              add_pin_constraints ts_0_stm1s0 C0
+//              add_pin_constraints int_ltest_en C0
+//              add_pin_constraints ext_ltest_en C1
+//           }
+//  command: proc tessent_scan_int_mode_mode {} {
+//              add_scan_groups grp1 ./scan_inserted_netlist/atpg_setup.testproc
+//           
+//              add_scan_chains int_mode_chain0 grp1 {/ts_int_mode_si[0]} {/ts_int_mode_so[0]}
+//              add_scan_chains int_mode_chain1 grp1 {/ts_int_mode_si[1]} {/ts_int_mode_so[1]}
+//              add_scan_chains int_mode_chain2 grp1 {/ts_int_mode_si[2]} {/ts_int_mode_so[2]}
+//              add_scan_chains int_mode_chain3 grp1 {/ts_int_mode_si[3]} {/ts_int_mode_so[3]}
+//              add_scan_chains int_mode_chain4 grp1 {/ts_int_mode_si[4]} {/ts_int_mode_so[4]}
+//              add_scan_chains int_mode_chain5 grp1 {/ts_int_mode_si[5]} {/ts_int_mode_so[5]}
+//              add_scan_chains int_mode_chain6 grp1 {/ts_int_mode_si[6]} {/ts_int_mode_so[6]}
+//              add_scan_chains int_mode_chain7 grp1 {/ts_int_mode_si[7]} {/ts_int_mode_so[7]}
+//              add_scan_chains int_mode_chain8 grp1 {/ts_int_mode_si[8]} {/ts_int_mode_so[8]}
+//              add_scan_chains int_mode_chain9 grp1 {/ts_int_mode_si[9]} {/ts_int_mode_so[9]}
+//              add_scan_chains int_mode_chain10 grp1 {/ts_int_mode_si[10]} {/ts_int_mode_so[10]}
+//              add_scan_chains int_mode_chain11 grp1 {/ts_int_mode_si[11]} {/ts_int_mode_so[11]}
+//              add_scan_chains int_mode_chain12 grp1 {/ts_int_mode_si[12]} {/ts_int_mode_so[12]}
+//              add_scan_chains int_mode_chain13 grp1 {/ts_int_mode_si[13]} {/ts_int_mode_so[13]}
+//              add_scan_chains int_mode_chain14 grp1 {/ts_int_mode_si[14]} {/ts_int_mode_so[14]}
+//              add_scan_chains int_mode_chain15 grp1 {/ts_int_mode_si[15]} {/ts_int_mode_so[15]}
+//              add_scan_chains int_mode_chain16 grp1 {/ts_int_mode_si[16]} {/ts_int_mode_so[16]}
+//              add_scan_chains int_mode_chain17 grp1 {/ts_int_mode_si[17]} {/ts_int_mode_so[17]}
+//              add_scan_chains int_mode_chain18 grp1 {/ts_int_mode_si[18]} {/ts_int_mode_so[18]}
+//              add_scan_chains int_mode_chain19 grp1 {/ts_int_mode_si[19]} {/ts_int_mode_so[19]}
+//              add_scan_chains int_mode_chain20 grp1 {/ts_int_mode_si[20]} {/ts_int_mode_so[20]}
+//              add_scan_chains int_mode_chain21 grp1 {/ts_int_mode_si[21]} {/ts_int_mode_so[21]}
+//              add_scan_chains int_mode_chain22 grp1 {/ts_int_mode_si[22]} {/ts_int_mode_so[22]}
+//              add_scan_chains int_mode_chain23 grp1 {/ts_int_mode_si[23]} {/ts_int_mode_so[23]}
+//              add_scan_chains int_mode_chain24 grp1 {/ts_int_mode_si[24]} {/ts_int_mode_so[24]}
+//              add_scan_chains int_mode_chain25 grp1 {/ts_int_mode_si[25]} {/ts_int_mode_so[25]}
+//              add_scan_chains int_mode_chain26 grp1 {/ts_int_mode_si[26]} {/ts_int_mode_so[26]}
+//              add_scan_chains int_mode_chain27 grp1 {/ts_int_mode_si[27]} {/ts_int_mode_so[27]}
+//              add_scan_chains int_mode_chain28 grp1 {/ts_int_mode_si[28]} {/ts_int_mode_so[28]}
+//              add_scan_chains int_mode_chain29 grp1 {/ts_int_mode_si[29]} {/ts_int_mode_so[29]}
+//              add_scan_chains int_mode_chain30 grp1 {/ts_int_mode_si[30]} {/ts_int_mode_so[30]}
+//              add_scan_chains int_mode_chain31 grp1 {/ts_int_mode_si[31]} {/ts_int_mode_so[31]}
+//              add_scan_chains int_mode_chain32 grp1 {/ts_int_mode_si[32]} {/ts_int_mode_so[32]}
+//              add_scan_chains int_mode_chain33 grp1 {/ts_int_mode_si[33]} {/ts_int_mode_so[33]}
+//              add_scan_chains int_mode_chain34 grp1 {/ts_int_mode_si[34]} {/ts_int_mode_so[34]}
+//              add_scan_chains int_mode_chain35 grp1 {/ts_int_mode_si[35]} {/ts_int_mode_so[35]}
+//              add_scan_chains int_mode_chain36 grp1 {/ts_int_mode_si[36]} {/ts_int_mode_so[36]}
+//              add_scan_chains int_mode_chain37 grp1 {/ts_int_mode_si[37]} {/ts_int_mode_so[37]}
+//              add_scan_chains int_mode_chain38 grp1 {/ts_int_mode_si[38]} {/ts_int_mode_so[38]}
+//              add_scan_chains int_mode_chain39 grp1 {/ts_int_mode_si[39]} {/ts_int_mode_so[39]}
+//              add_scan_chains int_mode_chain40 grp1 {/ts_int_mode_si[40]} {/ts_int_mode_so[40]}
+//              add_scan_chains int_mode_chain41 grp1 {/ts_int_mode_si[41]} {/ts_int_mode_so[41]}
+//              add_scan_chains int_mode_chain42 grp1 {/ts_int_mode_si[42]} {/ts_int_mode_so[42]}
+//              add_scan_chains int_mode_chain43 grp1 {/ts_int_mode_si[43]} {/ts_int_mode_so[43]}
+//              add_scan_chains int_mode_chain44 grp1 {/ts_int_mode_si[44]} {/ts_int_mode_so[44]}
+//              add_scan_chains int_mode_chain45 grp1 {/ts_int_mode_si[45]} {/ts_int_mode_so[45]}
+//              add_scan_chains int_mode_chain46 grp1 {/ts_int_mode_si[46]} {/ts_int_mode_so[46]}
+//              add_scan_chains int_mode_chain47 grp1 {/ts_int_mode_si[47]} {/ts_int_mode_so[47]}
+//              add_scan_chains int_mode_chain48 grp1 {/ts_int_mode_si[48]} {/ts_int_mode_so[48]}
+//              add_scan_chains int_mode_chain49 grp1 {/ts_int_mode_si[49]} {/ts_int_mode_so[49]}
+//              add_scan_chains int_mode_chain50 grp1 {/ts_int_mode_si[50]} {/ts_int_mode_so[50]}
+//              add_scan_chains int_mode_chain51 grp1 {/ts_int_mode_si[51]} {/ts_int_mode_so[51]}
+//              add_scan_chains int_mode_chain52 grp1 {/ts_int_mode_si[52]} {/ts_int_mode_so[52]}
+//              add_scan_chains int_mode_chain53 grp1 {/ts_int_mode_si[53]} {/ts_int_mode_so[53]}
+//              add_scan_chains int_mode_chain54 grp1 {/ts_int_mode_si[54]} {/ts_int_mode_so[54]}
+//              add_scan_chains int_mode_chain55 grp1 {/ts_int_mode_si[55]} {/ts_int_mode_so[55]}
+//              add_scan_chains int_mode_chain56 grp1 {/ts_int_mode_si[56]} {/ts_int_mode_so[56]}
+//              add_scan_chains int_mode_chain57 grp1 {/ts_int_mode_si[57]} {/ts_int_mode_so[57]}
+//              add_scan_chains int_mode_chain58 grp1 {/ts_int_mode_si[58]} {/ts_int_mode_so[58]}
+//              add_scan_chains int_mode_chain59 grp1 {/ts_int_mode_si[59]} {/ts_int_mode_so[59]}
+//           
+//              tessent_scan_common
+//           
+//              add_pin_constraints ts_0_stm0s0 C0
+//              add_pin_constraints ts_0_stm1s0 C1
+//              add_pin_constraints int_ltest_en C1
+//              add_pin_constraints ext_ltest_en C0
+//           }
+//  command: proc tessent_scan_setup { {mode ext_mode} } {
+//              switch -exact -- $mode {
+//                 ext_mode { tessent_scan_ext_mode_mode }
+//                 int_mode { tessent_scan_int_mode_mode }
+//                 default {
+//                    display_message -error "invalid scan mode: $mode"
+//                 }
+//              }
+//           }
+//  command: 
+//  command: tessent_scan_setup
+//  sub-command: add_scan_groups grp1 ./scan_inserted_netlist/atpg_setup.testproc 
+//  sub-command: add_scan_chains ext_mode_chain0 grp1 /ts_ext_mode_si[0] /ts_ext_mode_so[0] 
+//  sub-command: add_scan_chains ext_mode_chain1 grp1 /ts_ext_mode_si[1] /ts_ext_mode_so[1] 
+//  sub-command: add_scan_chains ext_mode_chain2 grp1 /ts_ext_mode_si[2] /ts_ext_mode_so[2] 
+//  sub-command: add_scan_chains ext_mode_chain3 grp1 /ts_ext_mode_si[3] /ts_ext_mode_so[3] 
+//  sub-command: add_scan_chains ext_mode_chain4 grp1 /ts_ext_mode_si[4] /ts_ext_mode_so[4] 
+//  sub-command: add_scan_chains ext_mode_chain5 grp1 /ts_ext_mode_si[5] /ts_ext_mode_so[5] 
+//  sub-command: add_scan_chains ext_mode_chain6 grp1 /ts_ext_mode_si[6] /ts_ext_mode_so[6] 
+//  sub-command: add_scan_chains ext_mode_chain7 grp1 /ts_ext_mode_si[7] /ts_ext_mode_so[7] 
+//  sub-command: add_scan_chains ext_mode_chain8 grp1 /ts_ext_mode_si[8] /ts_ext_mode_so[8] 
+//  sub-command: add_scan_chains ext_mode_chain9 grp1 /ts_ext_mode_si[9] /ts_ext_mode_so[9] 
+//  sub-command: add_clocks 0 ijtag_tck 
+//  Error: 'ijtag_tck' is already in clock list.
+//  command: check_design_rules 
+//  ---------------------------------------------------------------------------
+//  Begin scan chain identification process, memory elements = 2430.
+//  ---------------------------------------------------------------------------
+//  Reading group test procedure file ./scan_inserted_netlist/atpg_setup.testproc.
+//  The following occurred at line 18 in file ./scan_inserted_netlist/atpg_setup.testproc:
+//  Error: Incorrect pin name inferred_occ_clock0. (P12-1)
+//  The following occurred at line 19 in file ./scan_inserted_netlist/atpg_setup.testproc:
+//  Error: Non-clock pin 'shift_capture_clock' cannot be pulsed in timeplate gen_tp1. (P52-1)
+//  The following occurred at line 31 in file ./scan_inserted_netlist/atpg_setup.testproc:
+//  Error: Incorrect pin name inferred_occ_clock0. (P12-2)
+//  'inferred_occ_clock0' is not a valid clock pin.
+//  The following occurred at line 32 in file ./scan_inserted_netlist/atpg_setup.testproc:
+//  Error: Non-clock pin 'shift_capture_clock' cannot be pulsed in procedure shift. (P52-2)
+//  Error: ICL description for IJTAG has not been successfully loaded.
+//  The following occurred at line 45 in file ./scan_inserted_netlist/atpg_setup.testproc:
+//  Error: Couldn't process iReset statement without ICL near token ( iReset ). (P1-1)
+//  The following occurred at line 58 in file ./scan_inserted_netlist/atpg_setup.testproc:
+//  Error: Incorrect pin name inferred_occ_clock0. (P12-3)
+//  Error: Rules checking unsuccessful, cannot exit SETUP mode.
+//  command: set_current_mode edt_in_stuck -type internal
+//  Warning: You have switched to a new mode 'edt_in_stuck' of design 'msrv_soc_uncorewrapper'.
+//           The design setup information specified for the previous mode 'unwrapped' was not cleared.
+//           To clear setup data before proceeding, issue the 'reset_design' command.
+//  command: import_scan_mode int_mode
+//  Error: Core 'msrv_soc_uncorewrapper' has no scan modes available.
+//  command: import_scan_mode int_mode
+//  Error: Core 'msrv_soc_uncorewrapper' has no scan modes available.
+//  command: set_system_mode analysis
+//  ---------------------------------------------------------------------------
+//  Begin scan chain identification process, memory elements = 2430.
+//  ---------------------------------------------------------------------------
+//  Reading group test procedure file ./scan_inserted_netlist/atpg_setup.testproc.
+//  The following occurred at line 18 in file ./scan_inserted_netlist/atpg_setup.testproc:
+//  Error: Incorrect pin name inferred_occ_clock0. (P12-1)
+//  The following occurred at line 19 in file ./scan_inserted_netlist/atpg_setup.testproc:
+//  Error: Non-clock pin 'shift_capture_clock' cannot be pulsed in timeplate gen_tp1. (P52-1)
+//  The following occurred at line 31 in file ./scan_inserted_netlist/atpg_setup.testproc:
+//  Error: Incorrect pin name inferred_occ_clock0. (P12-2)
+//  'inferred_occ_clock0' is not a valid clock pin.
+//  The following occurred at line 32 in file ./scan_inserted_netlist/atpg_setup.testproc:
+//  Error: Non-clock pin 'shift_capture_clock' cannot be pulsed in procedure shift. (P52-2)
+//  Error: ICL description for IJTAG has not been successfully loaded.
+//  The following occurred at line 45 in file ./scan_inserted_netlist/atpg_setup.testproc:
+//  Error: Couldn't process iReset statement without ICL near token ( iReset ). (P1-1)
+//  The following occurred at line 58 in file ./scan_inserted_netlist/atpg_setup.testproc:
+//  Error: Incorrect pin name inferred_occ_clock0. (P12-3)
+//  Error: Rules checking unsuccessful, cannot exit SETUP mode.

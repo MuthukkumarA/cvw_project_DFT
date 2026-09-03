@@ -1,0 +1,671 @@
+/home/cad/eda/Mentor_Graphics/Tessent_2026/tessent_2026.1/bin/tessent -shell -logfile ./logs/aug08_atpg.log
+//  Tessent Shell  2026.1    Thu Feb 26 18:38:00 GMT 2026
+//                Unpublished work. Copyright 2026 Siemens
+//
+//      This material contains trade secrets or otherwise confidential 
+//  information owned by Siemens Industry Software Inc. or its affiliates 
+//   (collectively, "SISW"), or its licensors. Access to and use of this 
+//     information is strictly limited as set forth in the Customer's 
+//                   applicable agreements with SISW. 
+//
+//  Siemens software executing under x86-64 Linux on Sat Aug 08 17:56:25 IST 2026.
+//  64 bit version
+//  Host: mavenserver-RH3 (255072 MB RAM, 122071 MB Swap)
+//
+//  command: set_context pattern -scan
+//  command: 
+//  command: set_tsdb_output_directory ./TSDB
+./TSDB
+//  command: 
+//  command: read_cell_library ../../../libs/NangateOpenCellLibrary.tcelllib ../../../libs/dft_sim.tcelllib
+//  Reading DFT Library file ../../../libs/NangateOpenCellLibrary.tcelllib
+//  Finished reading file ../../../libs/NangateOpenCellLibrary.tcelllib
+//  Reading DFT Library file ../../../libs/dft_sim.tcelllib
+//  Finished reading file ../../../libs/dft_sim.tcelllib
+//  command: 
+//  command: read_design msrv_soc_uncorewrapper -design_identifier gate2 -verbose
+//  sub-command: set_tool_options -reapply_settings_after_reelaboration On
+//  sub-command: set_read_design_tag msrv_soc_uncorewrapper
+//  sub-command: read_verilog ./TSDB/dft_inserted_designs/msrv_soc_uncorewrapper_gate2.dft_inserted_design/msrv_soc_uncorewrapper.vg -no_duplicate_modules_warnings
+//  sub-command: set_read_design_tag ""
+//  sub-command: set_tool_options -reapply_settings_after_reelaboration Off
+//  sub-command: read_icl ./TSDB/dft_inserted_designs/msrv_soc_uncorewrapper_gate2.dft_inserted_design/msrv_soc_uncorewrapper.icl -skip_child_blocks -no_notes
+//  sub-command: source ./TSDB/dft_inserted_designs/msrv_soc_uncorewrapper_gate2.dft_inserted_design/msrv_soc_uncorewrapper.pdl
+//  sub-command: read_core_descriptions ./TSDB/dft_inserted_designs/msrv_soc_uncorewrapper_gate2.dft_inserted_design/msrv_soc_uncorewrapper.tcd
+//  command: set_current_design msrv_soc_uncorewrapper -show_elaboration_warnings
+//  Warning: Pin 'clk' of module 'msrv_soc_eeprom' is undefined, direction assumed to be input
+//  Warning: Pin 'rst_n' of module 'msrv_soc_eeprom' is undefined, direction assumed to be input
+//  Warning: Pin 'write_enable' of module 'msrv_soc_eeprom' is undefined, direction assumed to be input
+//  Note: Changing pin 'CK' function from 'active_low_clock' to 'clock_in'
+//        Model 'CLKGATE_X1' line 1266 file '../../../libs/NangateOpenCellLibrary.tcelllib'
+//  Note: Changing pin 'CK' function from 'active_low_clock' to 'clock_in'
+//        Model 'CLKGATE_X2' line 1282 file '../../../libs/NangateOpenCellLibrary.tcelllib'
+//  Note: Changing pin 'CK' function from 'active_low_clock' to 'clock_in'
+//        Model 'CLKGATE_X4' line 1298 file '../../../libs/NangateOpenCellLibrary.tcelllib'
+//  Note: Changing pin 'CK' function from 'active_low_clock' to 'clock_in'
+//        Model 'CLKGATE_X8' line 1314 file '../../../libs/NangateOpenCellLibrary.tcelllib'
+//  Warning: Undefined modules were found.
+//           Before using "set_system_mode" or "create_flat_model", you must either define
+//           the missing modules using "read_verilog" and/or "read_cell_library", or use the
+//           following command to treat them as black boxes:
+             add_black_boxes -modules { \
+                    msrv_soc_eeprom \
+             }
+//           You can also use "add_black_boxes -auto" to black box all undefined modules but
+//           it is recommended that you do not add this command to your dofile. Doing so may
+//           unintentionally black-box new undefined modules in future runs.
+//  Warning: Net 'edt_update_inv' in module 'msrv_soc_uncorewrapper' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper' has no pins
+//  Warning: Net 'HREADRam[63]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[62]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[61]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[60]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[59]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[58]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[57]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[56]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[55]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[54]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[53]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[52]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[51]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[50]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[49]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[48]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[47]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[46]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[45]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[44]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[43]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[42]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[41]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[40]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[39]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[38]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[37]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[36]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[35]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[34]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[33]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[32]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[31]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[30]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[29]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[28]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[27]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[26]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[25]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[24]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[23]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[22]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[21]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[20]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[19]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[18]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[17]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[16]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[15]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[14]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[13]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[12]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[11]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[10]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[9]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[8]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[7]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[6]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[5]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[4]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[3]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[2]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[1]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADRam[0]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HREADSDC[63]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[62]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[61]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[60]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[59]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[58]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[57]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[56]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[55]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[54]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[53]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[52]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[51]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[50]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[49]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[48]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[47]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[46]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[45]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[44]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[43]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[42]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[41]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[40]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[39]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[38]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[37]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[36]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[35]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[34]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[33]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[32]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[31]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[30]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[29]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[28]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[27]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[26]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[25]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[24]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[23]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[22]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[21]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[20]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[19]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[18]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[17]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[16]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[15]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[14]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[13]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[12]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[11]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[10]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[9]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[8]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[7]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[6]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[5]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[4]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[3]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[2]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[1]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADSDC[0]' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'aux_in[8]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'aux_in[6]' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HSELSDCD' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HRESPRam' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HRESPSDC' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADYRam' in module 'msrv_soc_uncore' is not driven
+//  Warning: Net 'HRESPSDCD' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'HREADYSDC' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'SDCIntM' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncore' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_adrdecs' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_adrdecs' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_adrdec' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_adrdec' has no pins
+//  Warning: Net 'rtlcN_out_mux0' in module 'M_RTLSIM_MUXN_DCZ_4_2' has no pins
+//  Warning: Net 's_wdata[15]' in module 'msrv_soc_ahbapbbridge' has no pins
+//  Warning: Net 's_resp' in module 'msrv_soc_ahbapbbridge' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_ahbapbbridge' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_ahbapbbridge' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_ahb_slave' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_ahb_slave' has no pins
+//  Warning: Net 'rtlcN_out_mux0' in module 'M_RTLSIM_MUXN_4_2' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_synchronizer_1' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_synchronizer_1' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_synchronizer' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_synchronizer' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_apb_master' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_apb_master' has no pins
+//  Warning: Net 'rtlc21n1' in module 'msrv_soc_apb_master' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_flopenl' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_flopenl' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_flopenr_1' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_flopenr_1' has no pins
+//  Warning: Net 'HADDRD[3]' in module 'msrv_soc_rom_ahb' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_rom_ahb' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_rom_ahb' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_flopenr_2' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_flopenr_2' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_flopenr_pv1' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_flopenr_pv1' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_flopr_1' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_flopr_1' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_mux2' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_mux2' has no pins
+//  Warning: Net 'MTIMECMP[0]' in module 'msrv_soc_clint_apb' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_clint_apb' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_clint_apb' has no pins
+//  Warning: Net 'rtlc4n167[31]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n167[30]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n167[29]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n167[28]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n167[27]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n167[26]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n167[25]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n167[24]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n167[23]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n167[22]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n167[21]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n167[20]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n167[19]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n167[18]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n167[17]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n167[16]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n167[15]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n167[14]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n167[13]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n167[12]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n167[11]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n167[10]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n167[9]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n167[8]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n167[7]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n167[6]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n297[31]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n297[30]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n297[29]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n297[28]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n297[27]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n297[26]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n297[25]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n297[24]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n297[23]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n297[22]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n297[21]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n297[20]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n297[19]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n297[18]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n297[17]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n297[16]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n297[15]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n297[14]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n297[13]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n297[12]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n297[11]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n297[10]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n297[9]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n297[8]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n297[7]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n297[6]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n321[31]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n321[30]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n321[29]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n321[28]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n321[27]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n321[26]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n321[25]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n321[24]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n321[23]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n321[22]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n321[21]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n321[20]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n321[19]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n321[18]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n321[17]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n321[16]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n321[15]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n321[14]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n321[13]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n321[12]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n321[11]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n321[10]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n321[9]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n321[8]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n321[7]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n321[6]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'intPending[1]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n49[0]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n1[2]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n1[1]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc4n1[0]' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc1n1' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc1n2' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc1n4' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc1n5' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc1n6' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc1n7' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc1n8' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc3n1' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc3n2' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc3n4' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc3n5' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc3n6' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc3n7' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlc3n8' in module 'msrv_soc_plic_apb' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_flopr_pv1' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_flopr_pv1' has no pins
+//  Warning: Net 'gpio_dat_o[0]' in module 'msrv_soc_gpio_apb' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_gpio_apb' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_gpio_apb' has no pins
+//  Warning: Net 'STATE[0]' in module 'msrv_soc_apb_slave_interface' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_apb_slave_interface' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_apb_slave_interface' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_aux_interface' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_aux_interface' has no pins
+//  Warning: Net 'rgpio_ints[0]' in module 'msrv_soc_gpio_register' has no pins
+//  Warning: Net 'rgpio_aux[0]' in module 'msrv_soc_gpio_register' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_gpio_register' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_gpio_register' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uart_apb' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uart_apb' has no pins
+//  Warning: Net 'rtlc3n37[17]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc3n40[17]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc4n149[10]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc7n5[10]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc7n5[9]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc7n5[8]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc7n5[7]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc7n5[6]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc7n5[5]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc7n5[4]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc7n5[3]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc7n5[2]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc7n5[1]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc7n5[0]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc12n5[7]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc12n5[6]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc12n5[5]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc12n5[4]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc12n5[3]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc12n5[2]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc12n5[1]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc12n5[0]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc4n79[4]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc7n636[4]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc12n509[4]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n607[3]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n607[2]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n687[1]' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n5' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n8' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n10' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n11' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n12' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n13' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n14' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n15' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n16' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n17' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n18' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n19' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n20' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n21' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n22' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n23' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n24' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n25' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n26' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n27' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n28' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n29' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n30' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n31' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n32' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n33' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n34' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n35' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n36' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n37' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n38' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlc0n39' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uartPC16550D' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_flopr_2' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_flopr_2' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_flopr_3' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_flopr_3' has no pins
+//  Warning: Net 'TransmitWriteWatermarkLevel[2]' in module 'msrv_soc_spi_apb' is not driven
+//  Warning: Net 'TransmitWriteWatermarkLevel[1]' in module 'msrv_soc_spi_apb' is not driven
+//  Warning: Net 'TransmitWriteWatermarkLevel[0]' in module 'msrv_soc_spi_apb' is not driven
+//  Warning: Net 'ReceiveReadWatermarkLevel[2]' in module 'msrv_soc_spi_apb' is not driven
+//  Warning: Net 'ReceiveReadWatermarkLevel[1]' in module 'msrv_soc_spi_apb' is not driven
+//  Warning: Net 'ReceiveReadWatermarkLevel[0]' in module 'msrv_soc_spi_apb' is not driven
+//  Warning: Net 'TrasmitFIFOEmpty' in module 'msrv_soc_spi_apb' is not driven
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_spi_apb' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_spi_apb' has no pins
+//  Warning: Net 'CurrState[0]' in module 'msrv_soc_spi_controller' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_spi_controller' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_spi_controller' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_flopr_4' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_flopr_4' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_flopenr_3' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_flopenr_3' has no pins
+//  Warning: Net 'mem[0]' in module 'msrv_soc_spi_fifo_1' has no pins
+//  Warning: Net 'rtlc0n3[7]' in module 'msrv_soc_spi_fifo_1' has no pins
+//  Warning: Net 'rtlc0n3[6]' in module 'msrv_soc_spi_fifo_1' has no pins
+//  Warning: Net 'rtlc0n3[5]' in module 'msrv_soc_spi_fifo_1' has no pins
+//  Warning: Net 'rtlc0n3[4]' in module 'msrv_soc_spi_fifo_1' has no pins
+//  Warning: Net 'rtlc0n3[3]' in module 'msrv_soc_spi_fifo_1' has no pins
+//  Warning: Net 'rtlc0n3[2]' in module 'msrv_soc_spi_fifo_1' has no pins
+//  Warning: Net 'rtlc0n3[1]' in module 'msrv_soc_spi_fifo_1' has no pins
+//  Warning: Net 'rtlc0n3[0]' in module 'msrv_soc_spi_fifo_1' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_spi_fifo_1' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_spi_fifo_1' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_flopr' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_flopr' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_flopenr' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_flopenr' has no pins
+//  Warning: Net 'mem[0]' in module 'msrv_soc_spi_fifo' has no pins
+//  Warning: Net 'rtlc0n3[7]' in module 'msrv_soc_spi_fifo' has no pins
+//  Warning: Net 'rtlc0n3[6]' in module 'msrv_soc_spi_fifo' has no pins
+//  Warning: Net 'rtlc0n3[5]' in module 'msrv_soc_spi_fifo' has no pins
+//  Warning: Net 'rtlc0n3[4]' in module 'msrv_soc_spi_fifo' has no pins
+//  Warning: Net 'rtlc0n3[3]' in module 'msrv_soc_spi_fifo' has no pins
+//  Warning: Net 'rtlc0n3[2]' in module 'msrv_soc_spi_fifo' has no pins
+//  Warning: Net 'rtlc0n3[1]' in module 'msrv_soc_spi_fifo' has no pins
+//  Warning: Net 'rtlc0n3[0]' in module 'msrv_soc_spi_fifo' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_spi_fifo' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_spi_fifo' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_sib_1' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_sib_1' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_sib_2' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_sib_2' has no pins
+//  Warning: Net 'async_set_reset_static_disable_to_buf' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl' has no pins
+//  Warning: Net 'mcp_bounding_en_to_buf' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl' has no pins
+//  Warning: Net 'control_test_point_en_to_buf' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl' has no pins
+//  Warning: Net 'observe_test_point_en_to_buf' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl' has no pins
+//  Warning: Net 'x_bounding_en_to_buf' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl' has no pins
+//  Warning: Net 'ext_mode_to_buf' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl' has no pins
+//  Warning: Net 'int_mode_to_buf' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl' has no pins
+//  Warning: Net 'ext_ltest_en_to_buf' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl' has no pins
+//  Warning: Net 'int_ltest_en_to_buf' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl' has no pins
+//  Warning: Net 'controller_chain_mode_to_buf' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl' has no pins
+//  Warning: Net 'ltest_en_to_buf' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_occ' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_occ' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_control' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_control' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_posedge_synchronizer_reset' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_posedge_synchronizer_reset' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_shift_reg' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_shift_reg' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_ijtag_control' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_ijtag_control' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_sib' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_sib' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_decompressor' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_decompressor' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_sib' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_sib' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_compactor' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_compactor' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_spatial_compactor_30_w_output_lockup' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_spatial_compactor_30_w_output_lockup' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_controller' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_controller' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_xor_decoder' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_xor_decoder' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_onehot_decoder_5_to_30' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_onehot_decoder_5_to_30' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_bypass_logic' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_bypass_logic' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_misr' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_misr' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_misr_reg' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_misr_reg' has no pins
+//  Warning: Net 'edt_bypass_to_buf' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_tdr' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_tdr' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_tdr' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_ctrl' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_ctrl' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_capture_phase_reg' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_capture_phase_reg' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_warmup_pattern_cnt_reg' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_warmup_pattern_cnt_reg' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_counter' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_counter' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_bit_cnt_reg' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_bit_cnt_reg' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_vector_cnt_reg' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_vector_cnt_reg' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_sib' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_sib' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_ctrl_signals' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_ctrl_signals' has no pins
+//  Warning: Net 'rtlc0n17' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_fsm' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_fsm' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_fsm' has no pins
+//  Warning: Net 'rtlc8n4' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_fsm' has no pins
+//  Warning: Net 'rtlc11n4' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_fsm' has no pins
+//  Warning: Net 'rtlc14n3' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_fsm' has no pins
+//  Warning: Net 'rtlc14n4' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_fsm' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_single_chain_mode_logic' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_single_chain_mode_logic' has no pins
+//  Warning: Net 'rtlcClkX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_single_chain_mode_logic_sib' has no pins
+//  Warning: Net 'rtlcXXX' in module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_single_chain_mode_logic_sib' has no pins
+//  ---------------------------------------------------------------------------
+//  Begin ICL elaboration and checking.
+//  -----------------------------------
+//  ICL elaboration completed, CPU time=0.04 sec.
+//  ---------------------------------------------------------------------------
+//  command: 
+//  command: set_current_mode edt_int_struck -type internal
+//  command: 
+//  command: report_dft_signals 
+
+// Existing and to be created DFT signals
+// ======================================
+// -------------------------------  --------  ------------------------  --------------  -----------------------------------------------------------------------------------------
+// Name                             Status    Origin                    Type            Location
+// -------------------------------  --------  ------------------------  --------------  -----------------------------------------------------------------------------------------
+// async_set_reset_dynamic_disable  Existing  Imported from DesignInfo  Pin             tessent_persistent_cell_async_set_reset_dynamic_disable/ZN
+// async_set_reset_static_disable   Existing  ICL attributes            IJTAG register  msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl_inst/async_set_reset_static_disable
+// control_test_point_en            Existing  ICL attributes            IJTAG register  msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl_inst/control_test_point_en
+// controller_chain_mode            Existing  ICL attributes            IJTAG register  msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl_inst/controller_chain_mode
+// edt_clock                        Existing  Imported from DesignInfo  Pin             msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_inst/edt_lbist_clock
+// edt_update                       Existing  Imported from DesignInfo  Port            edt_update
+// ext_ltest_en                     Existing  ICL attributes            IJTAG register  msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl_inst/ext_ltest_en
+// ext_mode                         Existing  ICL attributes            IJTAG register  msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl_inst/ext_mode
+// int_ltest_en                     Existing  ICL attributes            IJTAG register  msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl_inst/int_ltest_en
+// int_mode                         Existing  ICL attributes            IJTAG register  msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl_inst/int_mode
+// ltest_en                         Existing  ICL attributes            IJTAG register  msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl_inst/ltest_en
+// mcp_bounding_en                  Existing  ICL attributes            IJTAG register  msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl_inst/mcp_bounding_en
+// observe_test_point_en            Existing  ICL attributes            IJTAG register  msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl_inst/observe_test_point_en
+// scan_en                          Existing  Imported from DesignInfo  Port            scan_en_w -> msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_inst/scan_en_out
+// shift_capture_clock              Existing  Imported from DesignInfo  Pin             msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_inst/shift_capture_clock_out
+// test_clock                       Existing  Imported from DesignInfo  Port            test_clock_w
+// x_bounding_en                    Existing  ICL attributes            IJTAG register  msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl_inst/x_bounding_en
+//
+//  command: 
+//  command: import_scan_mode int_mode
+//  Resetting design.
+//  Reading core description file ./TSDB/instruments/msrv_soc_uncorewrapper_pass2_rtl_edt_lbist.instrument/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1.tcd
+//  Reading core description file ./TSDB/instruments/msrv_soc_uncorewrapper_pass2_rtl_occ.instrument/msrv_soc_uncorewrapper_pass2_rtl_tessent_occ.tcd
+//  command: 
+//  command: add_black_boxes -auto
+//  command: 
+//  command: #analyze_control_signals 
+//  command: 
+//  command: #dofile ./scan_inserted_netlist/atpg_setup.dofile 
+//  command: 
+//  command: #tessent_scan_setup
+//  command: 
+//  command: check_design_rules 
+//  Warning: Rule FN1 violation occurs 488 times
+//  Warning: Rule FN4 violation occurs 166 times
+//  Flattening process completed, cell instances=17640, gates=36052, PIs=268+1(pseudo port), POs=213, CPU time=0.21 sec.
+//  ---------------------------------------------------------------------------
+//  Begin circuit learning analyses.
+//  --------------------------------
+//  Learning completed, CPU time=0.10 sec.
+//  ---------------------------------------------------------------------------
+//  Begin scan chain identification process, memory elements = 2442.
+//  ---------------------------------------------------------------------------
+//  Begin simulation of test_setup procedure with 220 cycles.
+//  Simulation of test_setup procedure completed, CPU time=0.0 sec.
+//  Begin simulation of load_unload procedure.
+//  Simulation of load_unload procedure completed, CPU time=0.2 sec.
+//  Error: Clock port 'PCLK' is not internal, pulse-always, pulse-in-capture, or constrained during retargetable pattern generation.
+//         This will allow ATPG to control it to any value (unless a named capture procedure enforces specific constraints),
+//         even though this value will not be mapped to the top level during pattern retargeting.
+//         If this clock will not pulse during capture when the core is embedded, then constrain it off.
+//         Otherwise, use 'set_attribute_value {{PCLK}} -name is_excluded_from_isolation_constraints' to prevent
+//         this clock from being X-constrained, but only if it will be explicitly controlled by an NCP
+//         which models control logic outside the core.
+//  Error: Rules checking unsuccessful, cannot exit SETUP mode.
+//  command: 
+//  command: report_clocks 
+User-defined Clocks (4):
+=========================
+
+  Sync and Async Source Clocks
+  ============================
+   ------------------------------------------------------------------------------------------------  ---------  --------  ----------------  ------------------------------------------------------------------------------------------------
+   Name                                                                                              Off State  Internal  Other Properties  Pin(s)                                                                                          
+   ------------------------------------------------------------------------------------------------  ---------  --------  ----------------  ------------------------------------------------------------------------------------------------
+   'PCLK'                                                                                                0         No                                                                                                                       
+   'test_clock_w'                                                                                        0         No                                                                                                                       
+   'ijtag_tck'                                                                                           0         No                                                                                                                       
+   'msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_PCLK_inst_tessent_persistent_cell_clock_out_mux_Z'      0         Yes      Capture only    'msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_PCLK_inst/tessent_persistent_cell_clock_out_mux/Z'
+
+//  command: 
+//  command: add_faults -all
+//  Error: Command 'add_faults' is not available in the current system mode.
+//         It is available in the following system modes: analysis.
+//  command: 
+//  command: report_statistics -detail
+//  Warning: no faults have been added.
+         Statistics Report        
+          Stuck-at Faults         
+----------------------------------
+Fault Classes           #faults   
+                        (total)   
+-------------------  -------------
+  FU (full)                0      
+  -----------------  -------------
+----------------------------------
+Coverage                          
+  -----------------               
+----------------------------------
+#test_patterns                  0 
+#simulated_patterns             0 
+CPU_time (secs)             111.8 
+----------------------------------
+
+//  command: 
+//  command: create_patterns 
+//  Error: Command 'create_patterns' is not available in the current system mode.
+//         It is available in the following system modes: analysis.
+//  command: check_design_rules 
+//  ---------------------------------------------------------------------------
+//  Begin scan chain identification process, memory elements = 2442.
+//  ---------------------------------------------------------------------------
+//  Begin simulation of test_setup procedure with 220 cycles.
+//  Simulation of test_setup procedure completed, CPU time=0.0 sec.
+//  Begin simulation of load_unload procedure.
+//  Simulation of load_unload procedure completed, CPU time=0.2 sec.
+//  Error: Clock port 'PCLK' is not internal, pulse-always, pulse-in-capture, or constrained during retargetable pattern generation.
+//         This will allow ATPG to control it to any value (unless a named capture procedure enforces specific constraints),
+//         even though this value will not be mapped to the top level during pattern retargeting.
+//         If this clock will not pulse during capture when the core is embedded, then constrain it off.
+//         Otherwise, use 'set_attribute_value {{PCLK}} -name is_excluded_from_isolation_constraints' to prevent
+//         this clock from being X-constrained, but only if it will be explicitly controlled by an NCP
+//         which models control logic outside the core.
+//  Error: Rules checking unsuccessful, cannot exit SETUP mode.
+//  command: exit 
