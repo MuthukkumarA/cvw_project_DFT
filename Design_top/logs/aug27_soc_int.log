@@ -1,0 +1,2206 @@
+/home/cad/eda/Mentor_Graphics/Tessent_2026/tessent_2026.1/bin/tessent -shell -logfile ./logs/aug27_soc_int.log
+//  Tessent Shell  2026.1    Thu Feb 26 18:38:00 GMT 2026
+//                Unpublished work. Copyright 2026 Siemens
+//
+//      This material contains trade secrets or otherwise confidential 
+//  information owned by Siemens Industry Software Inc. or its affiliates 
+//   (collectively, "SISW"), or its licensors. Access to and use of this 
+//     information is strictly limited as set forth in the Customer's 
+//                   applicable agreements with SISW. 
+//
+//  Siemens software executing under x86-64 Linux on Thu Aug 27 10:58:01 IST 2026.
+//  64 bit version
+//  Host: mavenserver-RH3 (255072 MB RAM, 122071 MB Swap)
+//
+//  command: set_context dft -rtl -design_identifier soc
+//  command: 
+//  command: set_tsdb_output_directory TSDB
+TSDB
+//  command: 
+//  command: read_cell_library ../../libs/NangateOpenCellLibrary.tcelllib 
+//  Reading DFT Library file ../../libs/NangateOpenCellLibrary.tcelllib
+//  Finished reading file ../../libs/NangateOpenCellLibrary.tcelllib
+//  command: 
+//  command: set msrv_soc "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl/"
+/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl/
+//  command: 
+//  command: open_tsdb ./core/TSDB/
+//  command: 
+//  command: open_tsdb ./uncore/TSDB/
+//  command: 
+//  command: open_tsdb ./sys_ctr/TSDB/
+//  command: 
+//  command: read_design msrv_soc_pipelinedcorewrapper -design_identifier pass1_rtl -verbose
+//  sub-command: set_tool_options -reapply_settings_after_reelaboration On
+//  sub-command: set_read_design_tag msrv_soc_pipelinedcorewrapper
+//  sub-command: #### read1 #####
+
+set_design_include_directories -clear
+
+set_design_macros -clear
+
+set_design_sources -format verilog \
+   -y ../../rtl \
+   -extensions vh
+
+read_verilog \
+   {../../rtl/cvw.sv} \
+   -in_library work \
+   -format sv2012 \
+   -no_duplicate_modules_warnings \
+   -vcs_compatibility
+
+
+//  sub-command: #### read2 #####
+
+set_design_include_directories -clear
+
+set_design_macros -clear
+
+set_design_sources -format verilog \
+   -y ../../rtl \
+   -extensions vh
+
+read_verilog \
+   {../../rtl/msrv_soc_fpu/msrv_soc_fclassify.sv 
+    ../../rtl/msrv_soc_fpu/msrv_soc_fcmp.sv 
+    ../../rtl/msrv_soc_fpu/msrv_soc_fctrl.sv 
+    ../../rtl/msrv_soc_fpu/msrv_soc_fcvt.sv 
+    ../../rtl/msrv_soc_fpu/msrv_soc_fhazard.sv 
+    ../../rtl/msrv_soc_fpu/msrv_soc_fli.sv 
+    ../../rtl/msrv_soc_fpu/msrv_soc_fmtparams.sv 
+    ../../rtl/msrv_soc_fpu/msrv_soc_fpu.sv 
+    ../../rtl/msrv_soc_fpu/msrv_soc_fregfile.sv 
+    ../../rtl/msrv_soc_fpu/msrv_soc_fround.sv 
+    ../../rtl/msrv_soc_fpu/msrv_soc_fsgninj.sv 
+    ../../rtl/msrv_soc_fpu/msrv_soc_packoutput.sv 
+    ../../rtl/msrv_soc_fpu/msrv_soc_unpack.sv 
+    ../../rtl/msrv_soc_fpu/msrv_soc_unpackinput.sv} \
+   -in_library work \
+   -format sv2012 \
+   -no_duplicate_modules_warnings
+
+
+//  sub-command: #### read3 #####
+
+set_design_include_directories -clear
+
+set_design_macros -clear
+
+set_design_sources -format verilog \
+   -y ../../rtl \
+   -extensions vh
+
+read_verilog \
+   {../../rtl/msrv_soc_fpu/msrv_soc_fdivsqrt/msrv_soc_fdivsqrt.sv 
+    ../../rtl/msrv_soc_fpu/msrv_soc_fdivsqrt/msrv_soc_fdivsqrtcycles.sv 
+    ../../rtl/msrv_soc_fpu/msrv_soc_fdivsqrt/msrv_soc_fdivsqrtexpcalc.sv 
+    ../../rtl/msrv_soc_fpu/msrv_soc_fdivsqrt/msrv_soc_fdivsqrtfgen2.sv 
+    ../../rtl/msrv_soc_fpu/msrv_soc_fdivsqrt/msrv_soc_fdivsqrtfgen4.sv 
+    ../../rtl/msrv_soc_fpu/msrv_soc_fdivsqrt/msrv_soc_fdivsqrtfsm.sv 
+    ../../rtl/msrv_soc_fpu/msrv_soc_fdivsqrt/msrv_soc_fdivsqrtiter.sv 
+    ../../rtl/msrv_soc_fpu/msrv_soc_fdivsqrt/msrv_soc_fdivsqrtpostproc.sv 
+    ../../rtl/msrv_soc_fpu/msrv_soc_fdivsqrt/msrv_soc_fdivsqrtpreproc.sv 
+    ../../rtl/msrv_soc_fpu/msrv_soc_fdivsqrt/msrv_soc_fdivsqrtstage2.sv 
+    ../../rtl/msrv_soc_fpu/msrv_soc_fdivsqrt/msrv_soc_fdivsqrtstage4.sv 
+    ../../rtl/msrv_soc_fpu/msrv_soc_fdivsqrt/msrv_soc_fdivsqrtuotfc2.sv 
+    ../../rtl/msrv_soc_fpu/msrv_soc_fdivsqrt/msrv_soc_fdivsqrtuotfc4.sv 
+    ../../rtl/msrv_soc_fpu/msrv_soc_fdivsqrt/msrv_soc_fdivsqrtuslc2.sv 
+    ../../rtl/msrv_soc_fpu/msrv_soc_fdivsqrt/msrv_soc_fdivsqrtuslc4.sv 
+    ../../rtl/msrv_soc_fpu/msrv_soc_fdivsqrt/msrv_soc_fdivsqrtuslc4cmp.sv} \
+   -in_library work \
+   -format sv2012 \
+   -no_duplicate_modules_warnings
+
+
+//  sub-command: #### read4 #####
+
+set_design_include_directories -clear
+
+set_design_macros -clear
+
+set_design_sources -format verilog \
+   -y ../../rtl \
+   -extensions vh
+
+read_verilog \
+   {../../rtl/msrv_soc_fpu/msrv_soc_fma/msrv_soc_fma.sv 
+    ../../rtl/msrv_soc_fpu/msrv_soc_fma/msrv_soc_fmaadd.sv 
+    ../../rtl/msrv_soc_fpu/msrv_soc_fma/msrv_soc_fmaalign.sv 
+    ../../rtl/msrv_soc_fpu/msrv_soc_fma/msrv_soc_fmaexpadd.sv 
+    ../../rtl/msrv_soc_fpu/msrv_soc_fma/msrv_soc_fmalza.sv 
+    ../../rtl/msrv_soc_fpu/msrv_soc_fma/msrv_soc_fmamult.sv 
+    ../../rtl/msrv_soc_fpu/msrv_soc_fma/msrv_soc_fmasign.sv} \
+   -in_library work \
+   -format sv2012 \
+   -no_duplicate_modules_warnings
+
+
+//  sub-command: #### read5 #####
+
+set_design_include_directories -clear
+
+set_design_macros -clear
+
+set_design_sources -format verilog \
+   -y ../../rtl \
+   -extensions vh
+
+read_verilog \
+   {../../rtl/msrv_soc_fpu/msrv_soc_postproc/msrv_soc_cvtshiftcalc.sv 
+    ../../rtl/msrv_soc_fpu/msrv_soc_postproc/msrv_soc_divshiftcalc.sv 
+    ../../rtl/msrv_soc_fpu/msrv_soc_postproc/msrv_soc_flags.sv 
+    ../../rtl/msrv_soc_fpu/msrv_soc_postproc/msrv_soc_fmashiftcalc.sv 
+    ../../rtl/msrv_soc_fpu/msrv_soc_postproc/msrv_soc_negateintres.sv 
+    ../../rtl/msrv_soc_fpu/msrv_soc_postproc/msrv_soc_normshift.sv 
+    ../../rtl/msrv_soc_fpu/msrv_soc_postproc/msrv_soc_postprocess.sv 
+    ../../rtl/msrv_soc_fpu/msrv_soc_postproc/msrv_soc_resultsign.sv 
+    ../../rtl/msrv_soc_fpu/msrv_soc_postproc/msrv_soc_round.sv 
+    ../../rtl/msrv_soc_fpu/msrv_soc_postproc/msrv_soc_roundsign.sv 
+    ../../rtl/msrv_soc_fpu/msrv_soc_postproc/msrv_soc_shiftcorrection.sv 
+    ../../rtl/msrv_soc_fpu/msrv_soc_postproc/msrv_soc_specialcase.sv} \
+   -in_library work \
+   -format sv2012 \
+   -no_duplicate_modules_warnings
+
+
+//  sub-command: #### read6 #####
+
+set_design_include_directories -clear
+
+set_design_macros -clear
+
+set_design_sources -format verilog \
+   -y ../../rtl \
+   -extensions vh
+
+read_verilog \
+   {../../rtl/msrv_soc_ifu/msrv_soc_decompress.sv 
+    ../../rtl/msrv_soc_ifu/msrv_soc_ifu.sv 
+    ../../rtl/msrv_soc_ifu/msrv_soc_irom.sv 
+    ../../rtl/msrv_soc_ifu/msrv_soc_spill.sv} \
+   -in_library work \
+   -format sv2012 \
+   -no_duplicate_modules_warnings
+
+
+//  sub-command: #### read7 #####
+
+set_design_include_directories -clear
+
+set_design_macros -clear
+
+set_design_sources -format verilog \
+   -y ../../rtl \
+   -extensions vh
+
+read_verilog \
+   {../../rtl/msrv_soc_ifu/msrv_soc_bpred/msrv_soc_RASPredictor.sv 
+    ../../rtl/msrv_soc_ifu/msrv_soc_bpred/msrv_soc_bpred.sv 
+    ../../rtl/msrv_soc_ifu/msrv_soc_bpred/msrv_soc_btb.sv 
+    ../../rtl/msrv_soc_ifu/msrv_soc_bpred/msrv_soc_gshare.sv 
+    ../../rtl/msrv_soc_ifu/msrv_soc_bpred/msrv_soc_gsharebasic.sv 
+    ../../rtl/msrv_soc_ifu/msrv_soc_bpred/msrv_soc_icpred.sv 
+    ../../rtl/msrv_soc_ifu/msrv_soc_bpred/msrv_soc_localaheadbp.sv 
+    ../../rtl/msrv_soc_ifu/msrv_soc_bpred/msrv_soc_localbpbasic.sv 
+    ../../rtl/msrv_soc_ifu/msrv_soc_bpred/msrv_soc_localrepairbp.sv 
+    ../../rtl/msrv_soc_ifu/msrv_soc_bpred/msrv_soc_satCounter2.sv 
+    ../../rtl/msrv_soc_ifu/msrv_soc_bpred/msrv_soc_twoBitPredictor.sv} \
+   -in_library work \
+   -format sv2012 \
+   -no_duplicate_modules_warnings
+
+
+//  sub-command: #### read8 #####
+
+set_design_include_directories -clear
+
+set_design_macros -clear
+
+set_design_sources -format verilog \
+   -y ../../rtl \
+   -extensions vh
+
+read_verilog \
+   {../../rtl/msrv_soc_ieu/msrv_soc_alu.sv 
+    ../../rtl/msrv_soc_ieu/msrv_soc_comparator.sv 
+    ../../rtl/msrv_soc_ieu/msrv_soc_controller.sv 
+    ../../rtl/msrv_soc_ieu/msrv_soc_datapath.sv 
+    ../../rtl/msrv_soc_ieu/msrv_soc_extend.sv 
+    ../../rtl/msrv_soc_ieu/msrv_soc_ieu.sv 
+    ../../rtl/msrv_soc_ieu/msrv_soc_regfile.sv 
+    ../../rtl/msrv_soc_ieu/msrv_soc_shifter.sv} \
+   -in_library work \
+   -format sv2012 \
+   -no_duplicate_modules_warnings
+
+
+//  sub-command: #### read9 #####
+
+set_design_include_directories -clear
+
+set_design_macros -clear
+
+set_design_sources -format verilog \
+   -y ../../rtl \
+   -extensions vh
+
+read_verilog \
+   {../../rtl/msrv_soc_ieu/msrv_soc_bmu/msrv_soc_bitmanipalu.sv 
+    ../../rtl/msrv_soc_ieu/msrv_soc_bmu/msrv_soc_bitreverse.sv 
+    ../../rtl/msrv_soc_ieu/msrv_soc_bmu/msrv_soc_bmuctrl.sv 
+    ../../rtl/msrv_soc_ieu/msrv_soc_bmu/msrv_soc_byteop.sv 
+    ../../rtl/msrv_soc_ieu/msrv_soc_bmu/msrv_soc_clmul.sv 
+    ../../rtl/msrv_soc_ieu/msrv_soc_bmu/msrv_soc_cnt.sv 
+    ../../rtl/msrv_soc_ieu/msrv_soc_bmu/msrv_soc_ext.sv 
+    ../../rtl/msrv_soc_ieu/msrv_soc_bmu/msrv_soc_popcnt.sv 
+    ../../rtl/msrv_soc_ieu/msrv_soc_bmu/msrv_soc_zbb.sv 
+    ../../rtl/msrv_soc_ieu/msrv_soc_bmu/msrv_soc_zbc.sv} \
+   -in_library work \
+   -format sv2012 \
+   -no_duplicate_modules_warnings
+
+
+//  sub-command: #### read10 #####
+
+set_design_include_directories -clear
+
+set_design_macros -clear
+
+set_design_sources -format verilog \
+   -y ../../rtl \
+   -extensions vh
+
+read_verilog \
+   {../../rtl/msrv_soc_ieu/msrv_soc_aes/msrv_soc_aes32d.sv 
+    ../../rtl/msrv_soc_ieu/msrv_soc_aes/msrv_soc_aes32e.sv 
+    ../../rtl/msrv_soc_ieu/msrv_soc_aes/msrv_soc_aes64d.sv 
+    ../../rtl/msrv_soc_ieu/msrv_soc_aes/msrv_soc_aes64e.sv 
+    ../../rtl/msrv_soc_ieu/msrv_soc_aes/msrv_soc_aes64ks1i.sv 
+    ../../rtl/msrv_soc_ieu/msrv_soc_aes/msrv_soc_aes64ks2.sv 
+    ../../rtl/msrv_soc_ieu/msrv_soc_aes/msrv_soc_aesinvmixcolumns32.sv 
+    ../../rtl/msrv_soc_ieu/msrv_soc_aes/msrv_soc_aesinvmixcolumns8.sv 
+    ../../rtl/msrv_soc_ieu/msrv_soc_aes/msrv_soc_aesinvsbox64.sv 
+    ../../rtl/msrv_soc_ieu/msrv_soc_aes/msrv_soc_aesinvsbox8.sv 
+    ../../rtl/msrv_soc_ieu/msrv_soc_aes/msrv_soc_aesinvshiftrows64.sv 
+    ../../rtl/msrv_soc_ieu/msrv_soc_aes/msrv_soc_aesmixcolumns32.sv 
+    ../../rtl/msrv_soc_ieu/msrv_soc_aes/msrv_soc_aesmixcolumns8.sv 
+    ../../rtl/msrv_soc_ieu/msrv_soc_aes/msrv_soc_aessbox32.sv 
+    ../../rtl/msrv_soc_ieu/msrv_soc_aes/msrv_soc_aessbox8.sv 
+    ../../rtl/msrv_soc_ieu/msrv_soc_aes/msrv_soc_aesshiftrows64.sv 
+    ../../rtl/msrv_soc_ieu/msrv_soc_aes/msrv_soc_galoismultforward8.sv 
+    ../../rtl/msrv_soc_ieu/msrv_soc_aes/msrv_soc_galoismultinverse8.sv 
+    ../../rtl/msrv_soc_ieu/msrv_soc_aes/msrv_soc_rconlut32.sv 
+    ../../rtl/msrv_soc_ieu/msrv_soc_aes/msrv_soc_rotate.sv} \
+   -in_library work \
+   -format sv2012 \
+   -no_duplicate_modules_warnings
+
+
+//  sub-command: #### read11 #####
+
+set_design_include_directories -clear
+
+set_design_macros -clear
+
+set_design_sources -format verilog \
+   -y ../../rtl \
+   -extensions vh
+
+read_verilog \
+   {../../rtl/msrv_soc_ieu/msrv_soc_kmu/msrv_soc_packer.sv 
+    ../../rtl/msrv_soc_ieu/msrv_soc_kmu/msrv_soc_zbkb.sv 
+    ../../rtl/msrv_soc_ieu/msrv_soc_kmu/msrv_soc_zbkx.sv 
+    ../../rtl/msrv_soc_ieu/msrv_soc_kmu/msrv_soc_zipper.sv 
+    ../../rtl/msrv_soc_ieu/msrv_soc_kmu/msrv_soc_zknde32.sv 
+    ../../rtl/msrv_soc_ieu/msrv_soc_kmu/msrv_soc_zknde64.sv 
+    ../../rtl/msrv_soc_ieu/msrv_soc_kmu/msrv_soc_zknh32.sv 
+    ../../rtl/msrv_soc_ieu/msrv_soc_kmu/msrv_soc_zknh64.sv} \
+   -in_library work \
+   -format sv2012 \
+   -no_duplicate_modules_warnings
+
+
+//  sub-command: #### read12 #####
+
+set_design_include_directories -clear
+
+set_design_macros -clear
+
+set_design_sources -format verilog \
+   -y ../../rtl \
+   -extensions vh
+
+read_verilog \
+   {../../rtl/msrv_soc_ieu/msrv_soc_sha/msrv_soc_sha256.sv 
+    ../../rtl/msrv_soc_ieu/msrv_soc_sha/msrv_soc_sha512_32.sv 
+    ../../rtl/msrv_soc_ieu/msrv_soc_sha/msrv_soc_sha512_64.sv} \
+   -in_library work \
+   -format sv2012 \
+   -no_duplicate_modules_warnings
+
+
+//  sub-command: #### read13 #####
+
+set_design_include_directories -clear
+
+set_design_macros -clear
+
+set_design_sources -format verilog \
+   -y ../../rtl \
+   -extensions vh
+
+read_verilog \
+   {../../rtl/msrv_soc_lsu/msrv_soc_align.sv 
+    ../../rtl/msrv_soc_lsu/msrv_soc_amoalu.sv 
+    ../../rtl/msrv_soc_lsu/msrv_soc_atomic.sv 
+    ../../rtl/msrv_soc_lsu/msrv_soc_dtim.sv 
+    ../../rtl/msrv_soc_lsu/msrv_soc_endianswap.sv 
+    ../../rtl/msrv_soc_lsu/msrv_soc_lrsc.sv 
+    ../../rtl/msrv_soc_lsu/msrv_soc_lsu.sv 
+    ../../rtl/msrv_soc_lsu/msrv_soc_subwordread.sv 
+    ../../rtl/msrv_soc_lsu/msrv_soc_subwordwrite.sv 
+    ../../rtl/msrv_soc_lsu/msrv_soc_swbytemask.sv} \
+   -in_library work \
+   -format sv2012 \
+   -no_duplicate_modules_warnings
+
+
+//  sub-command: #### read14 #####
+
+set_design_include_directories -clear
+
+set_design_macros -clear
+
+set_design_sources -format verilog \
+   -y ../../rtl \
+   -extensions vh
+
+read_verilog \
+   {../../rtl/msrv_soc_ebu/msrv_soc_ahbcacheinterface.sv 
+    ../../rtl/msrv_soc_ebu/msrv_soc_ahbinterface.sv 
+    ../../rtl/msrv_soc_ebu/msrv_soc_buscachefsm.sv 
+    ../../rtl/msrv_soc_ebu/msrv_soc_busfsm.sv 
+    ../../rtl/msrv_soc_ebu/msrv_soc_controllerinput.sv 
+    ../../rtl/msrv_soc_ebu/msrv_soc_ebu.sv 
+    ../../rtl/msrv_soc_ebu/msrv_soc_ebufsmarb.sv} \
+   -in_library work \
+   -format sv2012 \
+   -no_duplicate_modules_warnings
+
+
+//  sub-command: #### read15 #####
+
+set_design_include_directories -clear
+
+set_design_macros -clear
+
+set_design_sources -format verilog \
+   -y ../../rtl \
+   -extensions vh
+
+read_verilog \
+   {../../rtl/msrv_soc_hazard/msrv_soc_hazard.sv} \
+   -in_library work \
+   -format sv2012 \
+   -no_duplicate_modules_warnings
+
+
+//  sub-command: #### read16 #####
+
+set_design_include_directories -clear
+
+set_design_macros -clear
+
+set_design_sources -format verilog \
+   -y ../../rtl \
+   -extensions vh
+
+read_verilog \
+   {../../rtl/msrv_soc_privileged/msrv_soc_csr.sv 
+    ../../rtl/msrv_soc_privileged/msrv_soc_csrc.sv 
+    ../../rtl/msrv_soc_privileged/msrv_soc_csri.sv 
+    ../../rtl/msrv_soc_privileged/msrv_soc_csrm.sv 
+    ../../rtl/msrv_soc_privileged/msrv_soc_csrs.sv 
+    ../../rtl/msrv_soc_privileged/msrv_soc_csrsr.sv 
+    ../../rtl/msrv_soc_privileged/msrv_soc_csru.sv 
+    ../../rtl/msrv_soc_privileged/msrv_soc_privdec.sv 
+    ../../rtl/msrv_soc_privileged/msrv_soc_privileged.sv 
+    ../../rtl/msrv_soc_privileged/msrv_soc_privmode.sv 
+    ../../rtl/msrv_soc_privileged/msrv_soc_privpiperegs.sv 
+    ../../rtl/msrv_soc_privileged/msrv_soc_trap.sv} \
+   -in_library work \
+   -format sv2012 \
+   -no_duplicate_modules_warnings
+
+
+//  sub-command: #### read17 #####
+
+set_design_include_directories -clear
+
+set_design_macros -clear
+
+set_design_sources -format verilog \
+   -y ../../rtl \
+   -extensions vh
+
+read_verilog \
+   {../../rtl/msrv_soc_mdu/msrv_soc_div.sv 
+    ../../rtl/msrv_soc_mdu/msrv_soc_divstep.sv 
+    ../../rtl/msrv_soc_mdu/msrv_soc_mdu.sv 
+    ../../rtl/msrv_soc_mdu/msrv_soc_mul.sv} \
+   -in_library work \
+   -format sv2012 \
+   -no_duplicate_modules_warnings
+
+
+//  sub-command: #### read18 #####
+
+set_design_include_directories -clear
+
+set_design_macros -clear
+
+set_design_sources -format verilog \
+   -y ../../rtl \
+   -extensions vh
+
+read_verilog \
+   {../../rtl/msrv_soc_mmu/msrv_soc_adrdec.sv 
+    ../../rtl/msrv_soc_mmu/msrv_soc_adrdecs.sv 
+    ../../rtl/msrv_soc_mmu/msrv_soc_hptw.sv 
+    ../../rtl/msrv_soc_mmu/msrv_soc_mmu.sv 
+    ../../rtl/msrv_soc_mmu/msrv_soc_pmachecker.sv 
+    ../../rtl/msrv_soc_mmu/msrv_soc_pmpadrdec.sv 
+    ../../rtl/msrv_soc_mmu/msrv_soc_pmpchecker.sv} \
+   -in_library work \
+   -format sv2012 \
+   -no_duplicate_modules_warnings
+
+
+//  sub-command: #### read19 #####
+
+set_design_include_directories -clear
+
+set_design_macros -clear
+
+set_design_sources -format verilog \
+   -y ../../rtl \
+   -extensions vh
+
+read_verilog \
+   {../../rtl/msrv_soc_mmu/msrv_soc_tlb/msrv_soc_tlb.sv 
+    ../../rtl/msrv_soc_mmu/msrv_soc_tlb/msrv_soc_tlbcam.sv 
+    ../../rtl/msrv_soc_mmu/msrv_soc_tlb/msrv_soc_tlbcamline.sv 
+    ../../rtl/msrv_soc_mmu/msrv_soc_tlb/msrv_soc_tlbcontrol.sv 
+    ../../rtl/msrv_soc_mmu/msrv_soc_tlb/msrv_soc_tlblru.sv 
+    ../../rtl/msrv_soc_mmu/msrv_soc_tlb/msrv_soc_tlbmixer.sv 
+    ../../rtl/msrv_soc_mmu/msrv_soc_tlb/msrv_soc_tlbram.sv 
+    ../../rtl/msrv_soc_mmu/msrv_soc_tlb/msrv_soc_tlbramline.sv 
+    ../../rtl/msrv_soc_mmu/msrv_soc_tlb/msrv_soc_vm64check.sv} \
+   -in_library work \
+   -format sv2012 \
+   -no_duplicate_modules_warnings
+
+
+//  sub-command: #### read20 #####
+
+set_design_include_directories -clear
+
+set_design_macros -clear
+
+set_design_sources -format verilog \
+   -y ../../rtl \
+   -extensions vh
+
+read_verilog \
+   {../../rtl/msrv_soc_generic/msrv_soc_adder.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_aplusbeq0.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_arrs.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_binencoder.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_counter.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_csa.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_decoder.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_lzc.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_mux.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_neg.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_onehotdecoder.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_or_rows.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_priorityonehot.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_prioritythermometer.sv} \
+   -in_library work \
+   -format sv2012 \
+   -no_duplicate_modules_warnings
+
+
+//  sub-command: #### read21 #####
+
+set_design_include_directories -clear
+
+set_design_macros -clear
+
+set_design_sources -format verilog \
+   -y ../../rtl \
+   -extensions vh
+
+read_verilog \
+   {../../rtl/msrv_soc_generic/msrv_soc_flop/msrv_soc_flop.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_flop/msrv_soc_flopen.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_flop/msrv_soc_flopenl.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_flop/msrv_soc_flopenr.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_flop/msrv_soc_flopenrc.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_flop/msrv_soc_flopr.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_flop/msrv_soc_reset_synchronizer.sv} \
+   -in_library work \
+   -format sv2012 \
+   -no_duplicate_modules_warnings
+
+
+//  sub-command: #### read22 #####
+
+set_design_include_directories -clear
+
+set_design_macros -clear
+
+set_design_sources -format verilog \
+   -y ../../rtl \
+   -extensions vh
+
+read_verilog \
+   {../../rtl/msrv_soc_top/msrv_soc_clk_generator.sv 
+    ../../rtl/msrv_soc_top/msrv_soc_design_top.sv 
+    ../../rtl/msrv_soc_top/msrv_soc_glitch_free_ckt.sv 
+    ../../rtl/msrv_soc_top/msrv_soc_io_interface.sv 
+    ../../rtl/msrv_soc_top/msrv_soc_pipelinedcore.sv 
+    ../../rtl/msrv_soc_top/msrv_soc_pipelinedsoc.sv 
+    ../../rtl/msrv_soc_top/msrv_soc_pmu.sv 
+    ../../rtl/msrv_soc_top/msrv_soc_register_bank.sv 
+    ../../rtl/msrv_soc_top/msrv_soc_system_controller.sv 
+    ../../rtl/msrv_soc_top/soc_topwrapper.sv} \
+   -in_library work \
+   -format sv2012 \
+   -no_duplicate_modules_warnings
+
+
+//  sub-command: #### read23 #####
+
+set_design_include_directories -clear
+
+set_design_macros -clear
+
+set_design_sources -format verilog \
+   -y ../../rtl \
+   -extensions vh
+
+read_verilog \
+   {./core/TSDB/dft_inserted_designs/msrv_soc_pipelinedcorewrapper_pass1_rtl.dft_inserted_design/modified_rtl_files/wrapper/msrv_soc_pipelinedcorewrapper.sv} \
+   -in_library work \
+   -format sv2012 \
+   -no_duplicate_modules_warnings
+
+
+//  sub-command: #### read24 #####
+
+set_design_include_directories -clear
+
+set_design_macros -clear
+
+set_design_sources -format verilog \
+   -y ../../rtl \
+   -extensions vh
+
+read_verilog \
+   {./core/TSDB/instruments/msrv_soc_pipelinedcorewrapper_pass1_rtl_cells.instrument/msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_posedge_synchronizer_reset.v} \
+   -in_library work \
+   -format 2001 \
+   -no_duplicate_modules_warnings
+
+
+//  sub-command: #### read25 #####
+
+set_design_include_directories -clear
+
+set_design_macros -clear
+
+set_design_sources -format verilog \
+   -y ../../rtl \
+   -extensions vh
+
+read_verilog \
+   {./core/TSDB/instruments/msrv_soc_pipelinedcorewrapper_pass1_rtl_cells.instrument/msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_clk_inv.v} \
+   -in_library work \
+   -format 2001 \
+   -no_duplicate_modules_warnings
+
+
+//  sub-command: #### read26 #####
+
+set_design_include_directories -clear
+
+set_design_macros -clear
+
+set_design_sources -format verilog \
+   -y ../../rtl \
+   -extensions vh
+
+read_verilog \
+   {./core/TSDB/instruments/msrv_soc_pipelinedcorewrapper_pass1_rtl_ijtag.instrument/msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_sib_1.v 
+    ./core/TSDB/instruments/msrv_soc_pipelinedcorewrapper_pass1_rtl_ijtag.instrument/msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_sib_2.v 
+    ./core/TSDB/instruments/msrv_soc_pipelinedcorewrapper_pass1_rtl_ijtag.instrument/msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_tdr_sri_ctrl.v} \
+   -in_library work \
+   -format 2001 \
+   -no_duplicate_modules_warnings
+
+
+//  sub-command: #### read27 #####
+
+set_design_include_directories -clear
+
+set_design_macros -clear
+
+set_design_sources -format verilog \
+   -y ../../rtl \
+   -extensions vh
+
+read_verilog \
+   {./core/TSDB/instruments/msrv_soc_pipelinedcorewrapper_pass1_rtl_occ.instrument/msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_occ.v} \
+   -in_library work \
+   -format 2001 \
+   -no_duplicate_modules_warnings
+
+
+//  sub-command: #### read28 #####
+
+set_design_include_directories -clear
+
+set_design_macros -clear
+
+set_design_sources -format verilog \
+   -y ../../rtl \
+   -extensions vh
+
+read_verilog \
+   {./core/TSDB/instruments/msrv_soc_pipelinedcorewrapper_pass1_rtl_edt_lbist.instrument/msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_edt_lbist_c1.v 
+    ./core/TSDB/instruments/msrv_soc_pipelinedcorewrapper_pass1_rtl_edt_lbist.instrument/msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_edt_lbist_c1_tdr.v} \
+   -in_library work \
+   -format 2001 \
+   -no_duplicate_modules_warnings
+
+
+//  sub-command: #### read29 #####
+
+set_design_include_directories -clear
+
+set_design_macros -clear
+
+set_design_sources -format verilog \
+   -y ../../rtl \
+   -extensions vh
+
+read_verilog \
+   {./core/TSDB/instruments/msrv_soc_pipelinedcorewrapper_pass1_rtl_lbist.instrument/msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_lbist.v 
+    ./core/TSDB/instruments/msrv_soc_pipelinedcorewrapper_pass1_rtl_lbist.instrument/msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_single_chain_mode_logic.v} \
+   -in_library work \
+   -format 2001 \
+   -no_duplicate_modules_warnings
+
+
+//  sub-command: set_read_design_tag ""
+//  sub-command: set_design_sources -format verilog -clear
+//  sub-command: set_design_include_directories -clear
+//  sub-command: set_design_macros -clear
+//  sub-command: set_tool_options -reapply_settings_after_reelaboration Off
+//  sub-command: read_icl ./core/TSDB/dft_inserted_designs/msrv_soc_pipelinedcorewrapper_pass1_rtl.dft_inserted_design/msrv_soc_pipelinedcorewrapper.icl -skip_child_blocks -no_notes
+//  sub-command: source ./core/TSDB/dft_inserted_designs/msrv_soc_pipelinedcorewrapper_pass1_rtl.dft_inserted_design/msrv_soc_pipelinedcorewrapper.pdl
+//  sub-command: read_core_descriptions ./core/TSDB/dft_inserted_designs/msrv_soc_pipelinedcorewrapper_pass1_rtl.dft_inserted_design/msrv_soc_pipelinedcorewrapper.tcd
+//  command: 
+//  command: read_design msrv_soc_uncorewrapper -design_identifier pass2_rtl -verbose
+//  sub-command: set_tool_options -reapply_settings_after_reelaboration On
+//  sub-command: set_read_design_tag msrv_soc_uncorewrapper
+//  sub-command: #### read1 #####
+
+set_design_include_directories -clear
+
+set_design_macros -clear
+
+set_design_sources -format verilog \
+   -y ../../rtl \
+   -extensions vh
+
+read_verilog \
+   {../../rtl/cvw.sv} \
+   -in_library work \
+   -format sv2012 \
+   -no_duplicate_modules_warnings \
+   -vcs_compatibility
+
+
+//  sub-command: #### read2 #####
+
+set_design_include_directories -clear
+
+set_design_macros -clear
+
+set_design_sources -format verilog \
+   -y ../../rtl \
+   -extensions vh
+
+read_verilog \
+   {../../rtl/msrv_soc_uncore/msrv_soc_ahb_slave.sv 
+    ../../rtl/msrv_soc_uncore/msrv_soc_ahb_to_apb_bridge.sv 
+    ../../rtl/msrv_soc_uncore/msrv_soc_apb_master.sv 
+    ../../rtl/msrv_soc_uncore/msrv_soc_apb_slave_interface.sv 
+    ../../rtl/msrv_soc_uncore/msrv_soc_aux_interface.sv 
+    ../../rtl/msrv_soc_uncore/msrv_soc_clint_apb.sv 
+    ../../rtl/msrv_soc_uncore/msrv_soc_gpio_apb.sv 
+    ../../rtl/msrv_soc_uncore/msrv_soc_gpio_register.sv 
+    ../../rtl/msrv_soc_uncore/msrv_soc_plic_apb.sv 
+    ../../rtl/msrv_soc_uncore/msrv_soc_ram_ahb.sv 
+    ../../rtl/msrv_soc_uncore/msrv_soc_rom_ahb.sv 
+    ../../rtl/msrv_soc_uncore/msrv_soc_spi_apb.sv 
+    ../../rtl/msrv_soc_uncore/msrv_soc_spi_controller.sv 
+    ../../rtl/msrv_soc_uncore/msrv_soc_spi_fifo.sv 
+    ../../rtl/msrv_soc_uncore/msrv_soc_synchronizer.sv 
+    ../../rtl/msrv_soc_uncore/msrv_soc_uartPC16550D.sv 
+    ../../rtl/msrv_soc_uncore/msrv_soc_uart_apb.sv 
+    ../../rtl/msrv_soc_uncore/msrv_soc_uncore.sv} \
+   -in_library work \
+   -format sv2012 \
+   -no_duplicate_modules_warnings
+
+
+//  sub-command: #### read3 #####
+
+set_design_include_directories -clear
+
+set_design_macros -clear
+
+set_design_sources -format verilog \
+   -y ../../rtl \
+   -extensions vh
+
+read_verilog \
+   {../../rtl/msrv_soc_mmu/msrv_soc_adrdec.sv} \
+   -in_library work \
+   -format sv2012 \
+   -no_duplicate_modules_warnings
+
+
+//  sub-command: #### read4 #####
+
+set_design_include_directories -clear
+
+set_design_macros -clear
+
+set_design_sources -format verilog \
+   -y ../../rtl \
+   -extensions vh
+
+read_verilog \
+   {../../rtl/msrv_soc_mmu/msrv_soc_adrdecs.sv} \
+   -in_library work \
+   -format sv2012 \
+   -no_duplicate_modules_warnings
+
+
+//  sub-command: #### read5 #####
+
+set_design_include_directories -clear
+
+set_design_macros -clear
+
+set_design_sources -format verilog \
+   -y ../../rtl \
+   -extensions vh
+
+read_verilog \
+   {../../rtl/msrv_soc_generic/msrv_soc_adder.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_aplusbeq0.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_arrs.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_binencoder.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_counter.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_csa.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_decoder.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_lzc.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_mux.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_neg.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_onehotdecoder.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_or_rows.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_priorityonehot.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_prioritythermometer.sv} \
+   -in_library work \
+   -format sv2012 \
+   -no_duplicate_modules_warnings
+
+
+//  sub-command: #### read6 #####
+
+set_design_include_directories -clear
+
+set_design_macros -clear
+
+set_design_sources -format verilog \
+   -y ../../rtl \
+   -extensions vh
+
+read_verilog \
+   {../../rtl/msrv_soc_generic/msrv_soc_flop/msrv_soc_flop.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_flop/msrv_soc_flopen.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_flop/msrv_soc_flopenl.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_flop/msrv_soc_flopenr.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_flop/msrv_soc_flopenrc.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_flop/msrv_soc_flopr.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_flop/msrv_soc_reset_synchronizer.sv} \
+   -in_library work \
+   -format sv2012 \
+   -no_duplicate_modules_warnings
+
+
+//  sub-command: #### read7 #####
+
+set_design_include_directories -clear
+
+set_design_macros -clear
+
+set_design_sources -format verilog \
+   -y ../../rtl \
+   -extensions vh
+
+read_verilog \
+   {./uncore/TSDB/dft_inserted_designs/msrv_soc_uncorewrapper_pass2_rtl.dft_inserted_design/modified_rtl_files/wrapper/msrv_soc_uncorewrapper.sv} \
+   -in_library work \
+   -format sv2012 \
+   -no_duplicate_modules_warnings
+
+
+//  sub-command: #### read8 #####
+
+set_design_include_directories -clear
+
+set_design_macros -clear
+
+set_design_sources -format verilog \
+   -y ../../rtl \
+   -extensions vh
+
+read_verilog \
+   {./uncore/TSDB/instruments/msrv_soc_uncorewrapper_pass2_rtl_cells.instrument/msrv_soc_uncorewrapper_pass2_rtl_tessent_posedge_synchronizer_reset.v} \
+   -in_library work \
+   -format 2001 \
+   -no_duplicate_modules_warnings
+
+
+//  sub-command: #### read9 #####
+
+set_design_include_directories -clear
+
+set_design_macros -clear
+
+set_design_sources -format verilog \
+   -y ../../rtl \
+   -extensions vh
+
+read_verilog \
+   {./uncore/TSDB/instruments/msrv_soc_uncorewrapper_pass2_rtl_cells.instrument/msrv_soc_uncorewrapper_pass2_rtl_tessent_clk_inv.v} \
+   -in_library work \
+   -format 2001 \
+   -no_duplicate_modules_warnings
+
+
+//  sub-command: #### read10 #####
+
+set_design_include_directories -clear
+
+set_design_macros -clear
+
+set_design_sources -format verilog \
+   -y ../../rtl \
+   -extensions vh
+
+read_verilog \
+   {./uncore/TSDB/instruments/msrv_soc_uncorewrapper_pass2_rtl_ijtag.instrument/msrv_soc_uncorewrapper_pass2_rtl_tessent_sib_1.v 
+    ./uncore/TSDB/instruments/msrv_soc_uncorewrapper_pass2_rtl_ijtag.instrument/msrv_soc_uncorewrapper_pass2_rtl_tessent_sib_2.v 
+    ./uncore/TSDB/instruments/msrv_soc_uncorewrapper_pass2_rtl_ijtag.instrument/msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl.v} \
+   -in_library work \
+   -format 2001 \
+   -no_duplicate_modules_warnings
+
+
+//  sub-command: #### read11 #####
+
+set_design_include_directories -clear
+
+set_design_macros -clear
+
+set_design_sources -format verilog \
+   -y ../../rtl \
+   -extensions vh
+
+read_verilog \
+   {./uncore/TSDB/instruments/msrv_soc_uncorewrapper_pass2_rtl_occ.instrument/msrv_soc_uncorewrapper_pass2_rtl_tessent_occ.v} \
+   -in_library work \
+   -format 2001 \
+   -no_duplicate_modules_warnings
+
+
+//  sub-command: #### read12 #####
+
+set_design_include_directories -clear
+
+set_design_macros -clear
+
+set_design_sources -format verilog \
+   -y ../../rtl \
+   -extensions vh
+
+read_verilog \
+   {./uncore/TSDB/instruments/msrv_soc_uncorewrapper_pass2_rtl_edt_lbist.instrument/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1.v 
+    ./uncore/TSDB/instruments/msrv_soc_uncorewrapper_pass2_rtl_edt_lbist.instrument/msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_tdr.v} \
+   -in_library work \
+   -format 2001 \
+   -no_duplicate_modules_warnings
+
+
+//  sub-command: #### read13 #####
+
+set_design_include_directories -clear
+
+set_design_macros -clear
+
+set_design_sources -format verilog \
+   -y ../../rtl \
+   -extensions vh
+
+read_verilog \
+   {./uncore/TSDB/instruments/msrv_soc_uncorewrapper_pass2_rtl_lbist.instrument/msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist.v 
+    ./uncore/TSDB/instruments/msrv_soc_uncorewrapper_pass2_rtl_lbist.instrument/msrv_soc_uncorewrapper_pass2_rtl_tessent_single_chain_mode_logic.v} \
+   -in_library work \
+   -format 2001 \
+   -no_duplicate_modules_warnings
+
+
+//  sub-command: set_read_design_tag ""
+//  sub-command: set_design_sources -format verilog -clear
+//  sub-command: set_design_include_directories -clear
+//  sub-command: set_design_macros -clear
+//  sub-command: set_tool_options -reapply_settings_after_reelaboration Off
+//  sub-command: read_icl ./uncore/TSDB/dft_inserted_designs/msrv_soc_uncorewrapper_pass2_rtl.dft_inserted_design/msrv_soc_uncorewrapper.icl -skip_child_blocks -no_notes
+//  sub-command: source ./uncore/TSDB/dft_inserted_designs/msrv_soc_uncorewrapper_pass2_rtl.dft_inserted_design/msrv_soc_uncorewrapper.pdl
+//  sub-command: read_core_descriptions ./uncore/TSDB/dft_inserted_designs/msrv_soc_uncorewrapper_pass2_rtl.dft_inserted_design/msrv_soc_uncorewrapper.tcd
+//  command: 
+//  command: read_design msrv_soc_system_controllerwrapper -design_identifier sys_controller -verbose
+//  sub-command: set_tool_options -reapply_settings_after_reelaboration On
+//  sub-command: set_read_design_tag msrv_soc_system_controllerwrapper
+//  sub-command: #### read1 #####
+
+set_design_include_directories -clear
+
+set_design_macros -clear
+
+set_design_sources -format verilog \
+   -y ../../rtl \
+   -extensions vh
+
+read_verilog \
+   {../../rtl/cvw.sv} \
+   -in_library work \
+   -format sv2012 \
+   -no_duplicate_modules_warnings \
+   -vcs_compatibility
+
+
+//  sub-command: #### read2 #####
+
+set_design_include_directories -clear
+
+set_design_macros -clear
+
+set_design_sources -format verilog \
+   -y ../../rtl \
+   -extensions vh
+
+read_verilog \
+   {../../rtl/msrv_soc_mmu/msrv_soc_adrdec.sv 
+    ../../rtl/msrv_soc_mmu/msrv_soc_adrdecs.sv 
+    ../../rtl/msrv_soc_mmu/msrv_soc_hptw.sv 
+    ../../rtl/msrv_soc_mmu/msrv_soc_mmu.sv 
+    ../../rtl/msrv_soc_mmu/msrv_soc_pmachecker.sv 
+    ../../rtl/msrv_soc_mmu/msrv_soc_pmpadrdec.sv 
+    ../../rtl/msrv_soc_mmu/msrv_soc_pmpchecker.sv} \
+   -in_library work \
+   -format sv2012 \
+   -no_duplicate_modules_warnings
+
+
+//  sub-command: #### read3 #####
+
+set_design_include_directories -clear
+
+set_design_macros -clear
+
+set_design_sources -format verilog \
+   -y ../../rtl \
+   -extensions vh
+
+read_verilog \
+   {../../rtl/msrv_soc_generic/msrv_soc_adder.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_aplusbeq0.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_arrs.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_binencoder.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_counter.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_csa.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_decoder.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_lzc.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_mux.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_neg.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_onehotdecoder.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_or_rows.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_priorityonehot.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_prioritythermometer.sv} \
+   -in_library work \
+   -format sv2012 \
+   -no_duplicate_modules_warnings
+
+
+//  sub-command: #### read4 #####
+
+set_design_include_directories -clear
+
+set_design_macros -clear
+
+set_design_sources -format verilog \
+   -y ../../rtl \
+   -extensions vh
+
+read_verilog \
+   {../../rtl/msrv_soc_generic/msrv_soc_flop/msrv_soc_flop.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_flop/msrv_soc_flopen.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_flop/msrv_soc_flopenl.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_flop/msrv_soc_flopenr.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_flop/msrv_soc_flopenrc.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_flop/msrv_soc_flopr.sv 
+    ../../rtl/msrv_soc_generic/msrv_soc_flop/msrv_soc_reset_synchronizer.sv} \
+   -in_library work \
+   -format sv2012 \
+   -no_duplicate_modules_warnings
+
+
+//  sub-command: #### read5 #####
+
+set_design_include_directories -clear
+
+set_design_macros -clear
+
+set_design_sources -format verilog \
+   -y ../../rtl \
+   -extensions vh
+
+read_verilog \
+   {../../rtl/msrv_soc_top/msrv_soc_clk_generator.sv 
+    ../../rtl/msrv_soc_top/msrv_soc_design_top.sv 
+    ../../rtl/msrv_soc_top/msrv_soc_glitch_free_ckt.sv 
+    ../../rtl/msrv_soc_top/msrv_soc_io_interface.sv 
+    ../../rtl/msrv_soc_top/msrv_soc_pipelinedcore.sv 
+    ../../rtl/msrv_soc_top/msrv_soc_pipelinedsoc.sv 
+    ../../rtl/msrv_soc_top/msrv_soc_pmu.sv 
+    ../../rtl/msrv_soc_top/msrv_soc_register_bank.sv 
+    ./sys_ctr/TSDB/dft_inserted_designs/msrv_soc_system_controllerwrapper_sys_controller.dft_inserted_design/modified_rtl_files/msrv_soc_top/msrv_soc_system_controller.sv 
+    ../../rtl/msrv_soc_top/soc_topwrapper.sv} \
+   -in_library work \
+   -format sv2012 \
+   -no_duplicate_modules_warnings
+
+
+//  sub-command: #### read6 #####
+
+set_design_include_directories -clear
+
+set_design_macros -clear
+
+set_design_sources -format verilog \
+   -y ../../rtl \
+   -extensions vh
+
+read_verilog \
+   {./sys_ctr/TSDB/dft_inserted_designs/msrv_soc_system_controllerwrapper_sys_controller.dft_inserted_design/modified_rtl_files/wrapper/msrv_soc_system_controllerwrapper.sv} \
+   -in_library work \
+   -format sv2012 \
+   -no_duplicate_modules_warnings
+
+
+//  sub-command: #### read7 #####
+
+set_design_include_directories -clear
+
+set_design_macros -clear
+
+set_design_sources -format verilog \
+   -y ../../rtl \
+   -extensions vh
+
+read_verilog \
+   {./sys_ctr/TSDB/instruments/msrv_soc_system_controllerwrapper_sys_controller_cells.instrument/msrv_soc_system_controllerwrapper_sys_controller_tessent_posedge_synchronizer_reset.v} \
+   -in_library work \
+   -format 2001 \
+   -no_duplicate_modules_warnings
+
+
+//  sub-command: #### read8 #####
+
+set_design_include_directories -clear
+
+set_design_macros -clear
+
+set_design_sources -format verilog \
+   -y ../../rtl \
+   -extensions vh
+
+read_verilog \
+   {./sys_ctr/TSDB/instruments/msrv_soc_system_controllerwrapper_sys_controller_cells.instrument/msrv_soc_system_controllerwrapper_sys_controller_tessent_clk_inv.v} \
+   -in_library work \
+   -format 2001 \
+   -no_duplicate_modules_warnings
+
+
+//  sub-command: #### read9 #####
+
+set_design_include_directories -clear
+
+set_design_macros -clear
+
+set_design_sources -format verilog \
+   -y ../../rtl \
+   -extensions vh
+
+read_verilog \
+   {./sys_ctr/TSDB/instruments/msrv_soc_system_controllerwrapper_sys_controller_ijtag.instrument/msrv_soc_system_controllerwrapper_sys_controller_tessent_sib_1.v 
+    ./sys_ctr/TSDB/instruments/msrv_soc_system_controllerwrapper_sys_controller_ijtag.instrument/msrv_soc_system_controllerwrapper_sys_controller_tessent_sib_2.v 
+    ./sys_ctr/TSDB/instruments/msrv_soc_system_controllerwrapper_sys_controller_ijtag.instrument/msrv_soc_system_controllerwrapper_sys_controller_tessent_tdr_sri_ctrl.v} \
+   -in_library work \
+   -format 2001 \
+   -no_duplicate_modules_warnings
+
+
+//  sub-command: #### read10 #####
+
+set_design_include_directories -clear
+
+set_design_macros -clear
+
+set_design_sources -format verilog \
+   -y ../../rtl \
+   -extensions vh
+
+read_verilog \
+   {./sys_ctr/TSDB/instruments/msrv_soc_system_controllerwrapper_sys_controller_occ.instrument/msrv_soc_system_controllerwrapper_sys_controller_tessent_occ.v} \
+   -in_library work \
+   -format 2001 \
+   -no_duplicate_modules_warnings
+
+
+//  sub-command: #### read11 #####
+
+set_design_include_directories -clear
+
+set_design_macros -clear
+
+set_design_sources -format verilog \
+   -y ../../rtl \
+   -extensions vh
+
+read_verilog \
+   {./sys_ctr/TSDB/instruments/msrv_soc_system_controllerwrapper_sys_controller_edt_lbist.instrument/msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_lbist_c1.v 
+    ./sys_ctr/TSDB/instruments/msrv_soc_system_controllerwrapper_sys_controller_edt_lbist.instrument/msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_lbist_c1_tdr.v} \
+   -in_library work \
+   -format 2001 \
+   -no_duplicate_modules_warnings
+
+
+//  sub-command: #### read12 #####
+
+set_design_include_directories -clear
+
+set_design_macros -clear
+
+set_design_sources -format verilog \
+   -y ../../rtl \
+   -extensions vh
+
+read_verilog \
+   {./sys_ctr/TSDB/instruments/msrv_soc_system_controllerwrapper_sys_controller_lbist.instrument/msrv_soc_system_controllerwrapper_sys_controller_tessent_lbist.v 
+    ./sys_ctr/TSDB/instruments/msrv_soc_system_controllerwrapper_sys_controller_lbist.instrument/msrv_soc_system_controllerwrapper_sys_controller_tessent_single_chain_mode_logic.v} \
+   -in_library work \
+   -format 2001 \
+   -no_duplicate_modules_warnings
+
+
+//  sub-command: set_read_design_tag ""
+//  sub-command: set_design_sources -format verilog -clear
+//  sub-command: set_design_include_directories -clear
+//  sub-command: set_design_macros -clear
+//  sub-command: set_tool_options -reapply_settings_after_reelaboration Off
+//  sub-command: read_icl ./sys_ctr/TSDB/dft_inserted_designs/msrv_soc_system_controllerwrapper_sys_controller.dft_inserted_design/msrv_soc_system_controllerwrapper.icl -skip_child_blocks -no_notes
+//  sub-command: source ./sys_ctr/TSDB/dft_inserted_designs/msrv_soc_system_controllerwrapper_sys_controller.dft_inserted_design/msrv_soc_system_controllerwrapper.pdl
+//  sub-command: read_core_descriptions ./sys_ctr/TSDB/dft_inserted_designs/msrv_soc_system_controllerwrapper_sys_controller.dft_inserted_design/msrv_soc_system_controllerwrapper.tcd
+//  command: 
+//  command: 
+//  command: read_verilog $msrv_soc/cvw.sv -format sv2012 -vcs_compatibility
+//  command: 
+//  command: read_verilog $msrv_soc/msrv_soc_top/msrv_soc_pipelinedsoc.sv -format sv2012 -vcs_compatibility
+//  command: 
+//  command: read_verilog $msrv_soc/wrapper/msrv_soc_pipelinedsocwrapper.sv -format sv2012 -vcs_compatibility
+//  command: 
+//  command: set_current_design msrv_soc_pipelinedsocwrapper
+//  Note: Changing pin 'CK' function from 'active_low_clock' to 'clock_in'
+//        Model 'CLKGATE_X1' line 1266 file '../../libs/NangateOpenCellLibrary.tcelllib'
+//  Note: Changing pin 'CK' function from 'active_low_clock' to 'clock_in'
+//        Model 'CLKGATE_X2' line 1282 file '../../libs/NangateOpenCellLibrary.tcelllib'
+//  Note: Changing pin 'CK' function from 'active_low_clock' to 'clock_in'
+//        Model 'CLKGATE_X4' line 1298 file '../../libs/NangateOpenCellLibrary.tcelllib'
+//  Note: Changing pin 'CK' function from 'active_low_clock' to 'clock_in'
+//        Model 'CLKGATE_X8' line 1314 file '../../libs/NangateOpenCellLibrary.tcelllib'
+//  Warning: Undefined modules were found.
+//           Before using "set_system_mode" or "create_flat_model", you must either define
+//           the missing modules using "read_verilog" and/or "read_cell_library", or use the
+//           following command to treat them as black boxes:
+             add_black_boxes -modules { \
+                    msrv_soc_cache \
+                    msrv_soc_eeprom \
+                    msrv_soc_ram2p1r1wbe \
+             }
+//           You can also use "add_black_boxes -auto" to black box all undefined modules but
+//           it is recommended that you do not add this command to your dofile. Doing so may
+//           unintentionally black-box new undefined modules in future runs.
+//  command: 
+//  command: report_module_matching -icl
+//  Design Module                      Design Instance  ICL Module                         ICL File                                                                                                                                      
+//  ---------------------------------  ---------------  ---------------------------------  ----------------------------------------------------------------------------------------------------------------------------------------------
+//  msrv_soc_pipelinedcorewrapper      dut/core_dft     msrv_soc_pipelinedcorewrapper      ./core/TSDB/dft_inserted_designs/msrv_soc_pipelinedcorewrapper_pass1_rtl.dft_inserted_design/msrv_soc_pipelinedcorewrapper.icl                
+//  msrv_soc_system_controllerwrapper  dut/sys_ctrl     msrv_soc_system_controllerwrapper  ./sys_ctr/TSDB/dft_inserted_designs/msrv_soc_system_controllerwrapper_sys_controller.dft_inserted_design/msrv_soc_system_controllerwrapper.icl
+//  msrv_soc_uncorewrapper             dut/uncore_dft   msrv_soc_uncorewrapper             ./uncore/TSDB/dft_inserted_designs/msrv_soc_uncorewrapper_pass2_rtl.dft_inserted_design/msrv_soc_uncorewrapper.icl                            
+//  command: 
+//  command: add_black_boxes -auto
+//  command: set_design_level physical_block
+//  command: 
+//  command: set_quick_synthesis_options -complete_synthesis on -verbose on
+//  command: 
+//  command: add_clocks clk -period 10ns 
+//  command: check_design_rules 
+//  Marking black boxes as stop points for hierarchical pre-tracing, CPU time=0.00 sec.
+//  Checking if complete synthesis is required, CPU time=0.00 sec.
+//  Merging all specification for hierarchical pre-tracing, CPU time=0.00 sec.
+//  Starting complete design synthesis with Quick Synthesis
+//  ---------------------------------------------------------------------------
+//  Begin RTL synthesis.
+//  --------------------
+//  Module 'msrv_soc_pipelinedsocwrapper' synthesized.
+//  Module 'work.msrv_soc_pipelinedsoc@PV1' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper' synthesized.
+//  Module 'work.msrv_soc_pipelinedcore@PV1' synthesized.
+//  Module 'work.msrv_soc_ebu@PV1' synthesized.
+//  Module 'work.msrv_soc_controllerinput@PV1' synthesized.
+//  Module 'work.msrv_soc_mux2@PV13' synthesized.
+//  Module 'work.msrv_soc_flopenr@PV13' synthesized.
+//  Module 'work.msrv_soc_controllerinput@PV2' synthesized.
+//  Module 'msrv_soc_ebufsmarb' synthesized.
+//  Module 'work.msrv_soc_counter@PV1' synthesized.
+//  Module 'work.msrv_soc_flopenr@PV10' synthesized.
+//  Module 'work.msrv_soc_flopenr@PV4' synthesized.
+//  Module 'work.msrv_soc_flopenl@PV3' synthesized.
+//  Module 'work.msrv_soc_flopr@PV2' synthesized.
+//  Module 'work.msrv_soc_fpu@PV1' synthesized.
+//  Module 'work.msrv_soc_flopenrc@PV4' synthesized.
+//  Module 'work.msrv_soc_flopenrc@PV15' synthesized.
+//  Module 'work.msrv_soc_flopenr@PV17' synthesized.
+//  Module 'work.msrv_soc_flopenrc@PV2' synthesized.
+//  Module 'work.msrv_soc_flopenrc@PV18' synthesized.
+//  Module 'work.msrv_soc_flopenrc@PV16' synthesized.
+//  Module 'work.msrv_soc_flopenrc@PV17' synthesized.
+//  Module 'work.msrv_soc_mux2@PV18' synthesized.
+//  Module 'work.msrv_soc_mux2@PV1' synthesized.
+//  Module 'work.msrv_soc_mux4@PV3' synthesized.
+//  Module 'work.msrv_soc_mux3@PV2' synthesized.
+//  Module 'work.msrv_soc_flopenrc@PV9' synthesized.
+//  Module 'work.msrv_soc_fli@PV1' synthesized.
+//  Module 'work.msrv_soc_fround@PV1' synthesized.
+//  Module 'work.msrv_soc_mux2@PV7' synthesized.
+//  Module 'work.msrv_soc_mux2@PV17' synthesized.
+//  Module 'work.msrv_soc_packoutput@PV1' synthesized.
+//  Module 'work.msrv_soc_fclassify@PV1' synthesized.
+//  Module 'work.msrv_soc_fcmp@PV1' synthesized.
+//  Module 'work.msrv_soc_fctrl@PV1' synthesized.
+//  Module 'work.msrv_soc_flopenrc@PV13' synthesized.
+//  Module 'work.msrv_soc_flopenrc@PV12' synthesized.
+//  Module 'work.msrv_soc_flopenrc@PV14' synthesized.
+//  Module 'work.msrv_soc_flopenrc@PV3' synthesized.
+//  Module 'work.msrv_soc_flopenrc@PV6' synthesized.
+//  Module 'work.msrv_soc_flopenrc@PV5' synthesized.
+//  Module 'work.msrv_soc_fcvt@PV1' synthesized.
+//  Module 'work.msrv_soc_lzc@PV4' synthesized.
+//  Module 'work.msrv_soc_fdivsqrt@PV1' synthesized.
+//  Module 'work.msrv_soc_fdivsqrtfsm@PV1' synthesized.
+//  Module 'work.msrv_soc_fdivsqrtiter@PV1' synthesized.
+//  Module 'work.msrv_soc_flopen@PV6' synthesized.
+//  Module 'work.msrv_soc_mux2@PV14' synthesized.
+//  Module 'work.msrv_soc_mux2@PV16' synthesized.
+//  Module 'work.msrv_soc_flopen@PV7' synthesized.
+//  Module 'work.msrv_soc_fdivsqrtstage4@PV1' synthesized.
+//  Module 'work.msrv_soc_csa@PV1' synthesized.
+//  Module 'work.msrv_soc_fdivsqrtuotfc4@PV1' synthesized.
+//  Module 'work.msrv_soc_fdivsqrtfgen4@PV1' synthesized.
+//  Module 'msrv_soc_fdivsqrtuslc4cmp' synthesized.
+//  Module 'work.msrv_soc_mux2@PV15' synthesized.
+//  Module 'work.msrv_soc_flopen@PV2' synthesized.
+//  Module 'work.msrv_soc_fdivsqrtpostproc@PV1' synthesized.
+//  Module 'work.msrv_soc_aplusbeq0@PV1' synthesized.
+//  Module 'work.msrv_soc_fdivsqrtpreproc@PV1' synthesized.
+//  Module 'work.msrv_soc_fdivsqrtcycles@PV1' synthesized.
+//  Module 'work.msrv_soc_fdivsqrtexpcalc@PV1' synthesized.
+//  Module 'work.msrv_soc_flopen@PV3' synthesized.
+//  Module 'work.msrv_soc_flopen@PV4' synthesized.
+//  Module 'work.msrv_soc_mux2@PV10' synthesized.
+//  Module 'work.msrv_soc_flopen@PV5' synthesized.
+//  Module 'work.msrv_soc_flopen@PV1' synthesized.
+//  Module 'work.msrv_soc_lzc@PV3' synthesized.
+//  Module 'msrv_soc_fhazard' synthesized.
+//  Module 'work.msrv_soc_fma@PV1' synthesized.
+//  Module 'work.msrv_soc_fmaadd@PV1' synthesized.
+//  Module 'work.msrv_soc_fmaalign@PV1' synthesized.
+//  Module 'work.msrv_soc_fmaexpadd@PV1' synthesized.
+//  Module 'work.msrv_soc_fmalza@PV1' synthesized.
+//  Module 'work.msrv_soc_lzc@PV2' synthesized.
+//  Module 'work.msrv_soc_fmamult@PV1' synthesized.
+//  Module 'msrv_soc_fmasign' synthesized.
+//  Module 'work.msrv_soc_fregfile@PV1' synthesized.
+//  Module 'work.msrv_soc_fsgninj@PV1' synthesized.
+//  Module 'work.msrv_soc_mux4@PV4' synthesized.
+//  Module 'work.msrv_soc_postprocess@PV1' synthesized.
+//  Module 'work.msrv_soc_cvtshiftcalc@PV1' synthesized.
+//  Module 'work.msrv_soc_divshiftcalc@PV1' synthesized.
+//  Module 'work.msrv_soc_flags@PV1' synthesized.
+//  Module 'work.msrv_soc_fmashiftcalc@PV1' synthesized.
+//  Module 'work.msrv_soc_negateintres@PV1' synthesized.
+//  Module 'work.msrv_soc_mux2@PV9' synthesized.
+//  Module 'work.msrv_soc_mux2@PV6' synthesized.
+//  Module 'work.msrv_soc_mux2@PV11' synthesized.
+//  Module 'work.msrv_soc_normshift@PV1' synthesized.
+//  Module 'msrv_soc_resultsign' synthesized.
+//  Module 'work.msrv_soc_round@PV1' synthesized.
+//  Module 'msrv_soc_roundsign' synthesized.
+//  Module 'work.msrv_soc_shiftcorrection@PV1' synthesized.
+//  Module 'work.msrv_soc_specialcase@PV1' synthesized.
+//  Module 'work.msrv_soc_unpack@PV1' synthesized.
+//  Module 'work.msrv_soc_fmtparams@PV1' synthesized.
+//  Module 'work.msrv_soc_unpackinput@PV1' synthesized.
+//  Module 'msrv_soc_hazard' synthesized.
+//  Module 'work.msrv_soc_ieu@PV1' synthesized.
+//  Module 'work.msrv_soc_controller@PV1' synthesized.
+//  Module 'work.msrv_soc_bmuctrl@PV1' synthesized.
+//  Module 'work.msrv_soc_flopenrc@PV7' synthesized.
+//  Module 'work.msrv_soc_flopenrc@PV8' synthesized.
+//  Module 'work.msrv_soc_flopenrc@PV10' synthesized.
+//  Module 'work.msrv_soc_datapath@PV1' synthesized.
+//  Module 'work.msrv_soc_alu@PV1' synthesized.
+//  Module 'work.msrv_soc_bitmanipalu@PV1' synthesized.
+//  Module 'work.msrv_soc_bitreverse@PV1' synthesized.
+//  Module 'work.msrv_soc_zbb@PV1' synthesized.
+//  Module 'work.msrv_soc_byteop@PV1' synthesized.
+//  Module 'work.msrv_soc_cnt@PV1' synthesized.
+//  Module 'work.msrv_soc_lzc@PV1' synthesized.
+//  Module 'work.msrv_soc_popcnt@PV1' synthesized.
+//  Module 'work.msrv_soc_ext@PV1' synthesized.
+//  Module 'work.msrv_soc_zbc@PV1' synthesized.
+//  Module 'work.msrv_soc_clmul@PV1' synthesized.
+//  Module 'work.msrv_soc_zbkb@PV1' synthesized.
+//  Module 'work.msrv_soc_packer@PV1' synthesized.
+//  Module 'msrv_soc_zipper' synthesized.
+//  Module 'work.msrv_soc_zbkx@PV1' synthesized.
+//  Module 'work.msrv_soc_decoder@PV1' synthesized.
+//  Module 'work.msrv_soc_zknde64@PV1' synthesized.
+//  Module 'msrv_soc_aes64ks1i' synthesized.
+//  Module 'msrv_soc_rconlut32' synthesized.
+//  Module 'msrv_soc_aes64ks2' synthesized.
+//  Module 'msrv_soc_aes64d' synthesized.
+//  Module 'msrv_soc_aesinvmixcolumns32' synthesized.
+//  Module 'msrv_soc_galoismultinverse8' synthesized.
+//  Module 'msrv_soc_aesinvsbox64' synthesized.
+//  Module 'msrv_soc_aesinvsbox8' synthesized.
+//  Module 'msrv_soc_aesinvshiftrows64' synthesized.
+//  Module 'msrv_soc_aes64e' synthesized.
+//  Module 'msrv_soc_aesmixcolumns32' synthesized.
+//  Module 'msrv_soc_galoismultforward8' synthesized.
+//  Module 'msrv_soc_aessbox32' synthesized.
+//  Module 'msrv_soc_aessbox8' synthesized.
+//  Module 'msrv_soc_aesshiftrows64' synthesized.
+//  Module 'work.msrv_soc_mux2@PV2' synthesized.
+//  Module 'msrv_soc_zknh64' synthesized.
+//  Module 'msrv_soc_sha256' synthesized.
+//  Module 'msrv_soc_sha512_64' synthesized.
+//  Module 'work.msrv_soc_shifter@PV1' synthesized.
+//  Module 'msrv_soc_comparator' synthesized.
+//  Module 'work.msrv_soc_extend@PV1' synthesized.
+//  Module 'work.msrv_soc_regfile@PV1' synthesized.
+//  Module 'work.msrv_soc_mux5@PV1' synthesized.
+//  Module 'work.msrv_soc_ifu@PV1' synthesized.
+//  Module 'work.msrv_soc_flopenl@PV1' synthesized.
+//  Module 'work.msrv_soc_flopenr@PV2' synthesized.
+//  Module 'work.msrv_soc_flopenr@PV9' synthesized.
+//  Module 'work.msrv_soc_spill@PV1' synthesized.
+//  Module 'work.msrv_soc_flopenr@PV1' synthesized.
+//  Module 'work.msrv_soc_flopr@PV1' synthesized.
+//  Module 'work.msrv_soc_bpred@PV1' synthesized.
+//  Module 'work.msrv_soc_gshare@PV1' synthesized.
+//  Module 'msrv_soc_satCounter2' synthesized.
+//  Module 'work.msrv_soc_flopenr@PV8' synthesized.
+//  Module 'work.msrv_soc_flopenrc@PV1' synthesized.
+//  Module 'work.msrv_soc_RASPredictor@PV1' synthesized.
+//  Module 'work.msrv_soc_mux2@PV3' synthesized.
+//  Module 'work.msrv_soc_btb@PV1' synthesized.
+//  Module 'work.msrv_soc_icpred@PV1' synthesized.
+//  Module 'work.msrv_soc_mux4@PV2' synthesized.
+//  Module 'work.msrv_soc_mux3@PV1' synthesized.
+//  Module 'work.msrv_soc_ahbcacheinterface@PV1' synthesized.
+//  Module 'work.msrv_soc_buscachefsm@PV1' synthesized.
+//  Module 'work.msrv_soc_flopenr@PV7' synthesized.
+//  Module 'work.msrv_soc_mux2@PV5' synthesized.
+//  Module 'work.msrv_soc_decompress@PV1' synthesized.
+//  Module 'work.msrv_soc_mmu@PV1' synthesized.
+//  Module 'work.msrv_soc_mux2@PV4' synthesized.
+//  Module 'work.msrv_soc_pmachecker@PV1' synthesized.
+//  Module 'work.msrv_soc_adrdecs@PV1' synthesized.
+//  Module 'work.msrv_soc_adrdec@PV1' synthesized.
+//  Module 'work.msrv_soc_pmpchecker@PV1' synthesized.
+//  Module 'work.msrv_soc_pmpadrdec@PV1' synthesized.
+//  Module 'work.msrv_soc_priorityonehot@PV2' synthesized.
+//  Module 'work.msrv_soc_tlb@PV1' synthesized.
+//  Module 'work.msrv_soc_tlbmixer@PV1' synthesized.
+//  Module 'work.msrv_soc_mux4@PV1' synthesized.
+//  Module 'work.msrv_soc_tlblru@PV1' synthesized.
+//  Module 'work.msrv_soc_priorityonehot@PV1' synthesized.
+//  Module 'work.msrv_soc_tlbcam@PV1' synthesized.
+//  Module 'work.msrv_soc_or_rows@PV1' synthesized.
+//  Module 'work.msrv_soc_tlbcamline@PV1' synthesized.
+//  Module 'work.msrv_soc_flopenr@PV5' synthesized.
+//  Module 'work.msrv_soc_flopenr@PV3' synthesized.
+//  Module 'work.msrv_soc_tlbcontrol@PV1' synthesized.
+//  Module 'work.msrv_soc_vm64check@PV1' synthesized.
+//  Module 'work.msrv_soc_tlbram@PV1' synthesized.
+//  Module 'work.msrv_soc_or_rows@PV2' synthesized.
+//  Module 'work.msrv_soc_tlbramline@PV1' synthesized.
+//  Module 'work.msrv_soc_flopenr@PV6' synthesized.
+//  Module 'work.msrv_soc_lsu@PV1' synthesized.
+//  Module 'work.msrv_soc_atomic@PV1' synthesized.
+//  Module 'work.msrv_soc_amoalu@PV1' synthesized.
+//  Module 'work.msrv_soc_comparator@PV1' synthesized.
+//  Module 'work.msrv_soc_lrsc@PV1' synthesized.
+//  Module 'work.msrv_soc_flopenr@PV12' synthesized.
+//  Module 'work.msrv_soc_ahbcacheinterface@PV2' synthesized.
+//  Module 'work.msrv_soc_buscachefsm@PV2' synthesized.
+//  Module 'msrv_soc_flopen' synthesized.
+//  Module 'work.msrv_soc_swbytemask@PV1' synthesized.
+//  Module 'work.msrv_soc_mmu@PV2' synthesized.
+//  Module 'work.msrv_soc_tlb@PV2' synthesized.
+//  Module 'work.msrv_soc_tlbcontrol@PV2' synthesized.
+//  Module 'work.msrv_soc_endianswap@PV1' synthesized.
+//  Module 'work.msrv_soc_hptw@PV1' synthesized.
+//  Module 'work.msrv_soc_flopr@PV3' synthesized.
+//  Module 'work.msrv_soc_flopr@PV4' synthesized.
+//  Module 'work.msrv_soc_flopenl@PV2' synthesized.
+//  Module 'work.msrv_soc_flopenr@PV11' synthesized.
+//  Module 'work.msrv_soc_subwordread@PV1' synthesized.
+//  Module 'msrv_soc_mux2' synthesized.
+//  Module 'work.msrv_soc_mux2@PV12' synthesized.
+//  Module 'work.msrv_soc_subwordwrite@PV1' synthesized.
+//  Module 'work.msrv_soc_swbytemask@PV2' synthesized.
+//  Module 'work.msrv_soc_align@PV1' synthesized.
+//  Module 'work.msrv_soc_mux3@PV3' synthesized.
+//  Module 'work.msrv_soc_mux2@PV8' synthesized.
+//  Module 'work.msrv_soc_mdu@PV1' synthesized.
+//  Module 'work.msrv_soc_mul@PV1' synthesized.
+//  Module 'work.msrv_soc_flopenrc@PV11' synthesized.
+//  Module 'work.msrv_soc_privileged@PV1' synthesized.
+//  Module 'work.msrv_soc_csr@PV1' synthesized.
+//  Module 'work.msrv_soc_csrc@PV1' synthesized.
+//  Module 'work.msrv_soc_csri@PV1' synthesized.
+//  Module 'work.msrv_soc_csrm@PV1' synthesized.
+//  Module 'work.msrv_soc_flopenr@PV15' synthesized.
+//  Module 'work.msrv_soc_flopenr@PV14' synthesized.
+//  Module 'msrv_soc_flopenr' synthesized.
+//  Module 'work.msrv_soc_csrs@PV1' synthesized.
+//  Module 'work.msrv_soc_csrsr@PV1' synthesized.
+//  Module 'work.msrv_soc_csru@PV1' synthesized.
+//  Module 'work.msrv_soc_flopenr@PV16' synthesized.
+//  Module 'work.msrv_soc_privdec@PV1' synthesized.
+//  Module 'work.msrv_soc_flopr@PV5' synthesized.
+//  Module 'msrv_soc_privpiperegs' synthesized.
+//  Module 'work.msrv_soc_privmode@PV1' synthesized.
+//  Module 'work.msrv_soc_flopenl@PV4' synthesized.
+//  Module 'work.msrv_soc_trap@PV1' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_edt_lbist_c1' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_edt_c1_bypass_logic' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_edt_c1_compactor' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_edt_c1_spatial_compactor_30_w_output_lockup' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_edt_c1_controller' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_edt_c1_onehot_decoder_5_to_30' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_edt_c1_sib' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_edt_c1_xor_decoder' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_edt_c1_decompressor' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_edt_c1_misr' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_edt_c1_misr_reg' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_edt_lbist_c1_tdr' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_lbist' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_lbist_ctrl' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_lbist_capture_phase_reg' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_lbist_counter' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_lbist_bit_cnt_reg' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_lbist_vector_cnt_reg' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_lbist_sib' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_lbist_warmup_pattern_cnt_reg' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_lbist_ctrl_signals' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_lbist_fsm' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_posedge_synchronizer_reset' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_occ' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_occ_ijtag_control' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_occ_sib' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_occ_control' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_occ_shift_reg' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_sib_2' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_sib_1' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_single_chain_mode_logic' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_single_chain_mode_logic_sib' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_tdr_sri_ctrl' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper' synthesized.
+//  Module 'work.msrv_soc_system_controller@PV1' synthesized.
+//  Module 'msrv_soc_pmu' synthesized.
+//  Module 'msrv_soc_clk_generator' synthesized.
+//  Module 'msrv_soc_glitch_free_ckt' synthesized.
+//  Module 'work.msrv_soc_register_bank@PV1' synthesized.
+//  Module 'msrv_soc_reset_synchronizer' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_lbist_c1' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_c1_bypass_logic' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_c1_compactor' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_c1_spatial_compactor_30_w_output_lockup' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_c1_controller' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_c1_onehot_decoder_5_to_30' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_c1_sib' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_c1_xor_decoder' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_c1_decompressor' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_c1_misr' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_c1_misr_reg' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_lbist_c1_tdr' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_lbist' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_lbist_ctrl' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_lbist_capture_phase_reg' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_lbist_counter' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_lbist_bit_cnt_reg' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_lbist_vector_cnt_reg' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_lbist_sib' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_lbist_warmup_pattern_cnt_reg' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_lbist_ctrl_signals' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_lbist_fsm' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_posedge_synchronizer_reset' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_occ' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_occ_ijtag_control' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_occ_sib' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_occ_control' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_occ_shift_reg' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_sib_2' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_sib_1' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_single_chain_mode_logic' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_single_chain_mode_logic_sib' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_tdr_sri_ctrl' synthesized.
+//  Module 'msrv_soc_uncorewrapper' synthesized.
+//  Module 'work.msrv_soc_uncore@PV1' synthesized.
+//  Module 'work.msrv_soc_ahbapbbridge@PV1' synthesized.
+//  Module 'work.msrv_soc_ahb_slave@PV1' synthesized.
+//  Module 'work.msrv_soc_apb_master@PV1' synthesized.
+//  Module 'msrv_soc_synchronizer' synthesized.
+//  Module 'work.msrv_soc_rom_ahb@PV1' synthesized.
+//  Module 'work.msrv_soc_clint_apb@PV1' synthesized.
+//  Module 'work.msrv_soc_gpio_apb@PV1' synthesized.
+//  Module 'work.msrv_soc_apb_slave_interface@PV1' synthesized.
+//  Module 'msrv_soc_aux_interface' synthesized.
+//  Module 'msrv_soc_gpio_register' synthesized.
+//  Module 'work.msrv_soc_flopenl@PV5' synthesized.
+//  Module 'work.msrv_soc_plic_apb@PV1' synthesized.
+//  Module 'work.msrv_soc_flopr@PV6' synthesized.
+//  Module 'work.msrv_soc_spi_apb@PV1' synthesized.
+//  Module 'msrv_soc_spi_controller' synthesized.
+//  Module 'msrv_soc_spi_fifo' synthesized.
+//  Module 'work.msrv_soc_uart_apb@PV1' synthesized.
+//  Module 'work.msrv_soc_uartPC16550D@PV1' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_bypass_logic' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_compactor' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_spatial_compactor_30_w_output_lockup' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_controller' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_onehot_decoder_5_to_30' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_sib' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_xor_decoder' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_decompressor' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_misr' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_misr_reg' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_tdr' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_ctrl' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_capture_phase_reg' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_counter' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_bit_cnt_reg' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_vector_cnt_reg' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_sib' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_warmup_pattern_cnt_reg' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_ctrl_signals' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_fsm' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_posedge_synchronizer_reset' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_occ' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_ijtag_control' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_sib' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_control' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_shift_reg' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_sib_2' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_sib_1' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_single_chain_mode_logic' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_single_chain_mode_logic_sib' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl' synthesized.
+//  RTL synthesis completed, synthesized modules=369, Time=13.72 sec.
+//  ---------------------------------------------------------------------------
+//  Complete design synthesis with Quick Synthesis finished successfully. CPU time=13.76 sec.
+//  Creation/Recreation of hierarchical information (HIE) done, CPU time=15.79 sec.
+//  Hierarchical tracing with Quick Synthesis support completed, total CPU time=15.79 sec.
+//  Start auto black box for all Synopsys DesignWare modules/instances
+//  End auto black box for all Synopsys DesignWare modules/instances
+//  Warning: Rule FN4 violation occurs 25 times
+//  Flattening process completed, cell instances=245210, gates=454524, PIs=36, POs=66, CPU time=15.79 sec.
+//  ---------------------------------------------------------------------------
+//  Begin circuit learning analyses.
+//  --------------------------------
+//  Learning completed, CPU time=2.02 sec.
+//  ---------------------------------------------------------------------------
+//  Begin transparent latch checking for 108 latches.
+//  ---------------------------------------------------------------------------
+//  22 latches not transparent due to uncontrollable. (D6)
+//  3 latches not transparent due to unobservable. (D6)
+//  Number transparent latches = 83.
+//  command: create_dft_specification 
+//  
+//  Begin creation of DftSpecification(msrv_soc_pipelinedsocwrapper,soc)
+//    Creation of RtlCells wrapper
+//    Creation of IjtagNetwork wrapper
+//  
+//  Done  creation of DftSpecification(msrv_soc_pipelinedsocwrapper,soc)
+//  
+/DftSpecification(msrv_soc_pipelinedsocwrapper,soc)
+//  command: 
+//  command:    
+//  command: process_dft_specification 
+//  
+//  Begin processing of /DftSpecification(msrv_soc_pipelinedsocwrapper,soc)
+//    --- IP generation phase ---
+//    Validation of IjtagNetwork
+//    Processing of IjtagNetwork
+//      Generating design files for IJTAG SIB module msrv_soc_pipelinedsocwrapper_soc_tessent_sib_1
+//        Verilog RTL : ./TSDB/instruments/msrv_soc_pipelinedsocwrapper_soc_ijtag.instrument/msrv_soc_pipelinedsocwrapper_soc_tessent_sib_1.v
+//        IJTAG ICL   : ./TSDB/instruments/msrv_soc_pipelinedsocwrapper_soc_ijtag.instrument/msrv_soc_pipelinedsocwrapper_soc_tessent_sib_1.icl
+//      Generating design files for IJTAG SIB module msrv_soc_pipelinedsocwrapper_soc_tessent_sib_2
+//        Verilog RTL : ./TSDB/instruments/msrv_soc_pipelinedsocwrapper_soc_ijtag.instrument/msrv_soc_pipelinedsocwrapper_soc_tessent_sib_2.v
+//        IJTAG ICL   : ./TSDB/instruments/msrv_soc_pipelinedsocwrapper_soc_ijtag.instrument/msrv_soc_pipelinedsocwrapper_soc_tessent_sib_2.icl
+//
+//      Loading the generated RTL verilog files (2) to enable instantiating the contained modules
+//      into the design.
+//    --- Instrument insertion phase ---
+//  Start undo auto black box for all Synopsys DesignWare modules/instances
+//  End undo auto black box for all Synopsys DesignWare modules/instances
+//   Inserting instruments of type 'ijtag'
+//  
+//    Writing out modified source design in ./TSDB/dft_inserted_designs/msrv_soc_pipelinedsocwrapper_soc.dft_inserted_design
+//    Writing out specification in ./TSDB/dft_inserted_designs/msrv_soc_pipelinedsocwrapper_soc.dft_spec
+//  
+//  Done  processing of DftSpecification(msrv_soc_pipelinedsocwrapper,soc)
+//  
+/DftSpecification(msrv_soc_pipelinedsocwrapper,soc)
+//  command: add_ijtag_logical_connection -from dut/lbist_shift_clk -to dut/sys_ctrl/lbist_shift_clk
+//  command: 
+//  command: add_ijtag_logical_connection -from dut/lbist_shift_clk -to dut/uncore_dft/lbist_shift_clk
+//  command: 
+//  command: add_ijtag_logical_connection -from dut/lbist_shift_clk -to dut/core_dft/lbist_shift_clk
+//  command: 
+//  command: report_clok
+//  Error: Command 'report_clok' is unknown
+//  command: report_clocks 
+//  Error: Command 'report_clocks' requires an elaborated
+//         hierarchical design model, which is not available in the insertion mode.
+//         In order to use this command, switch to the setup mode first.
+//  command: add_icl_ports lbist_shift_clk -type clock
+//  command: 
+//  command: add_ijtag_logical_connection -from dut/core_dft/HCLK -to dut/uncore_dft/HCLK
+//  command: 
+//  command: add_ijtag_logical_connection -from clk -to dut/uncore_dft/HCLK
+//  command: 
+//  command: add_ijtag_logical_connection -from clk -to dut/uncore_dft/PCLK
+//  command: 
+//  command: extract_icl 
+//  Note: Updating the hierarchical data model to reflect RTL design changes.
+//  Writing design source dictionary : ./TSDB/dft_inserted_designs/msrv_soc_pipelinedsocwrapper_soc.dft_inserted_design/msrv_soc_pipelinedsocwrapper.design_source_dictionary
+//  Marking black boxes as stop points for hierarchical pre-tracing, CPU time=0.00 sec.
+//  Checking if complete synthesis is required, CPU time=0.00 sec.
+//  Merging all specification for hierarchical pre-tracing, CPU time=0.00 sec.
+//  Starting complete design synthesis with Quick Synthesis
+//  ---------------------------------------------------------------------------
+//  Begin RTL synthesis.
+//  --------------------
+//  Module 'msrv_soc_pipelinedsocwrapper' synthesized.
+//  Module 'work.msrv_soc_pipelinedsoc@PV1' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper' synthesized.
+//  Module 'work.msrv_soc_pipelinedcore@PV1' synthesized.
+//  Module 'work.msrv_soc_ebu@PV1' synthesized.
+//  Module 'work.msrv_soc_controllerinput@PV1' synthesized.
+//  Module 'work.msrv_soc_mux2@PV13' synthesized.
+//  Module 'work.msrv_soc_flopenr@PV13' synthesized.
+//  Module 'work.msrv_soc_controllerinput@PV2' synthesized.
+//  Module 'msrv_soc_ebufsmarb' synthesized.
+//  Module 'work.msrv_soc_counter@PV1' synthesized.
+//  Module 'work.msrv_soc_flopenr@PV10' synthesized.
+//  Module 'work.msrv_soc_flopenr@PV4' synthesized.
+//  Module 'work.msrv_soc_flopenl@PV3' synthesized.
+//  Module 'work.msrv_soc_flopr@PV2' synthesized.
+//  Module 'work.msrv_soc_fpu@PV1' synthesized.
+//  Module 'work.msrv_soc_flopenrc@PV4' synthesized.
+//  Module 'work.msrv_soc_flopenrc@PV15' synthesized.
+//  Module 'work.msrv_soc_flopenr@PV17' synthesized.
+//  Module 'work.msrv_soc_flopenrc@PV2' synthesized.
+//  Module 'work.msrv_soc_flopenrc@PV18' synthesized.
+//  Module 'work.msrv_soc_flopenrc@PV16' synthesized.
+//  Module 'work.msrv_soc_flopenrc@PV17' synthesized.
+//  Module 'work.msrv_soc_mux2@PV18' synthesized.
+//  Module 'work.msrv_soc_mux2@PV1' synthesized.
+//  Module 'work.msrv_soc_mux4@PV3' synthesized.
+//  Module 'work.msrv_soc_mux3@PV2' synthesized.
+//  Module 'work.msrv_soc_flopenrc@PV9' synthesized.
+//  Module 'work.msrv_soc_fli@PV1' synthesized.
+//  Module 'work.msrv_soc_fround@PV1' synthesized.
+//  Module 'work.msrv_soc_mux2@PV7' synthesized.
+//  Module 'work.msrv_soc_mux2@PV17' synthesized.
+//  Module 'work.msrv_soc_packoutput@PV1' synthesized.
+//  Module 'work.msrv_soc_fclassify@PV1' synthesized.
+//  Module 'work.msrv_soc_fcmp@PV1' synthesized.
+//  Module 'work.msrv_soc_fctrl@PV1' synthesized.
+//  Module 'work.msrv_soc_flopenrc@PV13' synthesized.
+//  Module 'work.msrv_soc_flopenrc@PV12' synthesized.
+//  Module 'work.msrv_soc_flopenrc@PV14' synthesized.
+//  Module 'work.msrv_soc_flopenrc@PV3' synthesized.
+//  Module 'work.msrv_soc_flopenrc@PV6' synthesized.
+//  Module 'work.msrv_soc_flopenrc@PV5' synthesized.
+//  Module 'work.msrv_soc_fcvt@PV1' synthesized.
+//  Module 'work.msrv_soc_lzc@PV4' synthesized.
+//  Module 'work.msrv_soc_fdivsqrt@PV1' synthesized.
+//  Module 'work.msrv_soc_fdivsqrtfsm@PV1' synthesized.
+//  Module 'work.msrv_soc_fdivsqrtiter@PV1' synthesized.
+//  Module 'work.msrv_soc_flopen@PV6' synthesized.
+//  Module 'work.msrv_soc_mux2@PV14' synthesized.
+//  Module 'work.msrv_soc_mux2@PV16' synthesized.
+//  Module 'work.msrv_soc_flopen@PV7' synthesized.
+//  Module 'work.msrv_soc_fdivsqrtstage4@PV1' synthesized.
+//  Module 'work.msrv_soc_csa@PV1' synthesized.
+//  Module 'work.msrv_soc_fdivsqrtuotfc4@PV1' synthesized.
+//  Module 'work.msrv_soc_fdivsqrtfgen4@PV1' synthesized.
+//  Module 'msrv_soc_fdivsqrtuslc4cmp' synthesized.
+//  Module 'work.msrv_soc_mux2@PV15' synthesized.
+//  Module 'work.msrv_soc_flopen@PV2' synthesized.
+//  Module 'work.msrv_soc_fdivsqrtpostproc@PV1' synthesized.
+//  Module 'work.msrv_soc_aplusbeq0@PV1' synthesized.
+//  Module 'work.msrv_soc_fdivsqrtpreproc@PV1' synthesized.
+//  Module 'work.msrv_soc_fdivsqrtcycles@PV1' synthesized.
+//  Module 'work.msrv_soc_fdivsqrtexpcalc@PV1' synthesized.
+//  Module 'work.msrv_soc_flopen@PV3' synthesized.
+//  Module 'work.msrv_soc_flopen@PV4' synthesized.
+//  Module 'work.msrv_soc_mux2@PV10' synthesized.
+//  Module 'work.msrv_soc_flopen@PV5' synthesized.
+//  Module 'work.msrv_soc_flopen@PV1' synthesized.
+//  Module 'work.msrv_soc_lzc@PV3' synthesized.
+//  Module 'msrv_soc_fhazard' synthesized.
+//  Module 'work.msrv_soc_fma@PV1' synthesized.
+//  Module 'work.msrv_soc_fmaadd@PV1' synthesized.
+//  Module 'work.msrv_soc_fmaalign@PV1' synthesized.
+//  Module 'work.msrv_soc_fmaexpadd@PV1' synthesized.
+//  Module 'work.msrv_soc_fmalza@PV1' synthesized.
+//  Module 'work.msrv_soc_lzc@PV2' synthesized.
+//  Module 'work.msrv_soc_fmamult@PV1' synthesized.
+//  Module 'msrv_soc_fmasign' synthesized.
+//  Module 'work.msrv_soc_fregfile@PV1' synthesized.
+//  Module 'work.msrv_soc_fsgninj@PV1' synthesized.
+//  Module 'work.msrv_soc_mux4@PV4' synthesized.
+//  Module 'work.msrv_soc_postprocess@PV1' synthesized.
+//  Module 'work.msrv_soc_cvtshiftcalc@PV1' synthesized.
+//  Module 'work.msrv_soc_divshiftcalc@PV1' synthesized.
+//  Module 'work.msrv_soc_flags@PV1' synthesized.
+//  Module 'work.msrv_soc_fmashiftcalc@PV1' synthesized.
+//  Module 'work.msrv_soc_negateintres@PV1' synthesized.
+//  Module 'work.msrv_soc_mux2@PV9' synthesized.
+//  Module 'work.msrv_soc_mux2@PV6' synthesized.
+//  Module 'work.msrv_soc_mux2@PV11' synthesized.
+//  Module 'work.msrv_soc_normshift@PV1' synthesized.
+//  Module 'msrv_soc_resultsign' synthesized.
+//  Module 'work.msrv_soc_round@PV1' synthesized.
+//  Module 'msrv_soc_roundsign' synthesized.
+//  Module 'work.msrv_soc_shiftcorrection@PV1' synthesized.
+//  Module 'work.msrv_soc_specialcase@PV1' synthesized.
+//  Module 'work.msrv_soc_unpack@PV1' synthesized.
+//  Module 'work.msrv_soc_fmtparams@PV1' synthesized.
+//  Module 'work.msrv_soc_unpackinput@PV1' synthesized.
+//  Module 'msrv_soc_hazard' synthesized.
+//  Module 'work.msrv_soc_ieu@PV1' synthesized.
+//  Module 'work.msrv_soc_controller@PV1' synthesized.
+//  Module 'work.msrv_soc_bmuctrl@PV1' synthesized.
+//  Module 'work.msrv_soc_flopenrc@PV7' synthesized.
+//  Module 'work.msrv_soc_flopenrc@PV8' synthesized.
+//  Module 'work.msrv_soc_flopenrc@PV10' synthesized.
+//  Module 'work.msrv_soc_datapath@PV1' synthesized.
+//  Module 'work.msrv_soc_alu@PV1' synthesized.
+//  Module 'work.msrv_soc_bitmanipalu@PV1' synthesized.
+//  Module 'work.msrv_soc_bitreverse@PV1' synthesized.
+//  Module 'work.msrv_soc_zbb@PV1' synthesized.
+//  Module 'work.msrv_soc_byteop@PV1' synthesized.
+//  Module 'work.msrv_soc_cnt@PV1' synthesized.
+//  Module 'work.msrv_soc_lzc@PV1' synthesized.
+//  Module 'work.msrv_soc_popcnt@PV1' synthesized.
+//  Module 'work.msrv_soc_ext@PV1' synthesized.
+//  Module 'work.msrv_soc_zbc@PV1' synthesized.
+//  Module 'work.msrv_soc_clmul@PV1' synthesized.
+//  Module 'work.msrv_soc_zbkb@PV1' synthesized.
+//  Module 'work.msrv_soc_packer@PV1' synthesized.
+//  Module 'msrv_soc_zipper' synthesized.
+//  Module 'work.msrv_soc_zbkx@PV1' synthesized.
+//  Module 'work.msrv_soc_decoder@PV1' synthesized.
+//  Module 'work.msrv_soc_zknde64@PV1' synthesized.
+//  Module 'msrv_soc_aes64ks1i' synthesized.
+//  Module 'msrv_soc_rconlut32' synthesized.
+//  Module 'msrv_soc_aes64ks2' synthesized.
+//  Module 'msrv_soc_aes64d' synthesized.
+//  Module 'msrv_soc_aesinvmixcolumns32' synthesized.
+//  Module 'msrv_soc_galoismultinverse8' synthesized.
+//  Module 'msrv_soc_aesinvsbox64' synthesized.
+//  Module 'msrv_soc_aesinvsbox8' synthesized.
+//  Module 'msrv_soc_aesinvshiftrows64' synthesized.
+//  Module 'msrv_soc_aes64e' synthesized.
+//  Module 'msrv_soc_aesmixcolumns32' synthesized.
+//  Module 'msrv_soc_galoismultforward8' synthesized.
+//  Module 'msrv_soc_aessbox32' synthesized.
+//  Module 'msrv_soc_aessbox8' synthesized.
+//  Module 'msrv_soc_aesshiftrows64' synthesized.
+//  Module 'work.msrv_soc_mux2@PV2' synthesized.
+//  Module 'msrv_soc_zknh64' synthesized.
+//  Module 'msrv_soc_sha256' synthesized.
+//  Module 'msrv_soc_sha512_64' synthesized.
+//  Module 'work.msrv_soc_shifter@PV1' synthesized.
+//  Module 'msrv_soc_comparator' synthesized.
+//  Module 'work.msrv_soc_extend@PV1' synthesized.
+//  Module 'work.msrv_soc_regfile@PV1' synthesized.
+//  Module 'work.msrv_soc_mux5@PV1' synthesized.
+//  Module 'work.msrv_soc_ifu@PV1' synthesized.
+//  Module 'work.msrv_soc_flopenl@PV1' synthesized.
+//  Module 'work.msrv_soc_flopenr@PV2' synthesized.
+//  Module 'work.msrv_soc_flopenr@PV9' synthesized.
+//  Module 'work.msrv_soc_spill@PV1' synthesized.
+//  Module 'work.msrv_soc_flopenr@PV1' synthesized.
+//  Module 'work.msrv_soc_flopr@PV1' synthesized.
+//  Module 'work.msrv_soc_bpred@PV1' synthesized.
+//  Module 'work.msrv_soc_gshare@PV1' synthesized.
+//  Module 'msrv_soc_satCounter2' synthesized.
+//  Module 'work.msrv_soc_flopenr@PV8' synthesized.
+//  Module 'work.msrv_soc_flopenrc@PV1' synthesized.
+//  Module 'work.msrv_soc_RASPredictor@PV1' synthesized.
+//  Module 'work.msrv_soc_mux2@PV3' synthesized.
+//  Module 'work.msrv_soc_btb@PV1' synthesized.
+//  Module 'work.msrv_soc_icpred@PV1' synthesized.
+//  Module 'work.msrv_soc_mux4@PV2' synthesized.
+//  Module 'work.msrv_soc_mux3@PV1' synthesized.
+//  Module 'work.msrv_soc_ahbcacheinterface@PV1' synthesized.
+//  Module 'work.msrv_soc_buscachefsm@PV1' synthesized.
+//  Module 'work.msrv_soc_flopenr@PV7' synthesized.
+//  Module 'work.msrv_soc_mux2@PV5' synthesized.
+//  Module 'work.msrv_soc_decompress@PV1' synthesized.
+//  Module 'work.msrv_soc_mmu@PV1' synthesized.
+//  Module 'work.msrv_soc_mux2@PV4' synthesized.
+//  Module 'work.msrv_soc_pmachecker@PV1' synthesized.
+//  Module 'work.msrv_soc_adrdecs@PV1' synthesized.
+//  Module 'work.msrv_soc_adrdec@PV1' synthesized.
+//  Module 'work.msrv_soc_pmpchecker@PV1' synthesized.
+//  Module 'work.msrv_soc_pmpadrdec@PV1' synthesized.
+//  Module 'work.msrv_soc_priorityonehot@PV2' synthesized.
+//  Module 'work.msrv_soc_tlb@PV1' synthesized.
+//  Module 'work.msrv_soc_tlbmixer@PV1' synthesized.
+//  Module 'work.msrv_soc_mux4@PV1' synthesized.
+//  Module 'work.msrv_soc_tlblru@PV1' synthesized.
+//  Module 'work.msrv_soc_priorityonehot@PV1' synthesized.
+//  Module 'work.msrv_soc_tlbcam@PV1' synthesized.
+//  Module 'work.msrv_soc_or_rows@PV1' synthesized.
+//  Module 'work.msrv_soc_tlbcamline@PV1' synthesized.
+//  Module 'work.msrv_soc_flopenr@PV5' synthesized.
+//  Module 'work.msrv_soc_flopenr@PV3' synthesized.
+//  Module 'work.msrv_soc_tlbcontrol@PV1' synthesized.
+//  Module 'work.msrv_soc_vm64check@PV1' synthesized.
+//  Module 'work.msrv_soc_tlbram@PV1' synthesized.
+//  Module 'work.msrv_soc_or_rows@PV2' synthesized.
+//  Module 'work.msrv_soc_tlbramline@PV1' synthesized.
+//  Module 'work.msrv_soc_flopenr@PV6' synthesized.
+//  Module 'work.msrv_soc_lsu@PV1' synthesized.
+//  Module 'work.msrv_soc_atomic@PV1' synthesized.
+//  Module 'work.msrv_soc_amoalu@PV1' synthesized.
+//  Module 'work.msrv_soc_comparator@PV1' synthesized.
+//  Module 'work.msrv_soc_lrsc@PV1' synthesized.
+//  Module 'work.msrv_soc_flopenr@PV12' synthesized.
+//  Module 'work.msrv_soc_ahbcacheinterface@PV2' synthesized.
+//  Module 'work.msrv_soc_buscachefsm@PV2' synthesized.
+//  Module 'msrv_soc_flopen' synthesized.
+//  Module 'work.msrv_soc_swbytemask@PV1' synthesized.
+//  Module 'work.msrv_soc_mmu@PV2' synthesized.
+//  Module 'work.msrv_soc_tlb@PV2' synthesized.
+//  Module 'work.msrv_soc_tlbcontrol@PV2' synthesized.
+//  Module 'work.msrv_soc_endianswap@PV1' synthesized.
+//  Module 'work.msrv_soc_hptw@PV1' synthesized.
+//  Module 'work.msrv_soc_flopr@PV3' synthesized.
+//  Module 'work.msrv_soc_flopr@PV4' synthesized.
+//  Module 'work.msrv_soc_flopenl@PV2' synthesized.
+//  Module 'work.msrv_soc_flopenr@PV11' synthesized.
+//  Module 'work.msrv_soc_subwordread@PV1' synthesized.
+//  Module 'msrv_soc_mux2' synthesized.
+//  Module 'work.msrv_soc_mux2@PV12' synthesized.
+//  Module 'work.msrv_soc_subwordwrite@PV1' synthesized.
+//  Module 'work.msrv_soc_swbytemask@PV2' synthesized.
+//  Module 'work.msrv_soc_align@PV1' synthesized.
+//  Module 'work.msrv_soc_mux3@PV3' synthesized.
+//  Module 'work.msrv_soc_mux2@PV8' synthesized.
+//  Module 'work.msrv_soc_mdu@PV1' synthesized.
+//  Module 'work.msrv_soc_mul@PV1' synthesized.
+//  Module 'work.msrv_soc_flopenrc@PV11' synthesized.
+//  Module 'work.msrv_soc_privileged@PV1' synthesized.
+//  Module 'work.msrv_soc_csr@PV1' synthesized.
+//  Module 'work.msrv_soc_csrc@PV1' synthesized.
+//  Module 'work.msrv_soc_csri@PV1' synthesized.
+//  Module 'work.msrv_soc_csrm@PV1' synthesized.
+//  Module 'work.msrv_soc_flopenr@PV15' synthesized.
+//  Module 'work.msrv_soc_flopenr@PV14' synthesized.
+//  Module 'msrv_soc_flopenr' synthesized.
+//  Module 'work.msrv_soc_csrs@PV1' synthesized.
+//  Module 'work.msrv_soc_csrsr@PV1' synthesized.
+//  Module 'work.msrv_soc_csru@PV1' synthesized.
+//  Module 'work.msrv_soc_flopenr@PV16' synthesized.
+//  Module 'work.msrv_soc_privdec@PV1' synthesized.
+//  Module 'work.msrv_soc_flopr@PV5' synthesized.
+//  Module 'msrv_soc_privpiperegs' synthesized.
+//  Module 'work.msrv_soc_privmode@PV1' synthesized.
+//  Module 'work.msrv_soc_flopenl@PV4' synthesized.
+//  Module 'work.msrv_soc_trap@PV1' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_edt_lbist_c1' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_edt_c1_bypass_logic' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_edt_c1_compactor' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_edt_c1_spatial_compactor_30_w_output_lockup' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_edt_c1_controller' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_edt_c1_onehot_decoder_5_to_30' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_edt_c1_sib' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_edt_c1_xor_decoder' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_edt_c1_decompressor' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_edt_c1_misr' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_edt_c1_misr_reg' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_edt_lbist_c1_tdr' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_lbist' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_lbist_ctrl' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_lbist_capture_phase_reg' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_lbist_counter' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_lbist_bit_cnt_reg' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_lbist_vector_cnt_reg' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_lbist_sib' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_lbist_warmup_pattern_cnt_reg' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_lbist_ctrl_signals' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_lbist_fsm' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_posedge_synchronizer_reset' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_occ' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_occ_ijtag_control' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_occ_sib' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_occ_control' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_occ_shift_reg' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_sib_2' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_sib_1' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_single_chain_mode_logic' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_single_chain_mode_logic_sib' synthesized.
+//  Module 'msrv_soc_pipelinedcorewrapper_pass1_rtl_tessent_tdr_sri_ctrl' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper' synthesized.
+//  Module 'work.msrv_soc_system_controller@PV1' synthesized.
+//  Module 'msrv_soc_pmu' synthesized.
+//  Module 'msrv_soc_clk_generator' synthesized.
+//  Module 'msrv_soc_glitch_free_ckt' synthesized.
+//  Module 'work.msrv_soc_register_bank@PV1' synthesized.
+//  Module 'msrv_soc_reset_synchronizer' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_lbist_c1' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_c1_bypass_logic' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_c1_compactor' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_c1_spatial_compactor_30_w_output_lockup' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_c1_controller' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_c1_onehot_decoder_5_to_30' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_c1_sib' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_c1_xor_decoder' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_c1_decompressor' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_c1_misr' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_c1_misr_reg' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_lbist_c1_tdr' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_lbist' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_lbist_ctrl' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_lbist_capture_phase_reg' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_lbist_counter' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_lbist_bit_cnt_reg' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_lbist_vector_cnt_reg' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_lbist_sib' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_lbist_warmup_pattern_cnt_reg' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_lbist_ctrl_signals' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_lbist_fsm' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_posedge_synchronizer_reset' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_occ' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_occ_ijtag_control' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_occ_sib' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_occ_control' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_occ_shift_reg' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_sib_2' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_sib_1' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_single_chain_mode_logic' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_single_chain_mode_logic_sib' synthesized.
+//  Module 'msrv_soc_system_controllerwrapper_sys_controller_tessent_tdr_sri_ctrl' synthesized.
+//  Module 'msrv_soc_uncorewrapper' synthesized.
+//  Module 'work.msrv_soc_uncore@PV1' synthesized.
+//  Module 'work.msrv_soc_ahbapbbridge@PV1' synthesized.
+//  Module 'work.msrv_soc_ahb_slave@PV1' synthesized.
+//  Module 'work.msrv_soc_apb_master@PV1' synthesized.
+//  Module 'msrv_soc_synchronizer' synthesized.
+//  Module 'work.msrv_soc_rom_ahb@PV1' synthesized.
+//  Module 'work.msrv_soc_clint_apb@PV1' synthesized.
+//  Module 'work.msrv_soc_gpio_apb@PV1' synthesized.
+//  Module 'work.msrv_soc_apb_slave_interface@PV1' synthesized.
+//  Module 'msrv_soc_aux_interface' synthesized.
+//  Module 'msrv_soc_gpio_register' synthesized.
+//  Module 'work.msrv_soc_flopenl@PV5' synthesized.
+//  Module 'work.msrv_soc_plic_apb@PV1' synthesized.
+//  Module 'work.msrv_soc_flopr@PV6' synthesized.
+//  Module 'work.msrv_soc_spi_apb@PV1' synthesized.
+//  Module 'msrv_soc_spi_controller' synthesized.
+//  Module 'msrv_soc_spi_fifo' synthesized.
+//  Module 'work.msrv_soc_uart_apb@PV1' synthesized.
+//  Module 'work.msrv_soc_uartPC16550D@PV1' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_bypass_logic' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_compactor' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_spatial_compactor_30_w_output_lockup' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_controller' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_onehot_decoder_5_to_30' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_sib' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_xor_decoder' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_decompressor' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_misr' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_c1_misr_reg' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_edt_lbist_c1_tdr' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_ctrl' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_capture_phase_reg' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_counter' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_bit_cnt_reg' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_vector_cnt_reg' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_sib' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_warmup_pattern_cnt_reg' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_ctrl_signals' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_lbist_fsm' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_posedge_synchronizer_reset' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_occ' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_ijtag_control' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_sib' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_control' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_occ_shift_reg' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_sib_2' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_sib_1' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_single_chain_mode_logic' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_single_chain_mode_logic_sib' synthesized.
+//  Module 'msrv_soc_uncorewrapper_pass2_rtl_tessent_tdr_sri_ctrl' synthesized.
+//  Module 'msrv_soc_pipelinedsocwrapper_soc_tessent_sib_2' synthesized.
+//  Module 'msrv_soc_pipelinedsocwrapper_soc_tessent_sib_1' synthesized.
+//  RTL synthesis completed, synthesized modules=371, Time=13.19 sec.
+//  ---------------------------------------------------------------------------
+//  Complete design synthesis with Quick Synthesis finished successfully. CPU time=13.24 sec.
+//  Creation/Recreation of hierarchical information (HIE) done, CPU time=15.20 sec.
+//  Hierarchical tracing with Quick Synthesis support completed, total CPU time=15.20 sec.
+//  Start auto black box for all Synopsys DesignWare modules/instances
+//  End auto black box for all Synopsys DesignWare modules/instances
+//  Warning: Rule FN1 violation occurs 4999 times
+//  Warning: Rule FN4 violation occurs 25 times
+//  Warning: Rule FP13 violation occurs 15 times
+//  Flattening process completed, cell instances=245266, gates=454668, PIs=43, POs=67, CPU time=16.43 sec.
+//  ---------------------------------------------------------------------------
+//  Begin circuit learning analyses.
+//  --------------------------------
+//  Learning completed, CPU time=0.05 sec.
+//  ---------------------------------------------------------------------------
+//  Begin ICL extraction.
+//  ---------------------
+//  ICL extraction completed, ICL instances=7, CPU time=0.15 sec.
+//  ---------------------------------------------------------------------------
+//  ---------------------------------------------------------------------------
+//  Begin ICL elaboration and checking.
+//  -----------------------------------
+//  ICL elaboration completed, CPU time=0.08 sec.
+//  ---------------------------------------------------------------------------
+//  Writing ICL file : ./TSDB/dft_inserted_designs/msrv_soc_pipelinedsocwrapper_soc.dft_inserted_design/msrv_soc_pipelinedsocwrapper.icl
+//  Writing consolidated PDL file: ./TSDB/dft_inserted_designs/msrv_soc_pipelinedsocwrapper_soc.dft_inserted_design/msrv_soc_pipelinedsocwrapper.pdl
+//  Extracting SDC...
+//  Writing SDC file: ./TSDB/dft_inserted_designs/msrv_soc_pipelinedsocwrapper_soc.dft_inserted_design/msrv_soc_pipelinedsocwrapper.sdc
+//  Writing DFT info dictionary: ./TSDB/dft_inserted_designs/msrv_soc_pipelinedsocwrapper_soc.dft_inserted_design/msrv_soc_pipelinedsocwrapper.dft_info_dictionary
+//  Writing IJTAG graybox files in directory: ./TSDB/dft_inserted_designs/msrv_soc_pipelinedsocwrapper_soc.dft_inserted_design/ijtag_graybox
+//  Start undo auto black box for all Synopsys DesignWare modules/instances
+//  End undo auto black box for all Synopsys DesignWare modules/instances
+//  command: open_visualizer 
+//  Note: Generating IJTAG Network data model for visualization purposes... done.
+//  Note: Tessent Visualizer client successfully started and connected to the server.
+//  command: history 
+    1	set_context dft -rtl -design_identifier soc
+    2	set_tsdb_output_directory TSDB
+    3	read_cell_library ../../libs/NangateOpenCellLibrary.tcelllib 
+    4	set msrv_soc "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl/"
+    5	open_tsdb ./core/TSDB/
+    6	open_tsdb ./uncore/TSDB/
+    7	open_tsdb ./sys_ctr/TSDB/
+    8	read_design msrv_soc_pipelinedcorewrapper -design_identifier pass1_rtl -verbose
+    9	read_design msrv_soc_uncorewrapper -design_identifier pass2_rtl -verbose
+   10	read_design msrv_soc_system_controllerwrapper -design_identifier sys_controller -verbose
+   11	read_verilog $msrv_soc/cvw.sv -format sv2012 -vcs_compatibility
+   12	read_verilog $msrv_soc/msrv_soc_top/msrv_soc_pipelinedsoc.sv -format sv2012 -vcs_compatibility
+   13	read_verilog $msrv_soc/wrapper/msrv_soc_pipelinedsocwrapper.sv -format sv2012 -vcs_compatibility
+   14	set_current_design msrv_soc_pipelinedsocwrapper
+   15	report_module_matching -icl
+   16	add_black_boxes -auto
+   17	set_design_level physical_block
+   18	set_quick_synthesis_options -complete_synthesis on -verbose on
+   19	add_clocks clk -period 10ns 
+   20	check_design_rules 
+   21	create_dft_specification 
+   22	process_dft_specification 
+   23	add_ijtag_logical_connection -from dut/lbist_shift_clk -to dut/sys_ctrl/lbist_shift_clk
+   24	add_ijtag_logical_connection -from dut/lbist_shift_clk -to dut/uncore_dft/lbist_shift_clk
+   25	add_ijtag_logical_connection -from dut/lbist_shift_clk -to dut/core_dft/lbist_shift_clk
+   26	report_clok
+   27	report_clocks
+   28	add_icl_ports lbist_shift_clk -type clock
+   29	add_ijtag_logical_connection -from dut/core_dft/HCLK -to dut/uncore_dft/HCLK
+   30	add_ijtag_logical_connection -from clk -to dut/uncore_dft/HCLK
+   31	add_ijtag_logical_connection -from clk -to dut/uncore_dft/PCLK
+   32	extract_icl 
+   33	open_visualizer 
+   34	history 
+//  command: add_ijtag_logical_connection -from dut/lbist_shift_clk -to dut/core_dft/dut/lbist_shift_clk
+//  command: add_ijtag_logical_connection -from dut/lbist_shift_clk -to dut/sys_ctrl/dut/lbist_shift_clk
+//  command: add_ijtag_logical_connection -from dut/lbist_shift_clk -to dut/uncore_dft/dut/lbist_shift_clk
+//  command: open_visualizer 
+//  Note: Tessent Visualizer client successfully started and connected to the server.
+//  command: add_ijtag_logical_connection -from dut/lbist_shift_clk -to dut/sys_ctrl/lbist_shift_clk
+//  Error: add_ijtag_logical_connection -from /dut/lbist_shift_clk -to /dut/sys_ctrl/lbist_shift_clk, connection already exists.
+//  command: 
+//  command: add_ijtag_logical_connection -from dut/lbist_shift_clk -to dut/uncore_dft/lbist_shift_clk
+//  Error: add_ijtag_logical_connection -from /dut/lbist_shift_clk -to /dut/uncore_dft/lbist_shift_clk, connection already exists.
+//  command: 
+//  command: add_ijtag_logical_connection -from dut/lbist_shift_clk -to dut/core_dft/lbist_shift_clk
+//  Error: add_ijtag_logical_connection -from /dut/lbist_shift_clk -to /dut/core_dft/lbist_shift_clk, connection already exists.
+//  command: 
+//  command: exit 
