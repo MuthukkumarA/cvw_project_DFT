@@ -1,0 +1,43 @@
+#--------------------------------------------------------------------------
+#
+#  Unpublished work. Copyright 2026 Siemens
+#
+#  This material contains trade secrets or otherwise confidential 
+#  information owned by Siemens Industry Software Inc. or its affiliates 
+#  (collectively, SISW), or its licensors. Access to and use of this 
+#  information is strictly limited as set forth in the Customer's 
+#  applicable agreements with SISW.
+#
+#--------------------------------------------------------------------------
+#  File created by: Tessent Shell
+#          Version: 2026.1
+#       Created on: Tue Aug 18 14:57:02 IST 2026
+#--------------------------------------------------------------------------
+
+set synthesis_dictionary {
+  design_source_dictionary {
+    read1 {
+      format verilog_2001
+      work_library work
+      files {
+        ./msrv_soc_system_controllerwrapper_sys_controller_tessent_clk_inv.v ./msrv_soc_system_controllerwrapper_sys_controller_tessent_posedge_synchronizer_reset.v
+      }
+    }
+  }
+  designs_dictionary {
+    msrv_soc_system_controllerwrapper_sys_controller_tessent_clk_inv {
+      output_files {
+        msrv_soc_system_controllerwrapper_sys_controller_tessent_clk_inv.vg {
+          module_name_list msrv_soc_system_controllerwrapper_sys_controller_tessent_clk_inv
+        }
+      }
+    }
+    msrv_soc_system_controllerwrapper_sys_controller_tessent_posedge_synchronizer_reset {
+      output_files {
+        msrv_soc_system_controllerwrapper_sys_controller_tessent_posedge_synchronizer_reset.vg {
+          module_name_list msrv_soc_system_controllerwrapper_sys_controller_tessent_posedge_synchronizer_reset
+        }
+      }
+    }
+  }
+}

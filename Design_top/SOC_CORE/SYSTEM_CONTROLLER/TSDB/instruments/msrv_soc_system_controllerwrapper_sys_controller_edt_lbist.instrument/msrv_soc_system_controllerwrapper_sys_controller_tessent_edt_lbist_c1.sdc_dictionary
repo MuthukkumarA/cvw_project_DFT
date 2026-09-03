@@ -1,0 +1,98 @@
+#-------------------------------------------------
+#  File created by: Tessent Shell
+#          Version: 2026.1
+#       Created on: Tue Aug 18 14:57:09 IST 2026
+#-------------------------------------------------
+
+set sdc_dictionary(msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_lbist_c1) {
+  edt_bypass_logic on
+  single_chain_bypass on
+  persistent_multiplexer_pins {
+    select S
+    input0 A
+    input1 B
+    output Z
+  }
+  edt_bypass_edt_scan_in_persistent_mux_instances msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_c1_bypass_logic_i/tessent_persistent_cell_edt_scan_in_mux*
+  edt_bypass_edt_channels_out_persistent_mux_instances msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_c1_bypass_logic_i/tessent_persistent_cell_edt_channels_out_mux*
+  edt_bypass_single_bypass_chain_persistent_mux_instances msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_c1_bypass_logic_i/tessent_persistent_cell_single_bypass_chain_mux*
+  insertion_done 1
+  edt_clock_persistent_pin tessent_persistent_cell_edt_clock_buf/Z
+  edt_update_persistent_pin tessent_persistent_cell_edt_update_buf/Z
+  edt_bypass_persistent_pin tessent_persistent_cell_edt_bypass_buf/Z
+  edt_single_bypass_chain_persistent_pin tessent_persistent_cell_edt_single_bypass_chain_buf/Z
+  edt_channels_in_persistent_pins tessent_persistent_cell_edt_channels_in_*_buf/Z
+  edt_channels_out_persistent_pins tessent_persistent_cell_edt_channels_out_*_buf/Z
+  edt_scan_in_persistent_pins tessent_persistent_cell_edt_scan_in_*_buf/Z
+  edt_scan_out_persistent_pins tessent_persistent_cell_edt_scan_out_*_buf/Z
+  edt_ports {
+    edt_clock {
+      type edt_clock
+      direction input
+      on_state 1
+      port OptionalDftSignal(edt_clock)
+    }
+    edt_update {
+      type edt_update
+      direction input
+      on_state 1
+      port OptionalDftSignal(edt_update)
+    }
+    edt_bypass {
+      type edt_bypass
+      direction input
+      on_state 1
+      port {$msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_lbist_c1_tdr/edt_bypass}
+    }
+    edt_single_bypass_chain {
+      type edt_single_bypass_chain
+      direction input
+      on_state 1
+      port edt_single_bypass_chain
+    }
+    {edt_channels_in[0]} {
+      type channel_input0
+      direction input
+      on_state 1
+      port {msrv_soc_system_controllerwrapper_sys_controller_controller_c1_edt_channels_in[0]}
+    }
+    {edt_channels_out[0]} {
+      type channel_output0
+      direction output
+      on_state 1
+      port {msrv_soc_system_controllerwrapper_sys_controller_controller_c1_edt_channels_out[0]}
+    }
+    {edt_channels_in[1]} {
+      type channel_input1
+      direction input
+      on_state 1
+      port {msrv_soc_system_controllerwrapper_sys_controller_controller_c1_edt_channels_in[1]}
+    }
+    {edt_channels_out[1]} {
+      type channel_output1
+      direction output
+      on_state 1
+      port {msrv_soc_system_controllerwrapper_sys_controller_controller_c1_edt_channels_out[1]}
+    }
+  }
+  non_modal {
+  }
+  modal {
+    edt_shift {
+    }
+    edt_fast_capture {
+    }
+  }
+  chain_mask_reg msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_c1_controller_i/edt_chain_mask*reg*
+  misr_reg msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_c1_misr_i/msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_c1_misr_reg_i/misr*_reg*
+  prpg_sib_reg msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_c1_decompressor_i/msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_c1_sib_decompressor_i/*reg
+  lbist_lp_static_control_sib_reg msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_c1_decompressor_i/msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_c1_sib_lbist_lp_static_control_i/*reg
+  lbist_lp_mask_shift_reg_sib_reg msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_c1_decompressor_i/msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_c1_sib_lbist_lp_mask_shift_reg_i/*reg
+  chain_mask_sib_reg msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_c1_controller_i/msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_c1_sib_i/*reg
+  misr_sib_reg msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_c1_misr_i/msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_c1_sib_i/*reg
+  edt_lbist_sib_clock tck
+  edt_lbist_shift_clock_select_size 2
+  ccm_en tessent_persistent_cell_ccm_en_buf/Z
+  ccm_clock tck
+  tdr_persistent_buffers 1
+}

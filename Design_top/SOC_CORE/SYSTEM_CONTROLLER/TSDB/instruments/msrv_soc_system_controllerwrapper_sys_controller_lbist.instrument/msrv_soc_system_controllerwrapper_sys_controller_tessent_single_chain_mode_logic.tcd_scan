@@ -1,0 +1,35 @@
+//-------------------------------------------------
+//  File created by: Tessent Shell
+//          Version: 2026.1
+//       Created on: Tue Aug 18 14:57:08 IST 2026
+//-------------------------------------------------
+
+
+Core(msrv_soc_system_controllerwrapper_sys_controller_tessent_single_chain_mode_logic) {
+  Scan {
+    module_type : single_chain_mode_logic;
+    allow_scan_out_retiming : 1;
+    is_hard_module : 1;
+    Mode(controller_chain_mode) {
+      traceable : 0;
+      make_active_automatically : 0;
+      ModeEn(ccm_en) {
+        active_polarity : 1'b1;
+      }
+      Clock(ijtag_tck) {
+        off_state : 1'b0;
+      }
+      ScanEn(scan_en) {
+        active_polarity : 1'b1;
+      }
+      ScanChain {
+        length : 16;
+        scan_in_port : ccm_scan_in;
+        scan_out_port : ccm_scan_out;
+        scan_in_clock : ijtag_tck;
+        scan_out_clock : ~ijtag_tck;
+      }
+    }
+  }
+}
+

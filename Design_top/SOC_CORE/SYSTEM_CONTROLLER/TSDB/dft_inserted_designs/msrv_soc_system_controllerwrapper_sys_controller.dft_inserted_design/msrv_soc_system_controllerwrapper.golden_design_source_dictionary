@@ -1,0 +1,187 @@
+#-------------------------------------------------
+#  File created by: Tessent Shell
+#          Version: 2026.1
+#       Created on: Tue Aug 18 14:57:11 IST 2026
+#-------------------------------------------------
+
+set design_source_dictionary \
+{
+  read1 {
+    format {
+      "verilog_sv2012"
+    }
+    work_library {
+      "work"
+    }
+    files {
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//cvw.sv"
+    }
+    libraries {
+      {directory "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl"}
+    }
+    extensions {
+      ".vh" ".vh.gz"
+    }
+    defines {
+    }
+    incdirs {
+    }
+    options {
+      "-vcs_compatibility"
+    }
+    needed_before_reading_interface_view on
+  }
+  read2 {
+    format {
+      "verilog_sv2012"
+    }
+    work_library {
+      "work"
+    }
+    files {
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_mmu/msrv_soc_adrdec.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_mmu/msrv_soc_adrdecs.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_mmu/msrv_soc_hptw.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_mmu/msrv_soc_mmu.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_mmu/msrv_soc_pmachecker.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_mmu/msrv_soc_pmpadrdec.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_mmu/msrv_soc_pmpchecker.sv"
+    }
+    libraries {
+      {directory "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl"}
+    }
+    extensions {
+      ".vh" ".vh.gz"
+    }
+    defines {
+    }
+    incdirs {
+    }
+    options {
+    }
+  }
+  read3 {
+    format {
+      "verilog_sv2012"
+    }
+    work_library {
+      "work"
+    }
+    files {
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_generic/msrv_soc_adder.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_generic/msrv_soc_aplusbeq0.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_generic/msrv_soc_arrs.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_generic/msrv_soc_binencoder.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_generic/msrv_soc_counter.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_generic/msrv_soc_csa.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_generic/msrv_soc_decoder.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_generic/msrv_soc_lzc.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_generic/msrv_soc_mux.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_generic/msrv_soc_neg.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_generic/msrv_soc_onehotdecoder.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_generic/msrv_soc_or_rows.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_generic/msrv_soc_priorityonehot.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_generic/msrv_soc_prioritythermometer.sv"
+    }
+    libraries {
+      {directory "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl"}
+    }
+    extensions {
+      ".vh" ".vh.gz"
+    }
+    defines {
+    }
+    incdirs {
+    }
+    options {
+    }
+  }
+  read4 {
+    format {
+      "verilog_sv2012"
+    }
+    work_library {
+      "work"
+    }
+    files {
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_generic/msrv_soc_flop/msrv_soc_flop.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_generic/msrv_soc_flop/msrv_soc_flopen.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_generic/msrv_soc_flop/msrv_soc_flopenl.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_generic/msrv_soc_flop/msrv_soc_flopenr.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_generic/msrv_soc_flop/msrv_soc_flopenrc.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_generic/msrv_soc_flop/msrv_soc_flopr.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_generic/msrv_soc_flop/msrv_soc_reset_synchronizer.sv"
+    }
+    libraries {
+      {directory "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl"}
+    }
+    extensions {
+      ".vh" ".vh.gz"
+    }
+    defines {
+    }
+    incdirs {
+    }
+    options {
+    }
+  }
+  read5 {
+    format {
+      "verilog_sv2012"
+    }
+    work_library {
+      "work"
+    }
+    files {
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_top/msrv_soc_clk_generator.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_top/msrv_soc_design_top.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_top/msrv_soc_glitch_free_ckt.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_top/msrv_soc_io_interface.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_top/msrv_soc_pipelinedcore.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_top/msrv_soc_pipelinedsoc.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_top/msrv_soc_pmu.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_top/msrv_soc_register_bank.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_top/msrv_soc_system_controller.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_top/soc_topwrapper.sv"
+    }
+    libraries {
+      {directory "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl"}
+    }
+    extensions {
+      ".vh" ".vh.gz"
+    }
+    defines {
+    }
+    incdirs {
+    }
+    options {
+    }
+  }
+  read6 {
+    format {
+      "verilog_sv2012"
+    }
+    work_library {
+      "work"
+    }
+    files {
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper/msrv_soc_system_controllerwrapper.sv"
+    }
+    libraries {
+      {directory "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl"}
+    }
+    extensions {
+      ".vh" ".vh.gz"
+    }
+    defines {
+    }
+    incdirs {
+    }
+    options {
+    }
+    is_current_design on
+  }
+  logical_design_library_list {work}
+  default_logical_design_library {work}
+}
+ 

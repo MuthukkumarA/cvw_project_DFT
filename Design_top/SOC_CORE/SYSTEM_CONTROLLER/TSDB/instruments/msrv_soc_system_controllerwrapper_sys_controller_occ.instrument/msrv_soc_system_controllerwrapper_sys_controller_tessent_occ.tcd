@@ -1,0 +1,100 @@
+//--------------------------------------------------------------------------
+//
+//  Unpublished work. Copyright 2026 Siemens
+//
+//  This material contains trade secrets or otherwise confidential 
+//  information owned by Siemens Industry Software Inc. or its affiliates 
+//  (collectively, SISW), or its licensors. Access to and use of this 
+//  information is strictly limited as set forth in the Customer's 
+//  applicable agreements with SISW.
+//
+//--------------------------------------------------------------------------
+//  File created by: Tessent Shell
+//          Version: 2026.1
+//       Created on: Tue Aug 18 14:57:02 IST 2026
+//--------------------------------------------------------------------------
+
+Core(msrv_soc_system_controllerwrapper_sys_controller_tessent_occ) {
+   Occ {
+      version: 4;
+      ijtag_scan_interface: on;
+      type: standard;
+      Interface {
+         FastClock(fast_clock) {
+            persistent_pin: tessent_persistent_cell_fast_clock_buf/Z;
+         }
+         SlowClock(slow_clock) {
+            persistent_pin: tessent_persistent_cell_slow_clock_buf/Z;
+         }
+         ScanEnable(scan_en) {
+            persistent_pin: tessent_persistent_cell_scan_en_buf/Z;
+         }
+         CaptureEnable(capture_en) {
+            persistent_pin: tessent_persistent_cell_capture_en_buf/Z;
+         }
+         StaticClockControlMode(static_clock_control_mode) {
+            persistent_pin: tessent_persistent_cell_static_clock_control_mode_buf/Z;
+         }
+         ClockSequence(clock_sequence[2:0]) {
+            persistent_pin(0): tessent_persistent_cell_clock_sequence_buf_0/Z;
+            persistent_pin(1): tessent_persistent_cell_clock_sequence_buf_1/Z;
+            persistent_pin(2): tessent_persistent_cell_clock_sequence_buf_2/Z;
+         }
+         ScanInput(scan_in) {
+            persistent_pin: tessent_persistent_cell_scan_in_buf/Z;
+         }
+         ScanOutput(scan_out) {
+            persistent_pin: tessent_persistent_cell_scan_out_buf/Z;
+         }
+         ShiftRegisterClock(occ_control/tessent_persistent_cell_cgc_SHIFT_REG_CLK/GCK) {
+         }
+         GatedFastClock(tessent_persistent_cell_clock_out_mux/A) {
+         }
+         GatedClock(tessent_persistent_cell_clock_out_mux/Z) {
+            source: fast_clock;
+         }
+      }
+      Parameters {
+         iproc: setup;
+         FastCaptureMode {
+            parameter: fast_capture_mode;
+            type: boolean;
+            default_value: off;
+         }
+         ActiveUpstreamParentOcc {
+            parameter: active_upstream_parent_occ;
+            type: boolean;
+            default_value: off;
+         }
+         CaptureCycleWidth {
+            parameter: capture_window_size;
+            type: int;
+            legal_int: 1..3;
+            default_value: 3;
+         }
+         StaticClockControl {
+            parameter: static_clock_control;
+            type: string;
+            default_value: off;
+         }
+         ClockSequence {
+            parameter: clock_sequence;
+            type: int;
+            legal_int: 0..7;
+            default_value: 0;
+         }
+      }
+      ControlBits {
+         ControlBit(occ_control/ShiftReg/FF[0]) {
+         }
+         ControlBit(occ_control/ShiftReg/FF[1]) {
+         }
+         ControlBit(occ_control/ShiftReg/FF[2]) {
+         }
+      }
+      capture_trigger: capture_en;
+      static_clock_control: both;
+   }
+}
+  
+  

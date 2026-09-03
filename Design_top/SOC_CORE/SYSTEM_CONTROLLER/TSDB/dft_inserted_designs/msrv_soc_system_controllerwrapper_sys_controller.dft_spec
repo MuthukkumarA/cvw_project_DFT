@@ -1,0 +1,90 @@
+//-------------------------------------------------
+//  File created by: Tessent Shell
+//          Version: 2026.1
+//       Created on: Tue Aug 18 14:57:10 IST 2026
+//-------------------------------------------------
+
+
+DftSpecification(msrv_soc_system_controllerwrapper,sys_controller) {
+  IjtagNetwork {
+    HostScanInterface(ijtag) {
+      Sib(sri) {
+        Attributes {
+          tessent_dft_function : scan_resource_instrument_host;
+        }
+        Sib(sri_ctrl) {
+          Tdr(sri_ctrl) {
+            Attributes {
+              tessent_dft_function : scan_resource_instrument_dft_control;
+            }
+          }
+        }
+        Sib(edt) {
+        }
+        Sib(occ) {
+        }
+        Sib(lbist) {
+        }
+      }
+    }
+  }
+  OCC {
+    ijtag_host_interface : Sib(occ);
+    static_clock_control : both;
+    capture_trigger : capture_en;
+    Controller(clk) {
+      clock_intercept_nodes : clk;
+    }
+  }
+  EDT {
+    ijtag_host_interface : Sib(edt);
+    Controller(c1) {
+      longest_chain_range : 50, 65;
+      scan_chain_count : 60;
+      input_channel_count : 2;
+      output_channel_count : 2;
+      LogicBistOptions {
+        misr_input_ratio : 1;
+        ShiftPowerOptions {
+          present : on;
+          default_operation : disabled;
+          SwitchingThresholdPercentage {
+            hardware_default : 25;
+          }
+        }
+      }
+    }
+  }
+  LogicBist {
+    ijtag_host_interface : Sib(lbist);
+    Controller(1%ctrl_lbist) {
+      burn_in : on;
+      pre_post_shift_dead_cycles : 8;
+      SingleChainForDiagnosis {
+        present : on;
+      }
+      ControllerChain {
+        present : on;
+        clock : tck;
+      }
+      Connections {
+        shift_clock_src : lbist_shift_clk;
+      }
+      NcpOptions {
+        count : 1;
+      }
+      ShiftCycles {
+        max : 800;
+      }
+      CaptureCycles {
+        max : 7;
+      }
+      PatternCount {
+        max : 1024;
+      }
+      WarmupPatternCount {
+        max : 128;
+      }
+    }
+  }
+}

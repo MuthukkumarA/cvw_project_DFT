@@ -1,0 +1,41 @@
+#-------------------------------------------------
+#  File created by: Tessent Shell
+#          Version: 2026.1
+#       Created on: Tue Aug 18 14:57:09 IST 2026
+#-------------------------------------------------
+
+set synthesis_dictionary {
+  design_source_dictionary {
+    read1 {
+      format verilog_2001
+      work_library work
+      files {
+        ./msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_lbist_c1.v ./msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_lbist_c1_tdr.v
+      }
+    }
+  }
+  designs_dictionary {
+    msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_lbist_c1 {
+      size_only_prefix_list tessent_persistent_cell_
+      output_files {
+        msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_lbist_c1.vg {
+          module_name_list {
+            msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_*c1* -msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_lbist_c1_tdr*
+          }
+        }
+      }
+      sdc {
+        file_name msrv_soc_system_controllerwrapper_sys_controller_edt_lbist.sdc
+        proc_list msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_lbist_c1
+      }
+    }
+    msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_lbist_c1_tdr {
+      size_only_prefix_list tessent_persistent_cell_
+      output_files {
+        msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_lbist_c1_tdr.vg {
+          module_name_list msrv_soc_system_controllerwrapper_sys_controller_tessent_edt_lbist_c1_tdr
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,95 @@
+//-------------------------------------------------
+//  File created by: Tessent Shell
+//          Version: 2026.1
+//       Created on: Tue Aug 18 14:57:11 IST 2026
+//-------------------------------------------------
+
+
+Core(msrv_soc_system_controllerwrapper) {
+  DesignInfo {
+    design_id : sys_controller;
+    design_level : physical_block;
+    ChildBlockModules {
+    }
+    Clocks {
+      Clock(clk) {
+        domain_label : clk;
+        type : async_source;
+        base_period : 2.00ns;
+        period : 2.0;
+        posedge_scannable_flop_count : 172;
+        negedge_scannable_flop_count : 0;
+        posedge_non_scannable_flop_count : 4;
+        negedge_non_scannable_flop_count : 3;
+        active_high_latch_count : 0;
+        active_low_latch_count : 0;
+        posedge_memory_clock_input_count : 0;
+        negedge_memory_clock_input_count : 0;
+      }
+    }
+    DynamicDftSignals {
+      DynamicDftSignal(async_set_reset_dynamic_disable) {
+        Instance {
+          type : pin;
+          created_from_other_signals : on;
+          add_hold_scan_cell : off;
+          node_name : tessent_persistent_cell_async_set_reset_dynamic_disable/ZN;
+        }
+      }
+      DynamicDftSignal(edt_clock) {
+        Instance {
+          type : pin;
+          created_from_other_signals : on;
+          add_hold_scan_cell : off;
+          node_name : msrv_soc_system_controllerwrapper_sys_controller_tessent_lbist_inst/edt_lbist_clock;
+          At {
+            lbist_dft_driver_node_name : msrv_soc_system_controllerwrapper_sys_controller_tessent_lbist_inst/edt_lbist_clock;
+          }
+        }
+      }
+      DynamicDftSignal(edt_update) {
+        Instance {
+          type : port;
+          add_hold_scan_cell : off;
+          node_name : edt_update;
+          At {
+            lbist_dft_driver_node_name : msrv_soc_system_controllerwrapper_sys_controller_tessent_lbist_inst/edt_update_out;
+          }
+        }
+      }
+      DynamicDftSignal(scan_en) {
+        Instance {
+          type : pin;
+          add_hold_scan_cell : off;
+          node_name : msrv_soc_system_controllerwrapper_sys_controller_tessent_lbist_inst/scan_en_out;
+          unmapped_node_name : scan_en_w;
+          unmapped_type : port;
+          At {
+            lbist_dft_driver_node_name : msrv_soc_system_controllerwrapper_sys_controller_tessent_lbist_inst/scan_en_out;
+          }
+        }
+      }
+      DynamicDftSignal(shift_capture_clock) {
+        Instance {
+          type : pin;
+          created_from_other_signals : on;
+          add_hold_scan_cell : off;
+          node_name : msrv_soc_system_controllerwrapper_sys_controller_tessent_lbist_inst/shift_capture_clock_out;
+          At {
+            lbist_dft_driver_node_name : msrv_soc_system_controllerwrapper_sys_controller_tessent_lbist_inst/shift_capture_clock_out;
+          }
+        }
+      }
+      DynamicDftSignal(test_clock) {
+        Instance {
+          type : port;
+          add_hold_scan_cell : off;
+          node_name : test_clock_w;
+          At {
+            lbist_dft_driver_node_name : msrv_soc_system_controllerwrapper_sys_controller_tessent_lbist_inst/lbist_test_clock_out;
+          }
+        }
+      }
+    }
+  }
+}

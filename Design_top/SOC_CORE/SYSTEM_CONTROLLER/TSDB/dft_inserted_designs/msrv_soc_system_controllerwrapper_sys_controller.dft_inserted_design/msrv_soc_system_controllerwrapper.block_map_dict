@@ -1,0 +1,7 @@
+set block_map_dict {
+  original_top_block_module {msrv_soc_system_controllerwrapper}
+  original_top_block_id {}
+  top_block_module {msrv_soc_system_controllerwrapper}
+  top_block_id {sys_controller}
+  top_block_type {physical_block}
+}
