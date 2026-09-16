@@ -1,0 +1,7 @@
+set block_map_dict {
+  original_top_block_module {msrv_soc_pipelinedcorewrapper}
+  original_top_block_id {}
+  top_block_module {msrv_soc_pipelinedcorewrapper}
+  top_block_id {pass1_rtl}
+  top_block_type {physical_block}
+}

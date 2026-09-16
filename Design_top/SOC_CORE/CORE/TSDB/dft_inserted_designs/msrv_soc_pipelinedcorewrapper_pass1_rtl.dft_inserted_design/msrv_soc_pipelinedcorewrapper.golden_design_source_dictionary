@@ -1,0 +1,717 @@
+#-------------------------------------------------
+#  File created by: Tessent Shell
+#          Version: 2026.1
+#       Created on: Tue Aug 18 14:31:28 IST 2026
+#-------------------------------------------------
+
+set design_source_dictionary \
+{
+  read1 {
+    format {
+      "verilog_sv2012"
+    }
+    work_library {
+      "work"
+    }
+    files {
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//cvw.sv"
+    }
+    libraries {
+      {directory "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl"}
+    }
+    extensions {
+      ".vh" ".vh.gz"
+    }
+    defines {
+    }
+    incdirs {
+    }
+    options {
+      "-vcs_compatibility"
+    }
+    needed_before_reading_interface_view on
+  }
+  read2 {
+    format {
+      "verilog_sv2012"
+    }
+    work_library {
+      "work"
+    }
+    files {
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_fpu/msrv_soc_fclassify.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_fpu/msrv_soc_fcmp.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_fpu/msrv_soc_fctrl.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_fpu/msrv_soc_fcvt.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_fpu/msrv_soc_fhazard.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_fpu/msrv_soc_fli.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_fpu/msrv_soc_fmtparams.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_fpu/msrv_soc_fpu.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_fpu/msrv_soc_fregfile.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_fpu/msrv_soc_fround.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_fpu/msrv_soc_fsgninj.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_fpu/msrv_soc_packoutput.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_fpu/msrv_soc_unpack.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_fpu/msrv_soc_unpackinput.sv"
+    }
+    libraries {
+      {directory "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl"}
+    }
+    extensions {
+      ".vh" ".vh.gz"
+    }
+    defines {
+    }
+    incdirs {
+    }
+    options {
+    }
+  }
+  read3 {
+    format {
+      "verilog_sv2012"
+    }
+    work_library {
+      "work"
+    }
+    files {
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_fpu/msrv_soc_fdivsqrt/msrv_soc_fdivsqrt.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_fpu/msrv_soc_fdivsqrt/msrv_soc_fdivsqrtcycles.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_fpu/msrv_soc_fdivsqrt/msrv_soc_fdivsqrtexpcalc.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_fpu/msrv_soc_fdivsqrt/msrv_soc_fdivsqrtfgen2.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_fpu/msrv_soc_fdivsqrt/msrv_soc_fdivsqrtfgen4.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_fpu/msrv_soc_fdivsqrt/msrv_soc_fdivsqrtfsm.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_fpu/msrv_soc_fdivsqrt/msrv_soc_fdivsqrtiter.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_fpu/msrv_soc_fdivsqrt/msrv_soc_fdivsqrtpostproc.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_fpu/msrv_soc_fdivsqrt/msrv_soc_fdivsqrtpreproc.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_fpu/msrv_soc_fdivsqrt/msrv_soc_fdivsqrtstage2.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_fpu/msrv_soc_fdivsqrt/msrv_soc_fdivsqrtstage4.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_fpu/msrv_soc_fdivsqrt/msrv_soc_fdivsqrtuotfc2.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_fpu/msrv_soc_fdivsqrt/msrv_soc_fdivsqrtuotfc4.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_fpu/msrv_soc_fdivsqrt/msrv_soc_fdivsqrtuslc2.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_fpu/msrv_soc_fdivsqrt/msrv_soc_fdivsqrtuslc4.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_fpu/msrv_soc_fdivsqrt/msrv_soc_fdivsqrtuslc4cmp.sv"
+    }
+    libraries {
+      {directory "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl"}
+    }
+    extensions {
+      ".vh" ".vh.gz"
+    }
+    defines {
+    }
+    incdirs {
+    }
+    options {
+    }
+  }
+  read4 {
+    format {
+      "verilog_sv2012"
+    }
+    work_library {
+      "work"
+    }
+    files {
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_fpu/msrv_soc_fma/msrv_soc_fma.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_fpu/msrv_soc_fma/msrv_soc_fmaadd.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_fpu/msrv_soc_fma/msrv_soc_fmaalign.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_fpu/msrv_soc_fma/msrv_soc_fmaexpadd.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_fpu/msrv_soc_fma/msrv_soc_fmalza.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_fpu/msrv_soc_fma/msrv_soc_fmamult.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_fpu/msrv_soc_fma/msrv_soc_fmasign.sv"
+    }
+    libraries {
+      {directory "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl"}
+    }
+    extensions {
+      ".vh" ".vh.gz"
+    }
+    defines {
+    }
+    incdirs {
+    }
+    options {
+    }
+  }
+  read5 {
+    format {
+      "verilog_sv2012"
+    }
+    work_library {
+      "work"
+    }
+    files {
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_fpu/msrv_soc_postproc/msrv_soc_cvtshiftcalc.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_fpu/msrv_soc_postproc/msrv_soc_divshiftcalc.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_fpu/msrv_soc_postproc/msrv_soc_flags.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_fpu/msrv_soc_postproc/msrv_soc_fmashiftcalc.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_fpu/msrv_soc_postproc/msrv_soc_negateintres.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_fpu/msrv_soc_postproc/msrv_soc_normshift.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_fpu/msrv_soc_postproc/msrv_soc_postprocess.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_fpu/msrv_soc_postproc/msrv_soc_resultsign.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_fpu/msrv_soc_postproc/msrv_soc_round.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_fpu/msrv_soc_postproc/msrv_soc_roundsign.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_fpu/msrv_soc_postproc/msrv_soc_shiftcorrection.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_fpu/msrv_soc_postproc/msrv_soc_specialcase.sv"
+    }
+    libraries {
+      {directory "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl"}
+    }
+    extensions {
+      ".vh" ".vh.gz"
+    }
+    defines {
+    }
+    incdirs {
+    }
+    options {
+    }
+  }
+  read6 {
+    format {
+      "verilog_sv2012"
+    }
+    work_library {
+      "work"
+    }
+    files {
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ifu/msrv_soc_decompress.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ifu/msrv_soc_ifu.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ifu/msrv_soc_irom.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ifu/msrv_soc_spill.sv"
+    }
+    libraries {
+      {directory "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl"}
+    }
+    extensions {
+      ".vh" ".vh.gz"
+    }
+    defines {
+    }
+    incdirs {
+    }
+    options {
+    }
+  }
+  read7 {
+    format {
+      "verilog_sv2012"
+    }
+    work_library {
+      "work"
+    }
+    files {
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ifu/msrv_soc_bpred/msrv_soc_RASPredictor.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ifu/msrv_soc_bpred/msrv_soc_bpred.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ifu/msrv_soc_bpred/msrv_soc_btb.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ifu/msrv_soc_bpred/msrv_soc_gshare.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ifu/msrv_soc_bpred/msrv_soc_gsharebasic.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ifu/msrv_soc_bpred/msrv_soc_icpred.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ifu/msrv_soc_bpred/msrv_soc_localaheadbp.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ifu/msrv_soc_bpred/msrv_soc_localbpbasic.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ifu/msrv_soc_bpred/msrv_soc_localrepairbp.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ifu/msrv_soc_bpred/msrv_soc_satCounter2.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ifu/msrv_soc_bpred/msrv_soc_twoBitPredictor.sv"
+    }
+    libraries {
+      {directory "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl"}
+    }
+    extensions {
+      ".vh" ".vh.gz"
+    }
+    defines {
+    }
+    incdirs {
+    }
+    options {
+    }
+  }
+  read8 {
+    format {
+      "verilog_sv2012"
+    }
+    work_library {
+      "work"
+    }
+    files {
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ieu/msrv_soc_alu.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ieu/msrv_soc_comparator.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ieu/msrv_soc_controller.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ieu/msrv_soc_datapath.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ieu/msrv_soc_extend.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ieu/msrv_soc_ieu.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ieu/msrv_soc_regfile.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ieu/msrv_soc_shifter.sv"
+    }
+    libraries {
+      {directory "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl"}
+    }
+    extensions {
+      ".vh" ".vh.gz"
+    }
+    defines {
+    }
+    incdirs {
+    }
+    options {
+    }
+  }
+  read9 {
+    format {
+      "verilog_sv2012"
+    }
+    work_library {
+      "work"
+    }
+    files {
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ieu/msrv_soc_bmu/msrv_soc_bitmanipalu.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ieu/msrv_soc_bmu/msrv_soc_bitreverse.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ieu/msrv_soc_bmu/msrv_soc_bmuctrl.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ieu/msrv_soc_bmu/msrv_soc_byteop.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ieu/msrv_soc_bmu/msrv_soc_clmul.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ieu/msrv_soc_bmu/msrv_soc_cnt.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ieu/msrv_soc_bmu/msrv_soc_ext.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ieu/msrv_soc_bmu/msrv_soc_popcnt.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ieu/msrv_soc_bmu/msrv_soc_zbb.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ieu/msrv_soc_bmu/msrv_soc_zbc.sv"
+    }
+    libraries {
+      {directory "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl"}
+    }
+    extensions {
+      ".vh" ".vh.gz"
+    }
+    defines {
+    }
+    incdirs {
+    }
+    options {
+    }
+  }
+  read10 {
+    format {
+      "verilog_sv2012"
+    }
+    work_library {
+      "work"
+    }
+    files {
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ieu/msrv_soc_aes/msrv_soc_aes32d.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ieu/msrv_soc_aes/msrv_soc_aes32e.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ieu/msrv_soc_aes/msrv_soc_aes64d.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ieu/msrv_soc_aes/msrv_soc_aes64e.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ieu/msrv_soc_aes/msrv_soc_aes64ks1i.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ieu/msrv_soc_aes/msrv_soc_aes64ks2.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ieu/msrv_soc_aes/msrv_soc_aesinvmixcolumns32.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ieu/msrv_soc_aes/msrv_soc_aesinvmixcolumns8.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ieu/msrv_soc_aes/msrv_soc_aesinvsbox64.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ieu/msrv_soc_aes/msrv_soc_aesinvsbox8.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ieu/msrv_soc_aes/msrv_soc_aesinvshiftrows64.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ieu/msrv_soc_aes/msrv_soc_aesmixcolumns32.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ieu/msrv_soc_aes/msrv_soc_aesmixcolumns8.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ieu/msrv_soc_aes/msrv_soc_aessbox32.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ieu/msrv_soc_aes/msrv_soc_aessbox8.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ieu/msrv_soc_aes/msrv_soc_aesshiftrows64.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ieu/msrv_soc_aes/msrv_soc_galoismultforward8.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ieu/msrv_soc_aes/msrv_soc_galoismultinverse8.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ieu/msrv_soc_aes/msrv_soc_rconlut32.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ieu/msrv_soc_aes/msrv_soc_rotate.sv"
+    }
+    libraries {
+      {directory "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl"}
+    }
+    extensions {
+      ".vh" ".vh.gz"
+    }
+    defines {
+    }
+    incdirs {
+    }
+    options {
+    }
+  }
+  read11 {
+    format {
+      "verilog_sv2012"
+    }
+    work_library {
+      "work"
+    }
+    files {
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ieu/msrv_soc_kmu/msrv_soc_packer.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ieu/msrv_soc_kmu/msrv_soc_zbkb.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ieu/msrv_soc_kmu/msrv_soc_zbkx.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ieu/msrv_soc_kmu/msrv_soc_zipper.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ieu/msrv_soc_kmu/msrv_soc_zknde32.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ieu/msrv_soc_kmu/msrv_soc_zknde64.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ieu/msrv_soc_kmu/msrv_soc_zknh32.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ieu/msrv_soc_kmu/msrv_soc_zknh64.sv"
+    }
+    libraries {
+      {directory "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl"}
+    }
+    extensions {
+      ".vh" ".vh.gz"
+    }
+    defines {
+    }
+    incdirs {
+    }
+    options {
+    }
+  }
+  read12 {
+    format {
+      "verilog_sv2012"
+    }
+    work_library {
+      "work"
+    }
+    files {
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ieu/msrv_soc_sha/msrv_soc_sha256.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ieu/msrv_soc_sha/msrv_soc_sha512_32.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ieu/msrv_soc_sha/msrv_soc_sha512_64.sv"
+    }
+    libraries {
+      {directory "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl"}
+    }
+    extensions {
+      ".vh" ".vh.gz"
+    }
+    defines {
+    }
+    incdirs {
+    }
+    options {
+    }
+  }
+  read13 {
+    format {
+      "verilog_sv2012"
+    }
+    work_library {
+      "work"
+    }
+    files {
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_lsu/msrv_soc_align.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_lsu/msrv_soc_amoalu.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_lsu/msrv_soc_atomic.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_lsu/msrv_soc_dtim.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_lsu/msrv_soc_endianswap.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_lsu/msrv_soc_lrsc.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_lsu/msrv_soc_lsu.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_lsu/msrv_soc_subwordread.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_lsu/msrv_soc_subwordwrite.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_lsu/msrv_soc_swbytemask.sv"
+    }
+    libraries {
+      {directory "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl"}
+    }
+    extensions {
+      ".vh" ".vh.gz"
+    }
+    defines {
+    }
+    incdirs {
+    }
+    options {
+    }
+  }
+  read14 {
+    format {
+      "verilog_sv2012"
+    }
+    work_library {
+      "work"
+    }
+    files {
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ebu/msrv_soc_ahbcacheinterface.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ebu/msrv_soc_ahbinterface.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ebu/msrv_soc_buscachefsm.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ebu/msrv_soc_busfsm.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ebu/msrv_soc_controllerinput.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ebu/msrv_soc_ebu.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ebu/msrv_soc_ebufsmarb.sv"
+    }
+    libraries {
+      {directory "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl"}
+    }
+    extensions {
+      ".vh" ".vh.gz"
+    }
+    defines {
+    }
+    incdirs {
+    }
+    options {
+    }
+  }
+  read15 {
+    format {
+      "verilog_sv2012"
+    }
+    work_library {
+      "work"
+    }
+    files {
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_hazard/msrv_soc_hazard.sv"
+    }
+    libraries {
+      {directory "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl"}
+    }
+    extensions {
+      ".vh" ".vh.gz"
+    }
+    defines {
+    }
+    incdirs {
+    }
+    options {
+    }
+  }
+  read16 {
+    format {
+      "verilog_sv2012"
+    }
+    work_library {
+      "work"
+    }
+    files {
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_privileged/msrv_soc_csr.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_privileged/msrv_soc_csrc.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_privileged/msrv_soc_csri.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_privileged/msrv_soc_csrm.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_privileged/msrv_soc_csrs.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_privileged/msrv_soc_csrsr.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_privileged/msrv_soc_csru.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_privileged/msrv_soc_privdec.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_privileged/msrv_soc_privileged.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_privileged/msrv_soc_privmode.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_privileged/msrv_soc_privpiperegs.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_privileged/msrv_soc_trap.sv"
+    }
+    libraries {
+      {directory "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl"}
+    }
+    extensions {
+      ".vh" ".vh.gz"
+    }
+    defines {
+    }
+    incdirs {
+    }
+    options {
+    }
+  }
+  read17 {
+    format {
+      "verilog_sv2012"
+    }
+    work_library {
+      "work"
+    }
+    files {
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_mdu/msrv_soc_div.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_mdu/msrv_soc_divstep.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_mdu/msrv_soc_mdu.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_mdu/msrv_soc_mul.sv"
+    }
+    libraries {
+      {directory "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl"}
+    }
+    extensions {
+      ".vh" ".vh.gz"
+    }
+    defines {
+    }
+    incdirs {
+    }
+    options {
+    }
+  }
+  read18 {
+    format {
+      "verilog_sv2012"
+    }
+    work_library {
+      "work"
+    }
+    files {
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_mmu/msrv_soc_adrdec.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_mmu/msrv_soc_adrdecs.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_mmu/msrv_soc_hptw.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_mmu/msrv_soc_mmu.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_mmu/msrv_soc_pmachecker.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_mmu/msrv_soc_pmpadrdec.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_mmu/msrv_soc_pmpchecker.sv"
+    }
+    libraries {
+      {directory "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl"}
+    }
+    extensions {
+      ".vh" ".vh.gz"
+    }
+    defines {
+    }
+    incdirs {
+    }
+    options {
+    }
+  }
+  read19 {
+    format {
+      "verilog_sv2012"
+    }
+    work_library {
+      "work"
+    }
+    files {
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_mmu/msrv_soc_tlb/msrv_soc_tlb.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_mmu/msrv_soc_tlb/msrv_soc_tlbcam.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_mmu/msrv_soc_tlb/msrv_soc_tlbcamline.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_mmu/msrv_soc_tlb/msrv_soc_tlbcontrol.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_mmu/msrv_soc_tlb/msrv_soc_tlblru.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_mmu/msrv_soc_tlb/msrv_soc_tlbmixer.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_mmu/msrv_soc_tlb/msrv_soc_tlbram.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_mmu/msrv_soc_tlb/msrv_soc_tlbramline.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_mmu/msrv_soc_tlb/msrv_soc_vm64check.sv"
+    }
+    libraries {
+      {directory "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl"}
+    }
+    extensions {
+      ".vh" ".vh.gz"
+    }
+    defines {
+    }
+    incdirs {
+    }
+    options {
+    }
+  }
+  read20 {
+    format {
+      "verilog_sv2012"
+    }
+    work_library {
+      "work"
+    }
+    files {
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_generic/msrv_soc_adder.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_generic/msrv_soc_aplusbeq0.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_generic/msrv_soc_arrs.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_generic/msrv_soc_binencoder.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_generic/msrv_soc_counter.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_generic/msrv_soc_csa.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_generic/msrv_soc_decoder.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_generic/msrv_soc_lzc.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_generic/msrv_soc_mux.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_generic/msrv_soc_neg.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_generic/msrv_soc_onehotdecoder.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_generic/msrv_soc_or_rows.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_generic/msrv_soc_priorityonehot.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_generic/msrv_soc_prioritythermometer.sv"
+    }
+    libraries {
+      {directory "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl"}
+    }
+    extensions {
+      ".vh" ".vh.gz"
+    }
+    defines {
+    }
+    incdirs {
+    }
+    options {
+    }
+  }
+  read21 {
+    format {
+      "verilog_sv2012"
+    }
+    work_library {
+      "work"
+    }
+    files {
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_generic/msrv_soc_flop/msrv_soc_flop.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_generic/msrv_soc_flop/msrv_soc_flopen.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_generic/msrv_soc_flop/msrv_soc_flopenl.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_generic/msrv_soc_flop/msrv_soc_flopenr.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_generic/msrv_soc_flop/msrv_soc_flopenrc.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_generic/msrv_soc_flop/msrv_soc_flopr.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_generic/msrv_soc_flop/msrv_soc_reset_synchronizer.sv"
+    }
+    libraries {
+      {directory "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl"}
+    }
+    extensions {
+      ".vh" ".vh.gz"
+    }
+    defines {
+    }
+    incdirs {
+    }
+    options {
+    }
+  }
+  read22 {
+    format {
+      "verilog_sv2012"
+    }
+    work_library {
+      "work"
+    }
+    files {
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_top/msrv_soc_clk_generator.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_top/msrv_soc_design_top.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_top/msrv_soc_glitch_free_ckt.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_top/msrv_soc_io_interface.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_top/msrv_soc_pipelinedcore.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_top/msrv_soc_pipelinedsoc.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_top/msrv_soc_pmu.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_top/msrv_soc_register_bank.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_top/msrv_soc_system_controller.sv"
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_top/soc_topwrapper.sv"
+    }
+    libraries {
+      {directory "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl"}
+    }
+    extensions {
+      ".vh" ".vh.gz"
+    }
+    defines {
+    }
+    incdirs {
+    }
+    options {
+    }
+  }
+  read23 {
+    format {
+      "verilog_sv2012"
+    }
+    work_library {
+      "work"
+    }
+    files {
+      "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper/msrv_soc_pipelinedcorewrapper.sv"
+    }
+    libraries {
+      {directory "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl"}
+    }
+    extensions {
+      ".vh" ".vh.gz"
+    }
+    defines {
+    }
+    incdirs {
+    }
+    options {
+    }
+    is_current_design on
+  }
+  logical_design_library_list {work}
+  default_logical_design_library {work}
+}
+ 
