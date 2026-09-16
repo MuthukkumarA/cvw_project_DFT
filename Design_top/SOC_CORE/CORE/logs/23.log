@@ -1,0 +1,113 @@
+/home/cad/eda/Mentor_Graphics/Tessent_2026/tessent_2026.1/bin/tessent -shell -logfile ./logs/23.log -replace -dofile dofile/lbist_edt_occ.do
+//  Tessent Shell  2026.1    Thu Feb 26 18:38:00 GMT 2026
+//                Unpublished work. Copyright 2026 Siemens
+//
+//      This material contains trade secrets or otherwise confidential 
+//  information owned by Siemens Industry Software Inc. or its affiliates 
+//   (collectively, "SISW"), or its licensors. Access to and use of this 
+//     information is strictly limited as set forth in the Customer's 
+//                   applicable agreements with SISW. 
+//
+//  Siemens software executing under x86-64 Linux on Thu Jul 23 17:49:46 IST 2026.
+//  64 bit version
+//  Host: mavenserver-RH3 (255072 MB RAM, 122071 MB Swap)
+//
+//  command: #################################################
+//  command: #LBIST EDT OCC #Leo Started Working   
+//  command: #################################################
+//  command: set_context dft -rtl -design_identifier pass1_rtl
+//  command: set_tsdb_output_directory TSDB
+//  command: read_cell_library ../../../libs/NangateOpenCellLibrary.tcelllib 
+//  Reading DFT Library file ../../../libs/NangateOpenCellLibrary.tcelllib
+//  Finished reading file ../../../libs/NangateOpenCellLibrary.tcelllib
+//  command: set msrv_soc "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl/"
+//  command: #set rtl_path {}
+//  command: #set rtl_path "$rtl_path $msrv_soc/msrv_soc_cache"
+//  command: #set rtl_path "$rtl_path $msrv_soc/msrv_soc_ebu"
+//  command: #set rtl_path "$rtl_path $msrv_soc/msrv_soc_fpu"
+//  command: #set rtl_path "$rtl_path $msrv_soc/msrv_soc_fpu/msrv_soc_fdivsqrt"
+//  command: #set rtl_path "$rtl_path $msrv_soc/msrv_soc_fpu/msrv_soc_fma"
+//  command: #set rtl_path "$rtl_path $msrv_soc/msrv_soc_fpu/msrv_soc_postproc"
+//  command: #set rtl_path "$rtl_path $msrv_soc/msrv_soc_generic"
+//  command: #set rtl_path "$rtl_path $msrv_soc/msrv_soc_generic/msrv_soc_mem"
+//  command: #set rtl_path "$rtl_path $msrv_soc/msrv_soc_generic/msrv_soc_flop"
+//  command: #3set rtl_path "$rtl_path $msrv_soc/msrv_soc_hazard"
+//  command: #set rtl_path "$rtl_path $msrv_soc/msrv_soc_ieu"
+//  command: #set rtl_path "$rtl_path $msrv_soc/msrv_soc_ifu"
+//  command: #set rtl_path "$rtl_path $msrv_soc/msrv_soc_ieu/msrv_soc_aes"
+//  command: #set rtl_path "$rtl_path $msrv_soc/msrv_soc_ieu/msrv_soc_bmu"
+//  command: #set rtl_path "$rtl_path $msrv_soc/msrv_soc_ieu/msrv_soc_kmu"
+//  command: #set rtl_path "$rtl_path $msrv_soc/msrv_soc_ieu/msrv_soc_sha"
+//  command: #set rtl_path "$rtl_path $msrv_soc/msrv_soc_ifu/msrv_soc_bpred"
+//  command: #set rtl_path "$rtl_path $msrv_soc/msrv_soc_lsu"
+//  command: #set rtl_path "$rtl_path $msrv_soc/msrv_soc_mdu"
+//  command: #set rtl_path "$rtl_path $msrv_soc/msrv_soc_mmu/msrv_soc_tlb"
+//  command: #set rtl_path "$rtl_path $msrv_soc/msrv_soc_mmu"
+//  command: #set rtl_path "$rtl_path $msrv_soc/msrv_soc_privileged"
+//  command: #set rtl_path "$rtl_path $msrv_soc/msrv_soc_top"
+//  command: #set rtl_path "$rtl_path $msrv_soc/msrv_soc_uncore"
+//  command: #set rtl_path "$rtl_path $msrv_soc/wrapper" 
+//  command: #packages
+//  command: read_verilog $msrv_soc/cvw.sv -format sv2012 -vcs_compatibility
+//  command: #mdu block
+//  command: read_verilog $msrv_soc/msrv_soc_mdu/*.sv -format sv2012 -vcs_compatibility
+//  command: #fpu 
+//  command: read_verilog $msrv_soc/msrv_soc_fpu/*.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/msrv_soc_fpu/msrv_soc_fdivsqrt/*.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/msrv_soc_fpu/msrv_soc_fma/*.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/msrv_soc_fpu/msrv_soc_postproc/*.sv -format sv2012 -vcs_compatibility
+//  command: #ifu
+//  command: read_verilog $msrv_soc/msrv_soc_ifu/*.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/msrv_soc_ifu/msrv_soc_bpred/*.sv -format sv2012 -vcs_compatibility
+//  command: #ieu
+//  command: read_verilog $msrv_soc/msrv_soc_ieu/*.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/msrv_soc_ieu/msrv_soc_bmu/*.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/msrv_soc_ieu/msrv_soc_aes/*.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/msrv_soc_ieu/msrv_soc_kmu/*.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/msrv_soc_ieu/msrv_soc_sha/*.sv -format sv2012 -vcs_compatibility
+//  command: #lsu
+//  command: read_verilog $msrv_soc/msrv_soc_lsu/*.sv -format sv2012 -vcs_compatibility
+//  command: #ebu
+//  command: read_verilog $msrv_soc/msrv_soc_ebu/*.sv -format sv2012 -vcs_compatibility
+//  command: #hazard
+//  command: read_verilog $msrv_soc/msrv_soc_hazard/*.sv -format sv2012 -vcs_compatibility
+//  command: #privileged
+//  command: read_verilog $msrv_soc/msrv_soc_privileged/*.sv -format sv2012 -vcs_compatibility
+//  command: #mmu
+//  command: read_verilog $msrv_soc/msrv_soc_mmu/*.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/msrv_soc_mmu/msrv_soc_tlb/*.sv -format sv2012 -vcs_compatibility
+//  command: #cache
+//  command: read_verilog $msrv_soc/msrv_soc_cache/*.sv -format sv2012 -vcs_compatibility
+//  command: #generic
+//  command: #it comes in unore 
+//  command: #read_verilog $msrv_soc/msrv_soc_generic/*.sv -format sv2012 -vcs_compatibility
+//  command: #read_verilog $msrv_soc/msrv_soc_generic/msrv_soc_flop/*.sv -format sv2012 -vcs_compatibility
+//  command: #read_verilog $msrv_soc/msrv_soc_generic/msrv_soc_mem/*.sv -format sv2012 -vcs_compatibility
+//  command: #core top
+//  command: read_verilog $msrv_soc/msrv_soc_top/*.sv -format sv2012 -vcs_compatibility
+//  command: #wrapper
+//  command: read_verilog $msrv_soc/wrapper/msrv_soc_pipelinedcorewrapper.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/wrapper/msrv_soc_ifuwrapper.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/wrapper/msrv_soc_ieuwrapper.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/wrapper/msrv_soc_lsuwrapper.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/wrapper/msrv_soc_ebuwrapper.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/wrapper/msrv_soc_hazardwrapper.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/wrapper/msrv_soc_privilegedwrapper.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/wrapper/msrv_soc_mduwrapper.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/wrapper/msrv_soc_fpuwrapper.sv -format sv2012 -vcs_compatibility
+//  command: #reading the header file .vh 
+//  command: set_design_sources -V $msrv_soc/*.vh -extension vh
+//  command: set_design_sources -V $msrv_soc/wrapper/*.vh -extension vh
+//  command: set_design_sources -V $msrv_soc/msrv_soc_ifu/msrv_soc_bpred/*.vh -extension vh
+//  command: set_design_sources -V $msrv_soc/msrv_soc_fpu/*.vh -extension vh
+//  command: set_current_design msrv32_pipelinedcorewrapper -show_elaboration_warnings 
+//  Error: Specified module 'msrv32_pipelinedcorewrapper' is not defined.
+//  command: set_current_design msrv32_soc_pipelinedcorewrapper -show_elaboration_warnings
+//  Error: Specified module 'msrv32_soc_pipelinedcorewrapper' is not defined.
+//  command: set_current_design msrv_soc_pipelinedcorewrapper -show_elaboration_warnings
+//  Warning: The 'read_verilog' command was not issued after 'set_design_sources' was used to change the verilog design sources.
+//           'set_design_sources' only impacts subsequent 'read_verilog' commands.
+//  Error: File: /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_cache/msrv_soc_cache.sv, Line: 217:  Incorrect unpacked array port connection in instantiation ( ReadDataAOMux ) for port ( a ).
+//  Error: File: /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_cache/msrv_soc_cache.sv, Line: 217:  Elaboration failed for the instance: 'ReadDataAOMux'.
+//  Error: Elaboration failed for module : 'work.msrv_soc_pipelinedcorewrapper'.
+//  command: exit 

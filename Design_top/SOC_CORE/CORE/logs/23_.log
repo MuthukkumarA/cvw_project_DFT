@@ -1,0 +1,65 @@
+/home/cad/eda/Mentor_Graphics/Tessent_2026/tessent_2026.1/bin/tessent -shell -logfile ./logs/23_.log -replace
+//  Tessent Shell  2026.1    Thu Feb 26 18:38:00 GMT 2026
+//                Unpublished work. Copyright 2026 Siemens
+//
+//      This material contains trade secrets or otherwise confidential 
+//  information owned by Siemens Industry Software Inc. or its affiliates 
+//   (collectively, "SISW"), or its licensors. Access to and use of this 
+//     information is strictly limited as set forth in the Customer's 
+//                   applicable agreements with SISW. 
+//
+//  Siemens software executing under x86-64 Linux on Thu Jul 23 18:57:26 IST 2026.
+//  64 bit version
+//  Host: mavenserver-RH3 (255072 MB RAM, 122071 MB Swap)
+//
+//  command: set_context dft -rtl -design_identifier pass1_rtl
+//  command: 
+//  command: set_tsdb_output_directory TSDB
+TSDB
+//  command: 
+//  command: read_cell_library ../../../libs/NangateOpenCellLibrary.tcelllib 
+//  Reading DFT Library file ../../../libs/NangateOpenCellLibrary.tcelllib
+//  Finished reading file ../../../libs/NangateOpenCellLibrary.tcelllib
+//  command: 
+//  command: set msrv_soc "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl/"
+/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl/
+//  command: 
+//  command: set_design_sources -Y $msrv_soc/*.vh -extension vh
+//  Error: /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//BranchPredictorType.vh is not a directory.
+//  Error: /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//config-shared.vh is not a directory.
+//  Error: /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//parameter-defs.vh is not a directory.
+//  command: set_design_sources -Y $msrv_soc/*vh  -extension vh
+//  Error: /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//BranchPredictorType.vh is not a directory.
+//  Error: /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//config-shared.vh is not a directory.
+//  Error: /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//parameter-defs.vh is not a directory.
+//  command: set_design_sources -V $msrv_soc/*.vh -extension vh -vcs_compatibility
+//  Error: Invalid argument ( -vcs_compatibility ).
+Usage:
+        set_design_sources 
+            { [-format verilog]  { [ -V <file_path> ... ] [ -Y <dir_path> ... [ -extensions <ext> ] ... ] [-append] } | { [-clear] } }
+        set_design_sources 
+            { -format {icl | tcd_bscan | tcd_scan | tcd_fusebox | tcd_memory | tcd_memory_cluster} [-search_design_load_path On|Off] [ -Y <dir_path> ... [ -extensions <ext> ] ... ] [-append] }
+        set_design_sources 
+            { -format {icl | tcd_bscan | tcd_scan | tcd_fusebox | tcd_memory | tcd_memory_cluster} [-clear] }
+//  command: 
+//  command: set_design_sources -V $msrv_soc/*.vh -extension vh -vcs_compatibility -format sv2012
+//  Error: Invalid argument ( -vcs_compatibility ).
+Usage:
+        set_design_sources 
+            { [-format verilog]  { [ -V <file_path> ... ] [ -Y <dir_path> ... [ -extensions <ext> ] ... ] [-append] } | { [-clear] } }
+        set_design_sources 
+            { -format {icl | tcd_bscan | tcd_scan | tcd_fusebox | tcd_memory | tcd_memory_cluster} [-search_design_load_path On|Off] [ -Y <dir_path> ... [ -extensions <ext> ] ... ] [-append] }
+        set_design_sources 
+            { -format {icl | tcd_bscan | tcd_scan | tcd_fusebox | tcd_memory | tcd_memory_cluster} [-clear] }
+//  command: set_design_sources -V $msrv_soc/*.vh -extension vh -format sv2012
+//  Error: 'sv2012' is not a valid keyword. Accepted keywords for -format are 'verilog', 'icl' ,'tcd_bscan', 'tcd_scan', 'tcd_fusebox', 'tcd_memory' or 'tcd_memory_cluster'.
+Usage:
+        set_design_sources 
+            { [-format verilog]  { [ -V <file_path> ... ] [ -Y <dir_path> ... [ -extensions <ext> ] ... ] [-append] } | { [-clear] } }
+        set_design_sources 
+            { -format {icl | tcd_bscan | tcd_scan | tcd_fusebox | tcd_memory | tcd_memory_cluster} [-search_design_load_path On|Off] [ -Y <dir_path> ... [ -extensions <ext> ] ... ] [-append] }
+        set_design_sources 
+            { -format {icl | tcd_bscan | tcd_scan | tcd_fusebox | tcd_memory | tcd_memory_cluster} [-clear] }
+//  command: set_design_sources -V $msrv_soc/  -extension vh
+//  Error: /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl/ is a directory.
+//  command: exit 

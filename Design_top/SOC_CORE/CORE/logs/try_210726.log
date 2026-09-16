@@ -1,0 +1,55 @@
+/home/cad/eda/Mentor_Graphics/Tessent_2026/tessent_2026.1/bin/tessent -shell -logfile ./logs/try_210726.log
+//  Tessent Shell  2026.1    Thu Feb 26 18:38:00 GMT 2026
+//                Unpublished work. Copyright 2026 Siemens
+//
+//      This material contains trade secrets or otherwise confidential 
+//  information owned by Siemens Industry Software Inc. or its affiliates 
+//   (collectively, "SISW"), or its licensors. Access to and use of this 
+//     information is strictly limited as set forth in the Customer's 
+//                   applicable agreements with SISW. 
+//
+//  Siemens software executing under x86-64 Linux on Tue Jul 21 18:33:22 IST 2026.
+//  64 bit version
+//  Host: mavenserver-RH3 (255072 MB RAM, 122071 MB Swap)
+//
+//  command: dofile ./dofile/lbist_edt_occ.do 
+//  command: #################################################
+//  command: #LBIST EDT OCC #Leo Started Working   
+//  command: #################################################
+//  command: set_context dft -rtl -design_identifier pass2_rtl
+//  command: set_tsdb_output_directory TSDB
+//  command: read_cell_library 
+//  Error: Must include path to library file or issue -quick_synthesis_library switch or both.
+
+// 'DOFile ./dofile/lbist_edt_occ.do' aborted at line 9
+//  command: dofile ./dofile/lbist_edt_occ.do
+//  command: #################################################
+//  command: #LBIST EDT OCC #Leo Started Working   
+//  command: #################################################
+//  command: set_context dft -rtl -design_identifier pass1_rtl
+//  command: set_tsdb_output_directory TSDB
+//  command: read_cell_library 
+//  Error: Must include path to library file or issue -quick_synthesis_library switch or both.
+
+// 'DOFile ./dofile/lbist_edt_occ.do' aborted at line 9
+//  command: read_cell_library ../../../libs/NangateOpenCellLibrary.tcelllib 
+//  Reading DFT Library file ../../../libs/NangateOpenCellLibrary.tcelllib
+//  Finished reading file ../../../libs/NangateOpenCellLibrary.tcelllib
+//  command: read_verilog -help
+Usage: read_verilog  [ <design_path>... ] [ -verbose ] [ -force | 
+                     -no_overwrite_modules ] [ -interface_only ] 
+                     [ -exclude_from_file_dictionary ] [ -in_library <logical_lib_name> ] 
+                     [ -no_lib_rescan ] [ -no_mfcu ] [ -format { 1995 | 2001 | sv31a | sv2005 | sv2009 | sv2012 } ] 
+                     [ -pragma_list <pragma_list>... ] [ -ignore_synthesis_off_sections { on | off } ] 
+                     [ -vcs_compatibility ] [ -f <files> ] [ -no_duplicate_modules_warnings ] 
+//  command: set_design_sources -help
+Usage:
+        set_design_sources 
+            { [-format verilog]  { [ -V <file_path> ... ] [ -Y <dir_path> ... [ -extensions <ext> ] ... ] [-append] } | { [-clear] } }
+        set_design_sources 
+            { -format {icl | tcd_bscan | tcd_scan | tcd_fusebox | tcd_memory | tcd_memory_cluster} [-search_design_load_path On|Off] [ -Y <dir_path> ... [ -extensions <ext> ] ... ] [-append] }
+        set_design_sources 
+            { -format {icl | tcd_bscan | tcd_scan | tcd_fusebox | tcd_memory | tcd_memory_cluster} [-clear] }
+//  command: set msrv "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl/"
+/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl/
+//  command: read_verilog $msrv/cvw.sv -format sv2012 -vcs_compatibility

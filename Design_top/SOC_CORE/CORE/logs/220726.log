@@ -1,0 +1,198 @@
+/home/cad/eda/Mentor_Graphics/Tessent_2026/tessent_2026.1/bin/tessent -shell -logfile 220726.log
+//  Tessent Shell  2026.1    Thu Feb 26 18:38:00 GMT 2026
+//                Unpublished work. Copyright 2026 Siemens
+//
+//      This material contains trade secrets or otherwise confidential 
+//  information owned by Siemens Industry Software Inc. or its affiliates 
+//   (collectively, "SISW"), or its licensors. Access to and use of this 
+//     information is strictly limited as set forth in the Customer's 
+//                   applicable agreements with SISW. 
+//
+//  Siemens software executing under x86-64 Linux on Wed Jul 22 22:32:09 IST 2026.
+//  64 bit version
+//  Host: mavenserver-RH3 (255072 MB RAM, 122071 MB Swap)
+//
+//  command: set_context dft -rtl -design_identifier pass1_rtl
+//  command: 
+//  command: set_tsdb_output_directory TSDB
+TSDB
+//  command: 
+//  command: read_cell_library ../../../libs/NangateOpenCellLibrary.tcelllib 
+//  Reading DFT Library file ../../../libs/NangateOpenCellLibrary.tcelllib
+//  Finished reading file ../../../libs/NangateOpenCellLibrary.tcelllib
+//  command: 
+//  command: set msrv_soc "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl/"
+/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl/
+//  command: read_verilog $msrv/cvw.sv -format sv2012 -vcs_compatibility
+//  Error: can't read "msrv": no such variable
+//  command: read_verilog $msrv_soc/cvw.sv -format sv2012 -vcs_compatibility
+//  command: set rtl_path {}
+//  command: set rtl_path "$rtl_path $msrv_soc/wrapper"
+ /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper
+//  command: read_verilog $rtl_path/*.sv -format sv2012 -vcs_compatibility
+//  Error: File /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper/config.vh, Line 31: Variable name ( XLEN ) previously declared in /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper/config.vh line 31.
+//  Error: Design Unit ( \_work_/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper/msrv_soc_adrdecswrapper.sv_1_unit  ) is not analyzed properly because of non recoverable error in RTL.
+//  command: read_verilog $msrv_soc/wrapper/*.vh -foemat sv2012 -vcs_compatibility 
+//  Error: Unrecognized argument '-foemat'.
+//  command: read_verilog $msrv_soc/wrapper/*.vh -format sv2012 -vcs_compatibility
+//  Error: File /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper/config-shared.vh, Line 6: Variable name ( M_MODE ) previously declared in /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper/config-shared.vh line 6.
+//  Error: File /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper/parameter-defs.vh, Line 6: Syntax error near ( P ).
+
+  localparam cvw_t P <-  [ Expected Token(s): `','' ]
+//  Error: Design Unit ( \_work_/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper/BranchPredictorType.vh_2_unit  ) is not analyzed properly because of non recoverable error in RTL.
+//  command: read_verilog $msrv_soc/wrapper/*.sv -format sv2012 -vcs_compatibility
+//  Error: File /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper/config.vh, Line 31: Variable name ( XLEN ) previously declared in /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper/config.vh line 31.
+//  Error: Design Unit ( \_work_/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper/msrv_soc_adrdecswrapper.sv_3_unit  ) is not analyzed properly because of non recoverable error in RTL.
+//  command: read_verilog $msrv_soc/*.vh -format sv2012 -vcs_compatibility
+//  Error: File /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//parameter-defs.vh, Line 6: Syntax error near ( P ).
+
+  localparam cvw_t P <-
+//  Error: File /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//parameter-defs.vh, Line 6: Syntax error near ( P ).
+
+  localparam cvw_t P <-  [ Expected Token(s): `','' ]
+//  Error: Design Unit ( \_work_/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//BranchPredictorType.vh_4_unit  ) is not analyzed properly because of non recoverable error in RTL.
+//  command: puts $msrv_soc 
+/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl/
+//  command: ll
+//  Error: Command 'll' is unknown
+//  command: ls 
+//  command: /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl/
+//  Error: Command '/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl/' is unknown
+//  command: read_verilog $msrv_soc/msrv_soc_mdu/*.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/msrv_soc_fpu/*.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/msrv_soc_fpu/msrv_socfdivsqrt/*.sv -format sv2012 -vcs_compatibility
+//  Error: No match found for '/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_fpu/msrv_socfdivsqrt/*.sv'.
+//  command: read_verilog $msrv_soc/msrv_soc_fpu/msrv_soc_fdivsqrt/*.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/msrv_soc_fpu/msrv_soc_fma/*.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/msrv_soc_fpu/msrv_soc_postproc/*.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/msrv_soc_fpu/*.vh -format sv2012 -vcs_compatibility
+//  Error: File /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_fpu/parameter-defs.vh, Line 4: Include file ( BranchPredictorType.vh ) could not be found or opened in read mode. No such file or directory.
+//  Error: File /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_fpu/parameter-defs.vh, Line 6: Syntax error near ( P ).
+
+  localparam cvw_t P <-
+//  Error: File /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_fpu/parameter-defs.vh, Line 6: Syntax error near ( P ).
+
+  localparam cvw_t P <-  [ Expected Token(s): `','' ]
+//  Error: Design Unit ( \_work_/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_fpu/config-shared.vh_10_unit  ) is not analyzed properly because of non recoverable error in RTL.
+//  command: read_verilog $msrv_soc/msrv_soc_ifu/*.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/msrv_soc_ifu/msrv_soc_bpred/*.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/msrv_soc_ifu/msrv_soc_bpred/*.vh -format sv2012 -vcs_compatibility
+//  Error: File /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ifu/msrv_soc_bpred/parameter-defs.vh, Line 6: Syntax error near ( P ).
+
+  localparam cvw_t P <-
+//  Error: File /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ifu/msrv_soc_bpred/parameter-defs.vh, Line 6: Syntax error near ( P ).
+
+  localparam cvw_t P <-  [ Expected Token(s): `','' ]
+//  Error: Design Unit ( \_work_/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ifu/msrv_soc_bpred/BranchPredictorType.vh_13_unit  ) is not analyzed properly because of non recoverable error in RTL.
+//  command: read_verilog $msrv_soc/msrv_soc_ieu/*.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/msrv_soc_ieu/msrv_soc_pmu/*.sv -format sv2012 -vcs_compatibility
+//  Error: No match found for '/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_ieu/msrv_soc_pmu/*.sv'.
+//  command: read_verilog $msrv_soc/msrv_soc_ieu/msrv_soc_bmu/*.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/msrv_soc_ieu/msrv_soc_aes/*.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/msrv_soc_ieu/msrv_soc_kmu/*.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/msrv_soc_ieu/msrv_soc_sha/*.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/msrv_soc_lsu/*.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/msrv_soc_ebu/*.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/msrv_soc_harzard/*.sv -format sv2012 -vcs_compatibility
+//  Error: No match found for '/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_harzard/*.sv'.
+//  command: read_verilog $msrv_soc/msrv_soc_hazard/*.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/msrv_soc_privileged/*.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/wrapper/*.sv -format sv2012 -vcs_compatibility
+//  Error: File /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper/config.vh, Line 31: Variable name ( XLEN ) previously declared in /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper/config.vh line 31.
+//  Error: Design Unit ( \_work_/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper/msrv_soc_adrdecswrapper.sv_23_unit  ) is not analyzed properly because of non recoverable error in RTL.
+//  command: read_verilog $msrv_soc/wrapper/*.vh -format sv2012 -vcs_compatibility
+//  Error: File /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper/config-shared.vh, Line 6: Variable name ( M_MODE ) previously declared in /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper/config-shared.vh line 6.
+//  Error: File /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper/parameter-defs.vh, Line 6: Syntax error near ( P ).
+
+  localparam cvw_t P <-  [ Expected Token(s): `','' ]
+//  Error: Design Unit ( \_work_/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper/BranchPredictorType.vh_24_unit  ) is not analyzed properly because of non recoverable error in RTL.
+//  command: read_verilog $msrv_soc/wrapper/*.vh -format sv2012 -vcs_compatibility
+//  Error: File /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper/config-shared.vh, Line 6: Variable name ( M_MODE ) previously declared in /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper/config-shared.vh line 6.
+//  Error: File /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper/parameter-defs.vh, Line 6: Syntax error near ( P ).
+
+  localparam cvw_t P <-  [ Expected Token(s): `','' ]
+//  Error: Design Unit ( \_work_/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper/BranchPredictorType.vh_25_unit  ) is not analyzed properly because of non recoverable error in RTL.
+//  command: read_verilog $msrv_soc/wrapper_gen.py -format sv2012 -vcs_compatibility
+//  Error: File /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper_gen.py, Line 1: Syntax error near ( # ).
+
+  # <-
+//  Error: File /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper_gen.py, Line 4: Name of module missing.
+//  Error: File /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper_gen.py, Line 4: Syntax error near ( . ).
+
+  "" a SystemVerilog wrapper for a given module. <-
+//  Error: File /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper_gen.py, Line 6: Syntax error near ( - ).
+
+  - Extracts the complete module header (including multi- <-  [ Expected Token(s): `')'' ]
+//  Warning: File /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper_gen.py, Line 7: Ignoring undefined used macro ( dut ).
+//  Warning: File /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper_gen.py, Line 7: Ignoring undefined used macro ( instantiation ).
+//  Error: File /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper_gen.py, Line 7: Syntax error near ( # ).
+
+  - Generates a wrapper with `dut` instantiation using `# <-
+//  Warning: File /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper_gen.py, Line 7: Ignoring undefined used macro ( and ).
+//  Error: File /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper_gen.py, Line 7: Syntax error near ( . ).
+
+  - Generates a wrapper with `dut` instantiation using `#(P)` and `. <-
+//  Error: File /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper_gen.py, Line 7: Syntax error near ( . ).
+
+  - Generates a wrapper with `dut` instantiation using `#(P)` and `.*`. <-
+//  Error: File /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper_gen.py, Line 8: Name of module missing.
+//  Error: File /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper_gen.py, Line 8: Syntax error near ( > ).
+
+  - Saves the wrapper file in a 'wrapper/' directory with the name <module> <-
+//  Error: File /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper_gen.py, Line 16: Name of module missing.
+//  Error: File /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper_gen.py, Line 16: Syntax error near ( " ).
+
+  parser.add_argument(" <-
+//  Error: File /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper_gen.py, Line 46: Name of module missing.
+//  Error: File /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper_gen.py, Line 46: Syntax error near ( " ).
+
+  wrapper_module_name = module_name + " <-
+//  Error: File /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper_gen.py, Line 50: Name of module missing.
+//  Error: File /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper_gen.py, Line 50: Syntax error near ( { ).
+
+  header_lines.append(f"module { <-
+//  Error: File /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper_gen.py, Line 52: Name of module missing.
+//  Error: File /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper_gen.py, Line 52: Syntax error near ( { ).
+
+  header_lines.append(f"module { <-
+//  Error: File /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper_gen.py, Line 63: Syntax error near ( found ).
+
+  print("Error: No valid module declaration found <-
+//  Error: File /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper_gen.py, Line 70: Syntax error near ( === ).
+
+  # === <-
+//  Error: File /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper_gen.py, Line 77: Syntax error near ( ) ).
+
+  fout.write(buf) <-  [ Expected Token(s): `IDENTIFIER' or `LP_STAR' or `'#'' or `'('' ]
+//  Error: Design Unit ( \_work_/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper_gen.py_26_unit  ) is not analyzed properly because of non recoverable error in RTL.
+//  Error: Design Unit ( 0_Undef_Inst ) is not analyzed properly because of non recoverable error in RTL.
+//  command:  /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl/msrv_soc_mmu/msrv_soc_tlb/ oooooooooooooooooooooooooooooooooooo
+//  Error: Command '/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl/msrv_soc_mmu/msrv_soc_tlb/ oooooooooooooooooooooooooooooooooooo' is unknown
+//  command: read_verilog $msrv_soc/msrv_soc_mmu/*.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/msrv_soc_mmu/msrv_soc_tlb/*.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/msrv_soc_cache/*.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/msrv_soc_generic/*.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/msrv_soc_generic/msrv_soc_flop/*.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/msrv_soc_generic/msrv_soc_mem/*.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/wrapper/*.sv -format sv2012 -vcs_compatibility
+//  Error: File /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper/config.vh, Line 31: Variable name ( XLEN ) previously declared in /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper/config.vh line 31.
+//  Error: Design Unit ( \_work_/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper/msrv_soc_adrdecswrapper.sv_33_unit  ) is not analyzed properly because of non recoverable error in RTL.
+//  command: read_verilog $msrv_soc/wrapper/*.vh -format sv2012 -vcs_compatibility
+//  Error: File /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper/config-shared.vh, Line 6: Variable name ( M_MODE ) previously declared in /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper/config-shared.vh line 6.
+//  Error: File /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper/parameter-defs.vh, Line 6: Syntax error near ( P ).
+
+  localparam cvw_t P <-  [ Expected Token(s): `','' ]
+//  Error: Design Unit ( \_work_/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper/BranchPredictorType.vh_34_unit  ) is not analyzed properly because of non recoverable error in RTL.
+//  command: read_verilog $msrv_soc/msrv_soc_top/*.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/msrv_soc_top/*.vh -format sv2012 -vcs_compatibility
+//  Error: File /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_top/config-shared.vh, Line 6: Variable name ( M_MODE ) previously declared in /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_top/config-shared.vh line 6.
+//  Error: File /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_top/parameter-defs.vh, Line 6: Syntax error near ( P ).
+
+  localparam cvw_t P <-  [ Expected Token(s): `','' ]
+//  Error: Design Unit ( \_work_/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//msrv_soc_top/BranchPredictorType.vh_36_unit  ) is not analyzed properly because of non recoverable error in RTL.
+//  command: cd /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl/wrapper/ oooooooooooooooooooooooooooooooo
+//  Error: wrong # args: should be "cd ?dirName?"
+//  command: read_verilog $msrv_soc/wrapper/*.sv -format sv2012 -vcs_compatibility
+//  Error: File /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper/config.vh, Line 31: Variable name ( XLEN ) previously declared in /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper/config.vh line 31.
+//  Error: Design Unit ( \_work_/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper/msrv_soc_adrdecswrapper.sv_37_unit  ) is not analyzed properly because of non recoverable error in RTL.
+//  command: exit 

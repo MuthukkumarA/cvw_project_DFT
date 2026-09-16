@@ -1,0 +1,133 @@
+/home/cad/eda/Mentor_Graphics/Tessent_2026/tessent_2026.1/bin/tessent -shell -logfile 230726.log
+//  Tessent Shell  2026.1    Thu Feb 26 18:38:00 GMT 2026
+//                Unpublished work. Copyright 2026 Siemens
+//
+//      This material contains trade secrets or otherwise confidential 
+//  information owned by Siemens Industry Software Inc. or its affiliates 
+//   (collectively, "SISW"), or its licensors. Access to and use of this 
+//     information is strictly limited as set forth in the Customer's 
+//                   applicable agreements with SISW. 
+//
+//  Siemens software executing under x86-64 Linux on Thu Jul 23 14:35:28 IST 2026.
+//  64 bit version
+//  Host: mavenserver-RH3 (255072 MB RAM, 122071 MB Swap)
+//
+//  command: set_context dft -rtl -design_identifier pass1_rtl
+//  command: 
+//  command: set_tsdb_output_directory TSDB
+TSDB
+//  command: 
+//  command: read_cell_library ../../../libs/NangateOpenCellLibrary.tcelllib 
+//  Reading DFT Library file ../../../libs/NangateOpenCellLibrary.tcelllib
+//  Finished reading file ../../../libs/NangateOpenCellLibrary.tcelllib
+//  command: 
+//  command: set msrv_soc "/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl/"
+/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl/
+//  command: read_verilog $msrv_soc/cvw.sv -format sv2012 -vcs_compatibility
+//  command: 
+//  command: #mdu block
+//  command: 
+//  command: read_verilog $msrv_soc/msrv_soc_mdu/*.sv -format sv2012 -vcs_compatibility
+//  command: 
+//  command: #fpu 
+//  command: 
+//  command: read_verilog $msrv_soc/msrv_soc_fpu/*.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/msrv_soc_fpu/msrv_soc_fdivsqrt/*.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/msrv_soc_fpu/msrv_soc_fma/*.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/msrv_soc_fpu/msrv_soc_postproc/*.sv -format sv2012 -vcs_compatibility
+//  command: 
+//  command: #ifu
+//  command: 
+//  command: read_verilog $msrv_soc/msrv_soc_ifu/*.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/msrv_soc_ifu/msrv_soc_bpred/*.sv -format sv2012 -vcs_compatibility
+//  command: 
+//  command: #ieu
+//  command: 
+//  command: read_verilog $msrv_soc/msrv_soc_ieu/*.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/msrv_soc_ieu/msrv_soc_bmu/*.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/msrv_soc_ieu/msrv_soc_aes/*.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/msrv_soc_ieu/msrv_soc_kmu/*.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/msrv_soc_ieu/msrv_soc_sha/*.sv -format sv2012 -vcs_compatibility
+//  command: 
+//  command: #lsu
+//  command: 
+//  command: read_verilog $msrv_soc/msrv_soc_lsu/*.sv -format sv2012 -vcs_compatibility
+//  command: 
+//  command: #ebu
+//  command: 
+//  command: read_verilog $msrv_soc/msrv_soc_ebu/*.sv -format sv2012 -vcs_compatibility
+//  command: 
+//  command: #hazard
+//  command: 
+//  command: read_verilog $msrv_soc/msrv_soc_hazard/*.sv -format sv2012 -vcs_compatibility
+//  command: 
+//  command: #privileged
+//  command: 
+//  command: read_verilog $msrv_soc/msrv_soc_privileged/*.sv -format sv2012 -vcs_compatibility
+//  command: 
+//  command: #mmu
+//  command: 
+//  command: read_verilog $msrv_soc/msrv_soc_mmu/*.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/msrv_soc_mmu/msrv_soc_tlb/*.sv -format sv2012 -vcs_compatibility
+//  command: 
+//  command: #cache
+//  command: 
+//  command: read_verilog $msrv_soc/msrv_soc_cache/*.sv -format sv2012 -vcs_compatibility
+//  command: 
+//  command: #generic
+//  command: 
+//  command: read_verilog $msrv_soc/msrv_soc_generic/*.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/msrv_soc_generic/msrv_soc_flop/*.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/msrv_soc_generic/msrv_soc_mem/*.sv -format sv2012 -vcs_compatibility
+//  command: 
+//  command: #core top
+//  command: read_verilog $msrv_soc/msrv_soc_top/*.sv -format sv2012 -vcs_compatibility
+//  command: 
+//  command: puts $msrv_soc 
+/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl/
+//  command: cd /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl/wrapper/   000000-----------------
+//  Error: wrong # args: should be "cd ?dirName?"
+//  command: read_verilog $msrv_soc/wrapper/*.sv -format sv2012 -vcs_compatibility
+//  Error: File /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper/config.vh, Line 31: Variable name ( XLEN ) previously declared in /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper/config.vh line 31.
+//  Error: Design Unit ( \_work_/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper/msrv_soc_adrdecswrapper.sv_24_unit  ) is not analyzed properly because of non recoverable error in RTL.
+//  command: read_verilog $msrv_soc/wrapper/*vh -format sv2012 -vcs_compatibility
+//  Error: File /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper/config-shared.vh, Line 6: Variable name ( M_MODE ) previously declared in /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper/config-shared.vh line 6.
+//  Error: File /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper/parameter-defs.vh, Line 6: Syntax error near ( P ).
+
+  localparam cvw_t P <-  [ Expected Token(s): `','' ]
+//  Error: Design Unit ( \_work_/home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//wrapper/BranchPredictorType.vh_25_unit  ) is not analyzed properly because of non recoverable error in RTL.
+//  command: read_verilog $msrv_soc/wrapper/msrv_soc_pipelinedcorewrapper.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/wrapper/msrv_soc_ifuwrapper.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/wrapper/msrv_soc_ieuwrapper.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/wrapper/msrv_soc_lsuwrapper.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/wrapper/msrv_soc_ebuwrapper.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/wrapper/msrv_soc_hazardwrapper.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/wrapper/msrv_soc_privilegedwrapper.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/wrapper/msrv_soc_mduwrapper.sv -format sv2012 -vcs_compatibility
+//  command: read_verilog $msrv_soc/wrapper/msrv_soc_fpuwrapper.sv -format sv2012 -vcs_compatibility
+//  command: set_design_sources -helop
+//  Error: Invalid argument ( -helop ).
+Usage:
+        set_design_sources 
+            { [-format verilog]  { [ -V <file_path> ... ] [ -Y <dir_path> ... [ -extensions <ext> ] ... ] [-append] } | { [-clear] } }
+        set_design_sources 
+            { -format {icl | tcd_bscan | tcd_scan | tcd_fusebox | tcd_memory | tcd_memory_cluster} [-search_design_load_path On|Off] [ -Y <dir_path> ... [ -extensions <ext> ] ... ] [-append] }
+        set_design_sources 
+            { -format {icl | tcd_bscan | tcd_scan | tcd_fusebox | tcd_memory | tcd_memory_cluster} [-clear] }
+//  command: set_design_sources -help
+Usage:
+        set_design_sources 
+            { [-format verilog]  { [ -V <file_path> ... ] [ -Y <dir_path> ... [ -extensions <ext> ] ... ] [-append] } | { [-clear] } }
+        set_design_sources 
+            { -format {icl | tcd_bscan | tcd_scan | tcd_fusebox | tcd_memory | tcd_memory_cluster} [-search_design_load_path On|Off] [ -Y <dir_path> ... [ -extensions <ext> ] ... ] [-append] }
+        set_design_sources 
+            { -format {icl | tcd_bscan | tcd_scan | tcd_fusebox | tcd_memory | tcd_memory_cluster} [-clear] }
+//  command: set_design_sources -Y $msrv_soc/*.vh -extension vh
+//  Error: /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//BranchPredictorType.vh is not a directory.
+//  Error: /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//config-shared.vh is not a directory.
+//  Error: /home1/PD07/AMuthuKKumar/DFT_SOC_PROJECT/rtl//parameter-defs.vh is not a directory.
+//  command: set_design_sources -V $msrv_soc/*.vh -extension vh
+//  command: set_design_sources -V $msrv_soc/wrapper/*.vh -extension vh
+//  command: set_design_sources -V $msrv_soc/msrv_soc_ifu/msrv_soc_bpred/*.vh -extension vh
+//  command: set_design_sources -V $msrv_soc/msrv_soc_fpu/*.vh -extension vh
+//  command: exit 
